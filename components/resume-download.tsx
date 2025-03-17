@@ -1,0 +1,470 @@
+"use client";
+
+import type React from "react";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+  Download,
+  FileText,
+  Briefcase,
+  GraduationCap,
+  Award,
+  Code,
+  Languages,
+  X,
+  CheckCircle,
+} from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+
+export default function ResumeDownload() {
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const { toast } = useToast();
+
+  const handleDownload = () => {
+    setIsDownloading(true);
+
+    // Simulate download delay
+    setTimeout(() => {
+      setIsDownloading(false);
+
+      toast({
+        title: "Resume Downloaded",
+        description: "Your resume has been downloaded successfully.",
+        action: (
+          <div
+            className="h-8 w-8 bg-green-500/20 rounded-full flex items-center justify-center"
+            data-oid="0-v3ffr"
+          >
+            <CheckCircle
+              className="h-5 w-5 text-green-500"
+              data-oid="41v0znj"
+            />
+          </div>
+        ),
+      });
+    }, 1500);
+  };
+
+  return (
+    <div className="flex flex-col items-center" data-oid="vrd:ztf">
+      <div
+        className="flex flex-col sm:flex-row gap-4 items-center"
+        data-oid="a0mpnop"
+      >
+        <Button
+          onClick={() => setIsPreviewOpen(true)}
+          variant="outline"
+          className="gap-2"
+          data-oid="s5eo0gs"
+        >
+          <FileText className="h-4 w-4" data-oid="shfck5v" />
+          Preview Resume
+        </Button>
+
+        <Button
+          onClick={handleDownload}
+          className="gap-2 relative overflow-hidden"
+          disabled={isDownloading}
+          data-oid="5y9-us1"
+        >
+          {isDownloading ? (
+            <>
+              <svg
+                className="animate-spin h-4 w-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                data-oid="4:9ghra"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  data-oid="_s_5ud1"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  data-oid="7a3_rpr"
+                ></path>
+              </svg>
+              Downloading...
+            </>
+          ) : (
+            <>
+              <Download className="h-4 w-4" data-oid="yv7_0re" />
+              Download Resume
+            </>
+          )}
+
+          {/* Download progress animation */}
+          {isDownloading && (
+            <motion.div
+              className="absolute bottom-0 left-0 h-1 bg-white"
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 1.5 }}
+              data-oid="iw2c4oe"
+            />
+          )}
+        </Button>
+      </div>
+
+      <AnimatePresence data-oid="fvhrcu3">
+        {isPreviewOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setIsPreviewOpen(false)}
+            data-oid="8_r:_cf"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 20, stiffness: 300 }}
+              className="w-full max-w-3xl max-h-[80vh] bg-card rounded-xl shadow-xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+              data-oid="mde0w:l"
+            >
+              <div
+                className="flex items-center justify-between p-4 border-b"
+                data-oid="69gxjn0"
+              >
+                <div className="flex items-center gap-2" data-oid="klc7n8s">
+                  <FileText
+                    className="h-5 w-5 text-primary"
+                    data-oid="3yy6c2j"
+                  />
+                  <h3 className="font-semibold" data-oid="d6w4kqo">
+                    Resume Preview
+                  </h3>
+                </div>
+
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsPreviewOpen(false)}
+                  aria-label="Close preview"
+                  data-oid="sfsqw60"
+                >
+                  <X className="h-4 w-4" data-oid="dz9c.6u" />
+                </Button>
+              </div>
+
+              <div
+                className="overflow-y-auto p-6 max-h-[calc(80vh-60px)]"
+                data-oid="6b4p2cl"
+              >
+                <div className="space-y-8" data-oid="2n6f410">
+                  <div className="text-center mb-8" data-oid="mjg89z8">
+                    <h1 className="text-2xl font-bold" data-oid="hcaix4d">
+                      Shaquille Williams
+                    </h1>
+                    <p className="text-muted-foreground" data-oid="4cvhx1:">
+                      AI Engineer & Community Builder
+                    </p>
+                    <div
+                      className="flex justify-center gap-4 mt-2 text-sm text-muted-foreground"
+                      data-oid="0h2sv9z"
+                    >
+                      <span data-oid="hf9q0-g">shaq.williams.ai@gmail.com</span>
+                      <span data-oid="fwj26j5">|</span>
+                      <span data-oid="imaa_37">(917) 831-2482</span>
+                      <span data-oid="-9txnyc">|</span>
+                      <span data-oid="sjnan-t">New York, NY</span>
+                      <span data-oid="uy1:g-y">|</span>
+                      <a
+                        href="https://www.linkedin.com/in/shaquille-williams-957970129"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                        data-oid="aa1irbs"
+                      >
+                        LinkedIn Profile
+                      </a>
+                    </div>
+                  </div>
+
+                  <ResumeSection
+                    icon={
+                      <Briefcase
+                        className="h-5 w-5 text-primary"
+                        data-oid="ab50a0:"
+                      />
+                    }
+                    title="Professional Experience"
+                    data-oid="xp.h9gq"
+                  >
+                    <div className="space-y-4" data-oid="j.csod-">
+                      <ResumeItem
+                        title="Technical Program Director"
+                        organization="Rose from Concrete"
+                        period="January 2021 - Present"
+                        location="Brooklyn, NY"
+                        description={[
+                          "Forged strategic partnerships with 40+ community centers across Brooklyn, deploying ML models to assess and optimize program reach",
+                          "Developed predictive models using Python, Scikit-learn, and Geopandas on GCP to impact over 20,000 NYC residents",
+                          "Led implementation of community-focused programs using AWS Lambda and Docker for scalable resource management",
+                        ]}
+                        data-oid="g_wzu9b"
+                      />
+
+                      <ResumeItem
+                        title="Lead AP Physics Teacher"
+                        organization="Success Academy High School of the Liberal Arts"
+                        period="July 2019 - 2022"
+                        location="New York, NY"
+                        description={[
+                          "Applied advanced data analysis and statistical techniques in Python, optimizing lesson plans for 150+ students",
+                          "Awarded the 'Teacher Excellence Award' for exceptional instructional strategies",
+                          "Led a team of 13 teachers, fostering a collaborative academic environment",
+                        ]}
+                        data-oid="330byne"
+                      />
+                    </div>
+                  </ResumeSection>
+
+                  <ResumeSection
+                    icon={
+                      <GraduationCap
+                        className="h-5 w-5 text-primary"
+                        data-oid="zeimscs"
+                      />
+                    }
+                    title="Education"
+                    data-oid="8_vrvoq"
+                  >
+                    <ResumeItem
+                      title="Bachelor of Science in Physics"
+                      organization="City College of New York"
+                      period="2015 - 2019"
+                      location="New York, NY"
+                      description={["GPA: 3.8", "Honors: Magna Cum Laude"]}
+                      data-oid="ie30d3i"
+                    />
+                  </ResumeSection>
+
+                  <ResumeSection
+                    icon={
+                      <Code
+                        className="h-5 w-5 text-primary"
+                        data-oid="d1mixfi"
+                      />
+                    }
+                    title="Technical Skills"
+                    data-oid=":.n6h1f"
+                  >
+                    <div className="grid grid-cols-2 gap-4" data-oid=".zjb79z">
+                      <div data-oid="0il8uyp">
+                        <h4 className="font-medium mb-2" data-oid="2oa0:e:">
+                          Programming Languages
+                        </h4>
+                        <ul
+                          className="list-disc list-inside text-muted-foreground"
+                          data-oid="qggxsm0"
+                        >
+                          <li data-oid="n2lff5s">Python (Expert)</li>
+                          <li data-oid="vf9b2wg">
+                            JavaScript/TypeScript (Expert)
+                          </li>
+                          <li data-oid="xs9rou7">C++ (Advanced)</li>
+                          <li data-oid=".pgbiua">R (Intermediate)</li>
+                          <li data-oid="c9a-8s3">SQL (Advanced)</li>
+                        </ul>
+                      </div>
+
+                      <div data-oid="hdjtjvx">
+                        <h4 className="font-medium mb-2" data-oid=":.finw1">
+                          Frameworks & Tools
+                        </h4>
+                        <ul
+                          className="list-disc list-inside text-muted-foreground"
+                          data-oid="bvdyck6"
+                        >
+                          <li data-oid="6y6:.tb">PyTorch (Expert)</li>
+                          <li data-oid="gb5t_4u">TensorFlow (Expert)</li>
+                          <li data-oid="hltvx9l">Scikit-learn (Expert)</li>
+                          <li data-oid="athmw2:">Docker (Advanced)</li>
+                          <li data-oid="692jjkr">AWS/GCP (Advanced)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </ResumeSection>
+
+                  <ResumeSection
+                    icon={
+                      <Award
+                        className="h-5 w-5 text-primary"
+                        data-oid="cs3jhbd"
+                      />
+                    }
+                    title="Awards & Publications"
+                    data-oid="eykybhl"
+                  >
+                    <ul
+                      className="space-y-2 text-muted-foreground"
+                      data-oid="4169wkm"
+                    >
+                      <li data-oid="57:pj-z">
+                        <span
+                          className="font-medium text-foreground"
+                          data-oid="teqh65k"
+                        >
+                          Efficient Voice Cloning with Reduced Computational
+                          Resources
+                        </span>{" "}
+                        - IEEE Transactions on Audio Processing, 2022
+                      </li>
+                      <li data-oid="nb-qano">
+                        <span
+                          className="font-medium text-foreground"
+                          data-oid="hjxcx3x"
+                        >
+                          Community-Centered AI: Bridging Technology and Social
+                          Impact
+                        </span>{" "}
+                        - NeurIPS Workshop on AI for Social Good, 2021
+                      </li>
+                      <li data-oid="3b-fslr">
+                        <span
+                          className="font-medium text-foreground"
+                          data-oid="fubfpoh"
+                        >
+                          Teacher Excellence Award
+                        </span>{" "}
+                        - Success Academy, 2020
+                      </li>
+                    </ul>
+                  </ResumeSection>
+
+                  <ResumeSection
+                    icon={
+                      <Languages
+                        className="h-5 w-5 text-primary"
+                        data-oid="dipp.pz"
+                      />
+                    }
+                    title="Languages"
+                    data-oid="jf9vmnl"
+                  >
+                    <div
+                      className="flex gap-4 text-muted-foreground"
+                      data-oid="xy97ast"
+                    >
+                      <span data-oid="r2cnl4q">English (Native)</span>
+                      <span data-oid="b9_edoc">Spanish (Conversational)</span>
+                    </div>
+                  </ResumeSection>
+                </div>
+              </div>
+
+              <div
+                className="border-t p-4 flex justify-between items-center"
+                data-oid="lbjfa5-"
+              >
+                <span
+                  className="text-sm text-muted-foreground"
+                  data-oid="h3h6.cy"
+                >
+                  Last updated: March 2025
+                </span>
+                <Button
+                  onClick={handleDownload}
+                  className="gap-2"
+                  data-oid="wry_4e:"
+                >
+                  <Download className="h-4 w-4" data-oid="t1em-n_" />
+                  Download PDF
+                </Button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+interface ResumeSectionProps {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+}
+
+function ResumeSection({ icon, title, children }: ResumeSectionProps) {
+  return (
+    <div data-oid="y82ds._">
+      <div
+        className="flex items-center gap-2 mb-4 pb-2 border-b"
+        data-oid="ut7_tk_"
+      >
+        {icon}
+        <h3 className="text-lg font-semibold" data-oid=":b.53-z">
+          {title}
+        </h3>
+      </div>
+      {children}
+    </div>
+  );
+}
+
+interface ResumeItemProps {
+  title: string;
+  organization: string;
+  period: string;
+  location: string;
+  description: string[];
+}
+
+function ResumeItem({
+  title,
+  organization,
+  period,
+  location,
+  description,
+}: ResumeItemProps) {
+  return (
+    <div data-oid="oi9uonr">
+      <div
+        className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2"
+        data-oid="-iahp5h"
+      >
+        <h4 className="font-medium" data-oid="k44sm45">
+          {title}
+        </h4>
+        <span className="text-sm text-muted-foreground" data-oid="3fxm_v5">
+          {period}
+        </span>
+      </div>
+      <div
+        className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2"
+        data-oid="8pmmv4d"
+      >
+        <span data-oid="-:.:u43">{organization}</span>
+        <span className="text-sm text-muted-foreground" data-oid="fmpltox">
+          {location}
+        </span>
+      </div>
+      <ul
+        className="list-disc list-inside text-muted-foreground mt-2"
+        data-oid="q0h.sof"
+      >
+        {description.map((item, index) => (
+          <li key={index} data-oid="_ml0osr">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
