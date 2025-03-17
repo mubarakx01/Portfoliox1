@@ -52,6 +52,7 @@ const experiences = [
       "GCP",
       "Community Development",
     ],
+
     metrics: [
       { value: "40+", label: "Community Centers" },
       { value: "20,000+", label: "Residents impacted" },
@@ -83,6 +84,7 @@ const experiences = [
       "Team Management",
       "Curriculum Development",
     ],
+
     metrics: [
       { value: "150+", label: "Students" },
       { value: "13", label: "Team Size" },
@@ -114,6 +116,7 @@ const experiences = [
       "Scientific Computing",
       "Physics",
     ],
+
     metrics: [
       { value: "3", label: "Publications" },
       { value: "5", label: "Conferences" },
@@ -311,6 +314,7 @@ export default function RedesignedExperience() {
                                   className="h-4 w-4"
                                   data-oid="c:tuvw2"
                                 />
+
                                 <span data-oid="uvuurr0">
                                   {experience.company}
                                 </span>
@@ -323,6 +327,7 @@ export default function RedesignedExperience() {
                                   className="h-4 w-4"
                                   data-oid="_4l3i1t"
                                 />
+
                                 <span data-oid="6qchkfu">
                                   {experience.location}
                                 </span>
@@ -335,6 +340,7 @@ export default function RedesignedExperience() {
                                   className="h-4 w-4"
                                   data-oid="33gp7r."
                                 />
+
                                 <span data-oid="wpx0q77">
                                   {experience.period}
                                 </span>

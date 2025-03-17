@@ -76,6 +76,7 @@ const projects = [
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
     ],
+
     details:
       "A PyTorch implementation of the DALL-E 2 architecture for generating high-quality images from text descriptions. The project includes optimizations for CUDA acceleration and containerization with Docker.",
   },
@@ -311,6 +312,7 @@ export default function Projects() {
                         className="h-4 w-4 text-muted-foreground"
                         data-oid="_xqdu2v"
                       />
+
                       <span data-oid="x923a3h">
                         Completed: {featuredProject.completed}
                       </span>
@@ -320,6 +322,7 @@ export default function Projects() {
                         className="h-4 w-4 text-muted-foreground"
                         data-oid="7-lbj6g"
                       />
+
                       <span data-oid="8aseo:8">
                         Team Size: {featuredProject.teamSize}
                       </span>
@@ -329,6 +332,7 @@ export default function Projects() {
                         className="h-4 w-4 text-muted-foreground"
                         data-oid="vc83pc6"
                       />
+
                       <div className="flex" data-oid="wuq2x89">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
@@ -407,6 +411,7 @@ export default function Projects() {
               className="absolute left-3 top-3 h-4 w-4 text-muted-foreground"
               data-oid="au.slle"
             />
+
             <Input
               placeholder="Search projects..."
               className="pl-10"

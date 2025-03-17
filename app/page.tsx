@@ -29,6 +29,7 @@ function LoadingSection({ name }: { name: string }) {
         className="h-8 w-8 animate-spin text-primary mb-4"
         data-oid="4p-m15h"
       />
+
       <p className="text-muted-foreground" data-oid="z5-set5">
         Loading {name} section...
       </p>

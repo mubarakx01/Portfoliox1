@@ -26,10 +26,12 @@ export function ModeToggle() {
             className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all duration-500 dark:-rotate-90 dark:scale-0 text-golden-nugget"
             data-oid="lc:i1os"
           />
+
           <Moon
             className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all duration-500 dark:rotate-0 dark:scale-100 text-bite-tongue"
             data-oid="mw01mnj"
           />
+
           <span className="sr-only" data-oid="ea38jxd">
             Toggle theme
           </span>

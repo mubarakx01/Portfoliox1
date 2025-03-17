@@ -34,6 +34,7 @@ export default function AboutSection() {
         className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
         data-oid="fl-un10"
       />
+
       <div
         className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
         data-oid="ympr3po"
@@ -85,6 +86,7 @@ export default function AboutSection() {
               className="absolute top-4 -left-4 w-full h-full border-2 border-primary/50 rounded-lg -z-10"
               data-oid="4byxqq_"
             />
+
             <div
               className="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-primary/20 to-transparent rounded-lg -z-10"
               data-oid="szembq:"
@@ -106,6 +108,7 @@ export default function AboutSection() {
                       className="h-5 w-5 text-primary"
                       data-oid="b_d-3uk"
                     />
+
                     <div data-oid=".q0vef_">
                       <div className="text-sm font-medium" data-oid="5t4n3od">
                         Experience
@@ -134,6 +137,7 @@ export default function AboutSection() {
                       className="h-5 w-5 text-primary"
                       data-oid="zt_x0sz"
                     />
+
                     <div data-oid="oa7o48r">
                       <div className="text-sm font-medium" data-oid="xybxebw">
                         Projects

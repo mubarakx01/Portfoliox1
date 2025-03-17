@@ -44,6 +44,7 @@ export class ErrorBoundary extends React.Component<
               className="h-10 w-10 text-destructive mb-4"
               data-oid="ugsargz"
             />
+
             <h3 className="text-lg font-semibold mb-2" data-oid="0y3ldmd">
               Something went wrong
             </h3>

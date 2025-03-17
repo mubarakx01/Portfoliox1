@@ -29,6 +29,7 @@ export function AboutSkeleton() {
               gap={2}
               data-oid="pb.-7x0"
             />
+
             <Skeleton
               className="h-4 w-full mb-6"
               variant="text"

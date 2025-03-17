@@ -131,6 +131,7 @@ export default function EnhancedFooter() {
                   label="Twitter"
                   data-oid="-zr4-.a"
                 />
+
                 <SocialButton
                   icon={<Mail className="h-5 w-5" data-oid="tf0wal0" />}
                   url="mailto:shaq.williams.ai@gmail.com"
@@ -160,21 +161,25 @@ export default function EnhancedFooter() {
                   label="Experience"
                   data-oid="i5rvr:3"
                 />
+
                 <FooterLink
                   href="#projects"
                   label="Projects"
                   data-oid="srx7t3q"
                 />
+
                 <FooterLink
                   href="#education"
                   label="Education"
                   data-oid="g3mn2wv"
                 />
+
                 <FooterLink
                   href="#publications"
                   label="Publications"
                   data-oid="vsfifx4"
                 />
+
                 <FooterLink
                   href="#contact"
                   label="Contact"
@@ -225,6 +230,7 @@ export default function EnhancedFooter() {
                     className="h-4 w-4 text-primary"
                     data-oid="aim50yp"
                   />
+
                   <span data-oid="5k87m9h">Available for projects</span>
                 </li>
               </ul>

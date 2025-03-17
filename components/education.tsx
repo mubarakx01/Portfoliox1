@@ -53,46 +53,55 @@ export default function Education() {
                   grade="A"
                   data-oid="_0wtyq-"
                 />
+
                 <CourseItem
                   name="Data Structures"
                   grade="A"
                   data-oid="k30f9em"
                 />
+
                 <CourseItem
                   name="Computational Physics"
                   grade="A"
                   data-oid="d7_uml0"
                 />
+
                 <CourseItem
                   name="Network Science"
                   grade="A"
                   data-oid="t0oyvn:"
                 />
+
                 <CourseItem
                   name="Data Visualization"
                   grade="A"
                   data-oid="5l0uwj2"
                 />
+
                 <CourseItem
                   name="Quantum Mechanics"
                   grade="A"
                   data-oid="_faem.-"
                 />
+
                 <CourseItem
                   name="Statistical Mechanics"
                   grade="A"
                   data-oid="y1qpkgh"
                 />
+
                 <CourseItem
                   name="Mathematical Physics"
                   grade="A"
                   data-oid="irvc.yq"
                 />
+
                 <CourseItem
                   name="Differential Equations"
                   grade="A"
                   data-oid="t7yupr9"
                 />
+
                 <CourseItem
                   name="Linear Algebra"
                   grade="A"
@@ -140,16 +149,19 @@ export default function Education() {
                 value={90}
                 data-oid="dg7.pa5"
               />
+
               <SkillProgressItem
                 name="Data Analysis"
                 value={85}
                 data-oid="guc35k-"
               />
+
               <SkillProgressItem
                 name="Mathematical Modeling"
                 value={80}
                 data-oid="jje9tqr"
               />
+
               <SkillProgressItem
                 name="Research Methods"
                 value={95}

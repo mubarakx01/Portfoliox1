@@ -115,10 +115,9 @@ export default function SkillsChart() {
           <p className="font-medium" data-oid="bd37cz.">
             {payload[0].payload.area}
           </p>
-          <p
-            className="text-primary"
-            data-oid="_r75.4h"
-          >{`Proficiency: ${payload[0].value}%`}</p>
+          <p className="text-primary" data-oid="_r75.4h">
+            {`Proficiency: ${payload[0].value}%`}
+          </p>
         </div>
       );
     }
@@ -181,6 +180,7 @@ export default function SkillsChart() {
                     stroke="rgba(255, 255, 255, 0.15)"
                     data-oid="ax_:klo"
                   />
+
                   <PolarAngleAxis
                     dataKey="area"
                     tick={{
@@ -197,10 +197,12 @@ export default function SkillsChart() {
                     stroke="rgba(255, 255, 255, 0.15)"
                     data-oid="bz.gxlh"
                   />
+
                   <Tooltip
                     content={<CustomTooltip data-oid="5fr:drz" />}
                     data-oid="ky_9b_9"
                   />
+
                   <Radar
                     name="Skill Level"
                     dataKey="value"

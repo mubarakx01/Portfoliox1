@@ -25,6 +25,7 @@ export function SectionFallback({
             className="h-12 w-12 text-destructive mb-4"
             data-oid="4q87-9x"
           />
+
           <h3 className="text-xl font-semibold mb-2" data-oid="vbo8ng-">
             Failed to load {title} section
           </h3>

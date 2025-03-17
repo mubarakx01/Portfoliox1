@@ -51,6 +51,7 @@ const timelineData: TimelineEvent[] = [
       "GCP",
       "Community Development",
     ],
+
     color: "bg-gradient-to-r from-indigo-600 to-purple-600",
   },
   {
@@ -74,6 +75,7 @@ const timelineData: TimelineEvent[] = [
       "Team Management",
       "Curriculum Development",
     ],
+
     color: "bg-gradient-to-r from-green-600 to-emerald-600",
   },
   {
@@ -97,6 +99,7 @@ const timelineData: TimelineEvent[] = [
       "Scientific Computing",
       "Physics",
     ],
+
     color: "bg-gradient-to-r from-blue-600 to-cyan-600",
   },
 ];
@@ -141,6 +144,7 @@ export default function InteractiveTimeline() {
               className="absolute inset-0 opacity-10 bg-[url('/placeholder.svg?height=400&width=800')] bg-center bg-cover mix-blend-overlay"
               data-oid="ji1n0sz"
             />
+
             <div className="relative z-10" data-oid="kd-4.bm">
               <div
                 className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"

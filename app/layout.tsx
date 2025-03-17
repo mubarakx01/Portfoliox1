@@ -32,11 +32,13 @@ export default function RootLayout({
           as="image"
           data-oid="pfvpp0b"
         />
+
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
           data-oid="onyhci3"
         />
+
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -58,6 +60,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
           data-oid="g6:-h7e"
         />
+
         <meta
           httpEquiv="X-UA-Compatible"
           content="IE=edge"

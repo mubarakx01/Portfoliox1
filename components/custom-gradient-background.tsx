@@ -26,6 +26,7 @@ export function CustomGradientBackground({
           className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5 -z-10"
           data-oid="9vu5rsr"
         />
+
         {children}
       </div>
     );

@@ -43,6 +43,7 @@ const featuredProjects = [
       "HuggingFace Transformers",
       "Python",
     ],
+
     imageUrl: "/placeholder.svg?height=600&width=800",
     demoUrl: "#",
     githubUrl: "#",

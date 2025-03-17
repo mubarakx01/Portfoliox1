@@ -339,6 +339,7 @@ export default function CaseStudies() {
                                   className="h-4 w-4 mt-1 text-primary"
                                   data-oid="u44k4d7"
                                 />
+
                                 <span data-oid="3i-hc6f">{challenge}</span>
                               </li>
                             ))}
@@ -363,6 +364,7 @@ export default function CaseStudies() {
                                   className="h-4 w-4 mt-1 text-primary"
                                   data-oid="j6w44ym"
                                 />
+
                                 <span data-oid="27cz4y4">{solution}</span>
                               </li>
                             ))}

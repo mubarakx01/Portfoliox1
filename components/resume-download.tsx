@@ -145,6 +145,7 @@ export default function ResumeDownload() {
                     className="h-5 w-5 text-primary"
                     data-oid="3yy6c2j"
                   />
+
                   <h3 className="font-semibold" data-oid="d6w4kqo">
                     Resume Preview
                   </h3>

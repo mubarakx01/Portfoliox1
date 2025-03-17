@@ -81,6 +81,7 @@ export default function RedesignedHero() {
       "cybersecurity",
       "STEM",
     ];
+
     let highlightedText = text;
 
     termsToHighlight.forEach((term) => {
@@ -131,7 +132,7 @@ export default function RedesignedHero() {
                 className="bg-clip-text text-transparent bg-gradient-to-r from-happy-hearts to-golden-nugget"
                 data-oid="vbtkhl2"
               >
-                Shaquille Williams
+                MUBARAK A
               </span>
             </h1>
           </ScrollReveal>
@@ -215,6 +216,7 @@ export default function RedesignedHero() {
                   className="absolute inset-0 bg-gradient-to-r from-happy-hearts to-bite-tongue opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   data-oid="v8nvs-b"
                 />
+
                 <ExternalLink
                   className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10"
                   data-oid="qvki5_k"
@@ -331,6 +333,7 @@ export default function RedesignedHero() {
                 className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500/30 rounded-full blur-xl"
                 data-oid="ep98vkd"
               />
+
               <div
                 className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/30 rounded-full blur-xl"
                 data-oid="6e7__j6"
@@ -339,7 +342,7 @@ export default function RedesignedHero() {
               {/* Add a subtle pulsing glow effect */}
               {isClient && (
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 mix-blend-overlay"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 mix-blend-overlay left-[4px] top-[4px]"
                   animate={{
                     opacity: [0.2, 0.4, 0.2],
                   }}

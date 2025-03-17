@@ -29,6 +29,7 @@ function SkillsFallback() {
           className="h-8 w-8 animate-spin text-primary mr-2"
           data-oid=":4w:hqw"
         />
+
         <span data-oid="bw8y7.k">Loading skills visualization...</span>
       </div>
     </section>

@@ -370,6 +370,7 @@ export default function SkillsGlobe() {
               className="h-8 w-8 text-amber-500 mb-2"
               data-oid="k4om.kr"
             />
+
             <h3 className="text-lg font-semibold mb-1" data-oid="6o87k3h">
               3D Visualization Unavailable
             </h3>
@@ -474,6 +475,7 @@ export default function SkillsGlobe() {
                 className="h-8 w-8 animate-spin text-primary"
                 data-oid="n-0t8qm"
               />
+
               <span className="ml-2" data-oid="-k-_-y4">
                 Loading 3D Skills Globe...
               </span>

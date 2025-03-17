@@ -160,6 +160,7 @@ export default function Testimonials() {
                           alt={testimonials[currentIndex].author}
                           data-oid="iy2u1fb"
                         />
+
                         <AvatarFallback data-oid="u66n9w:">
                           {testimonials[currentIndex].author
                             .split(" ")

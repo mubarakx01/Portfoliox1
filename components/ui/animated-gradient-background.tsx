@@ -122,6 +122,7 @@ export function AnimatedGradientBackground({
         style={{ filter: `blur(${blur}px)` }}
         data-oid="rbm366b"
       />
+
       {children}
     </div>
   );

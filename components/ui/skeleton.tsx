@@ -25,6 +25,7 @@ export function Skeleton({
             data-oid="55tcgql"
           />
         );
+
       case "text":
         return (
           <div
@@ -36,6 +37,7 @@ export function Skeleton({
             data-oid="az3c3:h"
           />
         );
+
       case "circular":
         return (
           <div
@@ -44,6 +46,7 @@ export function Skeleton({
             data-oid="2xo9tz_"
           />
         );
+
       case "rectangular":
         return (
           <div
@@ -52,6 +55,7 @@ export function Skeleton({
             data-oid="ud-s1o7"
           />
         );
+
       default:
         return (
           <div

@@ -314,6 +314,7 @@ export default function RedesignedProjects() {
             className="h-8 w-8 animate-spin text-primary mr-2"
             data-oid="j-89yff"
           />
+
           <span data-oid="n7ckehg">Loading projects...</span>
         </div>
       </SectionContainer>
@@ -327,6 +328,7 @@ export default function RedesignedProjects() {
         className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
         data-oid="cuyuh25"
       />
+
       <div
         className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
         data-oid="vt8zc2a"

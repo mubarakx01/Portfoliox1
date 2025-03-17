@@ -47,6 +47,7 @@ const SkillsGlobe = dynamic(() => import("@/components/3d-skills-globe"), {
         className="h-8 w-8 animate-spin text-primary"
         data-oid="3iaeymt"
       />
+
       <span className="ml-2" data-oid="341uw.y">
         Loading 3D Globe...
       </span>
@@ -633,6 +634,7 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
               stopColor={getColorFromGradient(category.color, "from")}
               data-oid="muao2rc"
             />
+
             <stop
               offset="100%"
               stopColor={getColorFromGradient(category.color, "to")}

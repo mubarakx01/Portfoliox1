@@ -189,6 +189,7 @@ export default function InteractiveHero() {
                 className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 data-oid="9a4piq:"
               />
+
               <ArrowRight
                 className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10"
                 data-oid="xs1euvw"
@@ -224,6 +225,7 @@ export default function InteractiveHero() {
               label="GitHub"
               data-oid="b4:6qk0"
             />
+
             <SocialButton
               icon={<Linkedin className="h-5 w-5" data-oid="hpcb7h4" />}
               url="https://linkedin.com"
