@@ -10,59 +10,59 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-12" data-oid="lpz1as6">
-      <h2 className="text-3xl font-bold text-center mb-4" data-oid="52zkaby">
+    <section id="experience" className="py-12" data-oid="n0tub1s">
+      <h2 className="text-3xl font-bold text-center mb-4" data-oid="xrs9tap">
         Professional Journey
       </h2>
 
-      <div className="space-y-8 mt-12" data-oid="ss2yelo">
+      <div className="space-y-8 mt-12" data-oid="p983lb6">
         <ExperienceCard
-          title="Technical Program Director"
-          company="Rose from Concrete"
-          period="January 2021 - Present"
+          title="Web Designer Internship"
+          company="Kshitiksha Foundation"
+          period="04/2024" // From your CV
           achievements={[
-            "Forged strategic partnerships with 40+ community centers across Brooklyn, deploying ML models to assess and optimize program reach",
-            "Developed predictive models using Python, Scikit-learn, and Geopandas on GCP to impact over 20,000 NYC residents",
-            "Led implementation of community-focused programs using AWS Lambda and Docker for scalable resource management",
-            "Designed decentralized energy solutions and AI-powered monitoring tools for program sustainability",
+            "Designed responsive, user-friendly website layouts tailored for Gen Z audiences, enhancing engagement",
+            "Integrated interactive elements like scrolling animations and 3D effects using modern web tools",
+            "Optimized website performance and accessibility, improving load times and user experience",
+            "Collaborated with a small team to deliver visually appealing designs aligned with organizational goals",
           ]}
           technologies={[
-            "Python",
-            "Machine Learning",
-            "AWS",
-            "Docker",
-            "GCP",
-            "Community Development",
+            "Figma",
+            "Webflow",
+            "HTML/CSS",
+            "JavaScript",
+            "Graphic Design (Photoshop, Illustrator)",
+            "SEO",
           ]}
           impact={{
             title: "Overall Impact",
             description:
-              "Positively impacted over 20,000 NYC residents through data-driven community programs",
+              "Elevated the foundation’s online presence through innovative web design, reaching a wider audience",
             metrics: [
-              { value: "40+", label: "Community Centers" },
-              { value: "20,000+", label: "Residents impacted" },
-              { value: "15", label: "Team Size" },
+              { value: "5+", label: "Website Features Implemented" },
+              { value: "10%", label: "Performance Improvement" },
+              { value: "3", label: "Team Size" },
             ],
           }}
           bgColor="bg-gradient-to-r from-indigo-950 to-purple-950"
-          data-oid="jv0k9e0"
+          data-oid=":-bjust"
         />
 
         <ExperienceCard
-          title="Lead AP Physics Teacher"
-          company="Success Academy High School of the Liberal Arts"
-          period="July 2019 - 2022"
+          title="Data Science Internship"
+          company="Shiash Info Solutions Private Limited"
+          period="11/2023"
           achievements={[
-            "Applied advanced data analysis and statistical techniques in Python, optimizing lesson plans for 150+ students",
-            'Awarded the "Teacher Excellence Award" for exceptional instructional strategies',
-            "Led a team of 13 teachers, fostering a collaborative academic environment",
+            "Analyzed datasets using Python and SQL to extract actionable insights for business optimization",
+            "Developed machine learning models to support data-driven decision-making processes",
+            "Collaborated with a team to deliver data visualizations and reports for stakeholder review",
           ]}
           technologies={[
-            "Leadership",
+            "Python",
+            "SQL",
+            "Machine Learning",
             "Data Analysis",
-            "Education",
-            "Team Management",
-            "Curriculum Development",
+            "Visualization Tools (e.g., Canva, Figma)",
           ]}
           impact={{
             title: "",
@@ -70,7 +70,7 @@ export default function Experience() {
             metrics: [],
           }}
           bgColor="bg-gradient-to-r from-green-950 to-emerald-950"
-          data-oid="ekjkkwi"
+          data-oid="t2yksj5"
         />
       </div>
     </section>
@@ -104,57 +104,57 @@ function ExperienceCard({
   bgColor,
 }: ExperienceCardProps) {
   return (
-    <Card className={`${bgColor} border-none`} data-oid="lts8xz3">
-      <CardHeader data-oid="zhvtn-:">
-        <CardTitle className="text-2xl" data-oid="ahsr26.">
+    <Card className={`${bgColor} border-none`} data-oid="f9.hlzw">
+      <CardHeader data-oid="bz8csxl">
+        <CardTitle className="text-2xl" data-oid="3c90pph">
           {title}
         </CardTitle>
-        <CardDescription className="flex flex-col gap-1" data-oid="tzr.ii4">
-          <div className="flex items-center gap-2" data-oid="cy1290r">
-            <Building className="h-4 w-4" data-oid="w5tw7gd" />
-            <span data-oid="qdg22ac">{company}</span>
+        <CardDescription className="flex flex-col gap-1" data-oid="rxv6ur2">
+          <div className="flex items-center gap-2" data-oid="r988qq7">
+            <Building className="h-4 w-4" data-oid="ktngb_2" />
+            <span data-oid="zontazr">{company}</span>
           </div>
-          <div className="flex items-center gap-2" data-oid="v61kdho">
-            <Calendar className="h-4 w-4" data-oid="pl38l3j" />
-            <span data-oid="yc07.2x">{period}</span>
+          <div className="flex items-center gap-2" data-oid="8zaodnn">
+            <Calendar className="h-4 w-4" data-oid="g25r1fr" />
+            <span data-oid="bylzecd">{period}</span>
           </div>
         </CardDescription>
       </CardHeader>
-      <CardContent data-oid="2jxdzk.">
-        <div className="grid md:grid-cols-2 gap-8" data-oid="op81c:6">
-          <div data-oid="malt.kx">
-            <div className="flex items-center gap-2 mb-4" data-oid="9i57--o">
-              <Trophy className="h-5 w-5" data-oid="-z8bky5" />
-              <h3 className="text-lg font-semibold" data-oid="s.nn0_2">
+      <CardContent data-oid="_.q5yyz">
+        <div className="grid md:grid-cols-2 gap-8" data-oid="estm9ue">
+          <div data-oid="f58fq4a">
+            <div className="flex items-center gap-2 mb-4" data-oid="p1.dewb">
+              <Trophy className="h-5 w-5" data-oid="gyj0-wn" />
+              <h3 className="text-lg font-semibold" data-oid="1:3xt3q">
                 Key Achievements
               </h3>
             </div>
-            <ul className="space-y-3" data-oid="pmyl52r">
+            <ul className="space-y-3" data-oid="2sbz169">
               {achievements.map((achievement, index) => (
                 <li
                   key={index}
                   className="flex items-start gap-2"
-                  data-oid="8d3:95n"
+                  data-oid="7-em.vg"
                 >
-                  <span className="text-sm mt-1" data-oid="g.c0nzw">
+                  <span className="text-sm mt-1" data-oid="0gt1p1l">
                     •
                   </span>
-                  <span data-oid="05plnfw">{achievement}</span>
+                  <span data-oid="f-39cwa">{achievement}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div data-oid="xwo-u5p">
-            <div className="flex items-center gap-2 mb-4" data-oid="zqjcc6d">
-              <Cpu className="h-5 w-5" data-oid="rigmc5h" />
-              <h3 className="text-lg font-semibold" data-oid="7g-do_j">
+          <div data-oid="cuqcg39">
+            <div className="flex items-center gap-2 mb-4" data-oid="gf5_9rb">
+              <Cpu className="h-5 w-5" data-oid="h3lvpye" />
+              <h3 className="text-lg font-semibold" data-oid="j62:_ek">
                 Technologies & Skills
               </h3>
             </div>
-            <div className="flex flex-wrap gap-2 mb-6" data-oid="e-3xyqj">
+            <div className="flex flex-wrap gap-2 mb-6" data-oid=".f61bx.">
               {technologies.map((tech, index) => (
-                <Badge key={index} variant="secondary" data-oid="kyt6uni">
+                <Badge key={index} variant="secondary" data-oid="gofpl6-">
                   {tech}
                 </Badge>
               ))}
@@ -162,26 +162,26 @@ function ExperienceCard({
 
             {impact.title && (
               <>
-                <h3 className="text-lg font-semibold mb-2" data-oid="po0mg38">
+                <h3 className="text-lg font-semibold mb-2" data-oid="hnj_9xv">
                   {impact.title}
                 </h3>
-                <p className="mb-4" data-oid="q0emkh3">
+                <p className="mb-4" data-oid="2oc2_kj">
                   {impact.description}
                 </p>
 
-                <div className="grid grid-cols-3 gap-4" data-oid="n9xktwk">
+                <div className="grid grid-cols-3 gap-4" data-oid="kqr65ox">
                   {impact.metrics.map((metric, index) => (
                     <div
                       key={index}
                       className="bg-black/20 rounded-lg p-4 text-center"
-                      data-oid="2swp1vo"
+                      data-oid="vqmz.pk"
                     >
-                      <div className="text-2xl font-bold" data-oid="3nibmja">
+                      <div className="text-2xl font-bold" data-oid="_t7q5bf">
                         {metric.value}
                       </div>
                       <div
                         className="text-sm text-muted-foreground"
-                        data-oid="h4ft:0r"
+                        data-oid="v_5o369"
                       >
                         {metric.label}
                       </div>

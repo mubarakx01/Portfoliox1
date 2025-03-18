@@ -25,67 +25,70 @@ interface TimelineEvent {
   skills: string[];
   color: string;
   logo?: string;
+  type?: string;
+  metrics?: Array<{ value: string; label: string }>;
 }
 
 const timelineData: TimelineEvent[] = [
   {
     id: "rfc",
-    title: "Technical Program Director",
-    company: "Rose from Concrete",
-    location: "Brooklyn, NY",
-    period: "January 2021 - Present",
+    title: "Web Designer Internship",
+    company: "Kshitiksha Foundation",
+    location: "remote",
+    period: "04/2024",
     description:
-      "Leading technical initiatives and community programs across Brooklyn, developing and implementing ML models for assessing program impact and reach.",
+      "Contributed to web design projects, creating visually appealing and user-friendly digital solutions to enhance the foundation’s online presence and engagement.",
     achievements: [
-      "Forged strategic partnerships with 40+ community centers across Brooklyn",
-      "Developed predictive models with Python and Scikit-learn impacting 20,000+ NYC residents",
-      "Led implementation of community-focused programs using AWS Lambda and Docker",
-      "Designed decentralized energy solutions and AI-powered monitoring tools",
+      "Designed responsive website layouts optimized for Gen Z audiences, boosting user interaction",
+      "Implemented interactive features like scrolling animations and 3D effects using modern design tools",
+      "Improved website performance and accessibility, enhancing load times and usability",
+      "Worked remotely with a team to deliver designs aligned with the foundation’s mission",
     ],
 
     skills: [
-      "Python",
-      "Machine Learning",
-      "AWS",
-      "Docker",
-      "GCP",
-      "Community Development",
+      "Figma",
+      "Webflow",
+      "HTML/CSS",
+      "JavaScript",
+      "Graphic Design (Photoshop, Illustrator)",
+      "SEO",
     ],
 
     color: "bg-gradient-to-r from-indigo-600 to-purple-600",
   },
   {
     id: "success-academy",
-    title: "Lead AP Physics Teacher",
-    company: "Success Academy High School of the Liberal Arts",
-    location: "New York, NY",
-    period: "July 2019 - 2022",
+    title: "Data Science Internship",
+    company: "Shiash Info Solutions Private Limited",
+    location: "Tamil Nadu,Chennai",
+    period: "11/2023",
     description:
-      "Led physics education initiatives, applying data analysis to optimize teaching strategies for over 150 students while managing a team of 13 teachers.",
+      "Contributed to data science projects, leveraging analytical tools and machine learning to derive insights and support business solutions during a focused internship.",
     achievements: [
-      "Applied advanced data analysis to optimize lesson plans for 150+ students",
-      "Awarded the 'Teacher Excellence Award' for instructional strategies",
-      "Led a team of 13 teachers, fostering collaborative learning environment",
+      "Analyzed datasets using Python and SQL to provide actionable business insights",
+      "Built machine learning models to enhance data-driven decision-making",
+      "Collaborated with a team to create data visualizations for stakeholder presentations",
     ],
 
     skills: [
-      "Leadership",
+      "Python",
+      "SQL",
+      "Machine Learning",
       "Data Analysis",
-      "Education",
-      "Team Management",
-      "Curriculum Development",
+      "Visualization Tools (e.g., Canva, Figma)",
     ],
 
     color: "bg-gradient-to-r from-green-600 to-emerald-600",
   },
   {
     id: "research-assistant",
-    title: "Research Assistant",
-    company: "City College of New York",
-    location: "New York, NY",
-    period: "2017 - 2019",
+    title: "Electronics And Communications Engineeringt",
+    company: "City College of Thirvannamalai",
+    location: "India,Chennai",
+    period: "2020 - 2023",
     description:
       "Conducted physics research focused on computational modeling of complex systems and data analysis of experimental results.",
+    type: "education",
     achievements: [
       "Published research on computational physics models in peer-reviewed journals",
       "Developed custom analysis algorithms for experimental data processing",
@@ -98,6 +101,62 @@ const timelineData: TimelineEvent[] = [
       "Research",
       "Scientific Computing",
       "Physics",
+    ],
+
+    color: "bg-gradient-to-r from-blue-600 to-cyan-600",
+  },
+  {
+    id: "research-assistant",
+    title: "Electronics And Communication Engineering Diploma",
+    company: "Dr M G R Polytechnic College, Arani",
+    location: "India, Arani, Tamil Nadu",
+    period: "2017 - 2019",
+    type: "education",
+    description:
+      "Pursued a diploma in Electronics and Communication Engineering, focusing on foundational skills in circuit design, electronic systems, and communication technologies through practical training and coursework.",
+    achievements: [
+      "Designed and tested basic electronic circuits for signal processing and amplification",
+      "Performed lab experiments to understand communication principles and system troubleshooting",
+      "Collaborated with classmates on hands-on projects to build functional electronic devices",
+      "Assisted in documenting technical procedures and project outcomes for academic evaluation",
+    ],
+
+    skills: [
+      "Circuit Design",
+      "Electronics Troubleshooting",
+      "Programming (C)",
+      "Basic Signal Processing",
+      "Team Collaboration",
+    ],
+
+    metrics: [
+      { value: "3", label: "Practical Projects" },
+      { value: "4", label: "Core Skills Acquired" },
+      { value: "2", label: "Group Assignments" },
+    ],
+
+    color: "bg-gradient-to-r from-blue-600 to-cyan-600",
+  },
+  {
+    id: "research-assistant",
+    title: "12th Computer Science",
+    company: "St Joseph's Boys' Higher Secondary School",
+    location: "Tamil Nadu,Chennai",
+    period: "2017 - 2019",
+    description:
+      "Completed 12th-grade education with a focus on Computer Science, gaining foundational knowledge in programming, algorithms, and basic computer applications through theoretical study and practical assignments.",
+    achievements: [
+      "Developed simple programs and projects using C++ to solve computational problems",
+      "Learned and applied fundamental concepts of algorithms and data structures",
+      "Participated in school-level tech competitions or exhibitions showcasing coding skills",
+    ],
+
+    skills: [
+      "Programming (C++)",
+      "Basic Algorithms",
+      "Problem Solving",
+      "Computer Applications",
+      "Teamwork",
     ],
 
     color: "bg-gradient-to-r from-blue-600 to-cyan-600",
@@ -125,9 +184,9 @@ export default function InteractiveTimeline() {
   }, [expandedEvent]);
 
   return (
-    <div ref={containerRef} className="w-full py-8" data-oid="m2s1ipj">
-      <div className="mb-8" data-oid="3wi2xoq">
-        <AnimatePresence mode="wait" data-oid="u.mm_ej">
+    <div ref={containerRef} className="w-full py-8" data-oid="u3f43f6">
+      <div className="mb-8" data-oid="tga52u5">
+        <AnimatePresence mode="wait" data-oid=".1yo3r.">
           <motion.div
             key={timelineData[activeEventIndex].id}
             initial={{ opacity: 0, y: 20 }}
@@ -138,57 +197,57 @@ export default function InteractiveTimeline() {
               "rounded-xl p-6 relative overflow-hidden shadow-lg",
               timelineData[activeEventIndex].color,
             )}
-            data-oid="l16m6y."
+            data-oid="vynk6s5"
           >
             <div
               className="absolute inset-0 opacity-10 bg-[url('/placeholder.svg?height=400&width=800')] bg-center bg-cover mix-blend-overlay"
-              data-oid="ji1n0sz"
+              data-oid="8h75s-:"
             />
 
-            <div className="relative z-10" data-oid="kd-4.bm">
+            <div className="relative z-10" data-oid="-nqpzd4">
               <div
                 className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"
-                data-oid="giftyr7"
+                data-oid="3clhdb1"
               >
-                <div data-oid="7hqfdwc">
+                <div data-oid="a-9qwp0">
                   <Badge
                     variant="outline"
                     className="bg-white/10 text-white mb-2"
-                    data-oid="lyfod56"
+                    data-oid="d3xffvf"
                   >
                     Featured Experience
                   </Badge>
                   <h3
                     className="text-xl md:text-2xl font-bold text-white"
-                    data-oid="y66:_64"
+                    data-oid="sz8vws2"
                   >
                     {timelineData[activeEventIndex].title}
                   </h3>
                   <div
                     className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 text-white/80"
-                    data-oid="akc241x"
+                    data-oid="5w1vagb"
                   >
-                    <div className="flex items-center gap-1" data-oid=".yq_z8.">
-                      <Building className="h-4 w-4" data-oid="3co8ok9" />
-                      <span data-oid="oqvdpij">
+                    <div className="flex items-center gap-1" data-oid="n8ogxo1">
+                      <Building className="h-4 w-4" data-oid="7eto7gh" />
+                      <span data-oid="nhvjstu">
                         {timelineData[activeEventIndex].company}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1" data-oid="_teft7p">
-                      <MapPin className="h-4 w-4" data-oid="badhdrf" />
-                      <span data-oid="_.69ptb">
+                    <div className="flex items-center gap-1" data-oid="jcmvsjw">
+                      <MapPin className="h-4 w-4" data-oid="1ggd:g5" />
+                      <span data-oid="4ehf-fs">
                         {timelineData[activeEventIndex].location}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1" data-oid="tae6uhn">
-                      <Calendar className="h-4 w-4" data-oid="83_jvr8" />
-                      <span data-oid="u.__gp2">
+                    <div className="flex items-center gap-1" data-oid=":zd7-xe">
+                      <Calendar className="h-4 w-4" data-oid="6agdvbu" />
+                      <span data-oid="i77e9gn">
                         {timelineData[activeEventIndex].period}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-2" data-oid="seu3dpd">
+                <div className="flex gap-2" data-oid="3.2._uf">
                   {timelineData.map((_, index) => (
                     <button
                       key={index}
@@ -200,21 +259,21 @@ export default function InteractiveTimeline() {
                       )}
                       onClick={() => setActiveEventIndex(index)}
                       title={`Show ${timelineData[index].title}`}
-                      data-oid="4l_8qwn"
+                      data-oid="e0t_-5b"
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-white/90 mb-4" data-oid="vfsf4j4">
+              <p className="text-white/90 mb-4" data-oid="bh5c:h3">
                 {timelineData[activeEventIndex].description}
               </p>
-              <div className="flex flex-wrap gap-2" data-oid="i5ge9-p">
+              <div className="flex flex-wrap gap-2" data-oid="7x-.ok6">
                 {timelineData[activeEventIndex].skills.map((skill, index) => (
                   <Badge
                     key={index}
                     variant="outline"
                     className="bg-white/10 text-white border-white/20"
-                    data-oid="u.yxkp7"
+                    data-oid="6ns_52e"
                   >
                     {skill}
                   </Badge>
@@ -225,7 +284,7 @@ export default function InteractiveTimeline() {
         </AnimatePresence>
       </div>
 
-      <div className="space-y-4" data-oid=".-l6-h0">
+      <div className="space-y-4" data-oid="3c1vd1d">
         {timelineData.map((event, index) => (
           <motion.div
             key={event.id}
@@ -233,7 +292,7 @@ export default function InteractiveTimeline() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative"
-            data-oid="._my-zh"
+            data-oid="sqp4d53"
           >
             <div
               className={cn(
@@ -241,7 +300,7 @@ export default function InteractiveTimeline() {
                 expandedEvent === event.id ? "pb-12" : "",
               )}
               onClick={() => toggleExpand(event.id)}
-              data-oid="uq-oxm1"
+              data-oid="9.x_y3h"
             >
               <div
                 className={cn(
@@ -249,54 +308,54 @@ export default function InteractiveTimeline() {
                   expandedEvent === event.id ? "scale-125" : "",
                   event.color.replace("bg-gradient-to-r", "bg"),
                 )}
-                data-oid="pzw9xjf"
+                data-oid="_3jj..0"
               />
 
               <div
                 className="flex flex-col md:flex-row md:items-center justify-between gap-2"
-                data-oid="bn1pbhq"
+                data-oid="y9dermd"
               >
-                <div data-oid="c4jjymi">
+                <div data-oid="br.b:ng">
                   <h3
                     className="text-lg font-semibold flex items-center gap-2"
-                    data-oid="anzmcms"
+                    data-oid="s:j5__f"
                   >
                     {event.title}
                     <motion.div
                       animate={{ rotate: expandedEvent === event.id ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      data-oid=":zof3ye"
+                      data-oid="3383_91"
                     >
                       {expandedEvent === event.id ? (
                         <ChevronDown
                           className="h-4 w-4 text-muted-foreground"
-                          data-oid="5kkct.3"
+                          data-oid="qr5o.86"
                         />
                       ) : (
                         <ChevronRight
                           className="h-4 w-4 text-muted-foreground"
-                          data-oid="ad491yv"
+                          data-oid="6wr6zb."
                         />
                       )}
                     </motion.div>
                   </h3>
                   <div
                     className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground"
-                    data-oid="pptfpi2"
+                    data-oid="y82:qac"
                   >
-                    <div className="flex items-center gap-1" data-oid="axi3tyz">
-                      <Building className="h-3 w-3" data-oid="pju7uz2" />
-                      <span data-oid="3nd-b0l">{event.company}</span>
+                    <div className="flex items-center gap-1" data-oid="oga1o5v">
+                      <Building className="h-3 w-3" data-oid="q-1mri6" />
+                      <span data-oid=":00mo6t">{event.company}</span>
                     </div>
-                    <div className="flex items-center gap-1" data-oid="sz69ris">
-                      <Clock className="h-3 w-3" data-oid="5vw2-rs" />
-                      <span data-oid="u-m8_-1">{event.period}</span>
+                    <div className="flex items-center gap-1" data-oid="wy80qg8">
+                      <Clock className="h-3 w-3" data-oid="m8zo2ng" />
+                      <span data-oid="_61h2pg">{event.period}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <AnimatePresence data-oid="g_p.cbx">
+              <AnimatePresence data-oid="k.w5syw">
                 {expandedEvent === event.id && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -304,27 +363,27 @@ export default function InteractiveTimeline() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
-                    data-oid="z68ue9y"
+                    data-oid="zcejz4a"
                   >
-                    <div className="mt-4 pt-4 border-t" data-oid="yxaaee5">
-                      <div className="space-y-4" data-oid="i0-:_ma">
-                        <div data-oid="an-u1ru">
+                    <div className="mt-4 pt-4 border-t" data-oid="j3:7lnr">
+                      <div className="space-y-4" data-oid="s7f3i2n">
+                        <div data-oid="p.9i65z">
                           <h4
                             className="font-medium flex items-center gap-2 mb-2"
-                            data-oid="cs0bq04"
+                            data-oid="t8gdi4o"
                           >
                             <Award
                               className="h-4 w-4 text-primary"
-                              data-oid="_p6kxlg"
+                              data-oid="h-tg7jh"
                             />
                             Key Achievements
                           </h4>
                           <ul
                             className="space-y-1 ml-6 list-disc text-muted-foreground"
-                            data-oid="nkm-.rj"
+                            data-oid="mxsvevn"
                           >
                             {event.achievements.map((achievement, i) => (
-                              <li key={i} data-oid="kbvkci-">
+                              <li key={i} data-oid="-056oxq">
                                 {achievement}
                               </li>
                             ))}
@@ -332,13 +391,13 @@ export default function InteractiveTimeline() {
                         </div>
                         <div
                           className="flex flex-wrap gap-2"
-                          data-oid="ef9w36."
+                          data-oid="zuqnoyu"
                         >
                           {event.skills.map((skill, i) => (
                             <Badge
                               key={i}
                               variant="secondary"
-                              data-oid="va0s13r"
+                              data-oid="i:btz0k"
                             >
                               {skill}
                             </Badge>

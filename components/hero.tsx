@@ -27,23 +27,23 @@ export default function Hero() {
           className="w-fit mb-8 bg-secondary text-secondary-foreground"
           data-oid="pqqkv6."
         >
-          Senior Software Engineer
+          Software Engineer
         </Badge>
 
         <h1
           className="text-6xl font-bold mb-6 bg-gradient-to-r from-happy-hearts to-golden-nugget bg-clip-text text-transparent"
           data-oid="2ayv03d"
         >
-          Shaquille Williams
+          MUBARAK A
         </h1>
 
         <p
           className="text-xl text-muted-foreground mb-8 max-w-2xl"
           data-oid="8vkhnyy"
         >
-          Senior Software Engineer, AI Specialist, and Community Organizer
-          specializing in machine learning, generative AI, cybersecurity, and
-          STEM education.
+          Software Engineer, AI Specialist, and Community Organizer specializing
+          in machine learning, generative AI.
+          </Badge>
         </p>
 
         <div className="flex flex-wrap gap-4 mb-8" data-oid="-aa4lvp">
@@ -79,12 +79,12 @@ export default function Hero() {
 
         <div className="flex gap-4" data-oid="mz5a79c">
           {[
-            { icon: Github, href: "https://github.com/swilliams9772" },
+            { icon: Github, href: "https://github.com/mubarakx01" },
             {
               icon: Linkedin,
-              href: "https://www.linkedin.com/in/shaquille-williams-957970129",
+              href: "https://www.linkedin.com/in/mubarak-a-xyz/",
             },
-            { icon: Mail, href: "mailto:contact@example.com" },
+            { icon: Mail, href: "mr1398463@gmail.com" },
           ].map((social, index) => (
             <Button
               key={index}

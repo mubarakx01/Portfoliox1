@@ -18,13 +18,21 @@ import { cn } from "@/lib/utils";
 const featuredProjects = [
   {
     id: 1,
-    title: "Voice Cloning & Audio Processing Suite",
+    title:
+      "AI-Driven CNC Machine Health Monitoring: IoT Analytics with Mobile & Dashboard Integration",
     description:
-      "Comprehensive audio processing system including real-time voice cloning, multilingual transcription, and speaker diarization.",
+      "Developed an end-to-end intelligent monitoring system to predict CNC machine failures, optimize maintenance schedules, and enhance manufacturing efficiency using IoT, AI, and real-time analytics",
     longDescription:
-      "A state-of-the-art voice cloning system that allows for real-time audio processing with minimal latency. The system uses deep learning models to generate natural-sounding speech that matches the target voice with unprecedented accuracy and emotional range.",
-    technologies: ["TensorFlow TTS", "PyTorch", "Whisper", "FastAPI", "React"],
-    imageUrl: "/placeholder.svg?height=600&width=800",
+      "An innovative IoT-based monitoring system that leverages machine learning and real-time analytics to predict CNC machine failures and optimize maintenance schedules. The system integrates sensor data, predictive analytics, and a responsive dashboard to provide comprehensive machine health insights and maintenance recommendations.",
+    technologies: [
+      "React.js/Next.js",
+      "WebSockets",
+      "OpenAI API",
+      "FastAPI",
+      "SheetJS",
+    ],
+
+    imageUrl: "/lib/file/Screenshot 2025-03-03 at 2.56.24 AM.png",
     demoUrl: "#",
     githubUrl: "#",
     color: "from-blue-600 to-violet-600",
@@ -44,7 +52,7 @@ const featuredProjects = [
       "Python",
     ],
 
-    imageUrl: "/placeholder.svg?height=600&width=800",
+    imageUrl: "/lib/file/Screenshot 2025-03-03 at 2.56.24 AM.png",
     demoUrl: "#",
     githubUrl: "#",
     color: "from-pink-600 to-orange-600",
@@ -57,7 +65,7 @@ const featuredProjects = [
     longDescription:
       "A full-stack web application that streamlines the process of managing community grants from application to distribution. The system includes features for application submission, review workflows, financial tracking, and impact measurement dashboards.",
     technologies: ["Next.js", "PostgreSQL", "AWS", "TypeScript", "Prisma"],
-    imageUrl: "/placeholder.svg?height=600&width=800",
+    imageUrl: "/lib/file/Screenshot 2025-03-03 at 2.56.24 AM.png",
     demoUrl: "#",
     githubUrl: "#",
     color: "from-green-600 to-emerald-600",
@@ -129,18 +137,18 @@ export default function ProjectShowcase() {
       className="w-full max-w-5xl mx-auto relative rounded-2xl overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-oid="692i53n"
+      data-oid="6nkfs4h"
     >
       <div
         className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/70 to-background z-10"
-        data-oid="z6ulh81"
+        data-oid="kktydf0"
       />
 
       <AnimatePresence
         mode="wait"
         initial={false}
         custom={direction}
-        data-oid="i__wrz4"
+        data-oid="_qch.az"
       >
         <motion.div
           key={project.id}
@@ -166,7 +174,7 @@ export default function ProjectShowcase() {
             },
           }}
           className="relative w-full aspect-[16/9]"
-          data-oid="5e06-om"
+          data-oid="zljv-0i"
         >
           <Image
             src={project.imageUrl || "/placeholder.svg"}
@@ -174,7 +182,7 @@ export default function ProjectShowcase() {
             fill
             className="object-cover"
             priority
-            data-oid="j0ckreb"
+            data-oid="6jw2dnz"
           />
 
           <div
@@ -182,55 +190,55 @@ export default function ProjectShowcase() {
               "absolute inset-0 opacity-60 bg-gradient-to-r",
               project.color,
             )}
-            data-oid="2wcbfrb"
+            data-oid="iywxt5a"
           />
 
           <div
             className="absolute inset-0 z-20 flex flex-col justify-end p-8"
-            data-oid="jnwdmsv"
+            data-oid="yxzgvr5"
           >
             <Badge
               variant="outline"
               className="w-fit mb-4 bg-black/50 backdrop-blur-sm text-white border-white/20"
-              data-oid="g5zux8n"
+              data-oid="8:s3h62"
             >
               Featured Project
             </Badge>
             <h3
               className="text-2xl md:text-4xl font-bold text-white mb-4"
-              data-oid="veao5lc"
+              data-oid="16u4rmp"
             >
               {project.title}
             </h3>
             <p
               className="text-white/90 max-w-3xl mb-6 text-sm md:text-base"
-              data-oid="bm-icp8"
+              data-oid="3e2yv83"
             >
               {project.longDescription}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-6" data-oid="neewb7b">
+            <div className="flex flex-wrap gap-2 mb-6" data-oid="m6s:_b0">
               {project.technologies.map((tech, index) => (
                 <Badge
                   key={index}
                   className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                  data-oid="8.bv:_s"
+                  data-oid="kmlbejd"
                 >
                   {tech}
                 </Badge>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3" data-oid="uhoc:go">
+            <div className="flex flex-wrap gap-3" data-oid="za415gm">
               <Button
                 className="bg-white text-black hover:bg-white/90 group"
                 onClick={() => handleDemoClick(project.demoUrl)}
-                data-oid="y3i.vno"
+                data-oid=":vhyaso"
               >
                 Live Demo
                 <ExternalLink
                   className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                  data-oid="o5wjbw_"
+                  data-oid="qa:-ev-"
                 />
               </Button>
 
@@ -238,15 +246,15 @@ export default function ProjectShowcase() {
                 variant="outline"
                 className="border-white text-white hover:bg-white/20 gap-2"
                 asChild
-                data-oid="3pvlm7x"
+                data-oid="w0r2wh_"
               >
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-oid=":wpvii_"
+                  data-oid="g4v.r1m"
                 >
-                  <Github className="h-4 w-4" data-oid="w874b-p" />
+                  <Github className="h-4 w-4" data-oid="no.fqoa" />
                   View Code
                 </a>
               </Button>
@@ -261,9 +269,9 @@ export default function ProjectShowcase() {
         variant="ghost"
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
         onClick={handlePrev}
-        data-oid="sug4v5-"
+        data-oid="tj27pzx"
       >
-        <ChevronLeft className="h-6 w-6" data-oid="s:n.f-i" />
+        <ChevronLeft className="h-6 w-6" data-oid="mhrfm88" />
       </Button>
 
       <Button
@@ -271,15 +279,15 @@ export default function ProjectShowcase() {
         variant="ghost"
         className="absolute right-4 top-1/2 -translate-y-1/2 z-30 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
         onClick={handleNext}
-        data-oid="_d6j:5b"
+        data-oid="7ql0:tq"
       >
-        <ChevronRight className="h-6 w-6" data-oid=".pma44_" />
+        <ChevronRight className="h-6 w-6" data-oid="-1_huno" />
       </Button>
 
       {/* Progress dots */}
       <div
         className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1"
-        data-oid="-48x82t"
+        data-oid="fiz5b3k"
       >
         {featuredProjects.map((_, index) => (
           <button
@@ -292,7 +300,7 @@ export default function ProjectShowcase() {
             )}
             onClick={() => handleDotClick(index)}
             aria-label={`Go to project ${index + 1}`}
-            data-oid="ad:j2z1"
+            data-oid="rck1w:6"
           />
         ))}
       </div>

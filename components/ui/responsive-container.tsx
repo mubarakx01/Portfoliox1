@@ -38,7 +38,7 @@ export function ResponsiveContainer({
         className,
       )}
       {...props}
-      data-oid="o:fe6nn"
+      data-oid="hg1svf-"
     >
       {children}
     </Component>

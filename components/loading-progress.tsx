@@ -7,28 +7,28 @@ export function LoadingProgress() {
   const { isLoading, progress } = useProgressiveLoading();
 
   return (
-    <AnimatePresence data-oid="v7o_f3t">
+    <AnimatePresence data-oid="8c58-vp">
       {isLoading && (
         <motion.div
           className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          data-oid="u2kep1t"
+          data-oid="pd69uen"
         >
           <div
             className="w-64 h-1 bg-muted rounded-full overflow-hidden mb-4"
-            data-oid="hs6s5te"
+            data-oid="p6ul5yf"
           >
             <motion.div
               className="h-full bg-primary"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.3 }}
-              data-oid="tenuh1_"
+              data-oid="0u38sng"
             />
           </div>
-          <div className="text-sm text-muted-foreground" data-oid="_sv9w:n">
+          <div className="text-sm text-muted-foreground" data-oid="ngf8i22">
             Loading portfolio... {progress}%
           </div>
         </motion.div>

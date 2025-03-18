@@ -101,13 +101,13 @@ export function LazyImage({
       <div
         className={cn("relative overflow-hidden bg-muted", className)}
         style={containerStyle}
-        data-oid="8eum0_4"
+        data-oid="kuwi4wn"
       >
         <div
           className="absolute inset-0 flex items-center justify-center"
-          data-oid="r7zzy54"
+          data-oid="m9kv2qr"
         >
-          <Skeleton className="w-full h-full" data-oid="39onofg" />
+          <Skeleton className="w-full h-full" data-oid="i-2y_29" />
         </div>
       </div>
     );
@@ -117,17 +117,17 @@ export function LazyImage({
     <div
       className={cn("relative overflow-hidden", className)}
       style={containerStyle}
-      data-oid="44ii071"
+      data-oid="o3:lb2w"
     >
       {!isLoaded && (
         <div
           className="absolute inset-0 flex items-center justify-center"
-          data-oid="_aj507i"
+          data-oid="rarz1an"
         >
           <Skeleton
             className="w-full h-full"
             style={loadingColor ? { backgroundColor: loadingColor } : undefined}
-            data-oid="cfcn8a0"
+            data-oid=".b9d_wd"
           />
         </div>
       )}
@@ -145,7 +145,7 @@ export function LazyImage({
           isLoaded ? "opacity-100" : "opacity-0",
         )}
         {...props}
-        data-oid="chpquj0"
+        data-oid="24396xz"
       />
     </div>
   );

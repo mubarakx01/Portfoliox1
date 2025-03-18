@@ -20,11 +20,11 @@ export function CustomGradientBackground({
     return (
       <div
         className={cn("relative overflow-hidden", className)}
-        data-oid="t7_o9wz"
+        data-oid="i7.b4fs"
       >
         <div
           className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5 -z-10"
-          data-oid="9vu5rsr"
+          data-oid="20aj2:f"
         />
 
         {children}
@@ -35,12 +35,12 @@ export function CustomGradientBackground({
   return (
     <div
       className={cn("relative overflow-hidden", className)}
-      data-oid="aijq0cx"
+      data-oid="dmyftw0"
     >
       {/* Static gradient background */}
       <div
         className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5 -z-10"
-        data-oid="35vjo23"
+        data-oid="hsv5riq"
       />
 
       {/* Animated orbs for background effect */}
@@ -55,7 +55,7 @@ export function CustomGradientBackground({
           repeat: Number.POSITIVE_INFINITY,
           ease: "easeInOut",
         }}
-        data-oid="6bvv5fa"
+        data-oid="icwh68q"
       />
 
       <motion.div
@@ -70,7 +70,7 @@ export function CustomGradientBackground({
           ease: "easeInOut",
           delay: 2,
         }}
-        data-oid="l8prjwa"
+        data-oid=".fyiz5."
       />
 
       <motion.div
@@ -85,7 +85,7 @@ export function CustomGradientBackground({
           ease: "easeInOut",
           delay: 1,
         }}
-        data-oid="u8w.4.k"
+        data-oid="bbb4fi6"
       />
 
       {children}

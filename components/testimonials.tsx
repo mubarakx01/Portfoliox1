@@ -91,13 +91,13 @@ export default function Testimonials() {
   }, [currentIndex, isPaused]);
 
   return (
-    <section className="py-12" data-oid="_7i5p2r">
-      <h2 className="text-3xl font-bold text-center mb-4" data-oid="u09m7xb">
+    <section className="py-12" data-oid="wpsfe-5">
+      <h2 className="text-3xl font-bold text-center mb-4" data-oid="0i:hxpv">
         Client Testimonials
       </h2>
       <p
         className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-        data-oid="69djjk1"
+        data-oid="ymlz3.2"
       >
         Hear what clients and colleagues have to say about working with me.
       </p>
@@ -106,13 +106,13 @@ export default function Testimonials() {
         className="relative max-w-4xl mx-auto px-4"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        data-oid="fuvq03_"
+        data-oid="mgissx1"
       >
         <AnimatePresence
           mode="wait"
           initial={false}
           custom={direction}
-          data-oid="-1agz6."
+          data-oid="bt.21i-"
         >
           <motion.div
             key={testimonials[currentIndex].id}
@@ -138,30 +138,30 @@ export default function Testimonials() {
               },
             }}
             className="w-full"
-            data-oid="jd1328g"
+            data-oid="xug6s6u"
           >
             <Card
               className="border-none bg-gradient-to-br from-primary/5 to-primary/10 shadow-lg"
-              data-oid="w2uq1:b"
+              data-oid="shs.e6s"
             >
-              <CardContent className="p-8" data-oid="-kegrd5">
+              <CardContent className="p-8" data-oid="4xi.j-c">
                 <div
                   className="flex flex-col md:flex-row gap-8 items-center"
-                  data-oid="gsu-cy0"
+                  data-oid="4alwamb"
                 >
-                  <div className="flex-shrink-0" data-oid="f0si5:3">
-                    <div className="relative" data-oid="x.kygyp">
+                  <div className="flex-shrink-0" data-oid="38hg:lx">
+                    <div className="relative" data-oid=".pod.ol">
                       <Avatar
                         className="h-24 w-24 border-4 border-background"
-                        data-oid="7shhh7e"
+                        data-oid="-c6bggy"
                       >
                         <AvatarImage
                           src={testimonials[currentIndex].avatar}
                           alt={testimonials[currentIndex].author}
-                          data-oid="iy2u1fb"
+                          data-oid="y5o5p2m"
                         />
 
-                        <AvatarFallback data-oid="u66n9w:">
+                        <AvatarFallback data-oid="vyp7-rr">
                           {testimonials[currentIndex].author
                             .split(" ")
                             .map((n) => n[0])
@@ -170,20 +170,20 @@ export default function Testimonials() {
                       </Avatar>
                       <div
                         className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-1.5"
-                        data-oid="iz4xk_a"
+                        data-oid="qxin4zs"
                       >
-                        <Quote className="h-4 w-4" data-oid=".zidwvq" />
+                        <Quote className="h-4 w-4" data-oid="_l9w9x0" />
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex-1" data-oid="6pm:wan">
-                    <div className="mb-4" data-oid="cwq9041">
+                  <div className="flex-1" data-oid="6ipa_0c">
+                    <div className="mb-4" data-oid="8zgez30">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <span
                           key={i}
                           className="text-yellow-500 text-lg"
-                          data-oid="q3kgtpq"
+                          data-oid="r4j4-t2"
                         >
                           {i < testimonials[currentIndex].rating ? "★" : "☆"}
                         </span>
@@ -192,39 +192,39 @@ export default function Testimonials() {
 
                     <blockquote
                       className="text-lg md:text-xl italic mb-6 relative"
-                      data-oid="hplc3ms"
+                      data-oid="a-b0l1x"
                     >
                       <span
                         className="text-primary text-4xl absolute -top-4 -left-2 opacity-20"
-                        data-oid=".n2ai6k"
+                        data-oid="23qly5-"
                       >
                         "
                       </span>
                       {testimonials[currentIndex].content}
                       <span
                         className="text-primary text-4xl absolute -bottom-10 -right-2 opacity-20"
-                        data-oid="y0sb5uc"
+                        data-oid="8qxrbs6"
                       >
                         "
                       </span>
                     </blockquote>
 
-                    <div data-oid="awvnp8y">
-                      <div className="font-semibold" data-oid="n:1id1l">
+                    <div data-oid="r1t5::g">
+                      <div className="font-semibold" data-oid="-8nmd:d">
                         {testimonials[currentIndex].author}
                       </div>
                       <div
                         className="text-sm text-muted-foreground flex flex-wrap items-center gap-2"
-                        data-oid="jn3z1xu"
+                        data-oid="doxylaf"
                       >
-                        <span data-oid="l1wec-u">
+                        <span data-oid="3:8caqd">
                           {testimonials[currentIndex].role}
                         </span>
                         <span
                           className="h-1 w-1 rounded-full bg-muted-foreground"
-                          data-oid="iu0hglv"
+                          data-oid="c0llb.i"
                         ></span>
-                        <span data-oid="7xvt16o">
+                        <span data-oid="hx-7khd">
                           {testimonials[currentIndex].company}
                         </span>
                       </div>
@@ -237,19 +237,19 @@ export default function Testimonials() {
         </AnimatePresence>
 
         {/* Navigation controls */}
-        <div className="flex justify-between mt-6" data-oid="-5ecybq">
+        <div className="flex justify-between mt-6" data-oid="aeu3d.l">
           <Button
             variant="outline"
             size="icon"
             onClick={handlePrev}
             className="rounded-full"
             aria-label="Previous testimonial"
-            data-oid=".lfm5xj"
+            data-oid="gn52j2v"
           >
-            <ChevronLeft className="h-4 w-4" data-oid="d7_kay7" />
+            <ChevronLeft className="h-4 w-4" data-oid="w1pn60k" />
           </Button>
 
-          <div className="flex items-center gap-2" data-oid="y589sv:">
+          <div className="flex items-center gap-2" data-oid="og4dzzh">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -261,7 +261,7 @@ export default function Testimonials() {
                     : "bg-muted hover:bg-primary/50",
                 )}
                 aria-label={`Go to testimonial ${index + 1}`}
-                data-oid="bb3n38r"
+                data-oid="vxn:9o6"
               />
             ))}
           </div>
@@ -272,9 +272,9 @@ export default function Testimonials() {
             onClick={handleNext}
             className="rounded-full"
             aria-label="Next testimonial"
-            data-oid="o.pj.b9"
+            data-oid="5d2jz_u"
           >
-            <ChevronRight className="h-4 w-4" data-oid="b7bi7mm" />
+            <ChevronRight className="h-4 w-4" data-oid="1bv18xj" />
           </Button>
         </div>
       </div>

@@ -14,25 +14,25 @@ export function ModeToggle() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <DropdownMenu data-oid="vbn:ge.">
-      <DropdownMenuTrigger asChild data-oid="_wju8li">
+    <DropdownMenu data-oid="4vxw2m3">
+      <DropdownMenuTrigger asChild data-oid="r3qd02g">
         <Button
           variant="outline"
           size="icon"
           className="relative overflow-hidden border-border bg-background hover:bg-accent/10"
-          data-oid="xnm_kqi"
+          data-oid="33txoeg"
         >
           <Sun
             className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all duration-500 dark:-rotate-90 dark:scale-0 text-golden-nugget"
-            data-oid="lc:i1os"
+            data-oid="6gc3p.2"
           />
 
           <Moon
             className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all duration-500 dark:rotate-0 dark:scale-100 text-bite-tongue"
-            data-oid="mw01mnj"
+            data-oid="57ibvid"
           />
 
-          <span className="sr-only" data-oid="ea38jxd">
+          <span className="sr-only" data-oid="-_53wdj">
             Toggle theme
           </span>
         </Button>
@@ -40,32 +40,32 @@ export function ModeToggle() {
       <DropdownMenuContent
         align="end"
         className="animate-fade-in"
-        data-oid="3.7fwm_"
+        data-oid="k1rc-z:"
       >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
           className="cursor-pointer"
-          data-oid="4wjg8lf"
+          data-oid="n:am_t."
         >
-          <Sun className="h-4 w-4 mr-2 text-golden-nugget" data-oid="wrwn.m6" />
+          <Sun className="h-4 w-4 mr-2 text-golden-nugget" data-oid="w099xro" />
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
           className="cursor-pointer"
-          data-oid="y0p2oe1"
+          data-oid="d1-xuhg"
         >
-          <Moon className="h-4 w-4 mr-2 text-bite-tongue" data-oid="lt.wxxk" />
+          <Moon className="h-4 w-4 mr-2 text-bite-tongue" data-oid="lnj3csc" />
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
           className="cursor-pointer"
-          data-oid="ndzjcc3"
+          data-oid="_9-glgr"
         >
           <span
             className="h-4 w-4 mr-2 flex items-center justify-center text-xs"
-            data-oid="m2e7x.d"
+            data-oid="j-470lh"
           >
             💻
           </span>

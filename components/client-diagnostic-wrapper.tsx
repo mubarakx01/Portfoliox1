@@ -12,5 +12,5 @@ const DiagnosticTool = dynamic(
 );
 
 export default function ClientDiagnosticWrapper() {
-  return <DiagnosticTool data-oid="kjyi_85" />;
+  return <DiagnosticTool data-oid="aqef6he" />;
 }

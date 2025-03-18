@@ -26,10 +26,21 @@ export default function ResumeDownload() {
   const handleDownload = () => {
     setIsDownloading(true);
 
-    // Simulate download delay
-    setTimeout(() => {
-      setIsDownloading(false);
-
+    try {
+      // Create a link element to trigger the download
+      const link = document.createElement('a');
+      link.href = '/AI_x1.pdf'; // Path relative to the public directory
+      link.download = 'AI_x1.pdf';
+      document.body.appendChild(link);
+      
+      // Trigger download
+      link.click();
+      document.body.removeChild(link);
+      
+      // Show loading animation and success message
+      setTimeout(() => {
+        setIsDownloading(false);
+      
       toast({
         title: "Resume Downloaded",
         description: "Your resume has been downloaded successfully.",
@@ -169,7 +180,7 @@ export default function ResumeDownload() {
                 <div className="space-y-8" data-oid="2n6f410">
                   <div className="text-center mb-8" data-oid="mjg89z8">
                     <h1 className="text-2xl font-bold" data-oid="hcaix4d">
-                      Shaquille Williams
+                      MUBARAK A
                     </h1>
                     <p className="text-muted-foreground" data-oid="4cvhx1:">
                       AI Engineer & Community Builder
@@ -178,14 +189,14 @@ export default function ResumeDownload() {
                       className="flex justify-center gap-4 mt-2 text-sm text-muted-foreground"
                       data-oid="0h2sv9z"
                     >
-                      <span data-oid="hf9q0-g">shaq.williams.ai@gmail.com</span>
+                      <span data-oid="hf9q0-g">mr1398463@gmail.com</span>
                       <span data-oid="fwj26j5">|</span>
-                      <span data-oid="imaa_37">(917) 831-2482</span>
+                      <span data-oid="imaa_37">(+91)9500255291</span>
                       <span data-oid="-9txnyc">|</span>
-                      <span data-oid="sjnan-t">New York, NY</span>
+                      <span data-oid="sjnan-t">India,Chennai</span>
                       <span data-oid="uy1:g-y">|</span>
                       <a
-                        href="https://www.linkedin.com/in/shaquille-williams-957970129"
+                        href="https://www.linkedin.com/in/mubarak-a-xyz/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline"
@@ -197,41 +208,37 @@ export default function ResumeDownload() {
                   </div>
 
                   <ResumeSection
-                    icon={
-                      <Briefcase
-                        className="h-5 w-5 text-primary"
-                        data-oid="ab50a0:"
-                      />
-                    }
+                    icon={<Briefcase className="h-5 w-5 text-primary" data-oid="ab50a0:" />}
                     title="Professional Experience"
+                    type="work"
                     data-oid="xp.h9gq"
                   >
                     <div className="space-y-4" data-oid="j.csod-">
                       <ResumeItem
-                        title="Technical Program Director"
-                        organization="Rose from Concrete"
-                        period="January 2021 - Present"
-                        location="Brooklyn, NY"
+                        title="Web Designer Internship"
+                        organization="Kshitiksha Foundation"
+                        period="04/2024"
+                        location="remote"
                         description={[
-                          "Forged strategic partnerships with 40+ community centers across Brooklyn, deploying ML models to assess and optimize program reach",
-                          "Developed predictive models using Python, Scikit-learn, and Geopandas on GCP to impact over 20,000 NYC residents",
-                          "Led implementation of community-focused programs using AWS Lambda and Docker for scalable resource management",
+                          "Designed responsive website layouts tailored for Gen Z audiences, enhancing user engagement",
+                          "Implemented interactive features like scrolling animations and 3D effects using modern design tools",
+                          "Optimized website performance and accessibility to improve load times and reach"
                         ]}
                         data-oid="g_wzu9b"
                       />
 
-                      <ResumeItem
-                        title="Lead AP Physics Teacher"
-                        organization="Success Academy High School of the Liberal Arts"
-                        period="July 2019 - 2022"
-                        location="New York, NY"
-                        description={[
-                          "Applied advanced data analysis and statistical techniques in Python, optimizing lesson plans for 150+ students",
-                          "Awarded the 'Teacher Excellence Award' for exceptional instructional strategies",
-                          "Led a team of 13 teachers, fostering a collaborative academic environment",
-                        ]}
-                        data-oid="330byne"
-                      />
+<ResumeItem
+  title="Data Science Internship"
+  organization="Shiash Info Solutions Private Limited"
+  period="11/2023"
+  location="Tamil Nadu,Chennai"
+  description={[
+    "Analyzed datasets using Python and SQL to uncover actionable business insights",
+    "Developed machine learning models to enhance predictive analytics capabilities",
+    "Collaborated with a team to produce data visualizations for stakeholder insights"
+  ]}
+  data-oid="330byne"
+/>
                     </div>
                   </ResumeSection>
 
@@ -243,13 +250,14 @@ export default function ResumeDownload() {
                       />
                     }
                     title="Education"
+                    type="education"
                     data-oid="8_vrvoq"
                   >
                     <ResumeItem
-                      title="Bachelor of Science in Physics"
-                      organization="City College of New York"
+                      title="Bachelor of Engineering"
+                      organization="City College of Thirvannamalai"
                       period="2015 - 2019"
-                      location="New York, NY"
+                      location="India,Chennai"
                       description={["GPA: 3.8", "Honors: Magna Cum Laude"]}
                       data-oid="ie30d3i"
                     />
@@ -399,25 +407,24 @@ export default function ResumeDownload() {
 interface ResumeSectionProps {
   icon: React.ReactNode;
   title: string;
+  type: "work" | "education" | "skills" | "awards" | "languages";
   children: React.ReactNode;
 }
 
-function ResumeSection({ icon, title, children }: ResumeSectionProps) {
-  return (
-    <div data-oid="y82ds._">
-      <div
-        className="flex items-center gap-2 mb-4 pb-2 border-b"
-        data-oid="ut7_tk_"
-      >
-        {icon}
-        <h3 className="text-lg font-semibold" data-oid=":b.53-z">
-          {title}
-        </h3>
-      </div>
-      {children}
+const ResumeSection: React.FC<ResumeSectionProps> = ({
+  icon,
+  title,
+  type,
+  children,
+}) => (
+  <section className="space-y-4" data-oid="rnv8aqw">
+    <div className="flex items-center gap-2" data-oid="rnv8aqw">
+      {icon}
+      <h2 className="text-lg font-semibold" data-oid="rnv8aqw">{title}</h2>
     </div>
-  );
-}
+    {children}
+  </section>
+);
 
 interface ResumeItemProps {
   title: string;
@@ -427,45 +434,28 @@ interface ResumeItemProps {
   description: string[];
 }
 
-function ResumeItem({
+const ResumeItem: React.FC<ResumeItemProps> = ({
   title,
   organization,
   period,
   location,
   description,
-}: ResumeItemProps) {
-  return (
-    <div data-oid="oi9uonr">
-      <div
-        className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2"
-        data-oid="-iahp5h"
-      >
-        <h4 className="font-medium" data-oid="k44sm45">
-          {title}
-        </h4>
-        <span className="text-sm text-muted-foreground" data-oid="3fxm_v5">
-          {period}
-        </span>
+}) => (
+  <div className="space-y-2" data-oid="rnv8aqw">
+    <div className="flex justify-between items-start" data-oid="rnv8aqw">
+      <div data-oid="rnv8aqw">
+        <h3 className="font-medium" data-oid="rnv8aqw">{title}</h3>
+        <p className="text-sm text-muted-foreground" data-oid="rnv8aqw">{organization}</p>
       </div>
-      <div
-        className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2"
-        data-oid="8pmmv4d"
-      >
-        <span data-oid="-:.:u43">{organization}</span>
-        <span className="text-sm text-muted-foreground" data-oid="fmpltox">
-          {location}
-        </span>
+      <div className="text-sm text-right text-muted-foreground" data-oid="rnv8aqw">
+        <p data-oid="rnv8aqw">{period}</p>
+        <p data-oid="rnv8aqw">{location}</p>
       </div>
-      <ul
-        className="list-disc list-inside text-muted-foreground mt-2"
-        data-oid="q0h.sof"
-      >
-        {description.map((item, index) => (
-          <li key={index} data-oid="_ml0osr">
-            {item}
-          </li>
-        ))}
-      </ul>
     </div>
-  );
-}
+    <ul className="list-disc list-inside text-sm space-y-1" data-oid="rnv8aqw">
+      {description.map((item, index) => (
+        <li key={index} data-oid="rnv8aqw">{item}</li>
+      ))}
+    </ul>
+  </div>
+);
