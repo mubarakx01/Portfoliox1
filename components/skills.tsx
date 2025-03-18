@@ -29,7 +29,7 @@ type SkillLevel = "All" | "Expert" | "Advanced" | "Intermediate";
 // Skill data
 const skillCategories = [
   {
-    icon: <Laptop className="h-6 w-6" data-oid="85sx0ki" />,
+    icon: <Laptop className="h-6 w-6" data-oid="ot4kwbg" />,
     title: "Machine Learning & AI",
     skills: [
       { name: "Computer Vision", level: "Advanced", color: "blue", years: 3 },
@@ -47,7 +47,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Code className="h-6 w-6" data-oid="4_w0udd" />,
+    icon: <Code className="h-6 w-6" data-oid="np1itj6" />,
     title: "Programming & Development",
     skills: [
       { name: "Python", level: "Expert", color: "blue", years: 6 },
@@ -65,7 +65,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Cpu className="h-6 w-6" data-oid="htpba9h" />,
+    icon: <Cpu className="h-6 w-6" data-oid="epjx5nr" />,
     title: "AI Frameworks & Tools",
     skills: [
       { name: "PyTorch", level: "Expert", color: "green", years: 5 },
@@ -78,7 +78,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Database className="h-6 w-6" data-oid="-2h.jii" />,
+    icon: <Database className="h-6 w-6" data-oid="0qz:_-a" />,
     title: "Data Science & Analytics",
     skills: [
       { name: "Data Mining", level: "Advanced", color: "blue", years: 4 },
@@ -111,7 +111,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Cloud className="h-6 w-6" data-oid="e1hhxm0" />,
+    icon: <Cloud className="h-6 w-6" data-oid="i25gr6s" />,
     title: "Cloud & Infrastructure",
     skills: [
       { name: "GCP", level: "Advanced", color: "blue", years: 3 },
@@ -130,7 +130,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <BookOpen className="h-6 w-6" data-oid="n4236ps" />,
+    icon: <BookOpen className="h-6 w-6" data-oid="d7h:-75" />,
     title: "Research & Analysis",
     skills: [
       { name: "Grant Writing", level: "Advanced", color: "blue", years: 3 },
@@ -146,7 +146,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Tool className="h-6 w-6" data-oid="psjma.:" />,
+    icon: <Tool className="h-6 w-6" data-oid="xc3b6cj" />,
     title: "Tools & Technologies",
     skills: [
       { name: "SolidWorks", level: "Intermediate", color: "blue", years: 2 },
@@ -158,7 +158,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Heart className="h-6 w-6" data-oid="s0ckzq1" />,
+    icon: <Heart className="h-6 w-6" data-oid="z8i-n.f" />,
     title: "Soft Skills",
     skills: [
       { name: "Technical Writing", level: "Expert", color: "green", years: 6 },
@@ -176,7 +176,7 @@ const skillCategories = [
     ],
   },
   {
-    icon: <Microscope className="h-6 w-6" data-oid="ieij6g3" />,
+    icon: <Microscope className="h-6 w-6" data-oid="0azg880" />,
     title: "Physics & Mathematics",
     skills: [
       { name: "Complex Analysis", level: "Advanced", color: "blue", years: 4 },
@@ -227,20 +227,20 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="py-12" data-oid="1a25ncp">
+    <section id="skills" className="py-12" data-oid="reltiqw">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        data-oid="8d67l0p"
+        data-oid="u_c9n87"
       >
-        <h2 className="text-3xl font-bold text-center mb-4" data-oid="_hs6gyj">
+        <h2 className="text-3xl font-bold text-center mb-4" data-oid="52z93lp">
           Technical Skills
         </h2>
         <p
           className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-          data-oid=".cxdc1g"
+          data-oid="rbcso:."
         >
           A comprehensive overview of my technical expertise across various
           domains, from machine learning and AI to software development and
@@ -254,15 +254,15 @@ export default function Skills() {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
         className="flex flex-col md:flex-row gap-4 mb-8"
-        data-oid="f5alryl"
+        data-oid="s8mbov6"
       >
-        <div className="relative flex-1" data-oid="t5xki_-">
+        <div className="relative flex-1" data-oid="vi2hudf">
           <Search
             className={cn(
               "absolute left-3 top-3 h-4 w-4 transition-colors duration-200",
               isSearchFocused ? "text-primary" : "text-muted-foreground",
             )}
-            data-oid="jsjih1_"
+            data-oid="rfel3lp"
           />
 
           <Input
@@ -278,19 +278,19 @@ export default function Skills() {
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setIsSearchFocused(false)}
-            data-oid="_24-bo7"
+            data-oid="6dgdn_f"
           />
         </div>
 
         <div
           className="flex gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar"
-          data-oid="b30mf30"
+          data-oid="fwv8con"
         >
           <Button
             variant={selectedLevel === "All" ? "default" : "outline"}
             onClick={() => setSelectedLevel("All")}
             className="transition-all duration-300"
-            data-oid="v1-.yy9"
+            data-oid="xi6lvg1"
           >
             All
           </Button>
@@ -298,7 +298,7 @@ export default function Skills() {
             variant={selectedLevel === "Expert" ? "default" : "outline"}
             onClick={() => setSelectedLevel("Expert")}
             className="transition-all duration-300"
-            data-oid="9.8.j1n"
+            data-oid="jkcqn3a"
           >
             Expert
           </Button>
@@ -306,7 +306,7 @@ export default function Skills() {
             variant={selectedLevel === "Advanced" ? "default" : "outline"}
             onClick={() => setSelectedLevel("Advanced")}
             className="transition-all duration-300"
-            data-oid="hg-weff"
+            data-oid="lwg0_m-"
           >
             Advanced
           </Button>
@@ -314,7 +314,7 @@ export default function Skills() {
             variant={selectedLevel === "Intermediate" ? "default" : "outline"}
             onClick={() => setSelectedLevel("Intermediate")}
             className="transition-all duration-300"
-            data-oid="sc9qssu"
+            data-oid="dkxhtdj"
           >
             Intermediate
           </Button>
@@ -323,9 +323,9 @@ export default function Skills() {
 
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        data-oid="zhylyfh"
+        data-oid="a7ggdhd"
       >
-        <AnimatePresence data-oid="fupugt4">
+        <AnimatePresence data-oid="..:2c45">
           {skillCategories.map((category, categoryIndex) => {
             // Filter skills based on search and level
             const filteredSkills = category.skills.filter((skill) => {
@@ -348,11 +348,11 @@ export default function Skills() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
                 className="border rounded-xl p-6 bg-card hover:shadow-lg transition-all duration-300"
-                data-oid="3fg_s0j"
+                data-oid="3v-9ppb"
               >
                 <div
                   className="flex items-center gap-2 mb-4"
-                  data-oid="48s3wiq"
+                  data-oid="yrd..wy"
                 >
                   <motion.div
                     initial={{ scale: 0.8 }}
@@ -361,17 +361,17 @@ export default function Skills() {
                       duration: 0.5,
                       delay: categoryIndex * 0.1 + 0.2,
                     }}
-                    data-oid="v3uvif5"
+                    data-oid="byll-ri"
                   >
                     {category.icon}
                   </motion.div>
-                  <h3 className="text-lg font-semibold" data-oid="1gjy6c7">
+                  <h3 className="text-lg font-semibold" data-oid="uj8cho9">
                     {category.title}
                   </h3>
                 </div>
 
-                <div className="flex flex-wrap gap-2" data-oid="q511o6h">
-                  <TooltipProvider data-oid="zy:m-yq">
+                <div className="flex flex-wrap gap-2" data-oid="-7-23yi">
+                  <TooltipProvider data-oid="o2_jg4-">
                     {filteredSkills.map((skill, skillIndex) => (
                       <motion.div
                         key={skill.name}
@@ -383,16 +383,16 @@ export default function Skills() {
                         }}
                         onHoverStart={() => setHoveredSkill(skill.name)}
                         onHoverEnd={() => setHoveredSkill(null)}
-                        data-oid="hlk-m59"
+                        data-oid="n02urm0"
                       >
-                        <Tooltip data-oid="-j0zz6k">
-                          <TooltipTrigger asChild data-oid="57f4w71">
+                        <Tooltip data-oid="iiq8tqm">
+                          <TooltipTrigger asChild data-oid="l99qx1h">
                             <div
                               className={cn(
                                 `skill-tag skill-tag-${skill.color}`,
                                 hoveredSkill === skill.name ? "scale-110" : "",
                               )}
-                              data-oid="l2_4b2_"
+                              data-oid="r2bpva1"
                             >
                               {skill.name}
                             </div>
@@ -400,13 +400,13 @@ export default function Skills() {
                           <TooltipContent
                             side="top"
                             className="animate-fade-in"
-                            data-oid="o-ca0p0"
+                            data-oid="1..fv03"
                           >
-                            <div className="text-center" data-oid="qhd4dpw">
-                              <div className="font-semibold" data-oid="c:6gk2w">
+                            <div className="text-center" data-oid="wa95cet">
+                              <div className="font-semibold" data-oid="_3bkyyn">
                                 {skill.name}
                               </div>
-                              <div className="text-xs" data-oid="ag5pqbs">
+                              <div className="text-xs" data-oid="gqtbb1b">
                                 {skill.level} • {skill.years}{" "}
                                 {skill.years === 1 ? "year" : "years"}
                               </div>
@@ -429,34 +429,34 @@ export default function Skills() {
         transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true }}
         className="flex justify-center mt-12 gap-8"
-        data-oid="r-h24_2"
+        data-oid="05_yem3"
       >
-        <div className="flex items-center gap-2" data-oid="8nu:e71">
+        <div className="flex items-center gap-2" data-oid="4z01q52">
           <div
             className="skill-level-expert px-2 py-1 rounded-md"
-            data-oid="4a0_cq0"
+            data-oid="boluvws"
           >
             Expert
           </div>
-          <span data-oid="9tlzk:9">4+ years</span>
+          <span data-oid="t3vn6n9">4+ years</span>
         </div>
-        <div className="flex items-center gap-2" data-oid="e8wp5_y">
+        <div className="flex items-center gap-2" data-oid="cvv-c.j">
           <div
             className="skill-level-advanced px-2 py-1 rounded-md"
-            data-oid="m5sqizz"
+            data-oid="l6zt574"
           >
             Advanced
           </div>
-          <span data-oid="g973mkg">2-4 years</span>
+          <span data-oid="svuph9f">2-4 years</span>
         </div>
-        <div className="flex items-center gap-2" data-oid="x6-mtc-">
+        <div className="flex items-center gap-2" data-oid="g0763kc">
           <div
             className="skill-level-intermediate px-2 py-1 rounded-md"
-            data-oid="amtmz2b"
+            data-oid="vqctxmy"
           >
             Intermediate
           </div>
-          <span data-oid="t9lin1v">1-2 years</span>
+          <span data-oid="0drvl8p">1-2 years</span>
         </div>
       </motion.div>
     </section>

@@ -69,7 +69,7 @@ export default function InteractiveHero() {
   }, []);
 
   return (
-    <CustomGradientBackground className="min-h-[90vh]" data-oid="dpefjgb">
+    <CustomGradientBackground className="min-h-[90vh]" data-oid="y-xd0o2">
       <motion.section
         ref={containerRef}
         style={{ opacity, scale, y }}
@@ -77,7 +77,7 @@ export default function InteractiveHero() {
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        data-oid="6n95bd4"
+        data-oid="f2yniwy"
       >
         {/* Interactive hover effect */}
         {isHovered && (
@@ -86,7 +86,7 @@ export default function InteractiveHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            data-oid="go1.mmp"
+            data-oid="d3.:0hm"
           >
             <motion.div
               className="absolute bg-blue-500/10 rounded-full blur-3xl"
@@ -99,17 +99,17 @@ export default function InteractiveHero() {
                 y: "-50%",
               }}
               transition={{ type: "spring", stiffness: 150, damping: 15 }}
-              data-oid="a3y5u6j"
+              data-oid="dtfgq:f"
             />
           </motion.div>
         )}
 
-        <div className="container mx-auto px-4 z-10" data-oid="r2-xwy_">
+        <div className="container mx-auto px-4 z-10" data-oid="1bj41o-">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            data-oid="e0c3p:y"
+            data-oid="zkf.dp5"
           >
             <motion.h1
               className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-center"
@@ -119,7 +119,7 @@ export default function InteractiveHero() {
                   : "0 0 0px rgba(255,255,255,0)",
               }}
               transition={{ duration: 0.3 }}
-              data-oid="xxbi8t."
+              data-oid="vw-0d60"
             >
               <motion.span
                 className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 inline-block"
@@ -128,7 +128,7 @@ export default function InteractiveHero() {
                   y: mousePosition.y * 0.05,
                 }}
                 transition={{ type: "spring", stiffness: 150, damping: 15 }}
-                data-oid="nykn7_-"
+                data-oid="xdkv9ak"
               >
                 MUBARAK A
               </motion.span>
@@ -140,14 +140,14 @@ export default function InteractiveHero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-muted-foreground mb-8 flex items-center justify-center gap-2 text-center"
-            data-oid="8.l3n1x"
+            data-oid="tkraii6"
           >
-            <Mail className="h-4 w-4" data-oid="mlb.omt" />
-            <span data-oid="9s-x0nq">mr1398463@gmail.com</span>
-            <span className="mx-2" data-oid="36:8ppy">
+            <Mail className="h-4 w-4" data-oid="rrl6qxm" />
+            <span data-oid="2c:0q6:">mr1398463@gmail.com</span>
+            <span className="mx-2" data-oid="2v:zi3g">
               |
             </span>
-            <span data-oid="0tis-9s">(+91)9500255291</span>
+            <span data-oid=":95cv8n">(+91)9500255291</span>
           </motion.div>
 
           <motion.p
@@ -155,7 +155,7 @@ export default function InteractiveHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="max-w-3xl text-lg md:text-xl mb-12 leading-relaxed text-center mx-auto"
-            data-oid="5tbwd.4"
+            data-oid="u2nx2uq"
           >
             <TypewriterEffect
               text="  Software Engineer, AI Specialist, and Community Organizer specializing in machine learning, generative AI."
@@ -166,7 +166,7 @@ export default function InteractiveHero() {
                 "cybersecurity",
                 "STEM",
               ]}
-              data-oid="qj6:2qh"
+              data-oid="v_xvs.r"
             />
           </motion.p>
 
@@ -175,24 +175,24 @@ export default function InteractiveHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.9 }}
             className="flex flex-col sm:flex-row gap-4 mb-12 justify-center"
-            data-oid="w_mmofe"
+            data-oid="c3ay.r0"
           >
             <Button
               size="lg"
               className="group relative overflow-hidden"
-              data-oid="a_ojt.i"
+              data-oid="r551e9w"
             >
-              <span className="relative z-10" data-oid="ggmnvi_">
+              <span className="relative z-10" data-oid="u-e68dr">
                 View Projects
               </span>
               <span
                 className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="5a2alul"
+                data-oid="fz1c7zr"
               />
 
               <ArrowRight
                 className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10"
-                data-oid="0_cq09j"
+                data-oid="dahjn7l"
               />
             </Button>
             <Button
@@ -200,14 +200,14 @@ export default function InteractiveHero() {
               variant="outline"
               onClick={handleContactClick}
               className="group relative overflow-hidden border-primary/50"
-              data-oid="4kifee7"
+              data-oid="9wijuxx"
             >
-              <span className="relative z-10" data-oid="0tj58dq">
+              <span className="relative z-10" data-oid="3abr8dd">
                 Contact Me
               </span>
               <span
                 className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                data-oid="ci06:5f"
+                data-oid="1x0ycc3"
               />
             </Button>
           </motion.div>
@@ -217,26 +217,26 @@ export default function InteractiveHero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
             className="flex gap-4 justify-center"
-            data-oid="0mdd1.2"
+            data-oid="z6.ga1z"
           >
             <SocialButton
-              icon={<Github className="h-5 w-5" data-oid="prgfl0x" />}
+              icon={<Github className="h-5 w-5" data-oid="7umz8o6" />}
               url="https://github.com"
               label="GitHub"
-              data-oid="i856ky:"
+              data-oid="35mpb74"
             />
 
             <SocialButton
-              icon={<Linkedin className="h-5 w-5" data-oid="0.7s0sz" />}
+              icon={<Linkedin className="h-5 w-5" data-oid="e4.1rij" />}
               url="https://linkedin.com"
               label="LinkedIn"
-              data-oid="j2eggfo"
+              data-oid="ivdmsw3"
             />
           </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <AnimatePresence data-oid="kj.w7fw">
+        <AnimatePresence data-oid="3m_5z2y">
           {showScrollIndicator && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -244,24 +244,24 @@ export default function InteractiveHero() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
               className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-              data-oid="9ltldez"
+              data-oid="xb7bk7a"
             >
               <motion.p
                 className="text-sm text-muted-foreground mb-2"
                 animate={{ y: [0, 5, 0] }}
                 transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-                data-oid="s9933cw"
+                data-oid="e2k7snd"
               >
                 Scroll to explore
               </motion.p>
               <motion.div
                 animate={{ y: [0, 5, 0] }}
                 transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-                data-oid="yvom_jl"
+                data-oid="rp_s:-0"
               >
                 <ChevronDown
                   className="h-5 w-5 text-muted-foreground"
-                  data-oid="buyuixv"
+                  data-oid="j-dvlfj"
                 />
               </motion.div>
             </motion.div>
@@ -269,7 +269,7 @@ export default function InteractiveHero() {
         </AnimatePresence>
 
         {/* Interactive cursor */}
-        <AnimatePresence data-oid="693:g11">
+        <AnimatePresence data-oid="nhe7yeo">
           {isHovered && (
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -283,11 +283,11 @@ export default function InteractiveHero() {
               className="hidden md:block pointer-events-none fixed w-6 h-6 rounded-full border border-primary z-50 mix-blend-difference"
               style={{ left: "50%", top: "50%" }}
               transition={{ type: "spring", stiffness: 150, damping: 15 }}
-              data-oid="l-xx0ux"
+              data-oid=":z7h5fk"
             >
               <MousePointer
                 className="h-3 w-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary"
-                data-oid="l3uprc6"
+                data-oid="r-f91:j"
               />
             </motion.div>
           )}
@@ -310,7 +310,7 @@ function SocialButton({ icon, url, label }: SocialButtonProps) {
       size="icon"
       asChild
       className="relative overflow-hidden group"
-      data-oid="m3_9qmf"
+      data-oid="t2u5iqn"
     >
       <a
         href={url}
@@ -318,12 +318,12 @@ function SocialButton({ icon, url, label }: SocialButtonProps) {
         rel="noopener noreferrer"
         aria-label={label}
         className="transition-transform duration-300 group-hover:scale-110"
-        data-oid="bxbdvdr"
+        data-oid="3h335t7"
       >
         {icon}
         <span
           className="absolute inset-0 rounded-full bg-primary/10 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ease-out"
-          data-oid="mqt7_d9"
+          data-oid="f3pxzxb"
         ></span>
       </a>
     </Button>
@@ -358,9 +358,9 @@ function TypewriterEffect({
   // If no highlighted terms or typing is still in progress, just return the text
   if (highlightTerms.length === 0 || displayedText.length < text.length) {
     return (
-      <span data-oid="mdh2vyi">
+      <span data-oid="dzuhjd1">
         {displayedText}
-        <span className="animate-pulse" data-oid="4oad50w">
+        <span className="animate-pulse" data-oid="0940agy">
           |
         </span>
       </span>
@@ -382,7 +382,7 @@ function TypewriterEffect({
   return (
     <span
       dangerouslySetInnerHTML={{ __html: processedText }}
-      data-oid="0n6xfap"
+      data-oid="ft.srlj"
     />
   );
 }

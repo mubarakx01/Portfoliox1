@@ -18,7 +18,7 @@ const Progress = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="26s88ij"
+    data-oid="9li9795"
   >
     <ProgressPrimitive.Indicator
       className={cn(
@@ -26,7 +26,7 @@ const Progress = React.forwardRef<
         indicatorClassName,
       )}
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-      data-oid="3i7shby"
+      data-oid="f3y:fe7"
     />
   </ProgressPrimitive.Root>
 ));

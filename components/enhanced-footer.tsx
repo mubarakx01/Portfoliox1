@@ -66,11 +66,11 @@ export default function EnhancedFooter() {
         action: (
           <div
             className="h-8 w-8 bg-green-500/20 rounded-full flex items-center justify-center"
-            data-oid="d79ts_5"
+            data-oid="9.e:jx6"
           >
             <CheckCircle
               className="h-5 w-5 text-green-500"
-              data-oid="wr61z0:"
+              data-oid="zc88xjj"
             />
           </div>
         ),
@@ -87,200 +87,200 @@ export default function EnhancedFooter() {
   return (
     <footer
       className="bg-gradient-to-b from-background to-background/80 border-t"
-      data-oid="sjjeq3."
+      data-oid="m5xxu9w"
     >
-      <div className="container mx-auto px-4 py-12" data-oid="iiv.gqx">
+      <div className="container mx-auto px-4 py-12" data-oid="yxo9wti">
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
-          data-oid="4l7wcs-"
+          data-oid="1kxgs_-"
         >
-          <div data-oid="ajs1vty">
+          <div data-oid="-ygk3ul">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              data-oid="ckr07x."
+              data-oid="868.4iw"
             >
-              <div className="font-bold text-xl mb-4" data-oid="ug_11oz">
+              <div className="font-bold text-xl mb-4" data-oid="cyglk:2">
                 MUBARAK A
               </div>
-              <p className="text-muted-foreground mb-6" data-oid="il65s0j">
+              <p className="text-muted-foreground mb-6" data-oid="8vldp59">
                 AI Engineer & Community Builder specializing in machine
                 learning, generative AI, and STEM education.
               </p>
 
-              <div className="flex gap-3" data-oid="33:6tun">
+              <div className="flex gap-3" data-oid="1lis_0h">
                 <SocialButton
-                  icon={<Github className="h-5 w-5" data-oid="wgn12ub" />}
+                  icon={<Github className="h-5 w-5" data-oid="-9frb0d" />}
                   url="https://github.com/mubarakx01"
                   label="GitHub"
-                  data-oid="trc3lqg"
+                  data-oid="t.4ehl:"
                 />
 
                 <SocialButton
-                  icon={<Linkedin className="h-5 w-5" data-oid="flfmr:t" />}
+                  icon={<Linkedin className="h-5 w-5" data-oid="dxaw4sk" />}
                   url="https://www.linkedin.com/in/mubarak-a-xyz/"
                   label="LinkedIn"
-                  data-oid="oi-3wk3"
+                  data-oid="f72k:27"
                 />
 
                 <SocialButton
-                  icon={<Twitter className="h-5 w-5" data-oid="c49:v74" />}
+                  icon={<Twitter className="h-5 w-5" data-oid="zrnk0.n" />}
                   url="https://twitter.com"
                   label="Twitter"
-                  data-oid="umwv.rb"
+                  data-oid="h1q7h7n"
                 />
 
                 <SocialButton
-                  icon={<Mail className="h-5 w-5" data-oid="30b1p.t" />}
+                  icon={<Mail className="h-5 w-5" data-oid="ilas3ov" />}
                   url="mailto:mr1398463@gmail.com"
                   label="Email"
-                  data-oid="4_7sxok"
+                  data-oid="t4mqlkh"
                 />
               </div>
             </motion.div>
           </div>
 
-          <div data-oid="9d:ve9o">
+          <div data-oid="j4cq9xg">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              data-oid="3v704g:"
+              data-oid="o_q5bs6"
             >
-              <h3 className="font-semibold mb-4" data-oid="p-u-xut">
+              <h3 className="font-semibold mb-4" data-oid="vwh4:8t">
                 Quick Links
               </h3>
-              <ul className="space-y-2" data-oid="q_5-yny">
-                <FooterLink href="#" label="Home" data-oid="-5wm.fv" />
-                <FooterLink href="#skills" label="Skills" data-oid="xfyrfg1" />
+              <ul className="space-y-2" data-oid="j2i58l8">
+                <FooterLink href="#" label="Home" data-oid="i0fv48t" />
+                <FooterLink href="#skills" label="Skills" data-oid="6d8urwc" />
                 <FooterLink
                   href="#experience"
                   label="Experience"
-                  data-oid=":jn3uaf"
+                  data-oid="qdo6_v4"
                 />
 
                 <FooterLink
                   href="#projects"
                   label="Projects"
-                  data-oid="2y7o-e8"
+                  data-oid="smozfn8"
                 />
 
                 <FooterLink
                   href="#education"
                   label="Education"
-                  data-oid="u1g39aw"
+                  data-oid="tmars.i"
                 />
 
                 <FooterLink
                   href="#publications"
                   label="Publications"
-                  data-oid="8p0acmw"
+                  data-oid="cy5j3bg"
                 />
 
                 <FooterLink
                   href="#contact"
                   label="Contact"
-                  data-oid="3twov_d"
+                  data-oid="0dx:xto"
                 />
               </ul>
             </motion.div>
           </div>
 
-          <div data-oid="r-6pq_0">
+          <div data-oid=".nsn:vt">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              data-oid="-xspkis"
+              data-oid="dj4zz3f"
             >
-              <h3 className="font-semibold mb-4" data-oid="6:3ag38">
+              <h3 className="font-semibold mb-4" data-oid="fyu_o76">
                 Contact Info
               </h3>
-              <ul className="space-y-3" data-oid="xyq5qqy">
+              <ul className="space-y-3" data-oid="yt37l4k">
                 <li
                   className="flex items-center gap-3 text-muted-foreground"
-                  data-oid=".q_pa9w"
+                  data-oid="e6giv20"
                 >
-                  <Mail className="h-4 w-4 text-primary" data-oid="wikn35i" />
-                  <span data-oid="rdatowm">mr1398463@gmail.com</span>
+                  <Mail className="h-4 w-4 text-primary" data-oid="uuzag:i" />
+                  <span data-oid="_z-p-8v">mr1398463@gmail.com</span>
                 </li>
                 <li
                   className="flex items-center gap-3 text-muted-foreground"
-                  data-oid="6m_dupf"
+                  data-oid="i3ijqtr"
                 >
-                  <Phone className="h-4 w-4 text-primary" data-oid="37z1b-w" />
-                  <span data-oid="aun.yzh">(+91)9500255291</span>
+                  <Phone className="h-4 w-4 text-primary" data-oid="9_._ob:" />
+                  <span data-oid="hp.xvm.">(+91)9500255291</span>
                 </li>
                 <li
                   className="flex items-center gap-3 text-muted-foreground"
-                  data-oid=":hla:1w"
+                  data-oid="wks_18:"
                 >
-                  <MapPin className="h-4 w-4 text-primary" data-oid="v-1c:i9" />
-                  <span data-oid="rarkr:l">India,Chennai</span>
+                  <MapPin className="h-4 w-4 text-primary" data-oid="nw9rkkl" />
+                  <span data-oid="1uy4mrj">India,Chennai</span>
                 </li>
                 <li
                   className="flex items-center gap-3 text-muted-foreground"
-                  data-oid="7n5ne8:"
+                  data-oid="hkyawh_"
                 >
                   <Calendar
                     className="h-4 w-4 text-primary"
-                    data-oid="84dw11c"
+                    data-oid="jlv7ir7"
                   />
 
-                  <span data-oid=":-svlen">Available for projects</span>
+                  <span data-oid="618zkge">Available for projects</span>
                 </li>
               </ul>
 
               {/* Add Theme Preview */}
-              <div className="mt-6" data-oid="_lf-dba">
-                <ThemePreview data-oid="__ycmss" />
+              <div className="mt-6" data-oid="smaaii7">
+                <ThemePreview data-oid="jvuy_mb" />
               </div>
             </motion.div>
           </div>
 
-          <div data-oid="33z-853">
+          <div data-oid="i3031ih">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              data-oid="2r_yjm-"
+              data-oid="yx.qmxr"
             >
-              <h3 className="font-semibold mb-4" data-oid="x0iy346">
+              <h3 className="font-semibold mb-4" data-oid="l:-7n_l">
                 Newsletter
               </h3>
-              <p className="text-muted-foreground mb-4" data-oid="x9nopxx">
+              <p className="text-muted-foreground mb-4" data-oid="lwcj0ib">
                 Subscribe to receive updates on new projects and articles.
               </p>
 
-              <Form {...form} data-oid="-1hx_4h">
+              <Form {...form} data-oid="wf:8iyg">
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
                   className="space-y-4"
-                  data-oid="o6x.jsq"
+                  data-oid="h11qzzb"
                 >
                   <FormField
                     control={form.control}
                     name="email"
                     render={({ field }) => (
-                      <FormItem data-oid="9ns5_v-">
-                        <div className="flex gap-2" data-oid="v9ordxy">
-                          <FormControl data-oid="0fwvn9m">
+                      <FormItem data-oid="lb4a2:0">
+                        <div className="flex gap-2" data-oid="pv791a2">
+                          <FormControl data-oid="99axkj6">
                             <Input
                               placeholder="Your email"
                               {...field}
-                              data-oid="bfjd-vm"
+                              data-oid=":3fgxs1"
                             />
                           </FormControl>
                           <Button
                             type="submit"
                             size="icon"
                             disabled={isSubmitting}
-                            data-oid="gr:9qna"
+                            data-oid="x7nwxae"
                           >
                             {isSubmitting ? (
                               <svg
@@ -288,7 +288,7 @@ export default function EnhancedFooter() {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                data-oid="ptfollh"
+                                data-oid="o4oh88b"
                               >
                                 <circle
                                   className="opacity-25"
@@ -297,31 +297,31 @@ export default function EnhancedFooter() {
                                   r="10"
                                   stroke="currentColor"
                                   strokeWidth="4"
-                                  data-oid="x7:xhrx"
+                                  data-oid="5t_x-_0"
                                 ></circle>
                                 <path
                                   className="opacity-75"
                                   fill="currentColor"
                                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                  data-oid="rp28gu4"
+                                  data-oid="tw6mj7l"
                                 ></path>
                               </svg>
                             ) : (
-                              <Send className="h-4 w-4" data-oid="a-b:o2d" />
+                              <Send className="h-4 w-4" data-oid="0w3uly:" />
                             )}
                           </Button>
                         </div>
-                        <FormMessage data-oid="1dh11u2" />
+                        <FormMessage data-oid="_f4.gfm" />
                       </FormItem>
                     )}
-                    data-oid="9g8d..n"
+                    data-oid="4z_mh:s"
                   />
                 </form>
               </Form>
 
               <p
                 className="text-xs text-muted-foreground mt-2"
-                data-oid="gs71x82"
+                data-oid="2:2o0nt"
               >
                 I respect your privacy. Unsubscribe at any time.
               </p>
@@ -331,25 +331,25 @@ export default function EnhancedFooter() {
 
         <div
           className="border-t pt-6 flex flex-col md:flex-row justify-between items-center"
-          data-oid="8wk.2r1"
+          data-oid="ixh8si1"
         >
           <div
             className="text-sm text-muted-foreground mb-4 md:mb-0"
-            data-oid="8isu5-e"
+            data-oid="k3pmfbk"
           >
             © {currentYear} MUBARAK A. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-4" data-oid="3yfej:p">
+          <div className="flex items-center gap-4" data-oid="he-e1t:">
             <Button
               variant="outline"
               size="icon"
               className="rounded-full"
               onClick={scrollToTop}
               aria-label="Scroll to top"
-              data-oid="dzwojrk"
+              data-oid="h8r96ju"
             >
-              <ArrowUp className="h-4 w-4" data-oid="d_i-5a_" />
+              <ArrowUp className="h-4 w-4" data-oid="t6.2_t9" />
             </Button>
           </div>
         </div>
@@ -371,14 +371,14 @@ function SocialButton({ icon, url, label }: SocialButtonProps) {
       size="icon"
       asChild
       className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-      data-oid="y_abfrw"
+      data-oid="45-lxc-"
     >
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={label}
-        data-oid="a_p:qu1"
+        data-oid="ghtpdcl"
       >
         {icon}
       </a>
@@ -393,7 +393,7 @@ interface FooterLinkProps {
 
 function FooterLink({ href, label }: FooterLinkProps) {
   return (
-    <li data-oid="dzx:igj">
+    <li data-oid=".1w1ny4">
       <a
         href={href}
         className="text-muted-foreground hover:text-primary transition-colors duration-200 inline-block"
@@ -401,7 +401,7 @@ function FooterLink({ href, label }: FooterLinkProps) {
           e.preventDefault();
           document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
         }}
-        data-oid="ut7c5t_"
+        data-oid="5hor:ar"
       >
         {label}
       </a>

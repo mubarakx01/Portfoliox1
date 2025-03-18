@@ -76,14 +76,14 @@ export function ThemePreview({ className }: ThemePreviewProps) {
           "border-none bg-background/50 backdrop-blur-sm",
           className,
         )}
-        data-oid="h:dymg."
+        data-oid="webr1_h"
       >
-        <CardContent className="p-4" data-oid="-ou:1kf">
+        <CardContent className="p-4" data-oid="5gtwoho">
           <div
             className="h-[150px] flex items-center justify-center"
-            data-oid="r4.je.-"
+            data-oid="dkqo--6"
           >
-            <div className="animate-pulse" data-oid="i5tdo4j">
+            <div className="animate-pulse" data-oid="ykt8a.8">
               Loading theme options...
             </div>
           </div>
@@ -98,23 +98,23 @@ export function ThemePreview({ className }: ThemePreviewProps) {
   return (
     <Card
       className={cn("border-none bg-background/50 backdrop-blur-sm", className)}
-      data-oid="dax4p.z"
+      data-oid="rg0pt_f"
     >
-      <CardContent className="p-4" data-oid="ex2:0ze">
-        <div className="flex items-center gap-2 mb-3" data-oid="6cp1jl0">
-          <Palette className="h-4 w-4 text-primary" data-oid="ibds-rr" />
-          <h3 className="text-sm font-medium" data-oid="rlhd8vz">
+      <CardContent className="p-4" data-oid="8ftmafg">
+        <div className="flex items-center gap-2 mb-3" data-oid=".hj_ree">
+          <Palette className="h-4 w-4 text-primary" data-oid="tm_.o0r" />
+          <h3 className="text-sm font-medium" data-oid="zmmn728">
             Theme Customization
           </h3>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-3" data-oid="z1hhqww">
+        <div className="flex flex-wrap gap-2 mb-3" data-oid="2htp9em">
           <Button
             variant={isDark ? "default" : "outline"}
             size="sm"
             className="text-xs h-8"
             onClick={() => setTheme("dark")}
-            data-oid="pn7fxk0"
+            data-oid="5d11jml"
           >
             Dark Mode
           </Button>
@@ -123,13 +123,13 @@ export function ThemePreview({ className }: ThemePreviewProps) {
             size="sm"
             className="text-xs h-8"
             onClick={() => setTheme("light")}
-            data-oid="7rxv-0n"
+            data-oid="kiyr_ri"
           >
             Light Mode
           </Button>
         </div>
 
-        <div className="grid grid-cols-3 gap-2" data-oid="j7lg_v2">
+        <div className="grid grid-cols-3 gap-2" data-oid="nh9-paj">
           {colorOptions.map((option) => (
             <motion.button
               key={option.value}
@@ -138,7 +138,7 @@ export function ThemePreview({ className }: ThemePreviewProps) {
               onMouseLeave={() => setHoveredTheme(null)}
               whileHover={{ scale: 1.05 }}
               className="relative flex flex-col items-center justify-center p-1 rounded-md hover:bg-muted transition-colors"
-              data-oid="4y3dr1b"
+              data-oid="0c3kn:b"
             >
               <div
                 className={cn(
@@ -148,10 +148,10 @@ export function ThemePreview({ className }: ThemePreviewProps) {
                     colorTheme === option.value) &&
                     "scale-110",
                 )}
-                data-oid="kwnbjy5"
+                data-oid="9y:_27j"
               />
 
-              <span className="text-xs mt-1" data-oid="kbk:o8s">
+              <span className="text-xs mt-1" data-oid="5o_r23q">
                 {option.label}
               </span>
               {colorTheme === option.value && (
@@ -159,9 +159,9 @@ export function ThemePreview({ className }: ThemePreviewProps) {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="absolute top-0 right-0 bg-primary text-primary-foreground rounded-full p-0.5"
-                  data-oid="be-044b"
+                  data-oid="c2.t7ls"
                 >
-                  <Check className="h-3 w-3" data-oid="962:dks" />
+                  <Check className="h-3 w-3" data-oid="4.4ek0g" />
                 </motion.div>
               )}
             </motion.button>

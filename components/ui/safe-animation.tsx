@@ -90,7 +90,7 @@ export function SafeAnimation({
   if (!isClient || !shouldAnimate) {
     const Component = as;
     return (
-      <Component className={className} data-oid="k3n3.1h">
+      <Component className={className} data-oid="c54b6-.">
         {children}
       </Component>
     );
@@ -100,7 +100,7 @@ export function SafeAnimation({
   const MotionComponent = motion[as as keyof typeof motion] || motion.div;
 
   return (
-    <MotionComponent className={className} {...motionProps} data-oid="dlnhbo3">
+    <MotionComponent className={className} {...motionProps} data-oid="4agxkez">
       {children}
     </MotionComponent>
   );

@@ -22,7 +22,6 @@ export function Skeleton({
           <div
             className={cn("rounded-lg bg-muted/60 animate-pulse", className)}
             {...props}
-            data-oid="cx_hobj"
           />
         );
 
@@ -34,7 +33,6 @@ export function Skeleton({
               className,
             )}
             {...props}
-            data-oid="lw0zb:g"
           />
         );
 
@@ -43,7 +41,6 @@ export function Skeleton({
           <div
             className={cn("rounded-full bg-muted/60 animate-pulse", className)}
             {...props}
-            data-oid="v3pfkdf"
           />
         );
 
@@ -52,7 +49,6 @@ export function Skeleton({
           <div
             className={cn("rounded-md bg-muted/60 animate-pulse", className)}
             {...props}
-            data-oid="trm668f"
           />
         );
 
@@ -64,7 +60,6 @@ export function Skeleton({
               className,
             )}
             {...props}
-            data-oid="d99vsrw"
           />
         );
     }
@@ -75,11 +70,9 @@ export function Skeleton({
   }
 
   return (
-    <div className={`space-y-${gap}`} data-oid="1cvvsau">
+    <div className={`space-y-${gap}`}>
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} data-oid="0cpo2li">
-          {renderSkeleton()}
-        </div>
+        <div key={i}>{renderSkeleton()}</div>
       ))}
     </div>
   );

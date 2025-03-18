@@ -41,31 +41,31 @@ export default function Header() {
           ? "bg-background/80 backdrop-blur-md border-b"
           : "bg-transparent",
       )}
-      data-oid="nrvkjx8"
+      data-oid="r00kl0r"
     >
       <div
         className="container flex h-16 items-center justify-between"
-        data-oid="pr5rbwx"
+        data-oid="86oter2"
       >
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2"
-          data-oid="x5ejprj"
+          data-oid="hg9eqzm"
         >
-          <div className="flex items-center gap-2" data-oid="plhr:y1">
+          <div className="flex items-center gap-2" data-oid="h4cj_ll">
             <div
               className="font-bold text-xl bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
-              data-oid="-_q2y:v"
+              data-oid="comc4v6"
             >
               SW
             </div>
-            <div className="hidden md:block" data-oid="9j1hydp">
-              <div className="font-bold" data-oid="x_c8tvk">
+            <div className="hidden md:block" data-oid="k8hxl3w">
+              <div className="font-bold" data-oid="s0vbol0">
                 MUBARAK A
               </div>
-              <div className="text-xs text-muted-foreground" data-oid="7lruxy8">
+              <div className="text-xs text-muted-foreground" data-oid="zf-bf-h">
                 AI Engineer & Community Builder
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function Header() {
 
         <nav
           className="hidden md:flex items-center gap-6 text-sm"
-          data-oid="jn:40cp"
+          data-oid="ro8:l:w"
         >
           {navItems.map((item, index) => (
             <motion.div
@@ -82,7 +82,7 @@ export default function Header() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              data-oid="v61pd4h"
+              data-oid="z:97wp3"
             >
               <Link
                 href={item.href}
@@ -91,7 +91,7 @@ export default function Header() {
                   pathname === item.href ? "font-medium" : "",
                   "after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
                 )}
-                data-oid="tt7_at8"
+                data-oid="dduyvxo"
               >
                 {item.name}
               </Link>
@@ -99,35 +99,35 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4" data-oid="68qqt66">
+        <div className="flex items-center gap-4" data-oid="86i:lvo">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.7 }}
-            data-oid="r25.giz"
+            data-oid="7z:keig"
           >
-            <ModeToggle data-oid="joauew9" />
+            <ModeToggle data-oid="vg3d1i-" />
           </motion.div>
 
-          <div className="md:hidden" data-oid="fapwz6-">
+          <div className="md:hidden" data-oid="hfc9qsk">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              data-oid="kx11jlu"
+              data-oid="5c6ymxg"
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" data-oid="qj33xr4" />
+                <X className="h-5 w-5" data-oid="y6sihz3" />
               ) : (
-                <Menu className="h-5 w-5" data-oid="c0_r4h6" />
+                <Menu className="h-5 w-5" data-oid="o-4x4i6" />
               )}
             </Button>
           </div>
         </div>
       </div>
 
-      <AnimatePresence data-oid="st2tfgc">
+      <AnimatePresence data-oid="inwp3rc">
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -135,22 +135,22 @@ export default function Header() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden border-t overflow-hidden"
-            data-oid="rybw3sd"
+            data-oid="blkq6q_"
           >
-            <div className="flex flex-col space-y-3 p-4" data-oid="klbz4k3">
+            <div className="flex flex-col space-y-3 p-4" data-oid="af6xcwd">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  data-oid=".1zw1a-"
+                  data-oid="f.nn:8h"
                 >
                   <Link
                     href={item.href}
                     className={pathname === item.href ? "font-medium" : ""}
                     onClick={() => setMobileMenuOpen(false)}
-                    data-oid="2ow5tyy"
+                    data-oid="k49fgc_"
                   >
                     {item.name}
                   </Link>

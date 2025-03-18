@@ -31,14 +31,14 @@ export function ThemeProvider({
   // Prevent hydration mismatch
   if (!mounted) {
     return (
-      <div style={{ visibility: "hidden" }} data-oid="3y5esf1">
+      <div style={{ visibility: "hidden" }} data-oid="oqwcrfm">
         {children}
       </div>
     );
   }
 
   return (
-    <NextThemesProvider {...props} data-oid="uwh3nkl">
+    <NextThemesProvider {...props} data-oid=".7ynjrx">
       {children}
     </NextThemesProvider>
   );

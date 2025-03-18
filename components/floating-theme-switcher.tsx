@@ -73,21 +73,21 @@ export function FloatingThemeSwitcher() {
   const isDark = currentTheme === "dark";
 
   return (
-    <div className="fixed bottom-20 right-4 z-40" data-oid="o40p1ba">
-      <AnimatePresence data-oid="a.qx_-e">
+    <div className="fixed bottom-20 right-4 z-40" data-oid="-o48asy">
+      <AnimatePresence data-oid="h6r-rz8">
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 10 }}
             className="mb-2 p-3 bg-background/95 backdrop-blur-md rounded-lg border shadow-lg"
-            data-oid="8wztwzi"
+            data-oid="kwz9fz0"
           >
             <div
               className="flex justify-between items-center mb-2"
-              data-oid="-_55yhw"
+              data-oid="v11qpoi"
             >
-              <h3 className="text-sm font-medium" data-oid="70d6x-g">
+              <h3 className="text-sm font-medium" data-oid="f30vhh7">
                 Theme
               </h3>
               <Button
@@ -95,22 +95,22 @@ export function FloatingThemeSwitcher() {
                 size="sm"
                 className="h-7 w-7 p-0"
                 onClick={() => setIsOpen(false)}
-                data-oid="6u2diww"
+                data-oid=":vi59n6"
               >
-                <X className="h-4 w-4" data-oid=":nwak:y" />
+                <X className="h-4 w-4" data-oid="leg_chn" />
               </Button>
             </div>
 
-            <div className="flex gap-2 mb-3" data-oid="2q.wnwf">
+            <div className="flex gap-2 mb-3" data-oid="qors4k2">
               <Button
                 variant={isDark ? "default" : "outline"}
                 size="sm"
                 className="gap-1"
                 onClick={() => setTheme("dark")}
-                data-oid="ctzsr7s"
+                data-oid="ihvr2cg"
               >
-                <Moon className="h-3.5 w-3.5" data-oid="_hwfdgj" />
-                <span className="text-xs" data-oid="c2qr2.c">
+                <Moon className="h-3.5 w-3.5" data-oid="lxlzr_4" />
+                <span className="text-xs" data-oid="ezq19-k">
                   Dark
                 </span>
               </Button>
@@ -119,32 +119,32 @@ export function FloatingThemeSwitcher() {
                 size="sm"
                 className="gap-1"
                 onClick={() => setTheme("light")}
-                data-oid="t6hjtrr"
+                data-oid="x4lk097"
               >
-                <Sun className="h-3.5 w-3.5" data-oid="bcsir81" />
-                <span className="text-xs" data-oid="2a4gjo:">
+                <Sun className="h-3.5 w-3.5" data-oid="jxm2pi9" />
+                <span className="text-xs" data-oid="jqv:9mm">
                   Light
                 </span>
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-2" data-oid="63j5f7g">
+            <div className="grid grid-cols-3 gap-2" data-oid="e_72aeb">
               {colorOptions.map((option) => (
                 <button
                   key={option.value}
                   onClick={() => setColorTheme(option.value)}
                   className="relative flex flex-col items-center justify-center p-1 rounded-md hover:bg-muted transition-colors"
-                  data-oid="jszj.qh"
+                  data-oid="dn4dyb1"
                 >
                   <div
                     className={cn(
                       "w-8 h-8 rounded-full bg-gradient-to-br",
                       isDark ? option.darkColor : option.color,
                     )}
-                    data-oid="k0q_hn9"
+                    data-oid="po1i9zk"
                   />
 
-                  <span className="text-xs mt-1" data-oid="wymc82x">
+                  <span className="text-xs mt-1" data-oid="zsvf059">
                     {option.label}
                   </span>
                   {colorTheme === option.value && (
@@ -152,9 +152,9 @@ export function FloatingThemeSwitcher() {
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       className="absolute top-0 right-0 bg-primary text-primary-foreground rounded-full p-0.5"
-                      data-oid="dn716ja"
+                      data-oid="v.khlne"
                     >
-                      <Check className="h-3 w-3" data-oid="vtjv56t" />
+                      <Check className="h-3 w-3" data-oid="fb5w85l" />
                     </motion.div>
                   )}
                 </button>
@@ -171,9 +171,9 @@ export function FloatingThemeSwitcher() {
           isOpen ? "bg-primary text-primary-foreground" : "bg-background",
         )}
         onClick={() => setIsOpen(!isOpen)}
-        data-oid="36n7sxm"
+        data-oid="88qej:t"
       >
-        <Palette className="h-5 w-5" data-oid=".x36966" />
+        <Palette className="h-5 w-5" data-oid="8xs.ldx" />
       </Button>
     </div>
   );

@@ -15,23 +15,23 @@ export function SectionFallback({
   resetErrorBoundary,
 }: SectionFallbackProps) {
   return (
-    <div className="py-12" data-oid="zo3t56q">
-      <div className="container mx-auto px-4" data-oid="i7umjwi">
+    <div className="py-12" data-oid="qefrarl">
+      <div className="container mx-auto px-4" data-oid="_ia7lyq">
         <div
           className="flex flex-col items-center justify-center p-8 border border-destructive/20 rounded-lg bg-destructive/10 max-w-2xl mx-auto"
-          data-oid="-_qvo-:"
+          data-oid="u7de9f8"
         >
           <AlertTriangle
             className="h-12 w-12 text-destructive mb-4"
-            data-oid="qxssrvm"
+            data-oid="rj_n-89"
           />
 
-          <h3 className="text-xl font-semibold mb-2" data-oid="iwgp15d">
+          <h3 className="text-xl font-semibold mb-2" data-oid="-cyan5x">
             Failed to load {title} section
           </h3>
           <p
             className="text-muted-foreground mb-6 text-center"
-            data-oid="96y.x2v"
+            data-oid="cbpsk5z"
           >
             {error?.message ||
               "An unexpected error occurred while rendering this section."}
@@ -41,9 +41,9 @@ export function SectionFallback({
               variant="outline"
               onClick={resetErrorBoundary}
               className="gap-2"
-              data-oid="8v0n5eg"
+              data-oid="f40nqpa"
             >
-              <RefreshCw className="h-4 w-4" data-oid="byq_1r8" />
+              <RefreshCw className="h-4 w-4" data-oid="0zyzx4p" />
               Try again
             </Button>
           )}

@@ -40,8 +40,7 @@ export default function ResumeDownload() {
       // Show loading animation and success message
       setTimeout(() => {
         setIsDownloading(false);
-      
-      toast({
+        toast({
         title: "Resume Downloaded",
         description: "Your resume has been downloaded successfully.",
         action: (
@@ -57,7 +56,14 @@ export default function ResumeDownload() {
         ),
       });
     }, 1500);
-  };
+  } catch (error) {
+    setIsDownloading(false);
+    toast({
+      title: "Download Failed",
+      description: "There was an error downloading the resume. Please try again.",
+      variant: "destructive",
+    });
+  }
 
   return (
     <div className="flex flex-col items-center" data-oid="vrd:ztf">
@@ -264,6 +270,7 @@ export default function ResumeDownload() {
                   </ResumeSection>
 
                   <ResumeSection
+                    type="skills"
                     icon={
                       <Code
                         className="h-5 w-5 text-primary"
@@ -311,6 +318,7 @@ export default function ResumeDownload() {
                   </ResumeSection>
 
                   <ResumeSection
+                    type="awards"
                     icon={
                       <Award
                         className="h-5 w-5 text-primary"
@@ -357,6 +365,7 @@ export default function ResumeDownload() {
                   </ResumeSection>
 
                   <ResumeSection
+                    type="languages"
                     icon={
                       <Languages
                         className="h-5 w-5 text-primary"
@@ -458,4 +467,4 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
       ))}
     </ul>
   </div>
-);
+)};

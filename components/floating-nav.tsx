@@ -29,37 +29,37 @@ const navItems: NavItem[] = [
   {
     name: "Home",
     href: "#",
-    icon: <Home className="h-[18px] w-[18px]" data-oid="opcx61m" />,
+    icon: <Home className="h-[18px] w-[18px]" data-oid="85:1f.m" />,
   },
   {
     name: "Skills",
     href: "#skills",
-    icon: <Code className="h-[18px] w-[18px]" data-oid="0j-q8zn" />,
+    icon: <Code className="h-[18px] w-[18px]" data-oid="6urry8t" />,
   },
   {
     name: "Experience",
     href: "#experience",
-    icon: <Briefcase className="h-[18px] w-[18px]" data-oid="qarzwc6" />,
+    icon: <Briefcase className="h-[18px] w-[18px]" data-oid="ivv5-e0" />,
   },
   {
     name: "Projects",
     href: "#projects",
-    icon: <Code className="h-[18px] w-[18px] rotate-90" data-oid="ozclfnw" />,
+    icon: <Code className="h-[18px] w-[18px] rotate-90" data-oid="q3mg:v." />,
   },
   {
     name: "Education",
     href: "#education",
-    icon: <GraduationCap className="h-[18px] w-[18px]" data-oid="8u8_os0" />,
+    icon: <GraduationCap className="h-[18px] w-[18px]" data-oid="6ml4coe" />,
   },
   {
     name: "Publications",
     href: "#publications",
-    icon: <Book className="h-[18px] w-[18px]" data-oid=".sxqu4p" />,
+    icon: <Book className="h-[18px] w-[18px]" data-oid="sq70cfi" />,
   },
   {
     name: "Contact",
     href: "#contact",
-    icon: <Send className="h-[18px] w-[18px]" data-oid="8wiqg6c" />,
+    icon: <Send className="h-[18px] w-[18px]" data-oid="hi:dkoy" />,
   },
 ];
 
@@ -136,7 +136,7 @@ export default function FloatingNav() {
   return (
     <>
       {/* Desktop floating navigation */}
-      <AnimatePresence data-oid="5c603l4">
+      <AnimatePresence data-oid="a0tokc9">
         {isVisible && (
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -144,13 +144,13 @@ export default function FloatingNav() {
             exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden md:block"
-            data-oid="d1va.f1"
+            data-oid="6w9:pd4"
           >
             <div
               className="backdrop-blur-md bg-background/80 rounded-full border shadow-lg p-1.5"
-              data-oid="0:fwyjx"
+              data-oid="4p70yku"
             >
-              <nav className="flex items-center gap-1" data-oid="fi::mn8">
+              <nav className="flex items-center gap-1" data-oid="wzhp5c5">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
@@ -162,10 +162,10 @@ export default function FloatingNav() {
                         ? "text-white bg-primary"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent",
                     )}
-                    data-oid="yq_k4gt"
+                    data-oid="3qngrgm"
                   >
                     {item.icon}
-                    <span data-oid="s1:hp0f">{item.name}</span>
+                    <span data-oid="rv8zi41">{item.name}</span>
 
                     {activeSection === item.href.slice(1) && (
                       <motion.span
@@ -175,7 +175,7 @@ export default function FloatingNav() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        data-oid=":-9i4d_"
+                        data-oid="-48hd8j"
                       />
                     )}
                   </a>
@@ -187,7 +187,7 @@ export default function FloatingNav() {
       </AnimatePresence>
 
       {/* Mobile floating navigation button */}
-      <AnimatePresence data-oid="1juvpjb">
+      <AnimatePresence data-oid="ha5lpy1">
         {isVisible && (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
@@ -195,18 +195,18 @@ export default function FloatingNav() {
             exit={{ y: 100, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed bottom-4 right-4 z-50 md:hidden"
-            data-oid="_5.rp7x"
+            data-oid="oooyoab"
           >
             <Button
               size="icon"
               className="h-12 w-12 rounded-full shadow-lg bg-primary text-white"
               onClick={() => setIsOpen(!isOpen)}
-              data-oid="jqw37w_"
+              data-oid="3rozx05"
             >
               {isOpen ? (
-                <X className="h-5 w-5" data-oid="q4.5rid" />
+                <X className="h-5 w-5" data-oid="h4km-ct" />
               ) : (
-                <Menu className="h-5 w-5" data-oid="s24nx2m" />
+                <Menu className="h-5 w-5" data-oid="92df73_" />
               )}
             </Button>
           </motion.div>
@@ -214,7 +214,7 @@ export default function FloatingNav() {
       </AnimatePresence>
 
       {/* Mobile navigation menu */}
-      <AnimatePresence data-oid="nt.ul7j">
+      <AnimatePresence data-oid="269p2al">
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -222,11 +222,11 @@ export default function FloatingNav() {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.2 }}
             className="fixed bottom-20 right-4 z-50 md:hidden"
-            data-oid="fhpyx8-"
+            data-oid="o.87nll"
           >
             <div
               className="bg-background/95 backdrop-blur-lg rounded-lg border shadow-lg p-2 flex flex-col gap-1 w-48"
-              data-oid="3h6mt:7"
+              data-oid="isrbgbx"
             >
               {navItems.map((item) => (
                 <a
@@ -239,10 +239,10 @@ export default function FloatingNav() {
                       ? "bg-primary/10 text-primary"
                       : "hover:bg-accent text-muted-foreground hover:text-foreground",
                   )}
-                  data-oid="vxqoedv"
+                  data-oid="qdbl48l"
                 >
                   {item.icon}
-                  <span data-oid="73wz8b.">{item.name}</span>
+                  <span data-oid="mb-fynz">{item.name}</span>
                 </a>
               ))}
             </div>
@@ -251,7 +251,7 @@ export default function FloatingNav() {
       </AnimatePresence>
 
       {/* Back to top button */}
-      <AnimatePresence data-oid="2q:f_z7">
+      <AnimatePresence data-oid=":anjvm6">
         {showBackToTop && (
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -259,7 +259,7 @@ export default function FloatingNav() {
             exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed bottom-4 left-4 z-50"
-            data-oid="m0tk7im"
+            data-oid="0-hskem"
           >
             <Button
               size="icon"
@@ -267,9 +267,9 @@ export default function FloatingNav() {
               className="h-10 w-10 rounded-full shadow-md bg-background/80 backdrop-blur-sm hover:bg-accent"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               title="Back to top"
-              data-oid="jw7t.6p"
+              data-oid=":1tpy5d"
             >
-              <ChevronUp className="h-5 w-5" data-oid="ft9g0:g" />
+              <ChevronUp className="h-5 w-5" data-oid="ribaq_2" />
             </Button>
           </motion.div>
         )}

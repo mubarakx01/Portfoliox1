@@ -38,19 +38,19 @@ export class ErrorBoundary extends React.Component<
         this.props.fallback || (
           <div
             className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4"
-            data-oid="9vivhf-"
+            data-oid="sv5-..t"
           >
             <AlertTriangle
               className="h-10 w-10 text-destructive mb-4"
-              data-oid="4flahd_"
+              data-oid="7op_mw5"
             />
 
-            <h3 className="text-lg font-semibold mb-2" data-oid="f34o-eu">
+            <h3 className="text-lg font-semibold mb-2" data-oid="12jdtnl">
               Something went wrong
             </h3>
             <p
               className="text-muted-foreground mb-4 text-center max-w-md"
-              data-oid="c4xi_pu"
+              data-oid="-9xuvwc"
             >
               {this.state.error?.message ||
                 "An unexpected error occurred while rendering this section"}
@@ -58,7 +58,7 @@ export class ErrorBoundary extends React.Component<
             <Button
               variant="outline"
               onClick={() => this.setState({ hasError: false, error: null })}
-              data-oid="lkaog8e"
+              data-oid="ur3e6bn"
             >
               Try again
             </Button>
@@ -77,8 +77,8 @@ export function withErrorBoundary<P extends object>(
 ): React.FC<P> {
   return function WithErrorBoundary(props: P) {
     return (
-      <ErrorBoundary fallback={fallback} data-oid="6en3m4p">
-        <Component {...props} data-oid="ohogsf-" />
+      <ErrorBoundary fallback={fallback} data-oid="k0h_y:j">
+        <Component {...props} data-oid="do0w5b." />
       </ErrorBoundary>
     );
   };
