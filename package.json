@@ -2,10 +2,10 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOUR-USERNAME.github.io/portfolio-website",
+  "homepage": "https://mubarakx01.github.io/portfolio-website",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
