@@ -136,7 +136,7 @@ export default function RedesignedHero() {
               data-oid="en5-5oi"
             >
               <span
-                className="bg-clip-text text-transparent bg-gradient-to-r from-happy-hearts to-golden-nugget"
+                className="bg-clip-text text-transparent bg-gradient-to-r from-happy-hearts to-golden-nugget bg-[#F5CFCF9F]"
                 data-oid="vc-0x6f"
               >
                 MUBARAK A
