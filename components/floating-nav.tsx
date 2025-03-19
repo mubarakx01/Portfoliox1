@@ -72,12 +72,8 @@ export default function FloatingNav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show nav after scrolling down a bit
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      // Hide the floating nav completely
+      setIsVisible(false);
 
       // Show back to top button after scrolling down further
       if (window.scrollY > 800) {
@@ -188,7 +184,7 @@ export default function FloatingNav() {
 
       {/* Mobile floating navigation button */}
       <AnimatePresence data-oid="hgza20l">
-        {isVisible && (
+        {showBackToTop && (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

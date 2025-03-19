@@ -10,6 +10,7 @@ export default function Hero() {
   return (
     <section
       className="min-h-screen flex flex-col justify-center px-4 bg-background text-foreground"
+      suppressHydrationWarning
       data-oid="ffazap5"
     >
       <div className="absolute top-4 right-4" data-oid="jrecqc5">
@@ -43,7 +44,6 @@ export default function Hero() {
         >
           Software Engineer, AI Specialist, and Community Organizer specializing
           in machine learning, generative AI.
-          </Badge>
         </p>
 
         <div className="flex flex-wrap gap-4 mb-8" data-oid="-aa4lvp">
@@ -84,7 +84,7 @@ export default function Hero() {
               icon: Linkedin,
               href: "https://www.linkedin.com/in/mubarak-a-xyz/",
             },
-            { icon: Mail, href: "mr1398463@gmail.com" },
+            { icon: Mail, href: "mailto:mr1398463@gmail.com" },
           ].map((social, index) => (
             <Button
               key={index}
