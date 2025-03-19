@@ -441,16 +441,19 @@ export default function RedesignedProjects() {
                       className="relative w-full h-48 md:h-auto md:w-1/2"
                       data-oid="_s3apql"
                     >
-                      <img
-                        src={
-                          featuredProjects[currentFeaturedIndex].imageUrl ||
-                          "/placeholder.svg"
-                        }
-                        alt={featuredProjects[currentFeaturedIndex].title}
-                        className="w-full h-full object-contain"
-                        style={{ maxWidth: "100%", maxHeight: "100%" }}
-                        data-oid="bxj894j"
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={
+                            featuredProjects[currentFeaturedIndex].imageUrl ||
+                            "/placeholder.svg"
+                          }
+                          alt={featuredProjects[currentFeaturedIndex].title}
+                          fill
+                          priority
+                          className="object-cover rounded-md"
+                          data-oid="bxj894j"
+                        />
+                      </div>
                     </div>
 
                     <div
@@ -953,13 +956,15 @@ export default function RedesignedProjects() {
                       className="relative aspect-video mb-6 rounded-lg overflow-hidden"
                       data-oid="_0fqnck"
                     >
-                      <img
-                        src={selectedProject.imageUrl || "/placeholder.svg"}
-                        alt={selectedProject.title}
-                        className="w-full h-full object-cover"
-                        style={{ maxWidth: "100%", maxHeight: "100%" }}
-                        data-oid="bzfnq.b"
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={selectedProject.imageUrl || "/placeholder.svg"}
+                          alt={selectedProject.title}
+                          fill
+                          className="object-cover rounded-md"
+                          data-oid="bzfnq.b"
+                        />
+                      </div>
                     </div>
 
                     <div className="space-y-6" data-oid="njzt5ux">
@@ -1024,14 +1029,15 @@ export default function RedesignedProjects() {
                           className="overflow-hidden rounded-lg"
                           data-oid=":n:z_u1"
                         >
-                          <img
-                            src={`/placeholder.svg?height=400&width=600&text=Screenshot ${index}`}
-                            alt={`${selectedProject.title} screenshot ${index}`}
-                            width={600}
-                            height={400}
-                            className="w-full h-auto object-cover transition-transform duration-500 hover:scale-110"
-                            data-oid="k.sn.pl"
-                          />
+                          <div className="relative aspect-video">
+                            <Image
+                              src={`/placeholder.svg?height=400&width=600&text=Screenshot ${index}`}
+                              alt={`${selectedProject.title} screenshot ${index}`}
+                              fill
+                              className="object-cover transition-transform duration-500 hover:scale-110"
+                              data-oid="k.sn.pl"
+                            />
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -1063,13 +1069,15 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
       data-oid="uqi57g5"
     >
       <div className="relative aspect-video overflow-hidden" data-oid="qw0caks">
-        <img
-          src={project.imageUrl || "/placeholder.svg"}
-          alt={project.title}
-          className="w-full h-full object-contain"
-          style={{ maxWidth: "100%", maxHeight: "100%" }}
-          data-oid="lj_8t3y"
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src={project.imageUrl || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover"
+            data-oid="lj_8t3y"
+          />
+        </div>
 
         <div
           className={cn(
