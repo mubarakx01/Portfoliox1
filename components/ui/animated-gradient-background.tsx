@@ -114,13 +114,13 @@ export function AnimatedGradientBackground({
   return (
     <div
       className={cn("relative overflow-hidden", className)}
-      data-oid="z9sh70g"
+      data-oid="3or25n0"
     >
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full -z-10"
         style={{ filter: `blur(${blur}px)` }}
-        data-oid="zkfds39"
+        data-oid=":k8m2fq"
       />
 
       {children}

@@ -15,7 +15,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         )}
         ref={ref}
         {...props}
-        data-oid="sy-6aim"
+        data-oid="g2ksc7q"
       />
     );
   },

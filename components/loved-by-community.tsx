@@ -2,50 +2,50 @@
 
 export default function LovedByCommunity() {
   return (
-    <section className="py-16 md:py-24" data-oid="q7t77wf">
-      <div className="container mx-auto px-4" data-oid="p77.cv3">
+    <section className="py-16 md:py-24" data-oid="v5k_.mc">
+      <div className="container mx-auto px-4" data-oid="i1nh_e0">
         <h2
           className="text-3xl md:text-4xl font-bold text-center mb-12"
-          data-oid="g160-ar"
+          data-oid="gwwf64p"
         >
           Testimonial
         </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          data-oid=".h8akii"
+          data-oid="e4g-j8r"
         >
           {/* Add your community testimonials or achievements here */}
-          <div className="bg-card p-6 rounded-lg shadow-lg" data-oid="wf8cq-4">
-            <p className="text-muted-foreground" data-oid="tlpwgdt">
+          <div className="bg-card p-6 rounded-lg shadow-lg" data-oid="gbo2ky:">
+            <p className="text-muted-foreground" data-oid="5qb:3kp">
               "Mubarak's contributions to the AI community have been invaluable.
               His expertise and dedication to helping others learn and grow is
               truly inspiring."
             </p>
-            <div className="mt-4" data-oid="y6.w3uq">
-              <p className="font-semibold" data-oid="6r3:m_0">
+            <div className="mt-4" data-oid="wl80-0w">
+              <p className="font-semibold" data-oid="rjvn7ya">
                 AI Community Member
               </p>
             </div>
           </div>
-          <div className="bg-card p-6 rounded-lg shadow-lg" data-oid="pe.:fzv">
-            <p className="text-muted-foreground" data-oid="az0t1sq">
+          <div className="bg-card p-6 rounded-lg shadow-lg" data-oid="bl0vtik">
+            <p className="text-muted-foreground" data-oid="f6caatk">
               "Working with Mubarak on various projects has been a great
               experience. His technical skills and collaborative approach make
               him an excellent team member."
             </p>
-            <div className="mt-4" data-oid="_3f5wod">
-              <p className="font-semibold" data-oid="0d-1uif">
+            <div className="mt-4" data-oid="2fj4-1t">
+              <p className="font-semibold" data-oid="j_ri4yn">
                 Project Collaborator
               </p>
             </div>
           </div>
-          <div className="bg-card p-6 rounded-lg shadow-lg" data-oid="0qy3349">
-            <p className="text-muted-foreground" data-oid="q0kzml:">
+          <div className="bg-card p-6 rounded-lg shadow-lg" data-oid="940knum">
+            <p className="text-muted-foreground" data-oid="_x_:45p">
               "Mubarak's innovative solutions and problem-solving abilities have
               helped us achieve remarkable results in our AI initiatives."
             </p>
-            <div className="mt-4" data-oid="vwkhrl7">
-              <p className="font-semibold" data-oid="k:aw_ri">
+            <div className="mt-4" data-oid="i495pzx">
+              <p className="font-semibold" data-oid="p8h:pu5">
                 Industry Professional
               </p>
             </div>

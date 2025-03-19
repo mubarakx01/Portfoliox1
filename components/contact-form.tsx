@@ -69,65 +69,65 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="grid md:grid-cols-2 gap-8" data-oid="slzu_h1">
+    <div className="grid md:grid-cols-2 gap-8" data-oid="4:ylv9q">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        data-oid="r6bh_y_"
+        data-oid="t_79xyz"
       >
-        <h3 className="text-2xl font-bold mb-6" data-oid="az:npg:">
+        <h3 className="text-2xl font-bold mb-6" data-oid="w1ryod:">
           Get in Touch
         </h3>
-        <p className="text-muted-foreground mb-6" data-oid="lb.zu_2">
+        <p className="text-muted-foreground mb-6" data-oid="_l_h_w3">
           Have a question or want to work together? Fill out the form and I'll
           get back to you as soon as possible.
         </p>
 
-        <div className="space-y-4 mb-6" data-oid="9j5s-u_">
-          <div className="flex items-center gap-3" data-oid="cpgg7h0">
+        <div className="space-y-4 mb-6" data-oid="gk7md64">
+          <div className="flex items-center gap-3" data-oid="a0mi7qe">
             <div
               className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center"
-              data-oid="fnw_gem"
+              data-oid="f2anwki"
             >
-              <Mail className="h-5 w-5 text-primary" data-oid="soh1i9l" />
+              <Mail className="h-5 w-5 text-primary" data-oid="pj2asav" />
             </div>
-            <div data-oid="kyicmi8">
-              <div className="text-sm text-muted-foreground" data-oid="2cv.5ze">
+            <div data-oid="6r7ofq4">
+              <div className="text-sm text-muted-foreground" data-oid="jy0f30w">
                 Email
               </div>
-              <div data-oid="ori8dm5">mr1398463@gmail.com</div>
+              <div data-oid="f:z7aci">mr1398463@gmail.com</div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3" data-oid="c8yd4ud">
+          <div className="flex items-center gap-3" data-oid="5v0.h_n">
             <div
               className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center"
-              data-oid="j-rgeqm"
+              data-oid="fbh69lw"
             >
-              <Phone className="h-5 w-5 text-primary" data-oid="cr_2o:3" />
+              <Phone className="h-5 w-5 text-primary" data-oid="h23jtlb" />
             </div>
-            <div data-oid="g-is0g1">
-              <div className="text-sm text-muted-foreground" data-oid="bn:2mf4">
+            <div data-oid="fs5sdm6">
+              <div className="text-sm text-muted-foreground" data-oid="n_9.8kw">
                 Phone
               </div>
-              <div data-oid="kh1cefk">(+91)9500255291</div>
+              <div data-oid="1.c:3rj">(+91)9500255291</div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3" data-oid=".s.70y4">
+          <div className="flex items-center gap-3" data-oid="azbqm0y">
             <div
               className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center"
-              data-oid="kuxbe95"
+              data-oid="-ubs8ix"
             >
-              <MapPin className="h-5 w-5 text-primary" data-oid="r-90ir0" />
+              <MapPin className="h-5 w-5 text-primary" data-oid="x7dgpzx" />
             </div>
-            <div data-oid="_fwqbn2">
-              <div className="text-sm text-muted-foreground" data-oid="sv8obop">
+            <div data-oid="51vod9d">
+              <div className="text-sm text-muted-foreground" data-oid="qjg0.p1">
                 Location
               </div>
-              <div data-oid="m52n2xq">India,Chennai</div>
+              <div data-oid="qj:_yen">India,Chennai</div>
             </div>
           </div>
         </div>
@@ -139,135 +139,135 @@ export default function ContactForm() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="relative"
-        data-oid="dwftrzm"
+        data-oid="g_ntp02"
       >
         {isSubmitted ? (
           <div
             className="h-full flex flex-col items-center justify-center text-center p-6"
-            data-oid="lm:7edy"
+            data-oid="gxpz87u"
           >
             <div
               className="h-16 w-16 rounded-full bg-green-500/20 flex items-center justify-center mb-4"
-              data-oid="mpr9:.p"
+              data-oid="qzbtf9t"
             >
               <CheckCircle
                 className="h-8 w-8 text-green-500"
-                data-oid="5zeryx0"
+                data-oid="e69hn20"
               />
             </div>
-            <h3 className="text-xl font-bold mb-2" data-oid="26.zdv.">
+            <h3 className="text-xl font-bold mb-2" data-oid="zfgusf2">
               Message Sent!
             </h3>
-            <p className="text-muted-foreground mb-6" data-oid="5-.aaa9">
+            <p className="text-muted-foreground mb-6" data-oid="0ir7iaa">
               Thank you for reaching out. I'll get back to you as soon as
               possible.
             </p>
             <Button
               variant="outline"
               onClick={() => setIsSubmitted(false)}
-              data-oid="hjy18q0"
+              data-oid="5n1jngz"
             >
               Send Another Message
             </Button>
           </div>
         ) : (
-          <Form {...form} data-oid=":05x33x">
+          <Form {...form} data-oid="mlhp3dv">
             <form
               onSubmit={form.handleSubmit(onSubmit)}
               className="space-y-4"
-              data-oid="mxanc7e"
+              data-oid="ztu2okv"
             >
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
-                  <FormItem data-oid="pj.__y0">
-                    <FormLabel data-oid="9:kdp.a">Name</FormLabel>
-                    <FormControl data-oid="jzm5a3h">
+                  <FormItem data-oid="0v06ry2">
+                    <FormLabel data-oid="bh8j4sy">Name</FormLabel>
+                    <FormControl data-oid="sdb7mdy">
                       <Input
                         placeholder="Your name"
                         {...field}
-                        data-oid="fda7qp7"
+                        data-oid="8itqq8l"
                       />
                     </FormControl>
-                    <FormMessage data-oid="_850eff" />
+                    <FormMessage data-oid="8fn8_p3" />
                   </FormItem>
                 )}
-                data-oid="i80kmhf"
+                data-oid="b68361e"
               />
 
               <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
-                  <FormItem data-oid="yulhmk4">
-                    <FormLabel data-oid="3.xd4qg">Email</FormLabel>
-                    <FormControl data-oid="yi5bsql">
+                  <FormItem data-oid="1i-_lfh">
+                    <FormLabel data-oid="xhgn57a">Email</FormLabel>
+                    <FormControl data-oid="9ls.i9g">
                       <Input
                         placeholder="Your email"
                         {...field}
-                        data-oid=".dkohgl"
+                        data-oid="lc1h9o1"
                       />
                     </FormControl>
-                    <FormMessage data-oid="02cvis5" />
+                    <FormMessage data-oid="-yvqfzb" />
                   </FormItem>
                 )}
-                data-oid="u03-ovy"
+                data-oid=".sfmenq"
               />
 
               <FormField
                 control={form.control}
                 name="subject"
                 render={({ field }) => (
-                  <FormItem data-oid="fbij:v8">
-                    <FormLabel data-oid="6apwx3n">Subject</FormLabel>
-                    <FormControl data-oid="auif9g:">
+                  <FormItem data-oid="0.s83zh">
+                    <FormLabel data-oid="v0blc0c">Subject</FormLabel>
+                    <FormControl data-oid="8yb7q::">
                       <Input
                         placeholder="Message subject"
                         {...field}
-                        data-oid="pkz1xer"
+                        data-oid="dfpzwto"
                       />
                     </FormControl>
-                    <FormMessage data-oid="-0ciel." />
+                    <FormMessage data-oid="zucpdl4" />
                   </FormItem>
                 )}
-                data-oid="y15lhpz"
+                data-oid="c97qs.e"
               />
 
               <FormField
                 control={form.control}
                 name="message"
                 render={({ field }) => (
-                  <FormItem data-oid="f36obgc">
-                    <FormLabel data-oid="d4s6fbp">Message</FormLabel>
-                    <FormControl data-oid="rnaped9">
+                  <FormItem data-oid="-r5a9tj">
+                    <FormLabel data-oid="zotpk44">Message</FormLabel>
+                    <FormControl data-oid="eaw34q8">
                       <Textarea
                         placeholder="Your message"
                         className="min-h-[120px] resize-none"
                         {...field}
-                        data-oid="q04ti80"
+                        data-oid="vj:694o"
                       />
                     </FormControl>
-                    <FormMessage data-oid="l_s.l-w" />
+                    <FormMessage data-oid="pimqr:f" />
                   </FormItem>
                 )}
-                data-oid="u8nn1ja"
+                data-oid="96.y_dg"
               />
 
               <Button
                 type="submit"
                 className="w-full"
                 disabled={isSubmitting}
-                data-oid=":gfr:oo"
+                data-oid="rfh1l2-"
               >
                 {isSubmitting ? (
-                  <span className="flex items-center gap-2" data-oid="e.to_61">
+                  <span className="flex items-center gap-2" data-oid="e.fqlv.">
                     <svg
                       className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      data-oid="b3wfup9"
+                      data-oid="gl2bppa"
                     >
                       <circle
                         className="opacity-25"
@@ -276,21 +276,21 @@ export default function ContactForm() {
                         r="10"
                         stroke="currentColor"
                         strokeWidth="4"
-                        data-oid="o5ebu_y"
+                        data-oid="7uhupuy"
                       ></circle>
                       <path
                         className="opacity-75"
                         fill="currentColor"
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        data-oid="chjo6be"
+                        data-oid="p4ha6pm"
                       ></path>
                     </svg>
                     Sending...
                   </span>
                 ) : (
-                  <span className="flex items-center gap-2" data-oid="_a.k010">
+                  <span className="flex items-center gap-2" data-oid="ddgc0em">
                     Send Message
-                    <Send className="h-4 w-4" data-oid="3jqnlal" />
+                    <Send className="h-4 w-4" data-oid="d8pwj4j" />
                   </span>
                 )}
               </Button>

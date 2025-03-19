@@ -25,7 +25,7 @@ const DialogOverlay = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="1u99w2q"
+    data-oid="u8z1j91"
   />
 ));
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
@@ -34,8 +34,8 @@ const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
-  <DialogPortal data-oid="qmnyqbp">
-    <DialogOverlay data-oid="1fe6e95" />
+  <DialogPortal data-oid="g2w.wbx">
+    <DialogOverlay data-oid="dkfxw0k" />
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
@@ -43,15 +43,15 @@ const DialogContent = React.forwardRef<
         className,
       )}
       {...props}
-      data-oid="odqgigy"
+      data-oid="bh666.e"
     >
       {children}
       <DialogPrimitive.Close
         className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
-        data-oid="pqds7qd"
+        data-oid="spxbyiy"
       >
-        <X className="h-4 w-4" data-oid="llhmp_q" />
-        <span className="sr-only" data-oid="66-irf5">
+        <X className="h-4 w-4" data-oid="tr4fqi-" />
+        <span className="sr-only" data-oid="qthnyqa">
           Close
         </span>
       </DialogPrimitive.Close>
@@ -70,7 +70,7 @@ const DialogHeader = ({
       className,
     )}
     {...props}
-    data-oid="fllhp:0"
+    data-oid="isgr1te"
   />
 );
 
@@ -86,7 +86,7 @@ const DialogFooter = ({
       className,
     )}
     {...props}
-    data-oid="80uirec"
+    data-oid="4y6o93_"
   />
 );
 
@@ -103,7 +103,7 @@ const DialogTitle = React.forwardRef<
       className,
     )}
     {...props}
-    data-oid="-4sqbd_"
+    data-oid="nc2xsxd"
   />
 ));
 DialogTitle.displayName = DialogPrimitive.Title.displayName;
@@ -116,7 +116,7 @@ const DialogDescription = React.forwardRef<
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
-    data-oid="hqt2jz5"
+    data-oid="8a3k0yp"
   />
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;

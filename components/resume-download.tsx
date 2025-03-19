@@ -46,11 +46,11 @@ export default function ResumeDownload() {
           action: (
             <div
               className="h-8 w-8 bg-green-500/20 rounded-full flex items-center justify-center"
-              data-oid="-2q6188"
+              data-oid="0-v3ffr"
             >
               <CheckCircle
                 className="h-5 w-5 text-green-500"
-                data-oid="ek3oupw"
+                data-oid="41v0znj"
               />
             </div>
           ),
@@ -67,18 +67,18 @@ export default function ResumeDownload() {
     }
 
     return (
-      <div className="flex flex-col items-center" data-oid="s:04j64">
+      <div className="flex flex-col items-center" data-oid="vrd:ztf">
         <div
           className="flex flex-col sm:flex-row gap-4 items-center"
-          data-oid="4h2u_2-"
+          data-oid="a0mpnop"
         >
           <Button
             onClick={() => setIsPreviewOpen(true)}
             variant="outline"
             className="gap-2"
-            data-oid=":0c-znw"
+            data-oid="s5eo0gs"
           >
-            <FileText className="h-4 w-4" data-oid="pydpa9j" />
+            <FileText className="h-4 w-4" data-oid="shfck5v" />
             Preview Resume
           </Button>
 
@@ -86,7 +86,7 @@ export default function ResumeDownload() {
             onClick={handleDownload}
             className="gap-2 relative overflow-hidden"
             disabled={isDownloading}
-            data-oid="8_vai6m"
+            data-oid="5y9-us1"
           >
             {isDownloading ? (
               <>
@@ -95,7 +95,7 @@ export default function ResumeDownload() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  data-oid=":hz9wp_"
+                  data-oid="4:9ghra"
                 >
                   <circle
                     className="opacity-25"
@@ -104,20 +104,20 @@ export default function ResumeDownload() {
                     r="10"
                     stroke="currentColor"
                     strokeWidth="4"
-                    data-oid="7xsiq_3"
+                    data-oid="_s_5ud1"
                   ></circle>
                   <path
                     className="opacity-75"
                     fill="currentColor"
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    data-oid="ag8omxa"
+                    data-oid="7a3_rpr"
                   ></path>
                 </svg>
                 Downloading...
               </>
             ) : (
               <>
-                <Download className="h-4 w-4" data-oid="wv28hth" />
+                <Download className="h-4 w-4" data-oid="yv7_0re" />
                 Download Resume
               </>
             )}
@@ -129,13 +129,13 @@ export default function ResumeDownload() {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1.5 }}
-                data-oid="8ykd4u:"
+                data-oid="iw2c4oe"
               />
             )}
           </Button>
         </div>
 
-        <AnimatePresence data-oid="24oliz9">
+        <AnimatePresence data-oid="fvhrcu3">
           {isPreviewOpen && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -143,7 +143,7 @@ export default function ResumeDownload() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               onClick={() => setIsPreviewOpen(false)}
-              data-oid="rxlwqs9"
+              data-oid="8_r:_cf"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -152,19 +152,19 @@ export default function ResumeDownload() {
                 transition={{ type: "spring", damping: 20, stiffness: 300 }}
                 className="w-full max-w-3xl max-h-[80vh] bg-card rounded-xl shadow-xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
-                data-oid="pa:op3v"
+                data-oid="mde0w:l"
               >
                 <div
                   className="flex items-center justify-between p-4 border-b"
-                  data-oid=".px2l_l"
+                  data-oid="69gxjn0"
                 >
-                  <div className="flex items-center gap-2" data-oid="laz99_6">
+                  <div className="flex items-center gap-2" data-oid="klc7n8s">
                     <FileText
                       className="h-5 w-5 text-primary"
-                      data-oid="z.l0d2d"
+                      data-oid="3yy6c2j"
                     />
 
-                    <h3 className="font-semibold" data-oid="zquh:5t">
+                    <h3 className="font-semibold" data-oid="d6w4kqo">
                       Resume Preview
                     </h3>
                   </div>
@@ -174,40 +174,40 @@ export default function ResumeDownload() {
                     size="icon"
                     onClick={() => setIsPreviewOpen(false)}
                     aria-label="Close preview"
-                    data-oid="5ocx9o_"
+                    data-oid="sfsqw60"
                   >
-                    <X className="h-4 w-4" data-oid="i1ofw7u" />
+                    <X className="h-4 w-4" data-oid="dz9c.6u" />
                   </Button>
                 </div>
 
                 <div
                   className="overflow-y-auto p-6 max-h-[calc(80vh-60px)]"
-                  data-oid="rytnnri"
+                  data-oid="6b4p2cl"
                 >
-                  <div className="space-y-8" data-oid="4ghj8bz">
-                    <div className="text-center mb-8" data-oid="zotfja5">
-                      <h1 className="text-2xl font-bold" data-oid=":bj5cj8">
+                  <div className="space-y-8" data-oid="2n6f410">
+                    <div className="text-center mb-8" data-oid="mjg89z8">
+                      <h1 className="text-2xl font-bold" data-oid="hcaix4d">
                         MUBARAK A
                       </h1>
-                      <p className="text-muted-foreground" data-oid="yarf8kr">
+                      <p className="text-muted-foreground" data-oid="4cvhx1:">
                         AI Engineer & Community Builder
                       </p>
                       <div
                         className="flex justify-center gap-4 mt-2 text-sm text-muted-foreground"
-                        data-oid="aca3xcy"
+                        data-oid="0h2sv9z"
                       >
-                        <span data-oid="f.fi6ev">mr1398463@gmail.com</span>
-                        <span data-oid="o_gulr9">|</span>
-                        <span data-oid="761cfqu">(+91)9500255291</span>
-                        <span data-oid="_biipgm">|</span>
-                        <span data-oid="eio6pto">India,Chennai</span>
-                        <span data-oid="a6-dzst">|</span>
+                        <span data-oid="hf9q0-g">mr1398463@gmail.com</span>
+                        <span data-oid="fwj26j5">|</span>
+                        <span data-oid="imaa_37">(+91)9500255291</span>
+                        <span data-oid="-9txnyc">|</span>
+                        <span data-oid="sjnan-t">India,Chennai</span>
+                        <span data-oid="uy1:g-y">|</span>
                         <a
                           href="https://www.linkedin.com/in/mubarak-a-xyz/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:underline"
-                          data-oid="jmom31x"
+                          data-oid="aa1irbs"
                         >
                           LinkedIn Profile
                         </a>
@@ -218,14 +218,14 @@ export default function ResumeDownload() {
                       icon={
                         <Briefcase
                           className="h-5 w-5 text-primary"
-                          data-oid=":kvmxi4"
+                          data-oid="ab50a0:"
                         />
                       }
                       title="Professional Experience"
                       type="work"
-                      data-oid="5jy92za"
+                      data-oid="xp.h9gq"
                     >
-                      <div className="space-y-4" data-oid="x0:9fix">
+                      <div className="space-y-4" data-oid="j.csod-">
                         <ResumeItem
                           title="Web Designer Internship"
                           organization="Kshitiksha Foundation"
@@ -236,7 +236,7 @@ export default function ResumeDownload() {
                             "Implemented interactive features like scrolling animations and 3D effects using modern design tools",
                             "Optimized website performance and accessibility to improve load times and reach",
                           ]}
-                          data-oid="2z6r4r9"
+                          data-oid="g_wzu9b"
                         />
 
                         <ResumeItem
@@ -249,7 +249,7 @@ export default function ResumeDownload() {
                             "Developed machine learning models to enhance predictive analytics capabilities",
                             "Collaborated with a team to produce data visualizations for stakeholder insights",
                           ]}
-                          data-oid="kc7zvkr"
+                          data-oid="330byne"
                         />
                       </div>
                     </ResumeSection>
@@ -258,12 +258,12 @@ export default function ResumeDownload() {
                       icon={
                         <GraduationCap
                           className="h-5 w-5 text-primary"
-                          data-oid="r6375gj"
+                          data-oid="zeimscs"
                         />
                       }
                       title="Education"
                       type="education"
-                      data-oid="j61j_-y"
+                      data-oid="8_vrvoq"
                     >
                       <ResumeItem
                         title="Bachelor of Engineering"
@@ -271,7 +271,7 @@ export default function ResumeDownload() {
                         period="2015 - 2019"
                         location="India,Chennai"
                         description={["GPA: 3.8", "Honors: Magna Cum Laude"]}
-                        data-oid="_kra87w"
+                        data-oid="ie30d3i"
                       />
                     </ResumeSection>
 
@@ -280,47 +280,47 @@ export default function ResumeDownload() {
                       icon={
                         <Code
                           className="h-5 w-5 text-primary"
-                          data-oid="uog.cf9"
+                          data-oid="d1mixfi"
                         />
                       }
                       title="Technical Skills"
-                      data-oid="a_-xmmq"
+                      data-oid=":.n6h1f"
                     >
                       <div
                         className="grid grid-cols-2 gap-4"
-                        data-oid=".g7qrtd"
+                        data-oid=".zjb79z"
                       >
-                        <div data-oid="qawvdo6">
-                          <h4 className="font-medium mb-2" data-oid="sell-u0">
+                        <div data-oid="0il8uyp">
+                          <h4 className="font-medium mb-2" data-oid="2oa0:e:">
                             Programming Languages
                           </h4>
                           <ul
                             className="list-disc list-inside text-muted-foreground"
-                            data-oid=".s3:11i"
+                            data-oid="qggxsm0"
                           >
-                            <li data-oid="0ywtk0r">Python (Expert)</li>
-                            <li data-oid="yaadcl8">
+                            <li data-oid="n2lff5s">Python (Expert)</li>
+                            <li data-oid="vf9b2wg">
                               JavaScript/TypeScript (Expert)
                             </li>
-                            <li data-oid="urqw.:y">C++ (Advanced)</li>
-                            <li data-oid="dzvs-:3">R (Intermediate)</li>
-                            <li data-oid="qy7h9_z">SQL (Advanced)</li>
+                            <li data-oid="xs9rou7">C++ (Advanced)</li>
+                            <li data-oid=".pgbiua">R (Intermediate)</li>
+                            <li data-oid="c9a-8s3">SQL (Advanced)</li>
                           </ul>
                         </div>
 
-                        <div data-oid="5rn:m6a">
-                          <h4 className="font-medium mb-2" data-oid="4ujvwvg">
+                        <div data-oid="hdjtjvx">
+                          <h4 className="font-medium mb-2" data-oid=":.finw1">
                             Frameworks & Tools
                           </h4>
                           <ul
                             className="list-disc list-inside text-muted-foreground"
-                            data-oid="v_dbdr6"
+                            data-oid="bvdyck6"
                           >
-                            <li data-oid="u8-tknf">PyTorch (Expert)</li>
-                            <li data-oid="4sxsgla">TensorFlow (Expert)</li>
-                            <li data-oid="-75aiis">Scikit-learn (Expert)</li>
-                            <li data-oid="ld4451i">Docker (Advanced)</li>
-                            <li data-oid="kkhzf78">AWS/GCP (Advanced)</li>
+                            <li data-oid="6y6:.tb">PyTorch (Expert)</li>
+                            <li data-oid="gb5t_4u">TensorFlow (Expert)</li>
+                            <li data-oid="hltvx9l">Scikit-learn (Expert)</li>
+                            <li data-oid="athmw2:">Docker (Advanced)</li>
+                            <li data-oid="692jjkr">AWS/GCP (Advanced)</li>
                           </ul>
                         </div>
                       </div>
@@ -331,40 +331,40 @@ export default function ResumeDownload() {
                       icon={
                         <Award
                           className="h-5 w-5 text-primary"
-                          data-oid="l_k0:xr"
+                          data-oid="cs3jhbd"
                         />
                       }
                       title="Awards & Publications"
-                      data-oid="te.-cz0"
+                      data-oid="eykybhl"
                     >
                       <ul
                         className="space-y-2 text-muted-foreground"
-                        data-oid="r8aynn6"
+                        data-oid="4169wkm"
                       >
-                        <li data-oid="eivagqe">
+                        <li data-oid="57:pj-z">
                           <span
                             className="font-medium text-foreground"
-                            data-oid="4ucm_88"
+                            data-oid="teqh65k"
                           >
                             Efficient Voice Cloning with Reduced Computational
                             Resources
                           </span>{" "}
                           - IEEE Transactions on Audio Processing, 2022
                         </li>
-                        <li data-oid="_ae_sat">
+                        <li data-oid="nb-qano">
                           <span
                             className="font-medium text-foreground"
-                            data-oid="vkg6aqv"
+                            data-oid="hjxcx3x"
                           >
                             Community-Centered AI: Bridging Technology and
                             Social Impact
                           </span>{" "}
                           - NeurIPS Workshop on AI for Social Good, 2021
                         </li>
-                        <li data-oid="606mbku">
+                        <li data-oid="3b-fslr">
                           <span
                             className="font-medium text-foreground"
-                            data-oid="6shpw_2"
+                            data-oid="fubfpoh"
                           >
                             Teacher Excellence Award
                           </span>{" "}
@@ -378,18 +378,18 @@ export default function ResumeDownload() {
                       icon={
                         <Languages
                           className="h-5 w-5 text-primary"
-                          data-oid="527c3vl"
+                          data-oid="dipp.pz"
                         />
                       }
                       title="Languages"
-                      data-oid="dvmx3b9"
+                      data-oid="jf9vmnl"
                     >
                       <div
                         className="flex gap-4 text-muted-foreground"
-                        data-oid="7-ecxqp"
+                        data-oid="xy97ast"
                       >
-                        <span data-oid="8g2n1uq">English (Native)</span>
-                        <span data-oid="wbw5qx8">Spanish (Conversational)</span>
+                        <span data-oid="r2cnl4q">English (Native)</span>
+                        <span data-oid="b9_edoc">Spanish (Conversational)</span>
                       </div>
                     </ResumeSection>
                   </div>
@@ -397,20 +397,20 @@ export default function ResumeDownload() {
 
                 <div
                   className="border-t p-4 flex justify-between items-center"
-                  data-oid="ku0l:tz"
+                  data-oid="lbjfa5-"
                 >
                   <span
                     className="text-sm text-muted-foreground"
-                    data-oid="y:epcix"
+                    data-oid="h3h6.cy"
                   >
                     Last updated: March 2025
                   </span>
                   <Button
                     onClick={handleDownload}
                     className="gap-2"
-                    data-oid="25.hnqy"
+                    data-oid="wry_4e:"
                   >
-                    <Download className="h-4 w-4" data-oid="n6zc0om" />
+                    <Download className="h-4 w-4" data-oid="t1em-n_" />
                     Download PDF
                   </Button>
                 </div>
@@ -435,10 +435,10 @@ export default function ResumeDownload() {
     type,
     children,
   }) => (
-    <section className="space-y-4" data-oid="puc.38r">
-      <div className="flex items-center gap-2" data-oid="vos_v:-">
+    <section className="space-y-4" data-oid="rnv8aqw">
+      <div className="flex items-center gap-2" data-oid="-9m3z1h">
         {icon}
-        <h2 className="text-lg font-semibold" data-oid="piuq9c:">
+        <h2 className="text-lg font-semibold" data-oid="od5n0i1">
           {title}
         </h2>
       </div>
@@ -461,30 +461,30 @@ export default function ResumeDownload() {
     location,
     description,
   }) => (
-    <div className="space-y-2" data-oid="4_kx-g9">
-      <div className="flex justify-between items-start" data-oid="p1ktwj4">
-        <div data-oid="v0w6h6w">
-          <h3 className="font-medium" data-oid="v55zx0.">
+    <div className="space-y-2" data-oid="ni-wi.f">
+      <div className="flex justify-between items-start" data-oid="ocnpu89">
+        <div data-oid="qdocko-">
+          <h3 className="font-medium" data-oid="03819u8">
             {title}
           </h3>
-          <p className="text-sm text-muted-foreground" data-oid="-3vaf_p">
+          <p className="text-sm text-muted-foreground" data-oid=":zvleo2">
             {organization}
           </p>
         </div>
         <div
           className="text-sm text-right text-muted-foreground"
-          data-oid=":h6o_di"
+          data-oid="yvq2_wk"
         >
-          <p data-oid=":p6i.a1">{period}</p>
-          <p data-oid="qdr45oy">{location}</p>
+          <p data-oid="n7k_r1:">{period}</p>
+          <p data-oid="mub4q8i">{location}</p>
         </div>
       </div>
       <ul
         className="list-disc list-inside text-sm space-y-1"
-        data-oid="owblvcy"
+        data-oid="gg3c6ay"
       >
         {description.map((item, index) => (
-          <li key={index} data-oid="bi-ep4o">
+          <li key={index} data-oid="j:dudhr">
             {item}
           </li>
         ))}
