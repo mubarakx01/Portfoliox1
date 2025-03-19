@@ -105,7 +105,7 @@ export default function RedesignedHero() {
   return (
     <CustomGradientBackground
       className="min-h-screen flex items-center"
-      data-oid="csq3ldo"
+      data-oid="_heqfzm"
     >
       <motion.div
         ref={containerRef}
@@ -114,53 +114,53 @@ export default function RedesignedHero() {
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        data-oid="64crhzv"
+        data-oid="35im09k"
       >
         {/* Left column - Text content */}
         <div
           className="order-2 md:order-1 text-center md:text-left"
-          data-oid="ozls.v0"
+          data-oid="j6ch0ug"
         >
-          <ScrollReveal data-oid="i7r48da">
+          <ScrollReveal data-oid="qdgm5kv">
             <Badge
               className="mb-4 px-3 py-1.5 text-sm bg-primary/20 border-primary/30 text-primary"
-              data-oid="1uhbc-9"
+              data-oid="pyxpfha"
             >
               Software Engineer
             </Badge>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.1} data-oid="fs.nxrl">
+          <ScrollReveal delay={0.1} data-oid="__wm8c4">
             <h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 tracking-tight"
-              data-oid="1vo8lak"
+              data-oid="wqi1whq"
             >
               <span
                 className="bg-clip-text text-transparent bg-gradient-to-r from-happy-hearts to-golden-nugget"
-                data-oid=".2klk9g"
+                data-oid="e.nm8k1"
               >
                 MUBARAK A
               </span>
             </h1>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2} data-oid="paxeji6">
+          <ScrollReveal delay={0.2} data-oid="_wo6vnp">
             <p
               className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed"
-              data-oid="gwnjy6m"
+              data-oid="vyo1ed2"
             >
               {isClient && displayedText.length === fullText.length ? (
                 <span
                   dangerouslySetInnerHTML={{
                     __html: highlightText(displayedText),
                   }}
-                  data-oid="6i4ic1:"
+                  data-oid="ofuc9js"
                 />
               ) : (
                 <>
                   {displayedText}
                   {isClient && (
-                    <span className="animate-pulse" data-oid="j2tanzc">
+                    <span className="animate-pulse" data-oid="jnw:5ro">
                       |
                     </span>
                   )}
@@ -169,64 +169,64 @@ export default function RedesignedHero() {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3} data-oid="n_-leh3">
+          <ScrollReveal delay={0.3} data-oid="21qsssr">
             <div
               className="flex flex-wrap gap-2 justify-center md:justify-start mb-6 md:mb-8"
-              data-oid="7r.17dn"
+              data-oid="j2vpqmm"
             >
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-estragon/30 hover:bg-estragon/10 transition-colors"
-                data-oid="9g2jrn2"
+                data-oid=":kq_.mi"
               >
                 Machine Learning
               </Badge>
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-estragon/30 hover:bg-estragon/10 transition-colors"
-                data-oid="m72y0k9"
+                data-oid="yfls6cf"
               >
                 Generative AI
               </Badge>
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-white/20 hover:bg-white/10 transition-colors"
-                data-oid="dbp.wqy"
+                data-oid="n4_-k2-"
               >
                 Computer Vision
               </Badge>
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-white/20 hover:bg-white/10 transition-colors"
-                data-oid="sxrzevy"
+                data-oid="azcgv26"
               >
                 NLP
               </Badge>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.4} data-oid="ij6z66b">
+          <ScrollReveal delay={0.4} data-oid="sp7bl1i">
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6 md:mb-8"
-              data-oid="z0mz0et"
+              data-oid="sl:akxs"
             >
               <Button
                 size="lg"
                 onClick={scrollToProjects}
                 className="group relative overflow-hidden shadow-lg hover:shadow-happy-hearts/20 transition-all duration-300 bg-happy-hearts hover:bg-happy-hearts/90 text-white"
-                data-oid="nx4456k"
+                data-oid="stuaf25"
               >
-                <span className="relative z-10" data-oid="_34boe9">
+                <span className="relative z-10" data-oid="o8jqs_p">
                   View Projects
                 </span>
                 <span
                   className="absolute inset-0 bg-gradient-to-r from-happy-hearts to-bite-tongue opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  data-oid="gj5f92v"
+                  data-oid="fe.f.hj"
                 />
 
                 <ExternalLink
                   className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10"
-                  data-oid="ctz9.p."
+                  data-oid="61fdq0x"
                 />
               </Button>
 
@@ -235,14 +235,14 @@ export default function RedesignedHero() {
                 variant="outline"
                 onClick={handleContactClick}
                 className="group relative overflow-hidden border-copper-coin/50 hover:border-copper-coin transition-colors duration-300"
-                data-oid="6i.egfo"
+                data-oid="an2.ra8"
               >
-                <span className="relative z-10" data-oid="3dy.ej-">
+                <span className="relative z-10" data-oid="6j:mbi6">
                   Contact Me
                 </span>
                 <span
                   className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  data-oid="mib_1kh"
+                  data-oid="lpdw805"
                 />
               </Button>
 
@@ -251,48 +251,48 @@ export default function RedesignedHero() {
                 variant="outline"
                 asChild
                 className="group relative overflow-hidden border-copper-coin/50 hover:border-copper-coin transition-colors duration-300"
-                data-oid="fem4fpb"
+                data-oid="w7p3fm5"
               >
-                <a href="/AI_x1.pdf" download="AI_x1.pdf" data-oid="e1l8u-1">
+                <a href="/AI_x1.pdf" download="AI_x1.pdf" data-oid="8afy2ek">
                   <span
                     className="relative z-10 flex items-center"
-                    data-oid="x70likq"
+                    data-oid="16y:5gi"
                   >
                     Download Resume
                     <Download
                       className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5"
-                      data-oid="wvz32wy"
+                      data-oid="4bpa4e7"
                     />
                   </span>
                   <span
                     className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    data-oid="b9oxxs."
+                    data-oid="e:x35gm"
                   />
                 </a>
               </Button>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.5} data-oid=":zn7o:m">
+          <ScrollReveal delay={0.5} data-oid="av_8qrb">
             <div
               className="flex gap-4 justify-center md:justify-start"
-              data-oid="t8rep8l"
+              data-oid="rj1zanp"
             >
               <Button
                 variant="ghost"
                 size="icon"
                 asChild
                 className="rounded-full hover:bg-succulent/10 transition-all duration-300 hover:scale-110"
-                data-oid="27f2ra1"
+                data-oid="9:acr:."
               >
                 <a
                   href="https://github.com/mubarakx01"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  data-oid="53_xhw3"
+                  data-oid="9054mjd"
                 >
-                  <Github className="h-5 w-5" data-oid="ep0j992" />
+                  <Github className="h-5 w-5" data-oid="obnlw80" />
                 </a>
               </Button>
               <Button
@@ -300,16 +300,16 @@ export default function RedesignedHero() {
                 size="icon"
                 asChild
                 className="rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
-                data-oid="7vqybe3"
+                data-oid="39nwg1z"
               >
                 <a
                   href="https://www.linkedin.com/in/mubarak-a-xyz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  data-oid="sp3u1km"
+                  data-oid="xx1whr_"
                 >
-                  <Linkedin className="h-5 w-5" data-oid="5lz74wx" />
+                  <Linkedin className="h-5 w-5" data-oid="rhile0l" />
                 </a>
               </Button>
               <Button
@@ -317,14 +317,14 @@ export default function RedesignedHero() {
                 size="icon"
                 asChild
                 className="rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
-                data-oid="a39v43o"
+                data-oid="a-3gfoj"
               >
                 <a
                   href="mailto:mr1398463@gmail.com"
                   aria-label="Email"
-                  data-oid="096evbl"
+                  data-oid="w631vmj"
                 >
-                  <Mail className="h-5 w-5" data-oid="dbnyhfi" />
+                  <Mail className="h-5 w-5" data-oid="-c-svh8" />
                 </a>
               </Button>
             </div>
@@ -334,9 +334,9 @@ export default function RedesignedHero() {
         {/* Right column - Image */}
         <div
           className="order-1 md:order-2 flex justify-center mb-6 md:mb-0"
-          data-oid="p3hwdbv"
+          data-oid="gcdbooq"
         >
-          <ScrollReveal direction="left" data-oid="z.4t7i7">
+          <ScrollReveal direction="left" data-oid="ib26rpl">
             <motion.div
               className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl"
               animate={
@@ -349,7 +349,7 @@ export default function RedesignedHero() {
               }
               transition={{ type: "spring", stiffness: 150, damping: 15 }}
               whileHover={{ scale: 1.05 }}
-              data-oid=":20_jez"
+              data-oid="op8k-x9"
             >
               <Image
                 src="/profile.jpeg"
@@ -357,18 +357,18 @@ export default function RedesignedHero() {
                 fill
                 className="object-cover"
                 priority
-                data-oid="4aovzl:"
+                data-oid="d-hrdj2"
               />
 
               {/* Decorative elements */}
               <div
                 className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500/30 rounded-full blur-xl"
-                data-oid="-_2x4kv"
+                data-oid="a3pw.sx"
               />
 
               <div
                 className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/30 rounded-full blur-xl"
-                data-oid="jvit9lz"
+                data-oid="5y-bkh:"
               />
 
               {/* Add a subtle pulsing glow effect */}
@@ -383,7 +383,7 @@ export default function RedesignedHero() {
                     repeat: Number.POSITIVE_INFINITY,
                     ease: "easeInOut",
                   }}
-                  data-oid="2kpwn.v"
+                  data-oid="ql6e8ru"
                 />
               )}
             </motion.div>
@@ -394,13 +394,13 @@ export default function RedesignedHero() {
         {isClient && (
           <div
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-            data-oid="zf_.ygp"
+            data-oid="2sm9bkg"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
               whileHover={{ scale: 1.1 }}
-              data-oid="7m6c98e"
+              data-oid="jwn:tya"
             >
               <Button
                 variant="ghost"
@@ -411,9 +411,9 @@ export default function RedesignedHero() {
                     .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                data-oid="a8real2"
+                data-oid="9jgxbzs"
               >
-                <ArrowDown className="h-4 w-4" data-oid="wrrvwsd" />
+                <ArrowDown className="h-4 w-4" data-oid="xvinkxn" />
               </Button>
             </motion.div>
           </div>

@@ -436,9 +436,9 @@ export default function ResumeDownload() {
     children,
   }) => (
     <section className="space-y-4" data-oid="rnv8aqw">
-      <div className="flex items-center gap-2" data-oid="a1ulr0p">
+      <div className="flex items-center gap-2" data-oid="sx1b1gy">
         {icon}
-        <h2 className="text-lg font-semibold" data-oid="1pnqco.">
+        <h2 className="text-lg font-semibold" data-oid="cls.k_p">
           {title}
         </h2>
       </div>
@@ -461,30 +461,30 @@ export default function ResumeDownload() {
     location,
     description,
   }) => (
-    <div className="space-y-2" data-oid="flcu22g">
-      <div className="flex justify-between items-start" data-oid="39esh7.">
-        <div data-oid="cwrgqd6">
-          <h3 className="font-medium" data-oid="yhhyoar">
+    <div className="space-y-2" data-oid="875ehq7">
+      <div className="flex justify-between items-start" data-oid="1e2.f04">
+        <div data-oid="0pchc8u">
+          <h3 className="font-medium" data-oid="jynf1rh">
             {title}
           </h3>
-          <p className="text-sm text-muted-foreground" data-oid="8_4ofs-">
+          <p className="text-sm text-muted-foreground" data-oid="au41eon">
             {organization}
           </p>
         </div>
         <div
           className="text-sm text-right text-muted-foreground"
-          data-oid="8u2n7-2"
+          data-oid="7u9olwk"
         >
-          <p data-oid="__qsg56">{period}</p>
-          <p data-oid="cu04b16">{location}</p>
+          <p data-oid="x9dgdsq">{period}</p>
+          <p data-oid="yn7022c">{location}</p>
         </div>
       </div>
       <ul
         className="list-disc list-inside text-sm space-y-1"
-        data-oid="zldcj77"
+        data-oid="iqv0amr"
       >
         {description.map((item, index) => (
-          <li key={index} data-oid="ywp_eik">
+          <li key={index} data-oid="j1phyde">
             {item}
           </li>
         ))}

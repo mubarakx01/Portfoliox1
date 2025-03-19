@@ -6,11 +6,11 @@ export default function Loading() {
   return (
     <div
       className="flex items-center justify-center min-h-[200px]"
-      data-oid="w14m0aw"
+      data-oid="_a3h7--"
     >
       <Loader2
         className="h-8 w-8 animate-spin text-primary"
-        data-oid="g-d7oav"
+        data-oid="gv9xyp2"
       />
     </div>
   );
