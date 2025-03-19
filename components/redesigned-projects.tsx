@@ -93,6 +93,38 @@ const projectCategories = [
 const projects = [
   {
     id: 1,
+    title: "Machine Connect Monitor: Real-time Machine Status Dashboard",
+    category: "network",
+    description:
+      "A real-time monitoring system for tracking machine status, connectivity, and performance metrics across a network of devices with a clean, modern interface.",
+    longDescription:
+      "The Machine Connect Monitor provides a comprehensive solution for tracking the status and performance of networked machines in real-time. The system features a responsive dashboard that displays machine connectivity status, IP addresses, and allows for direct connection to machines for maintenance and monitoring purposes.",
+    technologies: [
+      "React.js/Next.js",
+      "WebSockets",
+      "Tailwind CSS",
+      "Node.js",
+      "Network Protocols",
+      "Real-time Monitoring",
+    ],
+    imageUrl: "/machine-monitor.jpg",
+    demoUrl: "#",
+    githubUrl: "https://github.com/mubarakabaz",
+    color: "from-green-600 to-blue-600",
+    featured: true,
+    completed: "2024",
+    teamSize: 1,
+    difficulty: 4,
+    achievements: [
+      "Implemented real-time machine status monitoring with WebSockets",
+      "Created a clean, intuitive dashboard interface with Tailwind CSS",
+      "Developed secure machine connection protocols",
+      "Built responsive design that works across all device sizes",
+      "Integrated automatic status updates and notifications",
+    ],
+  },
+  {
+    id: 2,
     title:
       "AI-Driven CNC Machine Health Monitoring: IoT Analytics with Mobile & Dashboard Integration",
     category: "ai",
@@ -107,7 +139,7 @@ const projects = [
       "FastAPI",
       "IoT Sensors",
       "TensorFlow",
-      "Docker"
+      "Docker",
     ],
     imageUrl: "/Screenshot 2025-03-03 at 2.56.24 AM.png",
     demoUrl: "#",
@@ -122,7 +154,7 @@ const projects = [
       "Developed predictive maintenance algorithms with 90% accuracy",
       "Created interactive dashboard for machine performance analytics",
       "Integrated mobile alerts for critical machine status updates",
-      "Reduced machine downtime by 35% through predictive maintenance"
+      "Reduced machine downtime by 35% through predictive maintenance",
     ],
   },
   {
