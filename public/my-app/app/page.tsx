@@ -4,11 +4,11 @@ export default function Home() {
   return (
     <div
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
-      data-oid="prw:ttt"
+      data-oid="o1zgwqa"
     >
       <main
         className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start"
-        data-oid="en.vvfu"
+        data-oid="b:werr6"
       >
         <Image
           className="dark:invert"
@@ -17,38 +17,38 @@ export default function Home() {
           width={180}
           height={38}
           priority
-          data-oid="m1o48a3"
+          data-oid="wvkucro"
         />
 
         <ol
           className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]"
-          data-oid="pa105ct"
+          data-oid="g0mvbi:"
         >
-          <li className="mb-2 tracking-[-.01em]" data-oid="3pnq84.">
+          <li className="mb-2 tracking-[-.01em]" data-oid="zjvblz.">
             Get started by editing{" "}
             <code
               className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold"
-              data-oid="_ef27sf"
+              data-oid="-haw4pb"
             >
               app/page.tsx
             </code>
             .
           </li>
-          <li className="tracking-[-.01em]" data-oid="i55cb4z">
+          <li className="tracking-[-.01em]" data-oid="vk1j7an">
             Save and see your changes instantly.
           </li>
         </ol>
 
         <div
           className="flex gap-4 items-center flex-col sm:flex-row"
-          data-oid="9i70ddv"
+          data-oid="z54rs.d"
         >
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-            data-oid="17_a9:o"
+            data-oid="3_e6m76"
           >
             <Image
               className="dark:invert"
@@ -56,7 +56,7 @@ export default function Home() {
               alt="Vercel logomark"
               width={20}
               height={20}
-              data-oid="gzwk5rp"
+              data-oid="rk3wrdk"
             />
             Deploy now
           </a>
@@ -65,7 +65,7 @@ export default function Home() {
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-            data-oid="telfsxm"
+            data-oid="3c::l1b"
           >
             Read our docs
           </a>
@@ -73,14 +73,14 @@ export default function Home() {
       </main>
       <footer
         className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"
-        data-oid="v0plojr"
+        data-oid="q-zzl.j"
       >
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-          data-oid="j2n7x9l"
+          data-oid="376y4-h"
         >
           <Image
             aria-hidden
@@ -88,7 +88,7 @@ export default function Home() {
             alt="File icon"
             width={16}
             height={16}
-            data-oid="xly2ahu"
+            data-oid="r2gb5kp"
           />
           Learn
         </a>
@@ -97,7 +97,7 @@ export default function Home() {
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-          data-oid="3rc:a1s"
+          data-oid="8yn-p53"
         >
           <Image
             aria-hidden
@@ -105,7 +105,7 @@ export default function Home() {
             alt="Window icon"
             width={16}
             height={16}
-            data-oid="e7jo0gn"
+            data-oid="wrfvmfn"
           />
           Examples
         </a>
@@ -114,7 +114,7 @@ export default function Home() {
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-          data-oid="5w0_m3r"
+          data-oid="5ily-lb"
         >
           <Image
             aria-hidden
@@ -122,7 +122,7 @@ export default function Home() {
             alt="Globe icon"
             width={16}
             height={16}
-            data-oid="px9mm4y"
+            data-oid="qijc0.p"
           />
           Go to nextjs.org →
         </a>

@@ -113,66 +113,67 @@ const testimonialChunks = chunkArray(
 
 export default function TestimonialSection() {
   return (
-    <section data-oid="rgeheys">
-      <div className="py-16 md:py-32" data-oid="6yacs3d">
-        <div className="mx-auto max-w-6xl px-6" data-oid="gb4f:2h">
-          <div className="text-center" data-oid="sg.s_2p">
+    <section data-oid="bbakb-w">
+      <div className="py-16 md:py-32" data-oid="0szwizb">
+        <div className="mx-auto max-w-6xl px-6" data-oid="j8e7-iv">
+          <div className="text-center" data-oid=".ottl.:">
             <h2
               className="text-title text-3xl font-semibold"
-              data-oid="ngtq_p_"
+              data-oid="t.qwjw_"
             >
               Testimonial
             </h2>
-            <p className="text-body mt-6" data-oid="jr3sstn">
+            <p className="text-body mt-6" data-oid="ba4x::1">
               What people say about working with me.
             </p>
           </div>
           <div
             className="mt-8 grid gap-3 [--color-card:var(--color-muted)] sm:grid-cols-2 md:mt-12 lg:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]"
-            data-oid="9mnh9p8"
+            data-oid="e1k9px1"
           >
             {testimonialChunks.map((chunk, chunkIndex) => (
               <div
                 key={chunkIndex}
                 className="space-y-3 *:border-none *:shadow-none"
-                data-oid="3q_srmo"
+                data-oid="fl0d6ws"
               >
                 {chunk.map(({ name, role, quote, image }, index) => (
-                  <Card key={index} data-oid="qa.i1:u">
+                  <Card key={index} data-oid="s6:6bmz">
                     <CardContent
                       className="grid grid-cols-[auto_1fr] gap-3 pt-6"
-                      data-oid="q5zdre:"
+                      data-oid="4j420.z"
                     >
-                      <Avatar className="size-9" data-oid="3tta-we">
+                      <Avatar className="size-9" data-oid="oxx4idh">
                         <AvatarImage
                           alt={name}
                           src={image}
                           loading="lazy"
                           width="120"
                           height="120"
-                          data-oid="nb_yckn"
+                          data-oid="o0lv80."
                         />
-                        <AvatarFallback data-oid="85v2:s4">
+
+                        <AvatarFallback data-oid="ry1yb9p">
                           {name
                             .split(" ")
                             .map((n) => n[0])
                             .join("")}
                         </AvatarFallback>
                       </Avatar>
-                      <div data-oid="yikc1:.">
-                        <h3 className="font-medium" data-oid="3aned6i">
+                      <div data-oid="qgmbwh3">
+                        <h3 className="font-medium" data-oid="9ivimo-">
                           {name}
                         </h3>
                         <span
                           className="text-muted-foreground block text-sm tracking-wide"
-                          data-oid="yczuf8g"
+                          data-oid="h:e7ti9"
                         >
                           {role}
                         </span>
-                        <blockquote className="mt-3" data-oid="jp2._hq">
+                        <blockquote className="mt-3" data-oid=":germmq">
                           <p
                             className="text-gray-700 dark:text-gray-300"
-                            data-oid="zmuin.y"
+                            data-oid="2oiit_7"
                           >
                             {quote}
                           </p>

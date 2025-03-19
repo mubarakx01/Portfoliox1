@@ -46,7 +46,7 @@ const FloatingPaths = memo(function FloatingPaths({
   const svgOffsetY = offsetY / scalingFactor;
 
   return (
-    <div className="absolute inset-0 pointer-events-none" data-oid="8xdrpl_">
+    <div className="absolute inset-0 pointer-events-none" data-oid="sm2:5v1">
       <svg
         className="w-full h-full text-slate-950/25 dark:text-white/20"
         viewBox="0 0 696 316"
@@ -55,9 +55,9 @@ const FloatingPaths = memo(function FloatingPaths({
           filter: "blur(0.5px)",
           transform: "scale(1.2)",
         }}
-        data-oid="1r4h5t3"
+        data-oid="gir5j-u"
       >
-        <title data-oid="3e76lj9">Background Paths</title>
+        <title data-oid="y2anb6t">Background Paths</title>
         {paths.map((path) => (
           <motion.path
             key={path.id}
@@ -82,7 +82,7 @@ const FloatingPaths = memo(function FloatingPaths({
                 repeat: Infinity,
               },
             }}
-            data-oid="t_wwvmh"
+            data-oid="t1biukk"
           />
         ))}
       </svg>
@@ -144,20 +144,21 @@ export default function BackgroundPaths() {
   return (
     <div
       className="absolute inset-0 pointer-events-none overflow-hidden"
-      data-oid="v.q1g-6"
+      data-oid="c9l1mut"
     >
-      <div className="absolute inset-0" data-oid="p_e_a9a">
+      <div className="absolute inset-0" data-oid="x1voy-2">
         <FloatingPaths
           position={1}
           mousePosition={mousePosition}
           windowSize={windowSize}
-          data-oid="r4a24px"
+          data-oid="-ufy:pc"
         />
+
         <FloatingPaths
           position={-1}
           mousePosition={mousePosition}
           windowSize={windowSize}
-          data-oid="qij7i19"
+          data-oid="6fm0:nc"
         />
       </div>
     </div>

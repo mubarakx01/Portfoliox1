@@ -50,11 +50,11 @@ export default function AboutSection() {
           action: (
             <div
               className="h-8 w-8 bg-green-500/20 rounded-full flex items-center justify-center"
-              data-oid="5xs54k_"
+              data-oid="t2sf21n"
             >
               <CheckCircle
                 className="h-5 w-5 text-green-500"
-                data-oid="-ku:m-a"
+                data-oid="xk0jqbg"
               />
             </div>
           ),
@@ -75,33 +75,34 @@ export default function AboutSection() {
     <SectionContainer
       id="about"
       className="relative overflow-hidden"
-      data-oid="sel3uo6"
+      data-oid="gwlq4r_"
     >
       {/* Background decorative elements */}
       <div
         className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="dj.ynom"
+        data-oid="hg3b4j0"
       />
+
       <div
         className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="q.nzvzn"
+        data-oid="tarbz2i"
       />
 
       <SectionHeader
         title="About Me"
         subtitle="Get to know more about my background, expertise, and what drives me to create impactful AI solutions."
-        data-oid="7fc.3kt"
+        data-oid="_j:ailv"
       />
 
       <div
         className="grid md:grid-cols-2 gap-12 items-center"
-        data-oid="p0:0650"
+        data-oid=":j1jics"
       >
-        <ScrollReveal data-oid="gp6o01u">
-          <div className="relative" data-oid="bygpwje">
+        <ScrollReveal data-oid="wq0p0iv">
+          <div className="relative" data-oid="ewmkpz:">
             <div
               className="relative z-10 rounded-lg overflow-hidden border border-white/10 shadow-xl"
-              data-oid="q47ps6w"
+              data-oid="ys-504-"
             >
               <Image
                 src="/profile.jpeg"
@@ -109,19 +110,19 @@ export default function AboutSection() {
                 width={600}
                 height={800}
                 className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
-                data-oid="u94_d51"
+                data-oid="-hvvvtm"
               />
 
               {/* Add an overlay with a subtle gradient */}
               <div
                 className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
-                data-oid="5l_ych8"
+                data-oid="ws.l2rv"
               >
-                <div className="p-4 text-white" data-oid="ertrd9w">
-                  <p className="font-medium" data-oid="e06r:0t">
+                <div className="p-4 text-white" data-oid="4k:01rt">
+                  <p className="font-medium" data-oid="brkdp2i">
                     MUBARAK A
                   </p>
-                  <p className="text-sm text-white/80" data-oid="u4aazlw">
+                  <p className="text-sm text-white/80" data-oid="icddo6s">
                     AI Engineer & Community Builder
                   </p>
                 </div>
@@ -131,25 +132,26 @@ export default function AboutSection() {
             {/* Decorative elements */}
             <div
               className="absolute top-4 -left-4 w-full h-full border-2 border-primary/50 rounded-lg -z-10"
-              data-oid="t3pdtbr"
+              data-oid="-j22a27"
             />
+
             <div
               className="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-primary/20 to-transparent rounded-lg -z-10"
-              data-oid="3sb5r15"
+              data-oid="8y-h98p"
             />
           </div>
         </ScrollReveal>
 
-        <div data-oid="yg-6saz">
-          <StaggeredContainer data-oid=":g3xcn-">
-            <StaggerItem data-oid="p3:j3u8">
-              <h3 className="text-2xl font-bold mb-4" data-oid="0wx_86o">
+        <div data-oid="lbp29:.">
+          <StaggeredContainer data-oid="3i8yqj3">
+            <StaggerItem data-oid="r4c7k-9">
+              <h3 className="text-2xl font-bold mb-4" data-oid="og1b4uv">
                 Software Engineer & AI Specialist
               </h3>
             </StaggerItem>
 
-            <StaggerItem data-oid="pwm0.9i">
-              <p className="text-muted-foreground mb-6" data-oid="exscwmr">
+            <StaggerItem data-oid="fqwpwt4">
+              <p className="text-muted-foreground mb-6" data-oid="4jyz:1-">
                 I'm a passionate Software Engineer and AI Enthusiast with a
                 robust foundation in Electronics and Communication Engineering.
                 My expertise spans machine learning, web development, and data
@@ -161,8 +163,8 @@ export default function AboutSection() {
               </p>
             </StaggerItem>
 
-            <StaggerItem data-oid="7octj-z">
-              <p className="text-muted-foreground mb-6" data-oid="3walxju">
+            <StaggerItem data-oid="l1e7j4u">
+              <p className="text-muted-foreground mb-6" data-oid="orbsccb">
                 Driven by creativity, attention to detail, and a passion for
                 impactful technology, I'm dedicated to building solutions that
                 enhance lives—whether streamlining industrial processes or
@@ -173,41 +175,41 @@ export default function AboutSection() {
               </p>
             </StaggerItem>
 
-            <StaggerItem data-oid="11y:mte">
-              <div className="flex flex-wrap gap-3 mb-8" data-oid="trcmn33">
+            <StaggerItem data-oid=":8syvyo">
+              <div className="flex flex-wrap gap-3 mb-8" data-oid="i6bbrx1">
                 <Badge
                   className="px-3 py-1.5 bg-blue-500/20 text-blue-500 border-blue-500/30 hover:bg-blue-500/30 transition-colors"
-                  data-oid="muj9a4j"
+                  data-oid="zfq3456"
                 >
-                  <Briefcase className="h-3.5 w-3.5 mr-1" data-oid="je2vcjb" />
+                  <Briefcase className="h-3.5 w-3.5 mr-1" data-oid="o1zqmak" />
                   Technical
                 </Badge>
                 <Badge
                   className="px-3 py-1.5 bg-purple-500/20 text-purple-500 border-purple-500/30 hover:bg-purple-500/30 transition-colors"
-                  data-oid="919d1v8"
+                  data-oid="-ffe9h_"
                 >
                   <GraduationCap
                     className="h-3.5 w-3.5 mr-1"
-                    data-oid="5duun-t"
+                    data-oid="5hnyk66"
                   />
                   AI Specialist
                 </Badge>
                 <Badge
                   className="px-3 py-1.5 bg-green-500/20 text-green-500 border-green-500/30 hover:bg-green-500/30 transition-colors"
-                  data-oid="-k5lpm3"
+                  data-oid="fjmyfro"
                 >
-                  <Heart className="h-3.5 w-3.5 mr-1" data-oid="mm3-:ve" />
+                  <Heart className="h-3.5 w-3.5 mr-1" data-oid="17oecbe" />
                   Community Building
                 </Badge>
               </div>
             </StaggerItem>
 
-            <StaggerItem data-oid="0b9lvd4">
+            <StaggerItem data-oid="zfz9cim">
               <Button
                 onClick={handleDownload}
                 className="gap-2 group shadow-lg hover:shadow-primary/20 transition-all duration-300"
                 disabled={isDownloading}
-                data-oid="36mz4hi"
+                data-oid="m-2_gms"
               >
                 {isDownloading ? (
                   <>
@@ -216,7 +218,7 @@ export default function AboutSection() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      data-oid="ktief4j"
+                      data-oid="00.x49s"
                     >
                       <circle
                         className="opacity-25"
@@ -225,24 +227,25 @@ export default function AboutSection() {
                         r="10"
                         stroke="currentColor"
                         strokeWidth="4"
-                        data-oid="0t:9mwa"
+                        data-oid="0h88h9q"
                       ></circle>
                       <path
                         className="opacity-75"
                         fill="currentColor"
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        data-oid="2ng2dgu"
+                        data-oid=":1w1axb"
                       ></path>
                     </svg>
-                    <span data-oid="7tz8i8:">Downloading...</span>
+                    <span data-oid="v5oicom">Downloading...</span>
                   </>
                 ) : (
                   <>
                     <Download
                       className="h-4 w-4 group-hover:animate-bounce"
-                      data-oid="w2ouyd3"
+                      data-oid="qun70rr"
                     />
-                    <span data-oid="hnt71b7">Download Resume</span>
+
+                    <span data-oid="yh74opj">Download Resume</span>
                   </>
                 )}
               </Button>
@@ -250,18 +253,18 @@ export default function AboutSection() {
                 variant="outline"
                 className="ml-3 gap-2 group"
                 asChild
-                data-oid="x001u09"
+                data-oid="xcbf84a"
               >
                 <a
                   href="https://www.linkedin.com/in/mubarak-a-xyz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-oid="ymadsx0"
+                  data-oid="u5uhmn_"
                 >
-                  <span data-oid="op_t-sz">View LinkedIn</span>
+                  <span data-oid="u_aflvr">View LinkedIn</span>
                   <ExternalLink
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                    data-oid="otq4my."
+                    data-oid="1bvek_0"
                   />
                 </a>
               </Button>
