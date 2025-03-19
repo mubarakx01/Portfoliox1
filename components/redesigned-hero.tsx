@@ -9,7 +9,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CustomGradientBackground } from "@/components/custom-gradient-background";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { Github, Linkedin, Mail, ArrowDown, ExternalLink, Download } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowDown,
+  ExternalLink,
+  Download,
+} from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { useIsClient } from "@/hooks/use-is-client";
 
@@ -100,7 +107,7 @@ export default function RedesignedHero() {
       <motion.div
         ref={containerRef}
         style={isClient ? { opacity, scale, y } : {}}
-        className="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 md:gap-12 items-center"
+        className="container mx-auto px-4 py-16 md:py-32 grid md:grid-cols-2 gap-8 md:gap-12 items-center"
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -257,7 +264,7 @@ export default function RedesignedHero() {
         <div className="order-1 md:order-2 flex justify-center mb-6 md:mb-0">
           <ScrollReveal direction="left">
             <motion.div
-              className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl"
+              className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl mt-8 md:mt-0"
               animate={
                 isClient && isHovered
                   ? {
