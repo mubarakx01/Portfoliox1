@@ -95,25 +95,26 @@ const projects = [
     id: 1,
     title:
       "AI-Driven CNC Machine Health Monitoring: IoT Analytics with Mobile & Dashboard Integration",
-    category: "Dashboard Integration",
+    category: "ai",
     description:
       "Developed an end-to-end intelligent monitoring system to predict CNC machine failures, optimize maintenance schedules, and enhance manufacturing efficiency using IoT, AI, and real-time analytics",
     longDescription:
-      "A state-of-the-art voice cloning system that allows for real-time and one-shot audio processing with minimal latency. The system uses deep learning models to generate natural-sounding speech that matches the target voice with unprecedented accuracy and emotional range, enabling applications in accessibility, personalized audiobooks, and more.",
+      "An advanced IoT-based monitoring system for CNC machines that leverages real-time data analytics and machine learning to predict potential failures and optimize maintenance schedules. The system features a responsive dashboard for real-time monitoring, predictive maintenance alerts, and comprehensive performance analytics.",
     technologies: [
       "React.js/Next.js",
       "PyTorch",
       "WebSockets",
       "FastAPI",
-      "SheetJS",
+      "IoT Sensors",
+      "TensorFlow",
+      "Docker"
     ],
-
-    imageUrl: "/lib/file/Screenshot 2025-03-03 at 2.56.24 AM.png",
+    imageUrl: "/Screenshot 2025-03-03 at 2.56.24 AM.png",
     demoUrl: "#",
     githubUrl: "https://github.com/mubarakx01",
     color: "from-blue-600 to-violet-600",
     featured: true,
-    completed: "2025",
+    completed: "2024",
     teamSize: 1,
     difficulty: 5,
     achievements: [
@@ -121,6 +122,7 @@ const projects = [
       "Developed predictive maintenance algorithms with 90% accuracy",
       "Created interactive dashboard for machine performance analytics",
       "Integrated mobile alerts for critical machine status updates",
+      "Reduced machine downtime by 35% through predictive maintenance"
     ],
   },
   {
@@ -405,15 +407,14 @@ export default function RedesignedProjects() {
                       className="relative w-full h-48 md:h-auto md:w-1/2"
                       data-oid="f2xcp5y"
                     >
-                      <Image
+                      <img
                         src={
                           featuredProjects[currentFeaturedIndex].imageUrl ||
                           "/placeholder.svg"
                         }
                         alt={featuredProjects[currentFeaturedIndex].title}
-                        fill
-                        className="object-cover"
-                        priority
+                        className="w-full h-full object-contain"
+                        style={{ maxWidth: "100%", maxHeight: "100%" }}
                         data-oid="rjp1yj2"
                       />
                     </div>
@@ -918,11 +919,11 @@ export default function RedesignedProjects() {
                       className="relative aspect-video mb-6 rounded-lg overflow-hidden"
                       data-oid="g4i0-nt"
                     >
-                      <Image
+                      <img
                         src={selectedProject.imageUrl || "/placeholder.svg"}
                         alt={selectedProject.title}
-                        fill
-                        className="object-cover"
+                        className="w-full h-full object-cover"
+                        style={{ maxWidth: "100%", maxHeight: "100%" }}
                         data-oid="q_s:2m6"
                       />
                     </div>
@@ -989,7 +990,7 @@ export default function RedesignedProjects() {
                           className="overflow-hidden rounded-lg"
                           data-oid="f78z:yr"
                         >
-                          <Image
+                          <img
                             src={`/placeholder.svg?height=400&width=600&text=Screenshot ${index}`}
                             alt={`${selectedProject.title} screenshot ${index}`}
                             width={600}
@@ -1028,14 +1029,11 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
       data-oid="cd0vm3f"
     >
       <div className="relative aspect-video overflow-hidden" data-oid="_3hqsvz">
-        <Image
+        <img
           src={project.imageUrl || "/placeholder.svg"}
           alt={project.title}
-          fill
-          className={cn(
-            "object-cover transition-transform duration-500",
-            isClient && isHovered ? "scale-110" : "scale-100",
-          )}
+          className="w-full h-full object-contain"
+          style={{ maxWidth: "100%", maxHeight: "100%" }}
           data-oid="kegxk0f"
         />
 

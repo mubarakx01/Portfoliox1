@@ -1,464 +1,112 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import {
-  Search,
-  Laptop,
-  Code,
-  Cpu,
-  Database,
-  Cloud,
-  BookOpen,
-  PenToolIcon as Tool,
-  Heart,
-  Microscope,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import { Loader2 } from "lucide-react";
+import { ErrorBoundary } from "@/components/error-boundary";
+import { useIsClient } from "@/hooks/use-is-client";
 
-type SkillLevel = "All" | "Expert" | "Advanced" | "Intermediate";
-
-// Skill data
-const skillCategories = [
-  {
-    icon: <Laptop className="h-6 w-6" data-oid="ot4kwbg" />,
-    title: "Machine Learning & AI",
-    skills: [
-      { name: "Computer Vision", level: "Advanced", color: "blue", years: 3 },
-      {
-        name: "Reinforcement Learning",
-        level: "Advanced",
-        color: "blue",
-        years: 3,
-      },
-      { name: "MLOps", level: "Intermediate", color: "blue", years: 1.5 },
-      { name: "Deep Learning", level: "Expert", color: "green", years: 5 },
-      { name: "NLP", level: "Expert", color: "green", years: 4.5 },
-      { name: "Voice Cloning", level: "Advanced", color: "blue", years: 2.5 },
-      { name: "Generative AI", level: "Advanced", color: "green", years: 3 },
-    ],
-  },
-  {
-    icon: <Code className="h-6 w-6" data-oid="np1itj6" />,
-    title: "Programming & Development",
-    skills: [
-      { name: "Python", level: "Expert", color: "blue", years: 6 },
-      { name: "C++", level: "Advanced", color: "blue", years: 4 },
-      {
-        name: "JavaScript/TypeScript",
-        level: "Expert",
-        color: "blue",
-        years: 5,
-      },
-      { name: "SQL", level: "Advanced", color: "blue", years: 4 },
-      { name: "R", level: "Intermediate", color: "blue", years: 2 },
-      { name: "MATLAB", level: "Intermediate", color: "yellow", years: 2 },
-      { name: "Julia", level: "Intermediate", color: "yellow", years: 1.5 },
-    ],
-  },
-  {
-    icon: <Cpu className="h-6 w-6" data-oid="epjx5nr" />,
-    title: "AI Frameworks & Tools",
-    skills: [
-      { name: "PyTorch", level: "Expert", color: "green", years: 5 },
-      { name: "TensorFlow", level: "Expert", color: "green", years: 5 },
-      { name: "Scikit-learn", level: "Expert", color: "green", years: 6 },
-      { name: "Hugging Face", level: "Advanced", color: "green", years: 3 },
-      { name: "CUDA", level: "Advanced", color: "blue", years: 3 },
-      { name: "TensorRT", level: "Intermediate", color: "blue", years: 2 },
-      { name: "MLflow", level: "Advanced", color: "blue", years: 3 },
-    ],
-  },
-  {
-    icon: <Database className="h-6 w-6" data-oid="0qz:_-a" />,
-    title: "Data Science & Analytics",
-    skills: [
-      { name: "Data Mining", level: "Advanced", color: "blue", years: 4 },
-      {
-        name: "Business Intelligence",
-        level: "Intermediate",
-        color: "blue",
-        years: 2,
-      },
-      {
-        name: "Big Data Processing",
-        level: "Advanced",
-        color: "blue",
-        years: 3,
-      },
-      { name: "Pandas", level: "Expert", color: "blue", years: 5 },
-      { name: "Tableau", level: "Intermediate", color: "blue", years: 2 },
-      {
-        name: "Data Visualization",
-        level: "Advanced",
-        color: "green",
-        years: 4,
-      },
-      {
-        name: "Predictive Modeling",
-        level: "Expert",
-        color: "green",
-        years: 5,
-      },
-    ],
-  },
-  {
-    icon: <Cloud className="h-6 w-6" data-oid="i25gr6s" />,
-    title: "Cloud & Infrastructure",
-    skills: [
-      { name: "GCP", level: "Advanced", color: "blue", years: 3 },
-      { name: "Kubernetes", level: "Advanced", color: "blue", years: 3 },
-      { name: "CI/CD", level: "Intermediate", color: "blue", years: 2 },
-      { name: "Microservices", level: "Intermediate", color: "blue", years: 2 },
-      {
-        name: "DevOps",
-        level: "Intermediate",
-        color: 'blue", years:  color: "blue',
-        years: 2,
-      },
-      { name: "DevOps", level: "Intermediate", color: "blue", years: 2 },
-      { name: "AWS", level: "Advanced", color: "blue", years: 4 },
-      { name: "Docker", level: "Expert", color: "blue", years: 4 },
-    ],
-  },
-  {
-    icon: <BookOpen className="h-6 w-6" data-oid="d7h:-75" />,
-    title: "Research & Analysis",
-    skills: [
-      { name: "Grant Writing", level: "Advanced", color: "blue", years: 3 },
-      { name: "Peer Review", level: "Advanced", color: "blue", years: 4 },
-      { name: "Research Methods", level: "Expert", color: "green", years: 5 },
-      {
-        name: "Experimental Design",
-        level: "Advanced",
-        color: "green",
-        years: 4,
-      },
-      { name: "Scientific Writing", level: "Expert", color: "green", years: 5 },
-    ],
-  },
-  {
-    icon: <Tool className="h-6 w-6" data-oid="xc3b6cj" />,
-    title: "Tools & Technologies",
-    skills: [
-      { name: "SolidWorks", level: "Intermediate", color: "blue", years: 2 },
-      { name: "AutoCAD", level: "Intermediate", color: "blue", years: 2 },
-      { name: "Arduino", level: "Intermediate", color: "blue", years: 3 },
-      { name: "Git/GitHub", level: "Expert", color: "green", years: 5 },
-      { name: "Linux/Unix", level: "Advanced", color: "green", years: 4 },
-      { name: "Raspberry Pi", level: "Intermediate", color: "green", years: 3 },
-    ],
-  },
-  {
-    icon: <Heart className="h-6 w-6" data-oid="z8i-n.f" />,
-    title: "Soft Skills",
-    skills: [
-      { name: "Technical Writing", level: "Expert", color: "green", years: 6 },
-      { name: "Public Speaking", level: "Advanced", color: "green", years: 4 },
-      {
-        name: "Project Management",
-        level: "Advanced",
-        color: "green",
-        years: 5,
-      },
-      { name: "Team Leadership", level: "Expert", color: "green", years: 5 },
-      { name: "Mentoring", level: "Expert", color: "green", years: 4 },
-      { name: "Problem Solving", level: "Expert", color: "green", years: 6 },
-      { name: "Critical Thinking", level: "Expert", color: "green", years: 6 },
-    ],
-  },
-  {
-    icon: <Microscope className="h-6 w-6" data-oid="0azg880" />,
-    title: "Physics & Mathematics",
-    skills: [
-      { name: "Complex Analysis", level: "Advanced", color: "blue", years: 4 },
-      { name: "Group Theory", level: "Advanced", color: "blue", years: 3 },
-      { name: "Quantum Mechanics", level: "Advanced", color: "blue", years: 4 },
-      {
-        name: "Statistical Mechanics",
-        level: "Advanced",
-        color: "blue",
-        years: 4,
-      },
-      {
-        name: "Mathematical Physics",
-        level: "Advanced",
-        color: "blue",
-        years: 4,
-      },
-      {
-        name: "Differential Equations",
-        level: "Expert",
-        color: "green",
-        years: 5,
-      },
-      { name: "Linear Algebra", level: "Expert", color: "green", years: 5 },
-    ],
-  },
-];
-
-export default function Skills() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedLevel, setSelectedLevel] = useState<SkillLevel>("All");
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const searchRef = useRef<HTMLInputElement>(null);
-
-  // Handle keyboard shortcut for search
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ctrl+K or Cmd+K to focus search
-      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
-        e.preventDefault();
-        searchRef.current?.focus();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
+// Static fallback component that works server-side
+function SkillsFallback() {
   return (
-    <section id="skills" className="py-12" data-oid="reltiqw">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        data-oid="u_c9n87"
+    <section id="skills" className="py-12" data-oid="oj9pcor">
+      <h2 className="text-3xl font-bold text-center mb-4" data-oid="4kbxy6n">
+        Technical Skills
+      </h2>
+      <p
+        className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
+        data-oid=":trqw:k"
       >
-        <h2 className="text-3xl font-bold text-center mb-4" data-oid="52z93lp">
+        A comprehensive overview of my technical expertise across various
+        domains, from machine learning and AI to software development and
+        research.
+      </p>
+      <div
+        className="flex justify-center items-center py-20"
+        data-oid="wql5y_e"
+      >
+        <Loader2
+          className="h-8 w-8 animate-spin text-primary mr-2"
+          data-oid="phfi__b"
+        />
+
+        <span data-oid="6437r6b">Loading skills visualization...</span>
+      </div>
+    </section>
+  );
+}
+
+// Dynamically import the skills component with no SSR
+const RedesignedSkills = dynamic(
+  () =>
+    import("@/components/redesigned-skills").catch((err) => {
+      console.error("Failed to load RedesignedSkills:", err);
+      return () => <SkillsFallback data-oid="gr6kb21" />;
+    }),
+  {
+    ssr: false,
+    loading: () => <SkillsFallback data-oid="24c5c50" />,
+  },
+);
+
+export default function SkillsSectionWrapper() {
+  const isClient = useIsClient();
+  const [hasError, setHasError] = useState(false);
+
+  // Reset error state when client state changes
+  useEffect(() => {
+    if (isClient) {
+      setHasError(false);
+    }
+  }, [isClient]);
+
+  if (!isClient) {
+    return <SkillsFallback data-oid="e3f8s91" />;
+  }
+
+  if (hasError) {
+    return (
+      <section id="skills" className="py-12" data-oid=".78:4u_">
+        <h2 className="text-3xl font-bold text-center mb-4" data-oid="ch9zw4x">
           Technical Skills
         </h2>
-        <p
-          className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-          data-oid="rbcso:."
-        >
-          A comprehensive overview of my technical expertise across various
-          domains, from machine learning and AI to software development and
-          research.
-        </p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="flex flex-col md:flex-row gap-4 mb-8"
-        data-oid="s8mbov6"
-      >
-        <div className="relative flex-1" data-oid="vi2hudf">
-          <Search
-            className={cn(
-              "absolute left-3 top-3 h-4 w-4 transition-colors duration-200",
-              isSearchFocused ? "text-primary" : "text-muted-foreground",
-            )}
-            data-oid="rfel3lp"
-          />
-
-          <Input
-            ref={searchRef}
-            placeholder="Search skills... (Ctrl+K)"
-            className={cn(
-              "pl-10 transition-all duration-300",
-              isSearchFocused
-                ? "ring-2 ring-primary ring-offset-2 ring-offset-background"
-                : "",
-            )}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => setIsSearchFocused(true)}
-            onBlur={() => setIsSearchFocused(false)}
-            data-oid="6dgdn_f"
-          />
-        </div>
-
         <div
-          className="flex gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar"
-          data-oid="fwv8con"
+          className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4 max-w-2xl mx-auto"
+          data-oid=":diot7_"
         >
-          <Button
-            variant={selectedLevel === "All" ? "default" : "outline"}
-            onClick={() => setSelectedLevel("All")}
-            className="transition-all duration-300"
-            data-oid="xi6lvg1"
-          >
-            All
-          </Button>
-          <Button
-            variant={selectedLevel === "Expert" ? "default" : "outline"}
-            onClick={() => setSelectedLevel("Expert")}
-            className="transition-all duration-300"
-            data-oid="jkcqn3a"
-          >
-            Expert
-          </Button>
-          <Button
-            variant={selectedLevel === "Advanced" ? "default" : "outline"}
-            onClick={() => setSelectedLevel("Advanced")}
-            className="transition-all duration-300"
-            data-oid="lwg0_m-"
-          >
-            Advanced
-          </Button>
-          <Button
-            variant={selectedLevel === "Intermediate" ? "default" : "outline"}
-            onClick={() => setSelectedLevel("Intermediate")}
-            className="transition-all duration-300"
-            data-oid="dkxhtdj"
-          >
-            Intermediate
-          </Button>
+          <p className="text-muted-foreground mb-4" data-oid="lqwxslw">
+            We encountered an issue loading the skills visualization. Please
+            refresh the page to try again.
+          </p>
         </div>
-      </motion.div>
+      </section>
+    );
+  }
 
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        data-oid="a7ggdhd"
-      >
-        <AnimatePresence data-oid="..:2c45">
-          {skillCategories.map((category, categoryIndex) => {
-            // Filter skills based on search and level
-            const filteredSkills = category.skills.filter((skill) => {
-              const matchesSearch = skill.name
-                .toLowerCase()
-                .includes(searchQuery.toLowerCase());
-              const matchesLevel =
-                selectedLevel === "All" || skill.level === selectedLevel;
-              return matchesSearch && matchesLevel;
-            });
-
-            // Skip rendering if no skills match the filters
-            if (filteredSkills.length === 0) return null;
-
-            return (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-                className="border rounded-xl p-6 bg-card hover:shadow-lg transition-all duration-300"
-                data-oid="3v-9ppb"
-              >
-                <div
-                  className="flex items-center gap-2 mb-4"
-                  data-oid="yrd..wy"
-                >
-                  <motion.div
-                    initial={{ scale: 0.8 }}
-                    animate={{ scale: 1 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: categoryIndex * 0.1 + 0.2,
-                    }}
-                    data-oid="byll-ri"
-                  >
-                    {category.icon}
-                  </motion.div>
-                  <h3 className="text-lg font-semibold" data-oid="uj8cho9">
-                    {category.title}
-                  </h3>
-                </div>
-
-                <div className="flex flex-wrap gap-2" data-oid="-7-23yi">
-                  <TooltipProvider data-oid="o2_jg4-">
-                    {filteredSkills.map((skill, skillIndex) => (
-                      <motion.div
-                        key={skill.name}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                          duration: 0.3,
-                          delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.3,
-                        }}
-                        onHoverStart={() => setHoveredSkill(skill.name)}
-                        onHoverEnd={() => setHoveredSkill(null)}
-                        data-oid="n02urm0"
-                      >
-                        <Tooltip data-oid="iiq8tqm">
-                          <TooltipTrigger asChild data-oid="l99qx1h">
-                            <div
-                              className={cn(
-                                `skill-tag skill-tag-${skill.color}`,
-                                hoveredSkill === skill.name ? "scale-110" : "",
-                              )}
-                              data-oid="r2bpva1"
-                            >
-                              {skill.name}
-                            </div>
-                          </TooltipTrigger>
-                          <TooltipContent
-                            side="top"
-                            className="animate-fade-in"
-                            data-oid="1..fv03"
-                          >
-                            <div className="text-center" data-oid="wa95cet">
-                              <div className="font-semibold" data-oid="_3bkyyn">
-                                {skill.name}
-                              </div>
-                              <div className="text-xs" data-oid="gqtbb1b">
-                                {skill.level} • {skill.years}{" "}
-                                {skill.years === 1 ? "year" : "years"}
-                              </div>
-                            </div>
-                          </TooltipContent>
-                        </Tooltip>
-                      </motion.div>
-                    ))}
-                  </TooltipProvider>
-                </div>
-              </motion.div>
-            );
-          })}
-        </AnimatePresence>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        viewport={{ once: true }}
-        className="flex justify-center mt-12 gap-8"
-        data-oid="05_yem3"
-      >
-        <div className="flex items-center gap-2" data-oid="4z01q52">
+  return (
+    <ErrorBoundary
+      fallback={
+        <section id="skills" className="py-12" data-oid="rr_f0r5">
+          <h2
+            className="text-3xl font-bold text-center mb-4"
+            data-oid="6uuk:_m"
+          >
+            Technical Skills
+          </h2>
           <div
-            className="skill-level-expert px-2 py-1 rounded-md"
-            data-oid="boluvws"
+            className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4 max-w-2xl mx-auto"
+            data-oid="8yh22nj"
           >
-            Expert
+            <p className="text-muted-foreground mb-4" data-oid="5ecjj2e">
+              We encountered an issue loading the skills visualization. Please
+              refresh the page to try again.
+            </p>
           </div>
-          <span data-oid="t3vn6n9">4+ years</span>
-        </div>
-        <div className="flex items-center gap-2" data-oid="cvv-c.j">
-          <div
-            className="skill-level-advanced px-2 py-1 rounded-md"
-            data-oid="l6zt574"
-          >
-            Advanced
-          </div>
-          <span data-oid="svuph9f">2-4 years</span>
-        </div>
-        <div className="flex items-center gap-2" data-oid="g0763kc">
-          <div
-            className="skill-level-intermediate px-2 py-1 rounded-md"
-            data-oid="vqctxmy"
-          >
-            Intermediate
-          </div>
-          <span data-oid="0drvl8p">1-2 years</span>
-        </div>
-      </motion.div>
-    </section>
+        </section>
+      }
+      data-oid="sf0636i"
+    >
+      <RedesignedSkills data-oid="am-dl5_" />
+    </ErrorBoundary>
   );
 }

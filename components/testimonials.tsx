@@ -1,283 +1,132 @@
-"use client";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Card, CardContent } from '@/components/ui/card'
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { cn } from "@/lib/utils";
+type Testimonial = {
+    name: string
+    role: string
+    image: string
+    quote: string
+}
 
-// Testimonial data
-const testimonials = [
-  {
-    id: 1,
-    content:
-      "Shaquille's expertise in AI and machine learning transformed our project. His ability to explain complex concepts in simple terms made collaboration seamless.",
-    author: "Dr. Sarah Johnson",
-    role: "Research Director, TechLabs",
-    avatar: "/placeholder.svg?height=100&width=100",
-    company: "TechLabs",
-    rating: 5,
-  },
-  {
-    id: 2,
-    content:
-      "Working with Shaquille on our community education initiative was incredible. His technical knowledge combined with his passion for education created a program that truly made an impact.",
-    author: "Marcus Chen",
-    role: "Executive Director, NYC Education Fund",
-    avatar: "/placeholder.svg?height=100&width=100",
-    company: "NYC Education Fund",
-    rating: 5,
-  },
-  {
-    id: 3,
-    content:
-      "Shaquille developed a custom ML solution that increased our operational efficiency by 40%. His attention to detail and commitment to excellence is unmatched.",
-    author: "Priya Patel",
-    role: "CTO, DataSphere",
-    avatar: "/placeholder.svg?height=100&width=100",
-    company: "DataSphere",
-    rating: 5,
-  },
-  {
-    id: 4,
-    content:
-      "As a teaching colleague, I've witnessed Shaquille's extraordinary ability to inspire students. His innovative approach to STEM education has set a new standard in our institution.",
-    author: "James Wilson",
-    role: "Department Chair, Success Academy",
-    avatar: "/placeholder.svg?height=100&width=100",
-    company: "Success Academy",
-    rating: 5,
-  },
-];
+const Testimonial: Testimonial[] = [
+    {
+        name: 'Alex Thompson',
+        role: 'Software Engineer',
+        image: 'https://randomuser.me/api/portraits/men/1.jpg',
+        quote: 'His contributions to our project were invaluable. He has a keen eye for detail and a deep understanding of software architecture.',
+    },
+    {
+        name: 'Maria Garcia',
+        role: 'Data Scientist',
+        image: 'https://randomuser.me/api/portraits/women/1.jpg',
+        quote: 'Collaborating with him on data analysis tasks was seamless. His expertise made our results stand out.',
+    },
+    {
+        name: 'David Kim',
+        role: 'Web Developer',
+        image: 'https://randomuser.me/api/portraits/men/2.jpg',
+        quote: 'He’s a talented developer with a passion for user-friendly interfaces. Our website’s engagement soared thanks to his work.',
+    },
+    {
+        name: 'Sophie Patel',
+        role: 'UX Designer',
+        image: 'https://randomuser.me/api/portraits/women/2.jpg',
+        quote: 'His technical skills and design sensibility make him an amazing collaborator. He always delivers top-notch work.',
+    },
+    {
+        name: 'Michael Brown',
+        role: 'Product Manager',
+        image: 'https://randomuser.me/api/portraits/men/3.jpg',
+        quote: 'He turns complex requirements into elegant solutions. A true asset to any team.',
+    },
+    {
+        name: 'Emma Wilson',
+        role: 'Technical Writer',
+        image: 'https://randomuser.me/api/portraits/women/3.jpg',
+        quote: 'His clear communication and thorough documentation kept our project on track. Highly recommended.',
+    },
+    {
+        name: 'James Lee',
+        role: 'Software Engineer',
+        image: 'https://randomuser.me/api/portraits/men/4.jpg',
+        quote: 'Working with him was a breeze. His problem-solving skills are exceptional, and he always hits deadlines.',
+    },
+    {
+        name: 'Olivia Martinez',
+        role: 'Data Scientist',
+        image: 'https://randomuser.me/api/portraits/women/4.jpg',
+        quote: 'His insights into data trends were critical to our research. A brilliant mind in the field.',
+    },
+    {
+        name: 'William Chen',
+        role: 'Web Developer',
+        image: 'https://randomuser.me/api/portraits/men/5.jpg',
+        quote: 'He built us a robust, scalable web app. His attention to detail is unmatched.',
+    },
+    {
+        name: 'Isabella Rossi',
+        role: 'UX Designer',
+        image: 'https://randomuser.me/api/portraits/women/5.jpg',
+        quote: 'His designs are beautiful and functional. He really gets what users need.',
+    },
+    {
+        name: 'Daniel Johnson',
+        role: 'Product Manager',
+        image: 'https://randomuser.me/api/portraits/men/6.jpg',
+        quote: 'He consistently delivers high-quality work and goes the extra mile. A total pro.',
+    },
+    {
+        name: 'Ava Taylor',
+        role: 'Technical Writer',
+        image: 'https://randomuser.me/api/portraits/women/6.jpg',
+        quote: 'His documentation is clear and comprehensive. It’s made onboarding so much easier.',
+    },
+]
 
-export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+const chunkArray = (array: Testimonial[], chunkSize: number): Testimonial[][] => {
+    const result: Testimonial[][] = []
+    for (let i = 0; i < array.length; i += chunkSize) {
+        result.push(array.slice(i, i + chunkSize))
+    }
+    return result
+}
 
-  const handleNext = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+const testimonialChunks = chunkArray(Testimonial, Math.ceil(Testimonial.length / 3))
 
-  const handlePrev = () => {
-    setDirection(-1);
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
-  };
-
-  const handleDotClick = (index: number) => {
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
-  };
-
-  // Auto-rotate testimonials
-  useEffect(() => {
-    if (isPaused) return;
-
-    intervalRef.current = setInterval(() => {
-      handleNext();
-    }, 8000);
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [currentIndex, isPaused]);
-
-  return (
-    <section className="py-12" data-oid="ozfbs12">
-      <h2 className="text-3xl font-bold text-center mb-4" data-oid="oo05-5y">
-        Client Testimonials
-      </h2>
-      <p
-        className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-        data-oid="cxw4gc_"
-      >
-        Hear what clients and colleagues have to say about working with me.
-      </p>
-
-      <div
-        className="relative max-w-4xl mx-auto px-4"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        data-oid="3hhe_1:"
-      >
-        <AnimatePresence
-          mode="wait"
-          initial={false}
-          custom={direction}
-          data-oid="20bov0e"
-        >
-          <motion.div
-            key={testimonials[currentIndex].id}
-            custom={direction}
-            initial={{
-              opacity: 0,
-              x: direction > 0 ? 100 : -100,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: {
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
-              },
-            }}
-            exit={{
-              opacity: 0,
-              x: direction > 0 ? -100 : 100,
-              transition: {
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
-              },
-            }}
-            className="w-full"
-            data-oid="lztgztt"
-          >
-            <Card
-              className="border-none bg-gradient-to-br from-primary/5 to-primary/10 shadow-lg"
-              data-oid="68-nv-f"
-            >
-              <CardContent className="p-8" data-oid="wa7r52i">
-                <div
-                  className="flex flex-col md:flex-row gap-8 items-center"
-                  data-oid="gs8uygw"
-                >
-                  <div className="flex-shrink-0" data-oid="v1u44rg">
-                    <div className="relative" data-oid="vq7329x">
-                      <Avatar
-                        className="h-24 w-24 border-4 border-background"
-                        data-oid="-tf:mjw"
-                      >
-                        <AvatarImage
-                          src={testimonials[currentIndex].avatar}
-                          alt={testimonials[currentIndex].author}
-                          data-oid="zbiw3sj"
-                        />
-
-                        <AvatarFallback data-oid="4l.6e:j">
-                          {testimonials[currentIndex].author
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div
-                        className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-1.5"
-                        data-oid="oqgbvy:"
-                      >
-                        <Quote className="h-4 w-4" data-oid="ywlamo5" />
-                      </div>
+export default function TestimonialSection() {
+    return (
+        <section>
+            <div className="py-16 md:py-32">
+                <div className="mx-auto max-w-6xl px-6">
+                    <div className="text-center">
+                        <h2 className="text-title text-3xl font-semibold">Testimonial</h2>
+                        <p className="text-body mt-6">What people say about working with me.</p>
                     </div>
-                  </div>
-
-                  <div className="flex-1" data-oid="nc8yx1u">
-                    <div className="mb-4" data-oid="s9l1ru3">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <span
-                          key={i}
-                          className="text-yellow-500 text-lg"
-                          data-oid="1b96lip"
-                        >
-                          {i < testimonials[currentIndex].rating ? "★" : "☆"}
-                        </span>
-                      ))}
+                    <div className="mt-8 grid gap-3 [--color-card:var(--color-muted)] sm:grid-cols-2 md:mt-12 lg:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]">
+                        {testimonialChunks.map((chunk, chunkIndex) => (
+                            <div key={chunkIndex} className="space-y-3 *:border-none *:shadow-none">
+                                {chunk.map(({ name, role, quote, image }, index) => (
+                                    <Card key={index}>
+                                        <CardContent className="grid grid-cols-[auto_1fr] gap-3 pt-6">
+                                            <Avatar className="size-9">
+                                                <AvatarImage alt={name} src={image} loading="lazy" width="120" height="120" />
+                                                <AvatarFallback>{name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                                            </Avatar>
+                                            <div>
+                                                <h3 className="font-medium">{name}</h3>
+                                                <span className="text-muted-foreground block text-sm tracking-wide">{role}</span>
+                                                <blockquote className="mt-3">
+                                                    <p className="text-gray-700 dark:text-gray-300">{quote}</p>
+                                                </blockquote>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
+                        ))}
                     </div>
-
-                    <blockquote
-                      className="text-lg md:text-xl italic mb-6 relative"
-                      data-oid=":2xbat1"
-                    >
-                      <span
-                        className="text-primary text-4xl absolute -top-4 -left-2 opacity-20"
-                        data-oid="80mgq1g"
-                      >
-                        "
-                      </span>
-                      {testimonials[currentIndex].content}
-                      <span
-                        className="text-primary text-4xl absolute -bottom-10 -right-2 opacity-20"
-                        data-oid="ym4bfoz"
-                      >
-                        "
-                      </span>
-                    </blockquote>
-
-                    <div data-oid="phxgyls">
-                      <div className="font-semibold" data-oid="nwn_70w">
-                        {testimonials[currentIndex].author}
-                      </div>
-                      <div
-                        className="text-sm text-muted-foreground flex flex-wrap items-center gap-2"
-                        data-oid=".i54:95"
-                      >
-                        <span data-oid="d3exlmu">
-                          {testimonials[currentIndex].role}
-                        </span>
-                        <span
-                          className="h-1 w-1 rounded-full bg-muted-foreground"
-                          data-oid="4:ycyg6"
-                        ></span>
-                        <span data-oid="_xhxe76">
-                          {testimonials[currentIndex].company}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Navigation controls */}
-        <div className="flex justify-between mt-6" data-oid="0wvfx_j">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={handlePrev}
-            className="rounded-full"
-            aria-label="Previous testimonial"
-            data-oid="8gv4zh7"
-          >
-            <ChevronLeft className="h-4 w-4" data-oid="vqo4src" />
-          </Button>
-
-          <div className="flex items-center gap-2" data-oid="wvaselu">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => handleDotClick(index)}
-                className={cn(
-                  "w-2 h-2 rounded-full transition-all duration-300",
-                  index === currentIndex
-                    ? "bg-primary w-4"
-                    : "bg-muted hover:bg-primary/50",
-                )}
-                aria-label={`Go to testimonial ${index + 1}`}
-                data-oid="uir5wni"
-              />
-            ))}
-          </div>
-
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={handleNext}
-            className="rounded-full"
-            aria-label="Next testimonial"
-            data-oid="ukf:fc2"
-          >
-            <ChevronRight className="h-4 w-4" data-oid="rlp0t2y" />
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
+            </div>
+        </section>
+    )
 }

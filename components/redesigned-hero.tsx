@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CustomGradientBackground } from "@/components/custom-gradient-background";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { Github, Linkedin, Mail, ArrowDown, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, ExternalLink, Download } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { useIsClient } from "@/hooks/use-is-client";
 
@@ -188,6 +188,21 @@ export default function RedesignedHero() {
               >
                 <span className="relative z-10">Contact Me</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="group relative overflow-hidden border-copper-coin/50 hover:border-copper-coin transition-colors duration-300"
+              >
+                <a href="/AI_x1.pdf" download="AI_x1.pdf">
+                  <span className="relative z-10 flex items-center">
+                    Download Resume
+                    <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </a>
               </Button>
             </div>
           </ScrollReveal>

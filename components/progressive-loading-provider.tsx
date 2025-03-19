@@ -12,7 +12,7 @@ type SectionName =
   | "caseStudies"
   | "education"
   | "publications"
-  | "testimonials"
+  | "Testimonial"
   | "blog"
   | "contact";
 
@@ -43,7 +43,7 @@ export function ProgressiveLoadingProvider({
     caseStudies: false,
     education: false,
     publications: false,
-    testimonials: false,
+    Testimonial: false,
     blog: false,
     contact: false,
   });

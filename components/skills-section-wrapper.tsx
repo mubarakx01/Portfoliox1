@@ -18,8 +18,8 @@ function SkillsFallback() {
         data-oid=":trqw:k"
       >
         A comprehensive overview of my technical expertise across various
-        domains, from machine learning and AI to software development and
-        research.
+        domains, from web design and machine learning to software development
+        and data science, honed through academic projects and internships.
       </p>
       <div
         className="flex justify-center items-center py-20"
@@ -29,7 +29,6 @@ function SkillsFallback() {
           className="h-8 w-8 animate-spin text-primary mr-2"
           data-oid="phfi__b"
         />
-
         <span data-oid="6437r6b">Loading skills visualization...</span>
       </div>
     </section>

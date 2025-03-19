@@ -1,20 +1,22 @@
 import { Suspense } from "react";
 import RedesignedHero from "@/components/redesigned-hero";
 import AboutSection from "@/components/about-section";
-import SkillsSectionWrapper from "@/components/skills-section-wrapper";
+import SkillsSection from "@/components/skills-section";
 import RedesignedExperience from "@/components/redesigned-experience";
 import RedesignedProjects from "@/components/redesigned-projects";
 import CaseStudies from "@/components/case-studies";
 import Education from "@/components/education";
-import Testimonials from "@/components/testimonials";
+import LovedByCommunity from "@/components/loved-by-community";
 import ContactForm from "@/components/contact-form";
 import EnhancedFooter from "@/components/enhanced-footer";
 import FloatingNav from "@/components/floating-nav";
-import ScrollProgress from "@/components/scroll-progress";
 import { FloatingThemeSwitcher } from "@/components/floating-theme-switcher";
+import ScrollProgress from "@/components/scroll-progress";
+import BackgroundPaths from "@/components/background-paths";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { SectionFallback } from "@/components/section-fallback";
 import { Loader2 } from "lucide-react";
+import Loading from "@/components/loading";
 
 // Simple loading component
 function LoadingSection({ name }: { name: string }) {
@@ -30,6 +32,7 @@ function LoadingSection({ name }: { name: string }) {
 export default function Home() {
   return (
     <main className="min-h-screen bg-background pt-16">
+      <BackgroundPaths />
       <ScrollProgress />
       <FloatingNav />
       <FloatingThemeSwitcher />
@@ -47,7 +50,7 @@ export default function Home() {
       </ErrorBoundary>
 
       <ErrorBoundary fallback={<SectionFallback title="Skills" />}>
-        <SkillsSectionWrapper />
+        <SkillsSection />
       </ErrorBoundary>
 
       <ErrorBoundary fallback={<SectionFallback title="Experience" />}>
@@ -74,9 +77,9 @@ export default function Home() {
         </Suspense>
       </ErrorBoundary>
 
-      <ErrorBoundary fallback={<SectionFallback title="Testimonials" />}>
-        <Suspense fallback={<LoadingSection name="Testimonials" />}>
-          <Testimonials />
+      <ErrorBoundary fallback={<SectionFallback title="Testimonial" />}>
+        <Suspense fallback={<LoadingSection name="Testimonial" />}>
+          <LovedByCommunity />
         </Suspense>
       </ErrorBoundary>
 
