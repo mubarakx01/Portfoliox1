@@ -50,42 +50,42 @@ const projectCategories = [
   {
     id: "ai",
     name: "AI & ML",
-    icon: <Cpu className="h-4 w-4" data-oid="8sv3g:q" />,
+    icon: <Cpu className="h-4 w-4" data-oid="0ivexg4" />,
   },
   {
     id: "audio",
     name: "Audio",
-    icon: <Zap className="h-4 w-4" data-oid="k2dyj1d" />,
+    icon: <Zap className="h-4 w-4" data-oid="giqb_n6" />,
   },
   {
     id: "web",
     name: "Web Dev",
-    icon: <Globe className="h-4 w-4" data-oid="eveykdb" />,
+    icon: <Globe className="h-4 w-4" data-oid="-.k501s" />,
   },
   {
     id: "data",
     name: "Data Science",
-    icon: <Database className="h-4 w-4" data-oid="xddjqbl" />,
+    icon: <Database className="h-4 w-4" data-oid="let00.k" />,
   },
   {
     id: "network",
     name: "Network",
-    icon: <Share2 className="h-4 w-4" data-oid="ikv3zhr" />,
+    icon: <Share2 className="h-4 w-4" data-oid="dbcn2yn" />,
   },
   {
     id: "security",
     name: "Security",
-    icon: <Shield className="h-4 w-4" data-oid="ykxfy8n" />,
+    icon: <Shield className="h-4 w-4" data-oid="10wymuu" />,
   },
   {
     id: "communication",
     name: "Communication",
-    icon: <MessageSquare className="h-4 w-4" data-oid="f7qfdy7" />,
+    icon: <MessageSquare className="h-4 w-4" data-oid="on_788v" />,
   },
   {
     id: "research",
     name: "Research",
-    icon: <BookOpen className="h-4 w-4" data-oid="7v4ptiy" />,
+    icon: <BookOpen className="h-4 w-4" data-oid="igo6771" />,
   },
 ];
 
@@ -310,69 +310,69 @@ export default function RedesignedProjects() {
   // If not client-side yet, show a loading state
   if (!isClient || isLoading) {
     return (
-      <SectionContainer id="projects" className="relative" data-oid="7dgmaot">
+      <SectionContainer id="projects" className="relative" data-oid="lbe387t">
         <SectionHeader
           title="Project Portfolio"
           subtitle="Explore my portfolio of AI, machine learning, and software development projects."
-          data-oid="yjwp1h3"
+          data-oid="6jbyhu3"
         />
 
         <div
           className="flex justify-center items-center py-20"
-          data-oid="juf7jnv"
+          data-oid="83hmz:9"
         >
           <Loader2
             className="h-8 w-8 animate-spin text-primary mr-2"
-            data-oid="wo8gnz6"
+            data-oid="8neueh1"
           />
 
-          <span data-oid="ak6s6pg">Loading projects...</span>
+          <span data-oid="umvzuj1">Loading projects...</span>
         </div>
       </SectionContainer>
     );
   }
 
   return (
-    <SectionContainer id="projects" className="relative" data-oid="o.abv.f">
+    <SectionContainer id="projects" className="relative" data-oid="l4rr3hx">
       {/* Background decorative elements */}
       <div
         className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="ruatuvb"
+        data-oid="ks00cp8"
       />
 
       <div
         className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="ow2ui0e"
+        data-oid="y6qi15y"
       />
 
       <SectionHeader
         title="Project Portfolio"
         subtitle="Explore my portfolio of AI, machine learning, and software development projects. Each project demonstrates different skills and technologies."
-        data-oid="ji6ibiq"
+        data-oid="xh2ekj0"
       />
 
       {featuredProjects.length > 0 && (
-        <div className="mb-16" data-oid="w71u8ua">
-          <ScrollReveal data-oid="hqqes1-">
+        <div className="mb-16" data-oid="e3r8u8l">
+          <ScrollReveal data-oid="o5eap1i">
             <h3
               className="text-xl font-semibold mb-6 flex items-center gap-2 justify-center"
-              data-oid="3f0hwcu"
+              data-oid="50iys_0"
             >
-              <Layers className="h-5 w-5 text-primary" data-oid="q3ee3:y" />
-              <span data-oid="l2d.l--">Featured Projects</span>
+              <Layers className="h-5 w-5 text-primary" data-oid="99kw_-1" />
+              <span data-oid=":1qg1s0">Featured Projects</span>
             </h3>
           </ScrollReveal>
 
-          <ScrollReveal data-oid="t7:j3jt">
+          <ScrollReveal data-oid="oa6_:il">
             <div
               className="relative rounded-xl overflow-hidden"
-              data-oid="kltbi7p"
+              data-oid="o9:bbp_"
             >
               <AnimatePresence
                 mode="wait"
                 initial={false}
                 custom={direction}
-                data-oid="prekkau"
+                data-oid="g7qzxs9"
               >
                 <motion.div
                   key={featuredProjects[currentFeaturedIndex].id}
@@ -398,15 +398,15 @@ export default function RedesignedProjects() {
                     },
                   }}
                   className="relative w-full aspect-[16/9]"
-                  data-oid="e_zkuwa"
+                  data-oid="28ckloq"
                 >
                   <div
                     className="absolute inset-0 flex flex-col md:flex-row"
-                    data-oid="xmgjbi5"
+                    data-oid="0d60tcr"
                   >
                     <div
                       className="relative w-full h-48 md:h-auto md:w-1/2"
-                      data-oid="f2xcp5y"
+                      data-oid="_s3apql"
                     >
                       <img
                         src={
@@ -416,7 +416,7 @@ export default function RedesignedProjects() {
                         alt={featuredProjects[currentFeaturedIndex].title}
                         className="w-full h-full object-contain"
                         style={{ maxWidth: "100%", maxHeight: "100%" }}
-                        data-oid="rjp1yj2"
+                        data-oid="bxj894j"
                       />
                     </div>
 
@@ -425,31 +425,31 @@ export default function RedesignedProjects() {
                         "w-full md:w-1/2 p-6 flex flex-col justify-center opacity-90 bg-gradient-to-r",
                         featuredProjects[currentFeaturedIndex].color,
                       )}
-                      data-oid="5t-1-ts"
+                      data-oid="smbhb:n"
                     >
                       <Badge
                         variant="outline"
                         className="w-fit mb-4 bg-black/50 backdrop-blur-sm text-white border-white/20"
-                        data-oid="fhq.bxe"
+                        data-oid="y5w7z:8"
                       >
                         Featured Project
                       </Badge>
                       <h3
                         className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4"
-                        data-oid="jm2hrue"
+                        data-oid="o-fl3_r"
                       >
                         {featuredProjects[currentFeaturedIndex].title}
                       </h3>
                       <p
                         className="text-white/90 mb-4 md:mb-6 text-sm md:text-base line-clamp-3 md:line-clamp-none"
-                        data-oid="exoa7xc"
+                        data-oid="ppindfj"
                       >
                         {featuredProjects[currentFeaturedIndex].description}
                       </p>
 
                       <div
                         className="flex flex-wrap gap-2 mb-4 md:mb-6"
-                        data-oid="it5rdsq"
+                        data-oid="rl.x1wm"
                       >
                         {featuredProjects[currentFeaturedIndex].technologies
                           .slice(0, 3)
@@ -457,7 +457,7 @@ export default function RedesignedProjects() {
                             <Badge
                               key={index}
                               className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                              data-oid="oh-b35c"
+                              data-oid="crj-2qw"
                             >
                               {tech}
                             </Badge>
@@ -466,7 +466,7 @@ export default function RedesignedProjects() {
                           .length > 3 && (
                           <Badge
                             className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                            data-oid="_y1eby6"
+                            data-oid="2wkjk62"
                           >
                             +
                             {featuredProjects[currentFeaturedIndex].technologies
@@ -476,7 +476,7 @@ export default function RedesignedProjects() {
                         )}
                       </div>
 
-                      <div className="flex flex-wrap gap-3" data-oid="fp-4ze-">
+                      <div className="flex flex-wrap gap-3" data-oid="kg6uset">
                         <Button
                           className="bg-white text-black hover:bg-white/90 group text-sm"
                           onClick={() =>
@@ -484,12 +484,12 @@ export default function RedesignedProjects() {
                               featuredProjects[currentFeaturedIndex].demoUrl,
                             )
                           }
-                          data-oid="dqa:y7."
+                          data-oid="_2org.u"
                         >
                           Live Demo
                           <ExternalLink
                             className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                            data-oid="1fhjcmo"
+                            data-oid="3i7ptqt"
                           />
                         </Button>
 
@@ -497,7 +497,7 @@ export default function RedesignedProjects() {
                           variant="outline"
                           className="border-white text-white hover:bg-white/20 gap-2 text-sm"
                           asChild
-                          data-oid="1xkiqji"
+                          data-oid="z09-iz3"
                         >
                           <a
                             href={
@@ -505,9 +505,9 @@ export default function RedesignedProjects() {
                             }
                             target="_blank"
                             rel="noopener noreferrer"
-                            data-oid="90vnjeu"
+                            data-oid="s03sokg"
                           >
-                            <Github className="h-4 w-4" data-oid="fqtj6lv" />
+                            <Github className="h-4 w-4" data-oid="20ei8ha" />
                             View Code
                           </a>
                         </Button>
@@ -521,9 +521,9 @@ export default function RedesignedProjects() {
                             );
                             setIsDialogOpen(true);
                           }}
-                          data-oid="kyzpf:y"
+                          data-oid="jmf3spn"
                         >
-                          <Code className="h-4 w-4" data-oid="1uk7aqr" />
+                          <Code className="h-4 w-4" data-oid="8.n6ee." />
                           Details
                         </Button>
                       </div>
@@ -538,9 +538,9 @@ export default function RedesignedProjects() {
                 variant="ghost"
                 className="absolute left-2 top-1/2 -translate-y-1/2 z-30 h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
                 onClick={handlePrev}
-                data-oid="mzxj_8j"
+                data-oid="..oejzx"
               >
-                <ChevronLeft className="h-5 w-5" data-oid="g2o59bt" />
+                <ChevronLeft className="h-5 w-5" data-oid="r9t4yi3" />
               </Button>
 
               <Button
@@ -548,15 +548,15 @@ export default function RedesignedProjects() {
                 variant="ghost"
                 className="absolute right-2 top-1/2 -translate-y-1/2 z-30 h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
                 onClick={handleNext}
-                data-oid="kllf.hu"
+                data-oid="vpllr:c"
               >
-                <ChevronRight className="h-5 w-5" data-oid="z_2kw-8" />
+                <ChevronRight className="h-5 w-5" data-oid="739_w-0" />
               </Button>
 
               {/* Progress dots */}
               <div
                 className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1"
-                data-oid="y.zh_rs"
+                data-oid="in16gzo"
               >
                 {featuredProjects.map((_, index) => (
                   <button
@@ -572,7 +572,7 @@ export default function RedesignedProjects() {
                       setCurrentFeaturedIndex(index);
                     }}
                     aria-label={`Go to project ${index + 1}`}
-                    data-oid="qbm26xs"
+                    data-oid="g0oq691"
                   />
                 ))}
               </div>
@@ -581,17 +581,17 @@ export default function RedesignedProjects() {
         </div>
       )}
 
-      <ScrollReveal data-oid="110p9bp">
+      <ScrollReveal data-oid="q4:p3q0">
         <Tabs
           defaultValue="all"
           onValueChange={setSelectedCategory}
           className="w-full"
-          data-oid="a7q2xvr"
+          data-oid="j7sns24"
         >
-          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="kp_htyk">
+          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="etrc.8g">
             <TabsList
               className="flex justify-start gap-2 mb-8 bg-transparent w-max mx-auto"
-              data-oid="3d4-ut:"
+              data-oid="_h5k_:6"
             >
               {projectCategories.map((category) => (
                 <TabsTrigger
@@ -603,14 +603,14 @@ export default function RedesignedProjects() {
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted hover:bg-muted/80",
                   )}
-                  data-oid="ppt3fy4"
+                  data-oid="_0inp2."
                 >
                   <div
                     className="flex items-center gap-1 sm:gap-2"
-                    data-oid="fl9.2g3"
+                    data-oid="g:hr7mt"
                   >
                     {category.icon && category.icon}
-                    <span data-oid="5xv.3zb">{category.name}</span>
+                    <span data-oid="uoq4zt5">{category.name}</span>
                   </div>
                 </TabsTrigger>
               ))}
@@ -619,17 +619,17 @@ export default function RedesignedProjects() {
 
           <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            data-oid="0f0h.tj"
+            data-oid="cd_vt:m"
           >
-            <AnimatePresence data-oid="_..as:3">
+            <AnimatePresence data-oid="aexhyyv">
               {filteredProjects.map((project, index) => (
-                <ErrorBoundary key={project.id} data-oid="6c76zak">
+                <ErrorBoundary key={project.id} data-oid="06agsbj">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    data-oid="qmj4rzq"
+                    data-oid="ozc7jnu"
                   >
                     <ProjectCard
                       project={project}
@@ -637,7 +637,7 @@ export default function RedesignedProjects() {
                         setSelectedProject(project);
                         setIsDialogOpen(true);
                       }}
-                      data-oid="k4esc7n"
+                      data-oid="qj4gge9"
                     />
                   </motion.div>
                 </ErrorBoundary>
@@ -651,24 +651,24 @@ export default function RedesignedProjects() {
       <Dialog
         open={isDialogOpen}
         onOpenChange={setIsDialogOpen}
-        data-oid="8-xc7_5"
+        data-oid="cesnwiy"
       >
         <DialogContent
           className="max-w-4xl max-h-[90vh] overflow-hidden p-0 w-[95vw]"
-          data-oid="hjanzws"
+          data-oid="wjiex.h"
         >
           {selectedProject && (
-            <div className="flex flex-col h-full" data-oid="3jwzjbx">
+            <div className="flex flex-col h-full" data-oid="a3f4:ie">
               <DialogHeader
                 className="px-4 sm:px-6 pt-4 sm:pt-6 pb-2"
-                data-oid=".e1gfjq"
+                data-oid="uxl9t76"
               >
                 <div
                   className="flex justify-between items-start"
-                  data-oid="mvq40yj"
+                  data-oid="p8-mblj"
                 >
-                  <div data-oid="yc95nux">
-                    <Badge className="mb-2" data-oid="fz1utrl">
+                  <div data-oid="fvat:u6">
+                    <Badge className="mb-2" data-oid="5p1rv6n">
                       {selectedProject.category === "ai"
                         ? "AI & Machine Learning"
                         : selectedProject.category === "web"
@@ -681,23 +681,23 @@ export default function RedesignedProjects() {
                     </Badge>
                     <DialogTitle
                       className="text-xl sm:text-2xl"
-                      data-oid="fqyugb5"
+                      data-oid="fc0z-if"
                     >
                       {selectedProject.title}
                     </DialogTitle>
                     <DialogDescription
                       className="mt-2 text-sm"
-                      data-oid="5krnly_"
+                      data-oid="xz3bmu0"
                     >
                       {selectedProject.description}
                     </DialogDescription>
                   </div>
-                  <div className="flex" data-oid="kyo4ch9">
+                  <div className="flex" data-oid="is_fpma">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
                         className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                        data-oid="55km929"
+                        data-oid="ok6.tnu"
                       />
                     ))}
                   </div>
@@ -707,31 +707,31 @@ export default function RedesignedProjects() {
               <Tabs
                 defaultValue="overview"
                 className="flex-1 overflow-hidden"
-                data-oid="lavnd_h"
+                data-oid="komfxh7"
               >
-                <div className="px-4 sm:px-6 border-b" data-oid="iin--xu">
+                <div className="px-4 sm:px-6 border-b" data-oid="wq-3gq4">
                   <TabsList
                     className="justify-start rounded-none bg-transparent h-10"
-                    data-oid="::eg3ea"
+                    data-oid="hge46k3"
                   >
                     <TabsTrigger
                       value="overview"
                       className="text-sm"
-                      data-oid="vrw0g1n"
+                      data-oid="8igd5qc"
                     >
                       Overview
                     </TabsTrigger>
                     <TabsTrigger
                       value="details"
                       className="text-sm"
-                      data-oid="b2gm2d3"
+                      data-oid="0a86zwb"
                     >
                       Details
                     </TabsTrigger>
                     <TabsTrigger
                       value="gallery"
                       className="text-sm"
-                      data-oid="hjkjnww"
+                      data-oid="3e6s19b"
                     >
                       Gallery
                     </TabsTrigger>
@@ -740,59 +740,59 @@ export default function RedesignedProjects() {
 
                 <div
                   className="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)]"
-                  data-oid="p2tv.f6"
+                  data-oid="l2n:hj8"
                 >
                   <TabsContent
                     value="overview"
                     className="mt-0 h-full"
-                    data-oid="3rcpmfq"
+                    data-oid="0d1l9:x"
                   >
                     <div
                       className="grid grid-cols-1 lg:grid-cols-3 gap-6"
-                      data-oid="car0h1k"
+                      data-oid="5vyrr01"
                     >
-                      <div className="lg:col-span-2" data-oid="h0mehu6">
+                      <div className="lg:col-span-2" data-oid="ph0.:6n">
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="w7r8zlt"
+                          data-oid="9pgjff2"
                         >
                           Project Details
                         </h4>
                         <p
                           className="mb-6 text-sm sm:text-base"
-                          data-oid="5ty3t_f"
+                          data-oid="grc:-3l"
                         >
                           {selectedProject.longDescription}
                         </p>
 
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="n.31jmt"
+                          data-oid="mdte7h1"
                         >
                           Key Achievements
                         </h4>
-                        <ul className="space-y-2 mb-6" data-oid="npvby60">
+                        <ul className="space-y-2 mb-6" data-oid="3nq7so4">
                           {selectedProject.achievements.map(
                             (achievement, i) => (
                               <li
                                 key={i}
                                 className="flex items-start gap-2"
-                                data-oid="c07vtw8"
+                                data-oid="rlk2hou"
                               >
                                 <div
                                   className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0"
-                                  data-oid="5v_9eg0"
+                                  data-oid="_vpswba"
                                 >
                                   <span
                                     className="text-xs text-primary"
-                                    data-oid="92iwuj3"
+                                    data-oid="y11q-69"
                                   >
                                     ✓
                                   </span>
                                 </div>
                                 <span
                                   className="text-sm sm:text-base"
-                                  data-oid="1tl6jxk"
+                                  data-oid="qh96mh:"
                                 >
                                   {achievement}
                                 </span>
@@ -803,19 +803,19 @@ export default function RedesignedProjects() {
 
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="c:qajp:"
+                          data-oid="2.fozwp"
                         >
                           Technologies
                         </h4>
                         <div
                           className="flex flex-wrap gap-2 mb-6"
-                          data-oid="s6h3cfg"
+                          data-oid="cfhoszg"
                         >
                           {selectedProject.technologies.map((tech, index) => (
                             <Badge
                               key={index}
                               variant="secondary"
-                              data-oid="hs2mjbm"
+                              data-oid="4_sv17k"
                             >
                               {tech}
                             </Badge>
@@ -824,7 +824,7 @@ export default function RedesignedProjects() {
 
                         <div
                           className="flex flex-wrap gap-3 mt-6"
-                          data-oid="9-0cror"
+                          data-oid="y6qre6g"
                         >
                           <Button
                             variant="default"
@@ -832,11 +832,11 @@ export default function RedesignedProjects() {
                             onClick={() =>
                               handleDemoClick(selectedProject.demoUrl)
                             }
-                            data-oid=":jk5e-7"
+                            data-oid="aqb-27j"
                           >
                             <ExternalLink
                               className="h-4 w-4"
-                              data-oid="b9wibjt"
+                              data-oid="hv25dux"
                             />
                             Live Demo
                           </Button>
@@ -844,64 +844,64 @@ export default function RedesignedProjects() {
                             variant="outline"
                             className="gap-2"
                             asChild
-                            data-oid="3potyow"
+                            data-oid="4w-f_p3"
                           >
                             <a
                               href={selectedProject.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              data-oid="8p37en6"
+                              data-oid="4wf_rga"
                             >
-                              <Github className="h-4 w-4" data-oid="5o2-kfb" />
+                              <Github className="h-4 w-4" data-oid="flmmnjy" />
                               GitHub
                             </a>
                           </Button>
                         </div>
                       </div>
 
-                      <div data-oid="0m5af44">
+                      <div data-oid=":ajopnb">
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="ut5vu.9"
+                          data-oid="2yrkrrx"
                         >
                           Project Info
                         </h4>
-                        <div className="space-y-4" data-oid="z:vdyls">
-                          <div className="flex flex-col" data-oid="jf2_xdf">
+                        <div className="space-y-4" data-oid="c:hgu9e">
+                          <div className="flex flex-col" data-oid="l37b29r">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="vcbfg_z"
+                              data-oid="9k74ix:"
                             >
                               Completed
                             </span>
-                            <span data-oid="tn6_s-7">
+                            <span data-oid="r5jymoq">
                               {selectedProject.completed}
                             </span>
                           </div>
-                          <div className="flex flex-col" data-oid=".4a:x:h">
+                          <div className="flex flex-col" data-oid="j:ze3og">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="26fgexj"
+                              data-oid="o:zwlo:"
                             >
                               Team Size
                             </span>
-                            <span data-oid="ne72dsq">
+                            <span data-oid="xrdbp7u">
                               {selectedProject.teamSize} people
                             </span>
                           </div>
-                          <div className="flex flex-col" data-oid="kzw_k2v">
+                          <div className="flex flex-col" data-oid="wu6cti0">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="fn8v-qt"
+                              data-oid="gkb1550"
                             >
                               Difficulty
                             </span>
-                            <div className="flex" data-oid="3x92gj_">
+                            <div className="flex" data-oid=":vzb_:l">
                               {Array.from({ length: 5 }).map((_, i) => (
                                 <Star
                                   key={i}
                                   className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                                  data-oid="ihnb35d"
+                                  data-oid="in2vpes"
                                 />
                               ))}
                             </div>
@@ -914,42 +914,42 @@ export default function RedesignedProjects() {
                   <TabsContent
                     value="details"
                     className="mt-0"
-                    data-oid="_19tali"
+                    data-oid="c0mz.7h"
                   >
                     <div
                       className="relative aspect-video mb-6 rounded-lg overflow-hidden"
-                      data-oid="g4i0-nt"
+                      data-oid="_0fqnck"
                     >
                       <img
                         src={selectedProject.imageUrl || "/placeholder.svg"}
                         alt={selectedProject.title}
                         className="w-full h-full object-cover"
                         style={{ maxWidth: "100%", maxHeight: "100%" }}
-                        data-oid="q_s:2m6"
+                        data-oid="bzfnq.b"
                       />
                     </div>
 
-                    <div className="space-y-6" data-oid="zkpno87">
-                      <div data-oid="uq6:9d3">
+                    <div className="space-y-6" data-oid="njzt5ux">
+                      <div data-oid="fb1uhi1">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="dacadjo"
+                          data-oid="7xhqqkj"
                         >
                           Project Description
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="9y5wxuz">
+                        <p className="text-sm sm:text-base" data-oid="8bvccv-">
                           {selectedProject.longDescription}
                         </p>
                       </div>
 
-                      <div data-oid="ypjm-1q">
+                      <div data-oid="1_moh7a">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="_nbdawl"
+                          data-oid="98npatj"
                         >
                           Implementation Details
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="1-.5y6g">
+                        <p className="text-sm sm:text-base" data-oid="fb:xegk">
                           This project was implemented using{" "}
                           {selectedProject.technologies.join(", ")}. The
                           development process involved careful planning,
@@ -958,14 +958,14 @@ export default function RedesignedProjects() {
                         </p>
                       </div>
 
-                      <div data-oid="7dp5432">
+                      <div data-oid="jh_y:fg">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="c9t5xbp"
+                          data-oid="bdhl.ne"
                         >
                           Challenges & Solutions
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="li_xaax">
+                        <p className="text-sm sm:text-base" data-oid="uc-qj9:">
                           During development, we encountered several challenges
                           including performance optimization, scalability
                           concerns, and integration complexities. These were
@@ -979,17 +979,17 @@ export default function RedesignedProjects() {
                   <TabsContent
                     value="gallery"
                     className="mt-0"
-                    data-oid="nvojw2v"
+                    data-oid=":bi3_7w"
                   >
                     <div
                       className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-                      data-oid="gnaf8.4"
+                      data-oid="al92zua"
                     >
                       {[1, 2, 3, 4].map((index) => (
                         <div
                           key={index}
                           className="overflow-hidden rounded-lg"
-                          data-oid="f78z:yr"
+                          data-oid=":n:z_u1"
                         >
                           <img
                             src={`/placeholder.svg?height=400&width=600&text=Screenshot ${index}`}
@@ -997,7 +997,7 @@ export default function RedesignedProjects() {
                             width={600}
                             height={400}
                             className="w-full h-auto object-cover transition-transform duration-500 hover:scale-110"
-                            data-oid="ra8ryo3"
+                            data-oid="k.sn.pl"
                           />
                         </div>
                       ))}
@@ -1027,15 +1027,15 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
       className="overflow-hidden h-full flex flex-col border-none shadow-md hover:shadow-lg transition-all duration-300 group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-oid="cd0vm3f"
+      data-oid="uqi57g5"
     >
-      <div className="relative aspect-video overflow-hidden" data-oid="_3hqsvz">
+      <div className="relative aspect-video overflow-hidden" data-oid="qw0caks">
         <img
           src={project.imageUrl || "/placeholder.svg"}
           alt={project.title}
           className="w-full h-full object-contain"
           style={{ maxWidth: "100%", maxHeight: "100%" }}
-          data-oid="kegxk0f"
+          data-oid="lj_8t3y"
         />
 
         <div
@@ -1043,30 +1043,30 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
             "absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-300 bg-gradient-to-r",
             project.color,
           )}
-          data-oid="k.srynm"
+          data-oid="49aui4k"
         />
 
         <div
           className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          data-oid="kuyqa_o"
+          data-oid="ia83jfa"
         >
           <Button
             variant="outline"
             className="border-white text-white hover:bg-white/20"
             onClick={onSelect}
-            data-oid="pemr64n"
+            data-oid="l7-bafs"
           >
             View Details
           </Button>
         </div>
       </div>
 
-      <CardContent className="p-4 flex-1 flex flex-col" data-oid="98e7-:g">
+      <CardContent className="p-4 flex-1 flex flex-col" data-oid="x5:h4sd">
         <div
           className="flex justify-between items-start mb-2"
-          data-oid="-uzjthd"
+          data-oid="yhx8y83"
         >
-          <Badge variant="outline" className="text-xs" data-oid="7ye-00:">
+          <Badge variant="outline" className="text-xs" data-oid="z82dpo-">
             {project.category === "ai"
               ? "AI & ML"
               : project.category === "web"
@@ -1077,40 +1077,40 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
                     ? "Audio"
                     : "Research"}
           </Badge>
-          <div className="flex" data-oid="b1roiuy">
+          <div className="flex" data-oid="oqzfoo2">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star
                 key={i}
                 className={`h-3 w-3 ${i < project.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                data-oid="o_vb_5o"
+                data-oid="568b7k1"
               />
             ))}
           </div>
         </div>
 
-        <h3 className="font-bold mb-2 line-clamp-1" data-oid="y8hhqg_">
+        <h3 className="font-bold mb-2 line-clamp-1" data-oid="clwglah">
           {project.title}
         </h3>
         <p
           className="text-muted-foreground text-sm line-clamp-3 mb-4"
-          data-oid="_b14m16"
+          data-oid="waxmpkq"
         >
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-1 mb-4 mt-auto" data-oid="44x8v:p">
+        <div className="flex flex-wrap gap-1 mb-4 mt-auto" data-oid="-p0q2g.">
           {project.technologies.slice(0, 3).map((tech, i) => (
             <Badge
               key={i}
               variant="secondary"
               className="text-xs"
-              data-oid="r:_aph3"
+              data-oid="au4ue0x"
             >
               {tech}
             </Badge>
           ))}
           {project.technologies.length > 3 && (
-            <Badge variant="secondary" className="text-xs" data-oid="0ey4j86">
+            <Badge variant="secondary" className="text-xs" data-oid="5v2h3hy">
               +{project.technologies.length - 3} more
             </Badge>
           )}
@@ -1118,15 +1118,15 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
 
         <div
           className="flex justify-between items-center text-xs text-muted-foreground"
-          data-oid="107ci56"
+          data-oid="qaog1a7"
         >
-          <div className="flex items-center gap-1" data-oid=":q1sve5">
-            <Calendar className="h-3 w-3" data-oid="192goeu" />
-            <span data-oid="j1tk:1x">{project.completed}</span>
+          <div className="flex items-center gap-1" data-oid="m9yoxpq">
+            <Calendar className="h-3 w-3" data-oid="skd29rm" />
+            <span data-oid="221ki_j">{project.completed}</span>
           </div>
-          <div className="flex items-center gap-1" data-oid="oxyp4vm">
-            <Users className="h-3 w-3" data-oid="zyb.phx" />
-            <span data-oid="787.s3d">Team: {project.teamSize}</span>
+          <div className="flex items-center gap-1" data-oid="6fnos8k">
+            <Users className="h-3 w-3" data-oid="y3_g2ia" />
+            <span data-oid="lnca.24">Team: {project.teamSize}</span>
           </div>
         </div>
       </CardContent>

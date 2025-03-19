@@ -147,7 +147,7 @@ export function DiagnosticTool() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50" data-oid="_ni:0dm">
+    <div className="fixed bottom-4 right-4 z-50" data-oid="-n6-qaa">
       <Button
         variant="outline"
         size="sm"
@@ -158,37 +158,37 @@ export function DiagnosticTool() {
             : "bg-background",
         )}
         onClick={() => setIsOpen(!isOpen)}
-        data-oid="1c2vig8"
+        data-oid="r.55.a7"
       >
         {diagnostics.errors.length > 0 ? (
-          <AlertTriangle className="h-4 w-4" data-oid="9bkyd_4" />
+          <AlertTriangle className="h-4 w-4" data-oid="76qcjxb" />
         ) : diagnostics.warnings && diagnostics.warnings.length > 0 ? (
-          <Activity className="h-4 w-4 text-amber-500" data-oid="f60.ud_" />
+          <Activity className="h-4 w-4 text-amber-500" data-oid="3ccf8f3" />
         ) : (
-          <CheckCircle className="h-4 w-4 text-green-500" data-oid="w4:fpwl" />
+          <CheckCircle className="h-4 w-4 text-green-500" data-oid="qgl0_.n" />
         )}
         Diagnostics
         {isOpen ? (
-          <ChevronDown className="h-4 w-4" data-oid="b05_om-" />
+          <ChevronDown className="h-4 w-4" data-oid="lvcnytc" />
         ) : (
-          <ChevronUp className="h-4 w-4" data-oid="v-9.-6x" />
+          <ChevronUp className="h-4 w-4" data-oid="j1zrh_c" />
         )}
       </Button>
 
       {isOpen && (
         <Card
           className="absolute bottom-12 right-0 w-80 shadow-xl"
-          data-oid="y0ylnu8"
+          data-oid="xzgrk1w"
         >
-          <CardHeader className="py-3" data-oid="s_u.2ql">
+          <CardHeader className="py-3" data-oid="d7r0yz7">
             <div
               className="flex justify-between items-center"
-              data-oid=":l5ifld"
+              data-oid="g.49o-i"
             >
-              <CardTitle className="text-sm" data-oid="h-s7lgv">
+              <CardTitle className="text-sm" data-oid="a.s:h8q">
                 System Diagnostics
               </CardTitle>
-              <div className="flex gap-2" data-oid=":ttg831">
+              <div className="flex gap-2" data-oid="0pcs18v">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -197,7 +197,7 @@ export function DiagnosticTool() {
                     activeTab === "system" ? "bg-muted" : "",
                   )}
                   onClick={() => setActiveTab("system")}
-                  data-oid="_u_p9up"
+                  data-oid="sgow:5f"
                 >
                   System
                 </Button>
@@ -209,7 +209,7 @@ export function DiagnosticTool() {
                     activeTab === "performance" ? "bg-muted" : "",
                   )}
                   onClick={() => setActiveTab("performance")}
-                  data-oid="3.gqfs0"
+                  data-oid="bftef6h"
                 >
                   Performance
                 </Button>
@@ -218,43 +218,43 @@ export function DiagnosticTool() {
                   size="sm"
                   className="h-6 w-6 p-0"
                   onClick={() => setIsOpen(false)}
-                  data-oid="w7ltixz"
+                  data-oid="f6axygk"
                 >
-                  <X className="h-4 w-4" data-oid="57wial2" />
+                  <X className="h-4 w-4" data-oid="tsj4rqd" />
                 </Button>
               </div>
             </div>
           </CardHeader>
           <CardContent
             className="text-xs space-y-3 max-h-96 overflow-y-auto"
-            data-oid="rsa9jfh"
+            data-oid="lels0_q"
           >
             {activeTab === "system" ? (
               <>
-                <div data-oid="_2q_giv">
-                  <div className="font-medium mb-1" data-oid="oki7jc:">
+                <div data-oid="9n34.m2">
+                  <div className="font-medium mb-1" data-oid="2-v.2ts">
                     Browser Info:
                   </div>
                   <div
                     className="text-muted-foreground break-words"
-                    data-oid="wp3mg3w"
+                    data-oid="qnmoh7u"
                   >
                     {diagnostics.browserInfo}
                   </div>
                 </div>
 
-                <div className="space-y-1" data-oid="4f785bv">
-                  <div className="font-medium" data-oid="h0umtdh">
+                <div className="space-y-1" data-oid="lftmxez">
+                  <div className="font-medium" data-oid="_s4.vg:">
                     Environment Checks:
                   </div>
-                  <div className="flex items-center gap-2" data-oid="kej:301">
+                  <div className="flex items-center gap-2" data-oid="l0basm-">
                     <div
                       className={
                         diagnostics.windowDefined
                           ? "text-green-500"
                           : "text-red-500"
                       }
-                      data-oid="30ztcuv"
+                      data-oid="ybnhw-6"
                     >
                       {diagnostics.windowDefined ? "✓" : "✗"} Window
                     </div>
@@ -264,7 +264,7 @@ export function DiagnosticTool() {
                           ? "text-green-500"
                           : "text-red-500"
                       }
-                      data-oid="_nwq2:p"
+                      data-oid="a8f9sx8"
                     >
                       {diagnostics.documentDefined ? "✓" : "✗"} Document
                     </div>
@@ -274,20 +274,20 @@ export function DiagnosticTool() {
                           ? "text-green-500"
                           : "text-red-500"
                       }
-                      data-oid=".lv0_kq"
+                      data-oid="vyckwkz"
                     >
                       {diagnostics.localStorageAvailable ? "✓" : "✗"}{" "}
                       LocalStorage
                     </div>
                   </div>
-                  <div className="flex items-center gap-2" data-oid="v3tccwt">
+                  <div className="flex items-center gap-2" data-oid="2ki6my5">
                     <div
                       className={
                         diagnostics.webGLSupported
                           ? "text-green-500"
                           : "text-red-500"
                       }
-                      data-oid="pz0cp54"
+                      data-oid="md5o3ku"
                     >
                       {diagnostics.webGLSupported ? "✓" : "✗"} WebGL
                     </div>
@@ -295,19 +295,19 @@ export function DiagnosticTool() {
                 </div>
 
                 {diagnostics.errors && diagnostics.errors.length > 0 && (
-                  <div data-oid="quft687">
+                  <div data-oid="l7w:_.0">
                     <div
                       className="font-medium text-destructive mb-1"
-                      data-oid="7fw1u8n"
+                      data-oid="7rl.5t0"
                     >
                       Errors:
                     </div>
-                    <ul className="list-disc pl-4 space-y-1" data-oid="msjbmqc">
+                    <ul className="list-disc pl-4 space-y-1" data-oid="6a7n367">
                       {diagnostics.errors.map((error, i) => (
                         <li
                           key={i}
                           className="text-destructive"
-                          data-oid="89l8wj4"
+                          data-oid="fl6th58"
                         >
                           {error}
                         </li>
@@ -317,19 +317,19 @@ export function DiagnosticTool() {
                 )}
 
                 {diagnostics.warnings && diagnostics.warnings.length > 0 && (
-                  <div data-oid="u435us1">
+                  <div data-oid="sx40pbd">
                     <div
                       className="font-medium text-amber-500 mb-1"
-                      data-oid="3:4qjcq"
+                      data-oid="i186fk1"
                     >
                       Warnings:
                     </div>
-                    <ul className="list-disc pl-4 space-y-1" data-oid="50ti.ls">
+                    <ul className="list-disc pl-4 space-y-1" data-oid="bbm6xev">
                       {diagnostics.warnings.map((warning, i) => (
                         <li
                           key={i}
                           className="text-amber-500"
-                          data-oid="dy_srz6"
+                          data-oid="p45ki9e"
                         >
                           {warning}
                         </li>
@@ -342,15 +342,15 @@ export function DiagnosticTool() {
               <>
                 <div
                   className="flex items-center justify-between"
-                  data-oid="cux1_3b"
+                  data-oid="iuwb9f2"
                 >
-                  <div className="flex items-center gap-2" data-oid="cj0ve4y">
+                  <div className="flex items-center gap-2" data-oid="94g94.-">
                     <Zap
                       className="h-4 w-4 text-amber-500"
-                      data-oid="gc_zjxi"
+                      data-oid="5naogkn"
                     />
 
-                    <span className="font-medium" data-oid=".z-ci3v">
+                    <span className="font-medium" data-oid="p6-3r:c">
                       FPS:
                     </span>
                   </div>
@@ -362,7 +362,7 @@ export function DiagnosticTool() {
                           ? "text-amber-500"
                           : "text-green-500",
                     )}
-                    data-oid="8kv0_sz"
+                    data-oid="od_awfl"
                   >
                     {performanceMetrics.fps.toFixed(0)}
                   </span>
@@ -378,29 +378,29 @@ export function DiagnosticTool() {
                         ? "bg-amber-500"
                         : "bg-green-500",
                   )}
-                  data-oid="0t4_.mj"
+                  data-oid="m_z3o5i"
                 />
 
                 {performanceMetrics.memory && (
                   <>
                     <div
                       className="flex items-center justify-between mt-4"
-                      data-oid="iywgt7v"
+                      data-oid="ocxnshk"
                     >
                       <div
                         className="flex items-center gap-2"
-                        data-oid="5azwhf8"
+                        data-oid=":pri:02"
                       >
                         <Cpu
                           className="h-4 w-4 text-blue-500"
-                          data-oid=".85pi3u"
+                          data-oid="k7jskss"
                         />
 
-                        <span className="font-medium" data-oid="2va5imr">
+                        <span className="font-medium" data-oid="zkmbilg">
                           Memory Usage:
                         </span>
                       </div>
-                      <span data-oid="ln4_33q">
+                      <span data-oid="m7n_5sd">
                         {formatBytes(performanceMetrics.memory.usedJSHeapSize)}{" "}
                         /{" "}
                         {formatBytes(performanceMetrics.memory.jsHeapSizeLimit)}
@@ -410,47 +410,47 @@ export function DiagnosticTool() {
                       value={performanceMetrics.memory.usedJSHeapSize}
                       max={performanceMetrics.memory.jsHeapSizeLimit}
                       className="h-1.5"
-                      data-oid="yhbgh70"
+                      data-oid="cxots6p"
                     />
                   </>
                 )}
 
                 <div
                   className="flex items-center justify-between mt-4"
-                  data-oid=":-v7og3"
+                  data-oid="3-qjylt"
                 >
-                  <div className="flex items-center gap-2" data-oid="8172ty-">
+                  <div className="flex items-center gap-2" data-oid="jn08m4e">
                     <Database
                       className="h-4 w-4 text-purple-500"
-                      data-oid="-muee5a"
+                      data-oid="pdjsqjv"
                     />
 
-                    <span className="font-medium" data-oid="7-:3hm9">
+                    <span className="font-medium" data-oid="sxes.-g">
                       DOM Nodes:
                     </span>
                   </div>
-                  <span data-oid="2ji_uc6">{performanceMetrics.domNodes}</span>
+                  <span data-oid="rmvxu90">{performanceMetrics.domNodes}</span>
                 </div>
 
-                <div className="space-y-1 mt-4" data-oid="rjg-urh">
-                  <div className="font-medium" data-oid="7n0a3d_">
+                <div className="space-y-1 mt-4" data-oid="lsi9p2g">
+                  <div className="font-medium" data-oid="tmel83x">
                     Timing:
                   </div>
-                  <div className="flex justify-between" data-oid="j:hds.-">
-                    <span data-oid="3fbcynb">Page Load:</span>
-                    <span data-oid="jsqw8tp">
+                  <div className="flex justify-between" data-oid="ggg1i2g">
+                    <span data-oid="xx:24ik">Page Load:</span>
+                    <span data-oid="n57p9c4">
                       {(performanceMetrics.loadTime / 1000).toFixed(2)}s
                     </span>
                   </div>
-                  <div className="flex justify-between" data-oid="m2mt7ge">
-                    <span data-oid=".gpdb5u">Resources:</span>
-                    <span data-oid="brtvi4d">
+                  <div className="flex justify-between" data-oid="ijfb9ac">
+                    <span data-oid="03d0m7k">Resources:</span>
+                    <span data-oid="fs7ic5-">
                       {performanceMetrics.resourceCount}
                     </span>
                   </div>
-                  <div className="flex justify-between" data-oid="_pcg2l:">
-                    <span data-oid="t3.ghe0">Render Time:</span>
-                    <span data-oid="th6rpcy">
+                  <div className="flex justify-between" data-oid="m4uj_de">
+                    <span data-oid="62u:ay3">Render Time:</span>
+                    <span data-oid="_zqp3_z">
                       {(performanceMetrics.renderTime / 1000).toFixed(2)}s
                     </span>
                   </div>
@@ -458,13 +458,13 @@ export function DiagnosticTool() {
               </>
             )}
 
-            <div className="pt-2 border-t flex gap-2" data-oid="7.1ovdl">
+            <div className="pt-2 border-t flex gap-2" data-oid="11mll4e">
               <Button
                 variant="outline"
                 size="sm"
                 className="w-full text-xs"
                 onClick={() => window.location.reload()}
-                data-oid="8aambr."
+                data-oid="0_:be7h"
               >
                 Refresh Page
               </Button>
@@ -482,7 +482,7 @@ export function DiagnosticTool() {
                     console.error("Failed to clear storage:", e);
                   }
                 }}
-                data-oid="a5ubzif"
+                data-oid="bzdux8j"
               >
                 Clear Cache
               </Button>

@@ -59,7 +59,7 @@ export function SectionWrapper({
   }, [shouldRender, sectionName, setLoaded, loadedSections]);
 
   return (
-    <div ref={setRef} className={cn(className)} data-oid="9oh_zwv">
+    <div ref={setRef} className={cn(className)} data-oid="zilrm-l">
       {shouldRender ? children : skeletonComponent}
     </div>
   );

@@ -23,14 +23,14 @@ function LoadingSection({ name }: { name: string }) {
   return (
     <div
       className="flex flex-col items-center justify-center py-20"
-      data-oid="z2e_2p-"
+      data-oid="6nz3gqa"
     >
       <Loader2
         className="h-8 w-8 animate-spin text-primary mb-4"
-        data-oid="dk54o16"
+        data-oid="x4cn3kp"
       />
 
-      <p className="text-muted-foreground" data-oid="hiwlkca">
+      <p className="text-muted-foreground" data-oid="x5edyqz">
         Loading {name} section...
       </p>
     </div>
@@ -39,116 +39,116 @@ function LoadingSection({ name }: { name: string }) {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background pt-16" data-oid="mcux_pj">
-      <BackgroundPaths data-oid="b3r9d6d" />
-      <ScrollProgress data-oid="r5pldrq" />
-      <FloatingNav data-oid="mvp0:4i" />
-      <FloatingThemeSwitcher data-oid="qprkmmp" />
+    <main className="min-h-screen bg-background pt-16" data-oid="yc:eojj">
+      <BackgroundPaths data-oid="8hw23sz" />
+      <ScrollProgress data-oid="3nkx.8f" />
+      <FloatingNav data-oid="h9kgvca" />
+      <FloatingThemeSwitcher data-oid="yl8bp6q" />
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Hero" data-oid="8_d-5c:" />}
-        data-oid="zfszgs0"
+        fallback={<SectionFallback title="Hero" data-oid="hk0xnyr" />}
+        data-oid="caa6tui"
       >
         <Suspense
-          fallback={<LoadingSection name="Hero" data-oid="e70q2v7" />}
-          data-oid="cctf415"
+          fallback={<LoadingSection name="Hero" data-oid="--ao7a_" />}
+          data-oid="og90hgm"
         >
-          <RedesignedHero data-oid="dzy15yt" />
+          <RedesignedHero data-oid="s1iss.q" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="About" data-oid=":z4vfzo" />}
-        data-oid="wrqwh4e"
+        fallback={<SectionFallback title="About" data-oid="-0mj-.m" />}
+        data-oid="f8o1v85"
       >
         <Suspense
-          fallback={<LoadingSection name="About" data-oid="qfx9thj" />}
-          data-oid="kf_d6hx"
+          fallback={<LoadingSection name="About" data-oid="ocj3y8z" />}
+          data-oid="6zrnh-9"
         >
-          <AboutSection data-oid="06:rqs3" />
+          <AboutSection data-oid="_4dvqpv" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Skills" data-oid="agt8qw2" />}
-        data-oid="fr3vc90"
+        fallback={<SectionFallback title="Skills" data-oid="x6ya9_4" />}
+        data-oid=":9_wva1"
       >
-        <SkillsSection data-oid="8ywte71" />
+        <SkillsSection data-oid="dwuj31m" />
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Experience" data-oid="0e8_s7." />}
-        data-oid="s2cblec"
+        fallback={<SectionFallback title="Experience" data-oid="c3q5z65" />}
+        data-oid="_q9mfou"
       >
         <Suspense
-          fallback={<LoadingSection name="Experience" data-oid="ab_pbi5" />}
-          data-oid="sk57fvg"
+          fallback={<LoadingSection name="Experience" data-oid="4y24_i4" />}
+          data-oid="j75:-9i"
         >
-          <RedesignedExperience data-oid="-whbdwz" />
+          <RedesignedExperience data-oid="v8x1i.m" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Projects" data-oid="z1pcg3u" />}
-        data-oid="sdhzx-4"
+        fallback={<SectionFallback title="Projects" data-oid="0::_er7" />}
+        data-oid="t939-ue"
       >
         <Suspense
-          fallback={<LoadingSection name="Projects" data-oid="698irq9" />}
-          data-oid="ujt6pgn"
+          fallback={<LoadingSection name="Projects" data-oid="y.u0p8s" />}
+          data-oid="wfa46cx"
         >
-          <RedesignedProjects data-oid="1awx6km" />
+          <RedesignedProjects data-oid="j4dssf4" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Case Studies" data-oid="038pfgh" />}
-        data-oid="zc6t9.."
+        fallback={<SectionFallback title="Case Studies" data-oid="02msuws" />}
+        data-oid="bgd0_d9"
       >
         <Suspense
-          fallback={<LoadingSection name="Case Studies" data-oid="7p0jwiz" />}
-          data-oid="0fvy.1i"
+          fallback={<LoadingSection name="Case Studies" data-oid="g.6jau-" />}
+          data-oid="e4y.xuu"
         >
-          <CaseStudies data-oid="s.oegmj" />
+          <CaseStudies data-oid="gxw16lr" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Education" data-oid="hbirofr" />}
-        data-oid="4dth5v_"
+        fallback={<SectionFallback title="Education" data-oid="1nwg4jj" />}
+        data-oid="hl6ddu-"
       >
         <Suspense
-          fallback={<LoadingSection name="Education" data-oid="hzc2xyc" />}
-          data-oid="jx18ubr"
+          fallback={<LoadingSection name="Education" data-oid="eh.rw7a" />}
+          data-oid="aa8y.j7"
         >
-          <Education data-oid="bxzrx8j" />
+          <Education data-oid="cv63v_s" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Testimonial" data-oid="92yalq5" />}
-        data-oid="0tlg71t"
+        fallback={<SectionFallback title="Testimonial" data-oid="i:496k_" />}
+        data-oid="fh9a9n8"
       >
         <Suspense
-          fallback={<LoadingSection name="Testimonial" data-oid="_huk1kt" />}
-          data-oid="lq62ko9"
+          fallback={<LoadingSection name="Testimonial" data-oid="l6vgb:_" />}
+          data-oid="nw:jgq2"
         >
-          <LovedByCommunity data-oid="4k:-j0f" />
+          <LovedByCommunity data-oid=":gjbbdp" />
         </Suspense>
       </ErrorBoundary>
 
       <ErrorBoundary
-        fallback={<SectionFallback title="Contact" data-oid=":brdv4r" />}
-        data-oid="5h--7ii"
+        fallback={<SectionFallback title="Contact" data-oid="a5y2lta" />}
+        data-oid="wwnq5um"
       >
         <Suspense
-          fallback={<LoadingSection name="Contact" data-oid="bdhe:h0" />}
-          data-oid="1mcwe_v"
+          fallback={<LoadingSection name="Contact" data-oid="uik1ayd" />}
+          data-oid="o2znbue"
         >
-          <ContactForm data-oid="h2soqpz" />
+          <ContactForm data-oid="vdp8:wu" />
         </Suspense>
       </ErrorBoundary>
 
-      <EnhancedFooter data-oid="d4p4rg." />
+      <EnhancedFooter data-oid="c:hn203" />
     </main>
   );
 }

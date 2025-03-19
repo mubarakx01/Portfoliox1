@@ -137,18 +137,18 @@ export default function ProjectShowcase() {
       className="w-full max-w-5xl mx-auto relative rounded-2xl overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-oid="_n7c8uu"
+      data-oid="ut6ii26"
     >
       <div
         className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/70 to-background z-10"
-        data-oid="rxpaicu"
+        data-oid="hp3xvys"
       />
 
       <AnimatePresence
         mode="wait"
         initial={false}
         custom={direction}
-        data-oid="s5gv06f"
+        data-oid="fwsz5v9"
       >
         <motion.div
           key={project.id}
@@ -174,7 +174,7 @@ export default function ProjectShowcase() {
             },
           }}
           className="relative w-full aspect-[16/9]"
-          data-oid="24xzdg4"
+          data-oid="b4na-ej"
         >
           <Image
             src={project.imageUrl || "/placeholder.svg"}
@@ -182,7 +182,7 @@ export default function ProjectShowcase() {
             fill
             className="object-cover"
             priority
-            data-oid="3bfbwsc"
+            data-oid="v5d.rt_"
           />
 
           <div
@@ -190,55 +190,55 @@ export default function ProjectShowcase() {
               "absolute inset-0 opacity-60 bg-gradient-to-r",
               project.color,
             )}
-            data-oid="js3:n2j"
+            data-oid="4n_ry.d"
           />
 
           <div
             className="absolute inset-0 z-20 flex flex-col justify-end p-8"
-            data-oid="7rulyte"
+            data-oid="ht9648y"
           >
             <Badge
               variant="outline"
               className="w-fit mb-4 bg-black/50 backdrop-blur-sm text-white border-white/20"
-              data-oid="jnqsdiz"
+              data-oid="d.ooph-"
             >
               Featured Project
             </Badge>
             <h3
               className="text-2xl md:text-4xl font-bold text-white mb-4"
-              data-oid="g0y.lyf"
+              data-oid="jvgbq:f"
             >
               {project.title}
             </h3>
             <p
               className="text-white/90 max-w-3xl mb-6 text-sm md:text-base"
-              data-oid="qourdpm"
+              data-oid="gagvdrh"
             >
               {project.longDescription}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-6" data-oid="f4ug2-l">
+            <div className="flex flex-wrap gap-2 mb-6" data-oid="owfj_.w">
               {project.technologies.map((tech, index) => (
                 <Badge
                   key={index}
                   className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                  data-oid="y81uo:6"
+                  data-oid="0y6_wkg"
                 >
                   {tech}
                 </Badge>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3" data-oid="xc6mt:.">
+            <div className="flex flex-wrap gap-3" data-oid="ghhh4mh">
               <Button
                 className="bg-white text-black hover:bg-white/90 group"
                 onClick={() => handleDemoClick(project.demoUrl)}
-                data-oid="k25.gt6"
+                data-oid="iby2-39"
               >
                 Live Demo
                 <ExternalLink
                   className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                  data-oid="-6mdlqs"
+                  data-oid="aexyh8h"
                 />
               </Button>
 
@@ -246,15 +246,15 @@ export default function ProjectShowcase() {
                 variant="outline"
                 className="border-white text-white hover:bg-white/20 gap-2"
                 asChild
-                data-oid="20vhh1n"
+                data-oid="ydq8m3z"
               >
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-oid="f0bje_8"
+                  data-oid=".b58saj"
                 >
-                  <Github className="h-4 w-4" data-oid="so::n39" />
+                  <Github className="h-4 w-4" data-oid="zip791w" />
                   View Code
                 </a>
               </Button>
@@ -269,9 +269,9 @@ export default function ProjectShowcase() {
         variant="ghost"
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
         onClick={handlePrev}
-        data-oid="gnh.v74"
+        data-oid="5h6cpei"
       >
-        <ChevronLeft className="h-6 w-6" data-oid="-zgmh5o" />
+        <ChevronLeft className="h-6 w-6" data-oid="1x2mlv2" />
       </Button>
 
       <Button
@@ -279,15 +279,15 @@ export default function ProjectShowcase() {
         variant="ghost"
         className="absolute right-4 top-1/2 -translate-y-1/2 z-30 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
         onClick={handleNext}
-        data-oid="mzvs2q-"
+        data-oid="b8_dumh"
       >
-        <ChevronRight className="h-6 w-6" data-oid="fuqch90" />
+        <ChevronRight className="h-6 w-6" data-oid="n53f.ap" />
       </Button>
 
       {/* Progress dots */}
       <div
         className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1"
-        data-oid="_wkhycy"
+        data-oid="b.9vhso"
       >
         {featuredProjects.map((_, index) => (
           <button
@@ -300,7 +300,7 @@ export default function ProjectShowcase() {
             )}
             onClick={() => handleDotClick(index)}
             aria-label={`Go to project ${index + 1}`}
-            data-oid="tsqyb_s"
+            data-oid="mftlh6p"
           />
         ))}
       </div>

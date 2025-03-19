@@ -23,27 +23,27 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-oid="64.jg_f">
-      <head data-oid="ytysm:5">
+    <html lang="en" suppressHydrationWarning data-oid=":5al:qm">
+      <head data-oid="pf65auu">
         {/* Preload critical resources */}
         <link
           rel="preload"
           href="/placeholder.svg?height=400&width=400"
           as="image"
-          data-oid="xf84vy2"
+          data-oid="txti-k7"
         />
 
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
-          data-oid="diqmsr3"
+          data-oid="2-l:cmn"
         />
 
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin=""
-          data-oid="5:in4sn"
+          data-oid="cfyt5.p"
         />
 
         {/* Add preload hints for critical JavaScript */}
@@ -51,37 +51,37 @@ export default function RootLayout({
           rel="preload"
           href="/_next/static/chunks/framework.js"
           as="script"
-          data-oid="fji4wtl"
+          data-oid="id60mp."
         />
 
         {/* Add meta tags for better performance */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-          data-oid="gpc4zp5"
+          data-oid="xc7v669"
         />
 
         <meta
           httpEquiv="X-UA-Compatible"
           content="IE=edge"
-          data-oid="2e24lyj"
+          data-oid="tnwb7p0"
         />
       </head>
       <body
         className={`${inter.className} theme-transition`}
-        data-oid="kp00vex"
+        data-oid="odnje1c"
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-          data-oid=":6u3nj4"
+          data-oid="1k7t1j7"
         >
-          <ResponsiveHeader data-oid="m93ilml" />
+          <ResponsiveHeader data-oid="u06hhts" />
           {children}
-          <Toaster data-oid="-gv:v_5" />
-          <ClientDiagnosticWrapper data-oid="od9ckb:" />
+          <Toaster data-oid="tw4a.0b" />
+          <ClientDiagnosticWrapper data-oid="zxilt67" />
         </ThemeProvider>
       </body>
     </html>

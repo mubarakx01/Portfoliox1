@@ -41,14 +41,14 @@ const SkillsGlobe = dynamic(() => import("@/components/3d-skills-globe"), {
   loading: () => (
     <div
       className="w-full h-[500px] flex items-center justify-center"
-      data-oid="d1hohe9"
+      data-oid="gprh6--"
     >
       <Loader2
         className="h-8 w-8 animate-spin text-primary"
-        data-oid="1kyxl-c"
+        data-oid="cfw5aax"
       />
 
-      <span className="ml-2" data-oid="f04y4-a">
+      <span className="ml-2" data-oid="g_ettr9">
         Loading 3D Globe...
       </span>
     </div>
@@ -60,79 +60,79 @@ const skillCategories = [
   {
     id: "ml-ai",
     name: "Machine Learning & AI",
-    icon: <Laptop className="h-5 w-5" data-oid="7fbgplv" />,
+    icon: <Laptop className="h-5 w-5" data-oid="ohxf7lm" />,
     color: "from-blue-500 to-indigo-500",
   },
   {
     id: "audio",
     name: "Audio & Voice Tech",
-    icon: <Zap className="h-5 w-5" data-oid="ltrgrnc" />,
+    icon: <Zap className="h-5 w-5" data-oid="qnkutki" />,
     color: "from-purple-500 to-violet-500",
   },
   {
     id: "programming",
     name: "Programming",
-    icon: <Code className="h-5 w-5" data-oid="pxc1v2_" />,
+    icon: <Code className="h-5 w-5" data-oid="tleuyku" />,
     color: "from-emerald-500 to-green-500",
   },
   {
     id: "frameworks",
     name: "AI Frameworks",
-    icon: <Cpu className="h-5 w-5" data-oid="g9r-zv-" />,
+    icon: <Cpu className="h-5 w-5" data-oid="h6_w7e0" />,
     color: "from-purple-500 to-violet-500",
   },
   {
     id: "data",
     name: "Data Science",
-    icon: <Database className="h-5 w-5" data-oid="7y-nyya" />,
+    icon: <Database className="h-5 w-5" data-oid=":5jlyrk" />,
     color: "from-amber-500 to-yellow-500",
   },
   {
     id: "network",
     name: "Network Analysis",
-    icon: <Globe className="h-5 w-5" data-oid="4p0bx1c" />,
+    icon: <Globe className="h-5 w-5" data-oid="94gui:b" />,
     color: "from-cyan-500 to-blue-500",
   },
   {
     id: "cloud",
     name: "Cloud & DevOps",
-    icon: <Cloud className="h-5 w-5" data-oid="ej3k.7_" />,
+    icon: <Cloud className="h-5 w-5" data-oid="i1rotle" />,
     color: "from-sky-500 to-blue-500",
   },
   {
     id: "chatbots",
     name: "Chatbots & AI",
-    icon: <MessageSquare className="h-5 w-5" data-oid="2o9k9lu" />,
+    icon: <MessageSquare className="h-5 w-5" data-oid="fxabcp9" />,
     color: "from-green-500 to-emerald-500",
   },
   {
     id: "security",
     name: "Cybersecurity",
-    icon: <Shield className="h-5 w-5" data-oid="b..ursm" />,
+    icon: <Shield className="h-5 w-5" data-oid="yqa6s6z" />,
     color: "from-red-500 to-rose-500",
   },
   {
     id: "research",
     name: "Research",
-    icon: <BookOpen className="h-5 w-5" data-oid="96fe4hh" />,
+    icon: <BookOpen className="h-5 w-5" data-oid="jgu:29:" />,
     color: "from-rose-500 to-pink-500",
   },
   {
     id: "tools",
     name: "Tools",
-    icon: <Tool className="h-5 w-5" data-oid="u560zn5" />,
+    icon: <Tool className="h-5 w-5" data-oid="7j.3zh:" />,
     color: "from-orange-500 to-amber-500",
   },
   {
     id: "transferable",
     name: "Transferable Skills",
-    icon: <Briefcase className="h-5 w-5" data-oid="j_hyq8t" />,
+    icon: <Briefcase className="h-5 w-5" data-oid="..8ug68" />,
     color: "from-indigo-500 to-blue-500",
   },
   {
     id: "math",
     name: "Mathematics",
-    icon: <Microscope className="h-5 w-5" data-oid="68ygs6x" />,
+    icon: <Microscope className="h-5 w-5" data-oid="_z69wt0" />,
     color: "from-cyan-500 to-teal-500",
   },
 ];
@@ -307,24 +307,24 @@ export default function RedesignedSkills() {
     <SectionContainer
       id="skills"
       className="bg-gradient-to-b from-background to-background/95"
-      data-oid="picg92j"
+      data-oid="5xksrbt"
     >
       <SectionHeader
         title="Technical Skills"
         subtitle="A comprehensive overview of my technical expertise across various domains, from machine learning and AI to software development and research."
-        data-oid="j2mihm0"
+        data-oid="sw6p5-u"
       />
 
-      <ScrollReveal data-oid="2kvfmvf">
+      <ScrollReveal data-oid="wgbod0.">
         <Tabs
           defaultValue="ml-ai"
           onValueChange={setActiveCategory}
           className="w-full"
-          data-oid="zpevkao"
+          data-oid="tq:ly04"
         >
           <TabsList
             className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent"
-            data-oid="2p-x7h7"
+            data-oid="wiigbbj"
           >
             {skillCategories.map((category) => (
               <TabsTrigger
@@ -336,18 +336,18 @@ export default function RedesignedSkills() {
                     ? `bg-gradient-to-r ${category.color} text-white`
                     : "bg-muted hover:bg-muted/80",
                 )}
-                data-oid="902_8x6"
+                data-oid=":0nxfst"
               >
-                <div className="flex items-center gap-2" data-oid="8.qkm55">
+                <div className="flex items-center gap-2" data-oid="9ltcxi3">
                   {category.icon}
-                  <span data-oid="7hl4rlg">{category.name}</span>
+                  <span data-oid="8tdqh2r">{category.name}</span>
                 </div>
               </TabsTrigger>
             ))}
           </TabsList>
 
-          <div className="flex justify-center mb-8" data-oid="o8rb4l:">
-            <div className="bg-muted rounded-full p-1 flex" data-oid="zl4ab:b">
+          <div className="flex justify-center mb-8" data-oid="4wzgcdm">
+            <div className="bg-muted rounded-full p-1 flex" data-oid="v:x:slw">
               <button
                 onClick={() => setVisualizationType("chart")}
                 className={cn(
@@ -356,10 +356,10 @@ export default function RedesignedSkills() {
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted/80",
                 )}
-                data-oid="ftvmnrs"
+                data-oid="jc6235x"
               >
-                <BarChart3 className="h-4 w-4" data-oid="umc5r9a" />
-                <span data-oid="pc029sf">Chart View</span>
+                <BarChart3 className="h-4 w-4" data-oid="3ko5chr" />
+                <span data-oid="-r1mwou">Chart View</span>
               </button>
               <button
                 onClick={() => setVisualizationType("globe")}
@@ -369,10 +369,10 @@ export default function RedesignedSkills() {
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted/80",
                 )}
-                data-oid="tac25f2"
+                data-oid="33_6h3w"
               >
-                <Globe className="h-4 w-4" data-oid="ikl82zq" />
-                <span data-oid="qwk8wd.">3D Globe</span>
+                <Globe className="h-4 w-4" data-oid="rp8g0xv" />
+                <span data-oid="swn2wrr">3D Globe</span>
               </button>
             </div>
           </div>
@@ -382,46 +382,46 @@ export default function RedesignedSkills() {
               key={category.id}
               value={category.id}
               className="mt-0"
-              data-oid="p--pd5n"
+              data-oid="c62n2nw"
             >
               <Card
                 className="border-none bg-gradient-to-br from-background/50 to-background/30 backdrop-blur-sm"
-                data-oid="udxg10o"
+                data-oid="ams557u"
               >
-                <CardContent className="p-6" data-oid="tjt3v9m">
+                <CardContent className="p-6" data-oid="84fhe2:">
                   {visualizationType === "chart" ? (
                     <StaggeredContainer
                       className="grid md:grid-cols-2 gap-8"
-                      data-oid="t1p5ry4"
+                      data-oid="uqjyx26"
                     >
                       {/* Left column - Skill bars */}
-                      <div data-oid="88d3bi2">
+                      <div data-oid="oi0daj.">
                         <h3
                           className="text-xl font-semibold mb-6 flex items-center gap-2"
-                          data-oid=":huii:3"
+                          data-oid="lajhijz"
                         >
                           {category.icon}
-                          <span data-oid="-2f0_h1">
+                          <span data-oid="aggruzn">
                             {category.name} Proficiency
                           </span>
                         </h3>
 
-                        <div className="space-y-6" data-oid="-.b6dul">
+                        <div className="space-y-6" data-oid="c2.88n3">
                           {skillsData[
                             category.id as keyof typeof skillsData
                           ].map((skill, index) => (
                             <StaggerItem
                               key={skill.name}
                               className="space-y-2"
-                              data-oid="8eqis2s"
+                              data-oid="lhojfq7"
                             >
                               <div
                                 className="flex justify-between items-center"
-                                data-oid="letyagj"
+                                data-oid="k:4a7li"
                               >
                                 <span
                                   className="font-medium"
-                                  data-oid=".hl56rw"
+                                  data-oid="_rrurb9"
                                 >
                                   {skill.name}
                                 </span>
@@ -434,7 +434,7 @@ export default function RedesignedSkills() {
                                         ? "bg-blue-500/20 text-blue-500 border-blue-500/30"
                                         : "bg-amber-500/20 text-amber-500 border-amber-500/30",
                                   )}
-                                  data-oid="vgttpl3"
+                                  data-oid="s3z91ki"
                                 >
                                   {skill.level}%
                                 </Badge>
@@ -442,7 +442,7 @@ export default function RedesignedSkills() {
                               <Progress
                                 value={skill.level}
                                 className="h-2"
-                                data-oid="kn-l0:-"
+                                data-oid="i1s-x4m"
                               />
                             </StaggerItem>
                           ))}
@@ -452,7 +452,7 @@ export default function RedesignedSkills() {
                       {/* Right column - Skill visualization */}
                       <div
                         className="flex items-center justify-center"
-                        data-oid=".h09ka."
+                        data-oid="v23bhtt"
                       >
                         {isMounted && (
                           <SkillVisualization
@@ -460,14 +460,14 @@ export default function RedesignedSkills() {
                             skills={
                               skillsData[category.id as keyof typeof skillsData]
                             }
-                            data-oid="emer_nh"
+                            data-oid="dvl0223"
                           />
                         )}
                       </div>
                     </StaggeredContainer>
                   ) : (
-                    <div className="flex justify-center" data-oid="yuthxbn">
-                      {isMounted && <SkillsGlobe data-oid="qaf9_cw" />}
+                    <div className="flex justify-center" data-oid="iutguf7">
+                      {isMounted && <SkillsGlobe data-oid="5zwhkdy" />}
                     </div>
                   )}
                 </CardContent>
@@ -477,12 +477,12 @@ export default function RedesignedSkills() {
         </Tabs>
       </ScrollReveal>
 
-      <div className="mt-12 text-center" data-oid="q1f3jt_">
-        <ScrollReveal data-oid="9ea1ub8">
-          <p className="text-muted-foreground" data-oid="s5mvr0-">
+      <div className="mt-12 text-center" data-oid="ha32q9t">
+        <ScrollReveal data-oid="-9xynj7">
+          <p className="text-muted-foreground" data-oid="r1lowz2">
             These skills represent my technical expertise developed over years
             of professional experience and continuous learning.
-            <br data-oid="xqmlj21" />
+            <br data-oid="1jpeuxc" />
             I'm constantly expanding my knowledge and staying up-to-date with
             the latest advancements in AI and technology.
           </p>
@@ -568,8 +568,8 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
     .join(" ");
 
   return (
-    <div className="relative w-[300px] h-[300px]" data-oid="upbij_t">
-      <svg width="300" height="300" viewBox="0 0 300 300" data-oid="pr8j306">
+    <div className="relative w-[300px] h-[300px]" data-oid="2ryu4tn">
+      <svg width="300" height="300" viewBox="0 0 300 300" data-oid="e3zx9pt">
         {/* Background circles */}
         {[25, 50, 75, 100].map((level) => (
           <circle
@@ -581,7 +581,7 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
             stroke="currentColor"
             strokeOpacity="0.1"
             strokeWidth="1"
-            data-oid="elia0f8"
+            data-oid="slgxxhh"
           />
         ))}
 
@@ -600,7 +600,7 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
               stroke="currentColor"
               strokeOpacity="0.1"
               strokeWidth="1"
-              data-oid="d1454rt"
+              data-oid="3t5vjre"
             />
           );
         })}
@@ -615,30 +615,30 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          data-oid="aav53k7"
+          data-oid="mwrlphh"
         />
 
         {/* Gradient definition */}
-        <defs data-oid="ns3-dcy">
+        <defs data-oid="0nx5.ie">
           <linearGradient
             id={`gradient-${category.id}`}
             x1="0%"
             y1="0%"
             x2="100%"
             y2="100%"
-            data-oid="98bqw82"
+            data-oid="lhrswn-"
           >
             {/* Extract colors safely from the gradient string */}
             <stop
               offset="0%"
               stopColor={getColorFromGradient(category.color, "from")}
-              data-oid="xfboc.8"
+              data-oid="m.88irt"
             />
 
             <stop
               offset="100%"
               stopColor={getColorFromGradient(category.color, "to")}
-              data-oid="9y9go4t"
+              data-oid="-47aa_."
             />
           </linearGradient>
         </defs>
@@ -656,7 +656,7 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: i * 0.05 }}
-            data-oid="vgdeb.0"
+            data-oid="i5g3k5a"
           />
         ))}
 
@@ -696,7 +696,7 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 + 0.3 }}
-              data-oid="2-kdmjz"
+              data-oid="didyet0"
             >
               {point.name}
             </motion.text>

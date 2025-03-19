@@ -10,12 +10,12 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-12" data-oid="vj:4m_i">
-      <h2 className="text-3xl font-bold text-center mb-4" data-oid="b2ky7.2">
+    <section id="experience" className="py-12" data-oid="gu94hqf">
+      <h2 className="text-3xl font-bold text-center mb-4" data-oid="ma_bpxi">
         Professional Journey
       </h2>
 
-      <div className="space-y-8 mt-12" data-oid="d1uowai">
+      <div className="space-y-8 mt-12" data-oid="jts6gmk">
         <ExperienceCard
           title="Web Designer Internship"
           company="Kshitiksha Foundation"
@@ -45,7 +45,7 @@ export default function Experience() {
             ],
           }}
           bgColor="bg-gradient-to-r from-indigo-950 to-purple-950"
-          data-oid="_pt43at"
+          data-oid="ffwur7d"
         />
 
         <ExperienceCard
@@ -70,7 +70,7 @@ export default function Experience() {
             metrics: [],
           }}
           bgColor="bg-gradient-to-r from-green-950 to-emerald-950"
-          data-oid="fmzo6in"
+          data-oid="l9cdfca"
         />
       </div>
     </section>
@@ -104,57 +104,57 @@ function ExperienceCard({
   bgColor,
 }: ExperienceCardProps) {
   return (
-    <Card className={`${bgColor} border-none`} data-oid="z0ebfuz">
-      <CardHeader data-oid="4cazx5_">
-        <CardTitle className="text-2xl" data-oid="3:ax0a2">
+    <Card className={`${bgColor} border-none`} data-oid="h-sc913">
+      <CardHeader data-oid="39nyqgf">
+        <CardTitle className="text-2xl" data-oid="csuk:6p">
           {title}
         </CardTitle>
-        <CardDescription className="flex flex-col gap-1" data-oid="6lg2abf">
-          <div className="flex items-center gap-2" data-oid=":t0:l74">
-            <Building className="h-4 w-4" data-oid="j9b_6uu" />
-            <span data-oid="gaz59wh">{company}</span>
+        <CardDescription className="flex flex-col gap-1" data-oid="jwl9ubb">
+          <div className="flex items-center gap-2" data-oid="c5u67at">
+            <Building className="h-4 w-4" data-oid="1e28din" />
+            <span data-oid="0uzdfl6">{company}</span>
           </div>
-          <div className="flex items-center gap-2" data-oid="-2v4:2o">
-            <Calendar className="h-4 w-4" data-oid="e1q3g0f" />
-            <span data-oid="9u:fovb">{period}</span>
+          <div className="flex items-center gap-2" data-oid="or2kmjt">
+            <Calendar className="h-4 w-4" data-oid="n4t2hay" />
+            <span data-oid=".s4e2i3">{period}</span>
           </div>
         </CardDescription>
       </CardHeader>
-      <CardContent data-oid="kc_l-7g">
-        <div className="grid md:grid-cols-2 gap-8" data-oid="qnmx3j8">
-          <div data-oid="jtf6qgx">
-            <div className="flex items-center gap-2 mb-4" data-oid="qdlyl:.">
-              <Trophy className="h-5 w-5" data-oid="v1osxp9" />
-              <h3 className="text-lg font-semibold" data-oid="be.uv:q">
+      <CardContent data-oid="ovu:-ie">
+        <div className="grid md:grid-cols-2 gap-8" data-oid="3h0_dxj">
+          <div data-oid="17.ox10">
+            <div className="flex items-center gap-2 mb-4" data-oid="uhpsqdw">
+              <Trophy className="h-5 w-5" data-oid="in68a3g" />
+              <h3 className="text-lg font-semibold" data-oid="29_lgcj">
                 Key Achievements
               </h3>
             </div>
-            <ul className="space-y-3" data-oid="mdkqnp9">
+            <ul className="space-y-3" data-oid="kyo0z4t">
               {achievements.map((achievement, index) => (
                 <li
                   key={index}
                   className="flex items-start gap-2"
-                  data-oid=".ko76o9"
+                  data-oid="f6pf1_7"
                 >
-                  <span className="text-sm mt-1" data-oid="934y1:u">
+                  <span className="text-sm mt-1" data-oid="tlq2m1-">
                     •
                   </span>
-                  <span data-oid="kootqrf">{achievement}</span>
+                  <span data-oid="m1m71fd">{achievement}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div data-oid="xxr.1bx">
-            <div className="flex items-center gap-2 mb-4" data-oid="etc-26f">
-              <Cpu className="h-5 w-5" data-oid="3q6-e0k" />
-              <h3 className="text-lg font-semibold" data-oid="s_plbi9">
+          <div data-oid="90oi78j">
+            <div className="flex items-center gap-2 mb-4" data-oid="4bgyckm">
+              <Cpu className="h-5 w-5" data-oid="p.0g_qd" />
+              <h3 className="text-lg font-semibold" data-oid="tt8oxaf">
                 Technologies & Skills
               </h3>
             </div>
-            <div className="flex flex-wrap gap-2 mb-6" data-oid="4mkooju">
+            <div className="flex flex-wrap gap-2 mb-6" data-oid="opj9r-0">
               {technologies.map((tech, index) => (
-                <Badge key={index} variant="secondary" data-oid="txkfvdf">
+                <Badge key={index} variant="secondary" data-oid="1fbce25">
                   {tech}
                 </Badge>
               ))}
@@ -162,26 +162,26 @@ function ExperienceCard({
 
             {impact.title && (
               <>
-                <h3 className="text-lg font-semibold mb-2" data-oid="otzo57l">
+                <h3 className="text-lg font-semibold mb-2" data-oid="j04rzs0">
                   {impact.title}
                 </h3>
-                <p className="mb-4" data-oid=".hr5lug">
+                <p className="mb-4" data-oid="ipkg2:w">
                   {impact.description}
                 </p>
 
-                <div className="grid grid-cols-3 gap-4" data-oid="rmkreqg">
+                <div className="grid grid-cols-3 gap-4" data-oid="96a80xp">
                   {impact.metrics.map((metric, index) => (
                     <div
                       key={index}
                       className="bg-black/20 rounded-lg p-4 text-center"
-                      data-oid="xq6nax5"
+                      data-oid="ddj_0v8"
                     >
-                      <div className="text-2xl font-bold" data-oid="8-oig_0">
+                      <div className="text-2xl font-bold" data-oid="qorouxz">
                         {metric.value}
                       </div>
                       <div
                         className="text-sm text-muted-foreground"
-                        data-oid="63pojoh"
+                        data-oid="mwdbida"
                       >
                         {metric.label}
                       </div>

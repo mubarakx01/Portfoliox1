@@ -14,7 +14,7 @@ const caseStudies = [
   {
     id: 1,
     title: "Optimizing Voice Cloning for Real-Time Applications",
-    icon: <Code className="h-5 w-5" data-oid="bvq.km3" />,
+    icon: <Code className="h-5 w-5" data-oid="po.ss-5" />,
     description:
       "An in-depth look at the challenges and solutions in developing a real-time voice cloning system.",
     metrics: [
@@ -53,7 +53,7 @@ const caseStudies = [
   {
     id: 2,
     title: "Scaling Machine Learning Infrastructure",
-    icon: <Code className="h-5 w-5" data-oid="uvk:_qw" />,
+    icon: <Code className="h-5 w-5" data-oid="6zxasss" />,
     description:
       "How we designed and implemented a scalable ML infrastructure to support thousands of models in production.",
     metrics: [
@@ -101,20 +101,20 @@ export default function CaseStudies() {
   };
 
   return (
-    <section id="case-studies" className="py-12" data-oid="hr8rea8">
+    <section id="case-studies" className="py-12" data-oid="o1zn49m">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        data-oid="m05mjo2"
+        data-oid="b5qd6o0"
       >
-        <h2 className="text-3xl font-bold text-center mb-4" data-oid="dl9xi-g">
+        <h2 className="text-3xl font-bold text-center mb-4" data-oid="1xd3p9m">
           Case Studies
         </h2>
         <p
           className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-          data-oid="lr6sdsn"
+          data-oid="_1xo0i6"
         >
           Detailed examinations of complex technical challenges and their
           solutions. These case studies showcase problem-solving approaches and
@@ -122,7 +122,7 @@ export default function CaseStudies() {
         </p>
       </motion.div>
 
-      <div className="space-y-8" data-oid="3gii6_k">
+      <div className="space-y-8" data-oid="836p8:6">
         {caseStudies.map((study, index) => (
           <motion.div
             key={study.id}
@@ -130,7 +130,7 @@ export default function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            data-oid="o25oy-9"
+            data-oid="lk8jfr_"
           >
             <Card
               className={cn(
@@ -138,22 +138,22 @@ export default function CaseStudies() {
                 `bg-gradient-to-br ${study.bgColor}`,
                 expandedCaseStudy === study.id ? "shadow-xl" : "",
               )}
-              data-oid=":6o.zx-"
+              data-oid="wd5mxuy"
             >
-              <CardHeader className="pb-2" data-oid="v_a2xws">
+              <CardHeader className="pb-2" data-oid="flltiuq">
                 <div
                   className="flex items-center gap-2 mb-2"
-                  data-oid="eu1gm4z"
+                  data-oid="lvorqy4"
                 >
                   {study.icon}
-                  <CardTitle data-oid="jkz4ox7">{study.title}</CardTitle>
+                  <CardTitle data-oid="k7o5p4k">{study.title}</CardTitle>
                 </div>
-                <p className="text-muted-foreground" data-oid="7qc.mzu">
+                <p className="text-muted-foreground" data-oid="xco3o7g">
                   {study.description}
                 </p>
               </CardHeader>
 
-              <CardContent data-oid="b_.a_7u">
+              <CardContent data-oid="9ox_g_f">
                 <div
                   className={cn(
                     "grid gap-6 transition-all duration-500",
@@ -161,37 +161,37 @@ export default function CaseStudies() {
                       ? "md:grid-cols-1"
                       : "md:grid-cols-2",
                   )}
-                  data-oid="ow4bq_j"
+                  data-oid="4a.oznm"
                 >
                   {expandedCaseStudy !== study.id && (
                     <>
-                      <div data-oid="z6vvxgp">
+                      <div data-oid="okj9ybs">
                         <h4
                           className="text-sm font-medium mb-3 flex items-center gap-2"
-                          data-oid="7gi.ptm"
+                          data-oid="7-qn83s"
                         >
-                          <BarChart className="h-4 w-4" data-oid="jp5qysc" />
+                          <BarChart className="h-4 w-4" data-oid="fraw68p" />
                           Key Metrics
                         </h4>
                         <div
                           className="grid grid-cols-3 gap-2"
-                          data-oid="g-grd.l"
+                          data-oid="bp64kaw"
                         >
                           {study.metrics.map((metric, i) => (
                             <div
                               key={i}
                               className="bg-black/20 rounded-lg p-3 text-center hover:bg-black/30 transition-colors"
-                              data-oid="8vm2d7b"
+                              data-oid="5uo6x0:"
                             >
                               <div
                                 className="text-xl font-bold"
-                                data-oid="1-p5ijs"
+                                data-oid="03nblr9"
                               >
                                 {metric.value}
                               </div>
                               <div
                                 className="text-xs text-muted-foreground"
-                                data-oid="-wx1j1d"
+                                data-oid="2fu1gz:"
                               >
                                 {metric.label}
                               </div>
@@ -200,24 +200,24 @@ export default function CaseStudies() {
                         </div>
                       </div>
 
-                      <div data-oid="3wtms6q">
+                      <div data-oid="giow-pj">
                         <div
                           className="flex justify-between items-center mb-3"
-                          data-oid="57h_txc"
+                          data-oid="y-5:j8h"
                         >
                           <h4
                             className="text-sm font-medium flex items-center gap-2"
-                            data-oid="vte_j83"
+                            data-oid="bqsk-6v"
                           >
-                            <Clock className="h-4 w-4" data-oid="pntbiwn" />
+                            <Clock className="h-4 w-4" data-oid="rs6uwzc" />
                             Timeline
                           </h4>
-                          <div className="flex gap-2" data-oid="54enk1p">
+                          <div className="flex gap-2" data-oid="oagcxz8">
                             {study.technologies.map((tech, i) => (
                               <Badge
                                 key={i}
                                 variant="outline"
-                                data-oid="2udca11"
+                                data-oid=".0zwn4v"
                               >
                                 {tech}
                               </Badge>
@@ -225,17 +225,17 @@ export default function CaseStudies() {
                           </div>
                         </div>
 
-                        <div className="space-y-2" data-oid="pok7oyv">
+                        <div className="space-y-2" data-oid="ndnals.">
                           {study.timeline.map((item, i) => (
                             <div
                               key={i}
                               className="flex justify-between items-center"
-                              data-oid="daaso:7"
+                              data-oid="2ac-8u2"
                             >
-                              <span data-oid="nl5nxa6">{item.phase}</span>
+                              <span data-oid="xn6m9tp">{item.phase}</span>
                               <span
                                 className="text-xs text-muted-foreground"
-                                data-oid="hzymbu1"
+                                data-oid="ox3zb-d"
                               >
                                 {item.duration}
                               </span>
@@ -250,19 +250,19 @@ export default function CaseStudies() {
                     <Tabs
                       defaultValue="overview"
                       className="w-full"
-                      data-oid="q8qxc4l"
+                      data-oid="a8628.:"
                     >
                       <TabsList
                         className="grid grid-cols-3 mb-4"
-                        data-oid="rambsl9"
+                        data-oid="pnps8dj"
                       >
-                        <TabsTrigger value="overview" data-oid="2i:wfmh">
+                        <TabsTrigger value="overview" data-oid="r4w.mzi">
                           Overview
                         </TabsTrigger>
-                        <TabsTrigger value="details" data-oid=".l:5-4k">
+                        <TabsTrigger value="details" data-oid="zeezk0w">
                           Details
                         </TabsTrigger>
-                        <TabsTrigger value="team" data-oid="gg5n0x7">
+                        <TabsTrigger value="team" data-oid="hl0ocun">
                           Team
                         </TabsTrigger>
                       </TabsList>
@@ -270,29 +270,29 @@ export default function CaseStudies() {
                       <TabsContent
                         value="overview"
                         className="space-y-4"
-                        data-oid="1vzk6vo"
+                        data-oid="t7u0tz1"
                       >
-                        <p data-oid="s:0079y">{study.details.overview}</p>
+                        <p data-oid="su3u32a">{study.details.overview}</p>
 
                         <div
                           className="grid md:grid-cols-3 gap-4 mt-6"
-                          data-oid="qz-wewd"
+                          data-oid="1_1c3hl"
                         >
                           {study.metrics.map((metric, i) => (
                             <div
                               key={i}
                               className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors"
-                              data-oid="c5452cd"
+                              data-oid="37ijk4s"
                             >
                               <div
                                 className="text-2xl font-bold"
-                                data-oid="w4m9drc"
+                                data-oid=":krv9ep"
                               >
                                 {metric.value}
                               </div>
                               <div
                                 className="text-sm text-muted-foreground"
-                                data-oid="19g_81m"
+                                data-oid="n42g3i:"
                               >
                                 {metric.label}
                               </div>
@@ -302,13 +302,13 @@ export default function CaseStudies() {
 
                         <div
                           className="flex flex-wrap gap-2 mt-4"
-                          data-oid="dv62f5g"
+                          data-oid="j0sodh_"
                         >
                           {study.technologies.map((tech, i) => (
                             <Badge
                               key={i}
                               variant="secondary"
-                              data-oid="6yr1gql"
+                              data-oid="4hd_pop"
                             >
                               {tech}
                             </Badge>
@@ -319,95 +319,95 @@ export default function CaseStudies() {
                       <TabsContent
                         value="details"
                         className="space-y-6"
-                        data-oid="6tam942"
+                        data-oid="08ftlco"
                       >
-                        <div data-oid="sq62wjn">
+                        <div data-oid="x:gc.er">
                           <h4
                             className="text-lg font-semibold mb-2"
-                            data-oid="r0q5skc"
+                            data-oid="ljzboyo"
                           >
                             Challenges
                           </h4>
-                          <ul className="space-y-2" data-oid="shg1n:m">
+                          <ul className="space-y-2" data-oid="r6s:q2d">
                             {study.details.challenges.map((challenge, i) => (
                               <li
                                 key={i}
                                 className="flex items-start gap-2"
-                                data-oid="-y7_e3."
+                                data-oid="i4kmu1t"
                               >
                                 <ChevronRight
                                   className="h-4 w-4 mt-1 text-primary"
-                                  data-oid="n:bj3wr"
+                                  data-oid="m8_8ojr"
                                 />
 
-                                <span data-oid="8van0ho">{challenge}</span>
+                                <span data-oid="20ue7w2">{challenge}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div data-oid="2m2q1e7">
+                        <div data-oid="1-j8f7l">
                           <h4
                             className="text-lg font-semibold mb-2"
-                            data-oid="7vpsde5"
+                            data-oid="3vpmspb"
                           >
                             Solutions
                           </h4>
-                          <ul className="space-y-2" data-oid="0081f0q">
+                          <ul className="space-y-2" data-oid="jr52pbm">
                             {study.details.solutions.map((solution, i) => (
                               <li
                                 key={i}
                                 className="flex items-start gap-2"
-                                data-oid="hklwnc_"
+                                data-oid="bor:o4f"
                               >
                                 <ChevronRight
                                   className="h-4 w-4 mt-1 text-primary"
-                                  data-oid="zcqt-q0"
+                                  data-oid="tuk3_dr"
                                 />
 
-                                <span data-oid="wnut_xa">{solution}</span>
+                                <span data-oid="c87swi6">{solution}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div data-oid="15wz962">
+                        <div data-oid="k62i9db">
                           <h4
                             className="text-lg font-semibold mb-2"
-                            data-oid="3khegbk"
+                            data-oid="2a:c1gs"
                           >
                             Results
                           </h4>
-                          <p data-oid="0st.f58">{study.details.results}</p>
+                          <p data-oid="5x3j245">{study.details.results}</p>
                         </div>
 
-                        <div className="mt-4" data-oid="x1ri:0y">
+                        <div className="mt-4" data-oid="m172e6n">
                           <h4
                             className="text-lg font-semibold mb-2"
-                            data-oid="czsvzp-"
+                            data-oid="irlmtw4"
                           >
                             Timeline
                           </h4>
-                          <div className="space-y-0" data-oid="hdfw952">
+                          <div className="space-y-0" data-oid="qzd39_z">
                             {study.timeline.map((item, i) => (
                               <div
                                 key={i}
                                 className="timeline-item"
-                                data-oid="x1s171r"
+                                data-oid="d3d5an_"
                               >
                                 <div
                                   className="flex justify-between items-center"
-                                  data-oid="r0e42r4"
+                                  data-oid="77llb4h"
                                 >
                                   <span
                                     className="font-medium"
-                                    data-oid="fc6k2om"
+                                    data-oid="ze8y-pf"
                                   >
                                     {item.phase}
                                   </span>
                                   <span
                                     className="text-sm text-muted-foreground"
-                                    data-oid="og43tm4"
+                                    data-oid="gp4iwa3"
                                   >
                                     {item.duration}
                                   </span>
@@ -418,11 +418,11 @@ export default function CaseStudies() {
                         </div>
                       </TabsContent>
 
-                      <TabsContent value="team" data-oid="z4sx80k">
-                        <div className="text-center py-8" data-oid="d5ltq0-">
+                      <TabsContent value="team" data-oid="lm8vw_s">
+                        <div className="text-center py-8" data-oid="9xs6xq7">
                           <p
                             className="text-muted-foreground"
-                            data-oid="r5n_mhe"
+                            data-oid="71zsob7"
                           >
                             Team information coming soon.
                           </p>
@@ -432,19 +432,19 @@ export default function CaseStudies() {
                   )}
                 </div>
 
-                <div className="mt-4 flex justify-end" data-oid="96iizzp">
+                <div className="mt-4 flex justify-end" data-oid=".cp...q">
                   <Button
                     variant="link"
                     className="p-0 h-auto gap-1"
                     onClick={() => toggleExpand(study.id)}
-                    data-oid="mhmmgte"
+                    data-oid="yj8.hqo"
                   >
                     {expandedCaseStudy === study.id ? (
                       <>View Less</>
                     ) : (
                       <>
                         Read Full Case Study
-                        <ArrowRight className="h-3 w-3" data-oid="5pq5ng2" />
+                        <ArrowRight className="h-3 w-3" data-oid="54bjg31" />
                       </>
                     )}
                   </Button>

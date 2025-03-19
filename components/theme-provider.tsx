@@ -40,14 +40,14 @@ export function ThemeProvider({
   // Prevent hydration mismatch
   if (!mounted) {
     return (
-      <div style={{ visibility: "hidden" }} data-oid="oqwcrfm">
+      <div style={{ visibility: "hidden" }} data-oid="122:mld">
         {children}
       </div>
     );
   }
 
   return (
-    <NextThemesProvider {...props} data-oid=".7ynjrx">
+    <NextThemesProvider {...props} data-oid="lynqypq">
       {children}
     </NextThemesProvider>
   );

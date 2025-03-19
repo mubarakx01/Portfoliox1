@@ -36,17 +36,17 @@ const themeOptions: ThemeOption[] = [
   {
     value: "light",
     label: "Light",
-    icon: <Sun className="h-5 w-5" data-oid="54wrlmd" />,
+    icon: <Sun className="h-5 w-5" data-oid="4_hu-_:" />,
   },
   {
     value: "dark",
     label: "Dark",
-    icon: <Moon className="h-5 w-5" data-oid="cf0qms2" />,
+    icon: <Moon className="h-5 w-5" data-oid="je:7m_2" />,
   },
   {
     value: "system",
     label: "System",
-    icon: <Laptop className="h-5 w-5" data-oid="_o.bvd." />,
+    icon: <Laptop className="h-5 w-5" data-oid="wfg37n8" />,
   },
 ];
 
@@ -107,9 +107,9 @@ export function ThemeSwitcher() {
         variant="outline"
         size="icon"
         className="relative overflow-hidden"
-        data-oid="c24nqz_"
+        data-oid="b570:nj"
       >
-        <span className="sr-only" data-oid="c-dbtw3">
+        <span className="sr-only" data-oid="nx-gt4e">
           Toggle theme
         </span>
       </Button>
@@ -120,49 +120,49 @@ export function ThemeSwitcher() {
   const isDark = currentTheme === "dark";
 
   return (
-    <Popover open={isOpen} onOpenChange={setIsOpen} data-oid="u3zh029">
-      <PopoverTrigger asChild data-oid="w3kax::">
+    <Popover open={isOpen} onOpenChange={setIsOpen} data-oid="v9bdi35">
+      <PopoverTrigger asChild data-oid="r9ym-7v">
         <Button
           variant="outline"
           size="icon"
           className="relative overflow-hidden border-border bg-background hover:bg-accent/10"
-          data-oid="c:txw-z"
+          data-oid="pibaqwg"
         >
           <Sun
             className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all duration-500 dark:-rotate-90 dark:scale-0 text-golden-nugget"
-            data-oid="26srtvn"
+            data-oid=".u.wfv0"
           />
 
           <Moon
             className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all duration-500 dark:rotate-0 dark:scale-100 text-bite-tongue"
-            data-oid="8g3ltyb"
+            data-oid="ibbknp_"
           />
 
-          <span className="sr-only" data-oid="kuiur_3">
+          <span className="sr-only" data-oid="fedxgs6">
             Toggle theme
           </span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent align="end" className="w-[240px] p-0" data-oid="sn4x756">
-        <div className="p-1" data-oid="ut969ii">
+      <PopoverContent align="end" className="w-[240px] p-0" data-oid="vp.muaa">
+        <div className="p-1" data-oid="6j-9em0">
           <Tabs
             defaultValue="mode"
             value={activeTab}
             onValueChange={(value) => setActiveTab(value as "mode" | "color")}
-            data-oid="f:my-t3"
+            data-oid="u4ravz0"
           >
-            <TabsList className="grid grid-cols-2" data-oid="1sqq0.g">
-              <TabsTrigger value="mode" className="text-xs" data-oid="nuhbouu">
+            <TabsList className="grid grid-cols-2" data-oid="8_c7a76">
+              <TabsTrigger value="mode" className="text-xs" data-oid="pt-syt4">
                 Mode
               </TabsTrigger>
-              <TabsTrigger value="color" className="text-xs" data-oid="e5e2o-n">
-                <Palette className="h-3.5 w-3.5 mr-1" data-oid="zh-dz7-" />
+              <TabsTrigger value="color" className="text-xs" data-oid="6dbbh6t">
+                <Palette className="h-3.5 w-3.5 mr-1" data-oid="4bmf-ca" />
                 Color
               </TabsTrigger>
             </TabsList>
-            <div className="p-4 pt-2" data-oid="g-d4l9e">
+            <div className="p-4 pt-2" data-oid="2z6wxew">
               {activeTab === "mode" ? (
-                <div className="grid grid-cols-3 gap-2" data-oid="mum8o22">
+                <div className="grid grid-cols-3 gap-2" data-oid="ppn2.l:">
                   {themeOptions.map((option) => (
                     <Button
                       key={option.value}
@@ -174,33 +174,33 @@ export function ThemeSwitcher() {
                         theme === option.value &&
                           "border-primary bg-primary/10",
                       )}
-                      data-oid="fk1x:e0"
+                      data-oid=".7buk-3"
                     >
                       {option.icon}
-                      <span className="text-xs" data-oid="1zp5pmh">
+                      <span className="text-xs" data-oid="w389si_">
                         {option.label}
                       </span>
                     </Button>
                   ))}
                 </div>
               ) : (
-                <div className="grid grid-cols-3 gap-2" data-oid="oi.tb3e">
+                <div className="grid grid-cols-3 gap-2" data-oid=":z66fa0">
                   {colorOptions.map((option) => (
                     <button
                       key={option.value}
                       onClick={() => setColorTheme(option.value)}
                       className="relative flex flex-col items-center justify-center p-1 rounded-md hover:bg-muted transition-colors"
-                      data-oid="_xa9nz8"
+                      data-oid="z2brb4:"
                     >
                       <div
                         className={cn(
                           "w-8 h-8 rounded-full bg-gradient-to-br",
                           isDark ? option.darkColor : option.color,
                         )}
-                        data-oid=":eux.pe"
+                        data-oid=":1ltp8a"
                       />
 
-                      <span className="text-xs mt-1" data-oid="xclst7_">
+                      <span className="text-xs mt-1" data-oid=".vb4ym.">
                         {option.label}
                       </span>
                       {colorTheme === option.value && (
@@ -208,9 +208,9 @@ export function ThemeSwitcher() {
                           initial={{ opacity: 0, scale: 0 }}
                           animate={{ opacity: 1, scale: 1 }}
                           className="absolute top-0 right-0 bg-primary text-primary-foreground rounded-full p-0.5"
-                          data-oid="sw9-9ra"
+                          data-oid="p6m3.v:"
                         >
-                          <Check className="h-3 w-3" data-oid="mn5k3tv" />
+                          <Check className="h-3 w-3" data-oid="x8t86bb" />
                         </motion.div>
                       )}
                     </button>
