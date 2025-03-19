@@ -9,13 +9,13 @@ import { useIsClient } from "@/hooks/use-is-client";
 // Static fallback component that works server-side
 function SkillsFallback() {
   return (
-    <section id="skills" className="py-12" data-oid="oj9pcor">
-      <h2 className="text-3xl font-bold text-center mb-4" data-oid="4kbxy6n">
+    <section id="skills" className="py-12" data-oid="qsqk.66">
+      <h2 className="text-3xl font-bold text-center mb-4" data-oid="r7dhz_-">
         Technical Skills
       </h2>
       <p
         className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-        data-oid=":trqw:k"
+        data-oid="nvwzl5p"
       >
         A comprehensive overview of my technical expertise across various
         domains, from web design and machine learning to software development
@@ -23,13 +23,14 @@ function SkillsFallback() {
       </p>
       <div
         className="flex justify-center items-center py-20"
-        data-oid="wql5y_e"
+        data-oid="l9prk72"
       >
         <Loader2
           className="h-8 w-8 animate-spin text-primary mr-2"
-          data-oid="phfi__b"
+          data-oid="5u2:a9w"
         />
-        <span data-oid="6437r6b">Loading skills visualization...</span>
+
+        <span data-oid="b:q8p4s">Loading skills visualization...</span>
       </div>
     </section>
   );
@@ -40,11 +41,11 @@ const RedesignedSkills = dynamic(
   () =>
     import("@/components/redesigned-skills").catch((err) => {
       console.error("Failed to load RedesignedSkills:", err);
-      return () => <SkillsFallback data-oid="gr6kb21" />;
+      return () => <SkillsFallback data-oid="yhuvwat" />;
     }),
   {
     ssr: false,
-    loading: () => <SkillsFallback data-oid="24c5c50" />,
+    loading: () => <SkillsFallback data-oid="sm9:qir" />,
   },
 );
 
@@ -60,20 +61,20 @@ export default function SkillsSectionWrapper() {
   }, [isClient]);
 
   if (!isClient) {
-    return <SkillsFallback data-oid="e3f8s91" />;
+    return <SkillsFallback data-oid="zire5ey" />;
   }
 
   if (hasError) {
     return (
-      <section id="skills" className="py-12" data-oid=".78:4u_">
-        <h2 className="text-3xl font-bold text-center mb-4" data-oid="ch9zw4x">
+      <section id="skills" className="py-12" data-oid="qt78f2z">
+        <h2 className="text-3xl font-bold text-center mb-4" data-oid="b10_:x3">
           Technical Skills
         </h2>
         <div
           className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4 max-w-2xl mx-auto"
-          data-oid=":diot7_"
+          data-oid="whrf8uk"
         >
-          <p className="text-muted-foreground mb-4" data-oid="lqwxslw">
+          <p className="text-muted-foreground mb-4" data-oid="jc591sh">
             We encountered an issue loading the skills visualization. Please
             refresh the page to try again.
           </p>
@@ -85,27 +86,27 @@ export default function SkillsSectionWrapper() {
   return (
     <ErrorBoundary
       fallback={
-        <section id="skills" className="py-12" data-oid="rr_f0r5">
+        <section id="skills" className="py-12" data-oid="_.ngpv7">
           <h2
             className="text-3xl font-bold text-center mb-4"
-            data-oid="6uuk:_m"
+            data-oid="xt6_p3:"
           >
             Technical Skills
           </h2>
           <div
             className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4 max-w-2xl mx-auto"
-            data-oid="8yh22nj"
+            data-oid="loxqkp."
           >
-            <p className="text-muted-foreground mb-4" data-oid="5ecjj2e">
+            <p className="text-muted-foreground mb-4" data-oid="pa22c76">
               We encountered an issue loading the skills visualization. Please
               refresh the page to try again.
             </p>
           </div>
         </section>
       }
-      data-oid="sf0636i"
+      data-oid="9dmbv86"
     >
-      <RedesignedSkills data-oid="am-dl5_" />
+      <RedesignedSkills data-oid="zhfffu7" />
     </ErrorBoundary>
   );
 }

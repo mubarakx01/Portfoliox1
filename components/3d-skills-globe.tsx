@@ -303,29 +303,29 @@ export default function SkillsGlobe() {
   // If not client-side yet, show a simple loading state
   if (!isClient) {
     return (
-      <div className="w-full" data-oid="by5vaxx">
+      <div className="w-full" data-oid="dywbxof">
         <div
           className="flex flex-wrap gap-2 justify-center mb-6"
-          data-oid="78v90em"
+          data-oid=".uij5xc"
         >
           <button
             className="px-4 py-2 rounded-full text-sm font-medium bg-muted"
-            data-oid="9j_4q15"
+            data-oid="cbf.747"
           >
             Loading...
           </button>
         </div>
         <Card
           className="relative w-full aspect-square max-w-xl mx-auto bg-card/50 border-none overflow-hidden backdrop-blur-sm"
-          data-oid="uh-p2el"
+          data-oid="xvdrwy6"
         >
           <div
             className="w-full h-full flex items-center justify-center"
-            data-oid="upvysjx"
+            data-oid="h72.lqm"
           >
             <Loader2
               className="h-8 w-8 animate-spin text-primary"
-              data-oid="zhr.tod"
+              data-oid="z_q4ty:"
             />
           </div>
         </Card>
@@ -336,10 +336,10 @@ export default function SkillsGlobe() {
   // Show a fallback grid view if 3D globe fails
   if (isError) {
     return (
-      <div className="w-full" data-oid="ixrf56_">
+      <div className="w-full" data-oid=":rxmh9l">
         <div
           className="flex flex-wrap gap-2 justify-center mb-6"
-          data-oid="20rh0xa"
+          data-oid="yjfuzwx"
         >
           {["All Skills", ...categories].map((category, index) => (
             <button
@@ -351,7 +351,7 @@ export default function SkillsGlobe() {
                   : "bg-muted hover:bg-muted/80",
               )}
               onClick={() => setSelectedCategory(index === 0 ? null : category)}
-              data-oid="8qfgqfv"
+              data-oid="_ujj1l2"
             >
               {category}
             </button>
@@ -360,23 +360,23 @@ export default function SkillsGlobe() {
 
         <Card
           className="relative w-full max-w-xl mx-auto bg-card/50 border-none overflow-hidden backdrop-blur-sm p-6"
-          data-oid="qnd9jf3"
+          data-oid="s:hblhq"
         >
           <div
             className="flex flex-col items-center justify-center mb-6"
-            data-oid="d:5n0uz"
+            data-oid="mdlj9ai"
           >
             <AlertTriangle
               className="h-8 w-8 text-amber-500 mb-2"
-              data-oid="av3ird8"
+              data-oid="j3uvtbk"
             />
 
-            <h3 className="text-lg font-semibold mb-1" data-oid="uvq5id7">
+            <h3 className="text-lg font-semibold mb-1" data-oid="-k::pl-">
               3D Visualization Unavailable
             </h3>
             <p
               className="text-muted-foreground text-center mb-4"
-              data-oid="zo59vsp"
+              data-oid="52tg4m9"
             >
               The 3D skills globe couldn't be loaded. Here's a simplified view
               of my skills instead.
@@ -385,23 +385,23 @@ export default function SkillsGlobe() {
 
           <div
             className="grid grid-cols-2 md:grid-cols-3 gap-3"
-            data-oid="mf-r0d0"
+            data-oid="yvzti1v"
           >
             {filteredSkills.map((skill, index) => (
               <div
                 key={index}
                 className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-                data-oid="z1sw.g9"
+                data-oid="u56z1_j"
               >
-                <div className="font-medium" data-oid="885zq3-">
+                <div className="font-medium" data-oid="qdlrxz0">
                   {skill.name}
                 </div>
                 <div
                   className="text-xs text-muted-foreground flex justify-between"
-                  data-oid="w.udk5q"
+                  data-oid="k-.89wm"
                 >
-                  <span data-oid="f3.sn5b">{skill.category}</span>
-                  <span data-oid=":8vq-.i">{skill.level}%</span>
+                  <span data-oid="svc:.-6">{skill.category}</span>
+                  <span data-oid="hkb:or9">{skill.level}%</span>
                 </div>
               </div>
             ))}
@@ -412,10 +412,10 @@ export default function SkillsGlobe() {
   }
 
   return (
-    <div className="w-full" data-oid="5zybe5s">
+    <div className="w-full" data-oid="7myyej0">
       <div
         className="flex flex-wrap gap-2 justify-center mb-6"
-        data-oid="fu3_v4l"
+        data-oid="ap_ujhg"
       >
         <motion.button
           className={cn(
@@ -427,7 +427,7 @@ export default function SkillsGlobe() {
           onClick={() => setSelectedCategory(null)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
-          data-oid="yf2ru6g"
+          data-oid="sezvm0_"
         >
           All Skills
         </motion.button>
@@ -450,7 +450,7 @@ export default function SkillsGlobe() {
                   ? categoryColors[category]
                   : undefined,
             }}
-            data-oid="3d1n5o2"
+            data-oid="2q:cq4k"
           >
             {category}
           </motion.button>
@@ -459,24 +459,24 @@ export default function SkillsGlobe() {
 
       <Card
         className="relative w-full aspect-square max-w-xl mx-auto bg-card/50 border-none overflow-hidden backdrop-blur-sm"
-        data-oid="wt.v:p9"
+        data-oid=":izff0l"
       >
         <div
           ref={containerRef}
           className="w-full h-full relative"
-          data-oid="z2eeg09"
+          data-oid="mtgrg4:"
         >
           {isLoading && (
             <div
               className="absolute inset-0 flex items-center justify-center"
-              data-oid="2h.nb95"
+              data-oid="a2drn21"
             >
               <Loader2
                 className="h-8 w-8 animate-spin text-primary"
-                data-oid="p9.na60"
+                data-oid="07:vvbi"
               />
 
-              <span className="ml-2" data-oid="d4._sdv">
+              <span className="ml-2" data-oid="6j8wfpd">
                 Loading 3D Skills Globe...
               </span>
             </div>
@@ -488,18 +488,18 @@ export default function SkillsGlobe() {
               "w-full h-full transition-opacity duration-500",
               isGlobeInitialized ? "opacity-100" : "opacity-0",
             )}
-            data-oid="x393z:l"
+            data-oid="nbl66r2"
           />
 
           {hoveredSkill && (
             <div
               className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg border shadow-lg"
-              data-oid="4znhzid"
+              data-oid="yhd1ixs"
             >
-              <div className="font-medium" data-oid="mumzw-4">
+              <div className="font-medium" data-oid="c7n-8nk">
                 {hoveredSkill}
               </div>
-              <div className="text-xs text-muted-foreground" data-oid="sdme6rw">
+              <div className="text-xs text-muted-foreground" data-oid=".jsmq.n">
                 {skills.find((s) => s.name === hoveredSkill)?.category} • Level:{" "}
                 {skills.find((s) => s.name === hoveredSkill)?.level}%
               </div>
@@ -510,14 +510,14 @@ export default function SkillsGlobe() {
 
       <div
         className="max-w-xl mx-auto mt-4 text-center text-sm text-muted-foreground"
-        data-oid="fu_f4s8"
+        data-oid="-0:q3ff"
       >
         {isGlobeInitialized ? (
           <>
             Hover over nodes to see skill details. Click categories to filter
             skills.
-            <br data-oid="ftcpy9z" />
-            <span className="text-xs" data-oid="2rtz126">
+            <br data-oid="xy-93b_" />
+            <span className="text-xs" data-oid="3j8bwrc">
               Drag to rotate the globe and explore all skills.
             </span>
           </>

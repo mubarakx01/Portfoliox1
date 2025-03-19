@@ -103,7 +103,10 @@ export default function RedesignedHero() {
   };
 
   return (
-    <CustomGradientBackground className="min-h-screen flex items-center">
+    <CustomGradientBackground
+      className="min-h-screen flex items-center"
+      data-oid="surj4h7"
+    >
       <motion.div
         ref={containerRef}
         style={isClient ? { opacity, scale, y } : {}}
@@ -111,80 +114,120 @@ export default function RedesignedHero() {
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        data-oid="8j6o8fv"
       >
         {/* Left column - Text content */}
-        <div className="order-2 md:order-1 text-center md:text-left">
-          <ScrollReveal>
-            <Badge className="mb-4 px-3 py-1.5 text-sm bg-primary/20 border-primary/30 text-primary">
+        <div
+          className="order-2 md:order-1 text-center md:text-left"
+          data-oid="jmc3ja7"
+        >
+          <ScrollReveal data-oid="y-k7y.f">
+            <Badge
+              className="mb-4 px-3 py-1.5 text-sm bg-primary/20 border-primary/30 text-primary"
+              data-oid="g:7ap-m"
+            >
               Software Engineer
             </Badge>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-happy-hearts to-golden-nugget">
+          <ScrollReveal delay={0.1} data-oid="e4mwlbk">
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 tracking-tight"
+              data-oid="byrld8v"
+            >
+              <span
+                className="bg-clip-text text-transparent bg-gradient-to-r from-happy-hearts to-golden-nugget"
+                data-oid="vdhkio4"
+              >
                 MUBARAK A
               </span>
             </h1>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2}>
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed">
+          <ScrollReveal delay={0.2} data-oid="xvu2o4a">
+            <p
+              className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed"
+              data-oid="qvqzw0p"
+            >
               {isClient && displayedText.length === fullText.length ? (
                 <span
                   dangerouslySetInnerHTML={{
                     __html: highlightText(displayedText),
                   }}
+                  data-oid="qj.j-_v"
                 />
               ) : (
                 <>
                   {displayedText}
-                  {isClient && <span className="animate-pulse">|</span>}
+                  {isClient && (
+                    <span className="animate-pulse" data-oid="4a1wek.">
+                      |
+                    </span>
+                  )}
                 </>
               )}
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
-            <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6 md:mb-8">
+          <ScrollReveal delay={0.3} data-oid="dy2x4io">
+            <div
+              className="flex flex-wrap gap-2 justify-center md:justify-start mb-6 md:mb-8"
+              data-oid="x5-rtwu"
+            >
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-estragon/30 hover:bg-estragon/10 transition-colors"
+                data-oid="5r4kew3"
               >
                 Machine Learning
               </Badge>
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-estragon/30 hover:bg-estragon/10 transition-colors"
+                data-oid="aqyyjg:"
               >
                 Generative AI
               </Badge>
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-white/20 hover:bg-white/10 transition-colors"
+                data-oid="kozaaf9"
               >
                 Computer Vision
               </Badge>
               <Badge
                 variant="outline"
                 className="px-2 py-1 sm:px-3 sm:py-1.5 backdrop-blur-sm border-white/20 hover:bg-white/10 transition-colors"
+                data-oid="aelw4cm"
               >
                 NLP
               </Badge>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.4}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6 md:mb-8">
+          <ScrollReveal delay={0.4} data-oid="x09c463">
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6 md:mb-8"
+              data-oid="iq4-0vc"
+            >
               <Button
                 size="lg"
                 onClick={scrollToProjects}
                 className="group relative overflow-hidden shadow-lg hover:shadow-happy-hearts/20 transition-all duration-300 bg-happy-hearts hover:bg-happy-hearts/90 text-white"
+                data-oid="w:ohwl_"
               >
-                <span className="relative z-10">View Projects</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-happy-hearts to-bite-tongue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="relative z-10" data-oid="7.s_e-e">
+                  View Projects
+                </span>
+                <span
+                  className="absolute inset-0 bg-gradient-to-r from-happy-hearts to-bite-tongue opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  data-oid="b:sc5_w"
+                />
 
-                <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10" />
+                <ExternalLink
+                  className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10"
+                  data-oid="tib79yo"
+                />
               </Button>
 
               <Button
@@ -192,9 +235,15 @@ export default function RedesignedHero() {
                 variant="outline"
                 onClick={handleContactClick}
                 className="group relative overflow-hidden border-copper-coin/50 hover:border-copper-coin transition-colors duration-300"
+                data-oid="ez265rs"
               >
-                <span className="relative z-10">Contact Me</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="relative z-10" data-oid="ftk80gi">
+                  Contact Me
+                </span>
+                <span
+                  className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  data-oid="j4odnqx"
+                />
               </Button>
 
               <Button
@@ -202,33 +251,48 @@ export default function RedesignedHero() {
                 variant="outline"
                 asChild
                 className="group relative overflow-hidden border-copper-coin/50 hover:border-copper-coin transition-colors duration-300"
+                data-oid="_0bn_2a"
               >
-                <a href="/AI_x1.pdf" download="AI_x1.pdf">
-                  <span className="relative z-10 flex items-center">
+                <a href="/AI_x1.pdf" download="AI_x1.pdf" data-oid=":7q54h8">
+                  <span
+                    className="relative z-10 flex items-center"
+                    data-oid="loq7o20"
+                  >
                     Download Resume
-                    <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+                    <Download
+                      className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5"
+                      data-oid="qzaq:-q"
+                    />
                   </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span
+                    className="absolute inset-0 bg-gradient-to-r from-copper-coin/10 to-golden-nugget/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    data-oid="z2w18hq"
+                  />
                 </a>
               </Button>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.5}>
-            <div className="flex gap-4 justify-center md:justify-start">
+          <ScrollReveal delay={0.5} data-oid="dzzq.b4">
+            <div
+              className="flex gap-4 justify-center md:justify-start"
+              data-oid="6r06eaq"
+            >
               <Button
                 variant="ghost"
                 size="icon"
                 asChild
                 className="rounded-full hover:bg-succulent/10 transition-all duration-300 hover:scale-110"
+                data-oid="rgcc3-."
               >
                 <a
                   href="https://github.com/mubarakx01"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
+                  data-oid="d1wb9oh"
                 >
-                  <Github className="h-5 w-5" />
+                  <Github className="h-5 w-5" data-oid="hgets51" />
                 </a>
               </Button>
               <Button
@@ -236,14 +300,16 @@ export default function RedesignedHero() {
                 size="icon"
                 asChild
                 className="rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                data-oid="z7k-:41"
               >
                 <a
                   href="https://www.linkedin.com/in/mubarak-a-xyz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
+                  data-oid="sygn:be"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-5 w-5" data-oid="8_:3_qz" />
                 </a>
               </Button>
               <Button
@@ -251,9 +317,14 @@ export default function RedesignedHero() {
                 size="icon"
                 asChild
                 className="rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                data-oid=".rlsad."
               >
-                <a href="mailto:mr1398463@gmail.com" aria-label="Email">
-                  <Mail className="h-5 w-5" />
+                <a
+                  href="mailto:mr1398463@gmail.com"
+                  aria-label="Email"
+                  data-oid="wdhf_8d"
+                >
+                  <Mail className="h-5 w-5" data-oid="7kbt.gg" />
                 </a>
               </Button>
             </div>
@@ -261,8 +332,11 @@ export default function RedesignedHero() {
         </div>
 
         {/* Right column - Image */}
-        <div className="order-1 md:order-2 flex justify-center mb-6 md:mb-0">
-          <ScrollReveal direction="left">
+        <div
+          className="order-1 md:order-2 flex justify-center mb-6 md:mb-0"
+          data-oid="zrl5701"
+        >
+          <ScrollReveal direction="left" data-oid="ji-csuz">
             <motion.div
               className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl mt-8 md:mt-0"
               animate={
@@ -275,6 +349,7 @@ export default function RedesignedHero() {
               }
               transition={{ type: "spring", stiffness: 150, damping: 15 }}
               whileHover={{ scale: 1.05 }}
+              data-oid="rbzchbc"
             >
               <Image
                 src="/profile.jpeg"
@@ -282,12 +357,19 @@ export default function RedesignedHero() {
                 fill
                 className="object-cover"
                 priority
+                data-oid="l7vs:sh"
               />
 
               {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500/30 rounded-full blur-xl" />
+              <div
+                className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500/30 rounded-full blur-xl"
+                data-oid=".64ei.-"
+              />
 
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/30 rounded-full blur-xl" />
+              <div
+                className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/30 rounded-full blur-xl"
+                data-oid="10zrget"
+              />
 
               {/* Add a subtle pulsing glow effect */}
               {isClient && (
@@ -301,6 +383,7 @@ export default function RedesignedHero() {
                     repeat: Number.POSITIVE_INFINITY,
                     ease: "easeInOut",
                   }}
+                  data-oid="-qy859m"
                 />
               )}
             </motion.div>
@@ -309,11 +392,15 @@ export default function RedesignedHero() {
 
         {/* Scroll indicator */}
         {isClient && (
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+          <div
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+            data-oid="cscmu85"
+          >
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
               whileHover={{ scale: 1.1 }}
+              data-oid="q70s3wk"
             >
               <Button
                 variant="ghost"
@@ -324,8 +411,9 @@ export default function RedesignedHero() {
                     .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
+                data-oid="3jq-lnv"
               >
-                <ArrowDown className="h-4 w-4" />
+                <ArrowDown className="h-4 w-4" data-oid="ose5s7f" />
               </Button>
             </motion.div>
           </div>

@@ -39,32 +39,32 @@ export default function ResponsiveHeader() {
     return (
       <header
         className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
-        data-oid="fxg:0z4"
+        data-oid="zj:gsxv"
       >
         <div
           className="container flex h-16 items-center justify-between"
-          data-oid=".xdkbeo"
+          data-oid="kqi51d3"
         >
-          <div className="flex items-center gap-2" data-oid="jii74-z">
-            <div className="font-bold text-xl" data-oid="6:c-:g5">
+          <div className="flex items-center gap-2" data-oid="6rlc7sr">
+            <div className="font-bold text-xl" data-oid="s7357.r">
               SW
             </div>
-            <div className="hidden md:block" data-oid="lgal1pg">
-              <div className="font-bold" data-oid="::2oe3o">
+            <div className="hidden md:block" data-oid="5yairsp">
+              <div className="font-bold" data-oid="y95svk8">
                 MUBARAK A
               </div>
-              <div className="text-xs text-muted-foreground" data-oid="q2fqk:1">
+              <div className="text-xs text-muted-foreground" data-oid="bgtyp1b">
                 AI Engineer & Community Builder
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4" data-oid="cqehu:q">
-            <div className="h-9 w-9" data-oid="nnrlpg4"></div>{" "}
+          <div className="flex items-center gap-4" data-oid=".l_gc5s">
+            <div className="h-9 w-9" data-oid="163saox"></div>{" "}
             {/* Placeholder for theme toggle */}
-            <div className="md:hidden" data-oid="vcqaaiu">
-              <Button variant="ghost" size="icon" data-oid="azyombb">
-                <Menu className="h-5 w-5" data-oid="jozdij0" />
+            <div className="md:hidden" data-oid="4taaql6">
+              <Button variant="ghost" size="icon" data-oid=".vrd0pb">
+                <Menu className="h-5 w-5" data-oid="e.-fshe" />
               </Button>
             </div>
           </div>
@@ -81,31 +81,31 @@ export default function ResponsiveHeader() {
           ? "bg-background/80 backdrop-blur-md border-b border-border"
           : "bg-transparent",
       )}
-      data-oid="jw0hlgu"
+      data-oid="cqju92v"
     >
       <div
         className="container flex h-16 items-center justify-between px-4"
-        data-oid="1:er6da"
+        data-oid="q5kl5uw"
       >
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2"
-          data-oid="7:ho0-o"
+          data-oid="j1m27e9"
         >
-          <div className="flex items-center gap-2" data-oid="9:wq.f_">
+          <div className="flex items-center gap-2" data-oid="2x9f6ql">
             <div
               className="font-bold text-xl bg-gradient-to-r from-happy-hearts to-golden-nugget text-transparent bg-clip-text"
-              data-oid="jzp5tj-"
+              data-oid=":c21fwu"
             >
               MA
             </div>
-            <div className="hidden md:block" data-oid="q-v8ty:">
-              <div className="font-bold" data-oid="3wlpu:d">
+            <div className="hidden md:block" data-oid="::t4nuf">
+              <div className="font-bold" data-oid=":b_506z">
                 MUBARAK A
               </div>
-              <div className="text-xs text-muted-foreground" data-oid="fgzay_x">
+              <div className="text-xs text-muted-foreground" data-oid="tygo-ys">
                 AI Engineer & Community Builder
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function ResponsiveHeader() {
 
         <nav
           className="hidden md:flex items-center gap-4 lg:gap-6 text-sm"
-          data-oid="gfyepah"
+          data-oid="zydfb41"
         >
           {navItems.map((item, index) => (
             <motion.div
@@ -122,7 +122,7 @@ export default function ResponsiveHeader() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              data-oid="sjbis:e"
+              data-oid="kk:_.8j"
             >
               <Link
                 href={item.href}
@@ -130,7 +130,7 @@ export default function ResponsiveHeader() {
                   "relative transition-colors hover:text-primary",
                   "after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
                 )}
-                data-oid="_nap5yo"
+                data-oid="x7tk8a9"
               >
                 {item.name}
               </Link>
@@ -138,35 +138,35 @@ export default function ResponsiveHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-4" data-oid="l6f.s34">
+        <div className="flex items-center gap-2 sm:gap-4" data-oid="tuj0js0">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.7 }}
-            data-oid="3:01hi5"
+            data-oid=".zzrkts"
           >
-            <ThemeSwitcher data-oid="8rqh.md" />
+            <ThemeSwitcher data-oid="oohgyj3" />
           </motion.div>
 
-          <div className="md:hidden" data-oid="uucnbvj">
+          <div className="md:hidden" data-oid="r00wybw">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              data-oid="in7g.eq"
+              data-oid="h5ogkys"
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" data-oid="s2yq_vj" />
+                <X className="h-5 w-5" data-oid="ib10jqq" />
               ) : (
-                <Menu className="h-5 w-5" data-oid="nufw9cg" />
+                <Menu className="h-5 w-5" data-oid=".18vcl8" />
               )}
             </Button>
           </div>
         </div>
       </div>
 
-      <AnimatePresence data-oid="3daz8pr">
+      <AnimatePresence data-oid="5:vk12h">
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -174,35 +174,35 @@ export default function ResponsiveHeader() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden border-t overflow-hidden bg-background/95 backdrop-blur-md"
-            data-oid="lzah3l0"
+            data-oid=".autnyc"
           >
-            <div className="flex flex-col space-y-3 p-4" data-oid="b0b_pm8">
+            <div className="flex flex-col space-y-3 p-4" data-oid="2w95b9e">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  data-oid="58d_o_n"
+                  data-oid="zvxzm13"
                 >
                   <Link
                     href={item.href}
                     className="block py-2 hover:text-primary transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
-                    data-oid="ukmk.6l"
+                    data-oid="dvn31rz"
                   >
                     {item.name}
                   </Link>
                 </motion.div>
               ))}
-              <div className="pt-2 border-t border-border" data-oid="qkmb46h">
+              <div className="pt-2 border-t border-border" data-oid="_z8oj6n">
                 <div
                   className="flex items-center justify-between"
-                  data-oid="rbdehmo"
+                  data-oid="r50ut88"
                 >
                   <span
                     className="text-sm text-muted-foreground"
-                    data-oid="mwn24n:"
+                    data-oid="7p29z5i"
                   >
                     Theme settings
                   </span>

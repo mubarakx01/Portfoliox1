@@ -184,9 +184,9 @@ export default function InteractiveTimeline() {
   }, [expandedEvent]);
 
   return (
-    <div ref={containerRef} className="w-full py-8" data-oid="n9u73gf">
-      <div className="mb-8" data-oid="zwzj1s4">
-        <AnimatePresence mode="wait" data-oid="rj__c5g">
+    <div ref={containerRef} className="w-full py-8" data-oid="erul_wi">
+      <div className="mb-8" data-oid="kgu5bxu">
+        <AnimatePresence mode="wait" data-oid="l77kdfv">
           <motion.div
             key={timelineData[activeEventIndex].id}
             initial={{ opacity: 0, y: 20 }}
@@ -197,57 +197,57 @@ export default function InteractiveTimeline() {
               "rounded-xl p-6 relative overflow-hidden shadow-lg",
               timelineData[activeEventIndex].color,
             )}
-            data-oid="0dmoret"
+            data-oid="ps3bi87"
           >
             <div
               className="absolute inset-0 opacity-10 bg-[url('/placeholder.svg?height=400&width=800')] bg-center bg-cover mix-blend-overlay"
-              data-oid="13e3e:4"
+              data-oid="rdid:ql"
             />
 
-            <div className="relative z-10" data-oid="b6:9bew">
+            <div className="relative z-10" data-oid="cfseamr">
               <div
                 className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"
-                data-oid="ygiraa."
+                data-oid="0xsvs.n"
               >
-                <div data-oid="9wjcl3i">
+                <div data-oid="k8pls2y">
                   <Badge
                     variant="outline"
                     className="bg-white/10 text-white mb-2"
-                    data-oid="lfy6j._"
+                    data-oid="dh21k7a"
                   >
                     Featured Experience
                   </Badge>
                   <h3
                     className="text-xl md:text-2xl font-bold text-white"
-                    data-oid="twaintz"
+                    data-oid="2l2d.zj"
                   >
                     {timelineData[activeEventIndex].title}
                   </h3>
                   <div
                     className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 text-white/80"
-                    data-oid="f4ljtw0"
+                    data-oid="5.ro53k"
                   >
-                    <div className="flex items-center gap-1" data-oid="1kwda7e">
-                      <Building className="h-4 w-4" data-oid="g4tes_v" />
-                      <span data-oid="n3p3gsu">
+                    <div className="flex items-center gap-1" data-oid="ysc02mk">
+                      <Building className="h-4 w-4" data-oid="a5:lxw-" />
+                      <span data-oid="cvbpnb4">
                         {timelineData[activeEventIndex].company}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1" data-oid="xzbvf54">
-                      <MapPin className="h-4 w-4" data-oid="_a7nsc." />
-                      <span data-oid="q:ta6fi">
+                    <div className="flex items-center gap-1" data-oid="1lcxshf">
+                      <MapPin className="h-4 w-4" data-oid="vu5-4ky" />
+                      <span data-oid="i.0zkrd">
                         {timelineData[activeEventIndex].location}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1" data-oid="085rwk:">
-                      <Calendar className="h-4 w-4" data-oid="cnrfio0" />
-                      <span data-oid="1uq-d16">
+                    <div className="flex items-center gap-1" data-oid="mr71nvh">
+                      <Calendar className="h-4 w-4" data-oid="qnxjkxt" />
+                      <span data-oid="x3djksk">
                         {timelineData[activeEventIndex].period}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-2" data-oid="fej9zzg">
+                <div className="flex gap-2" data-oid="c_6lp1e">
                   {timelineData.map((_, index) => (
                     <button
                       key={index}
@@ -259,21 +259,21 @@ export default function InteractiveTimeline() {
                       )}
                       onClick={() => setActiveEventIndex(index)}
                       title={`Show ${timelineData[index].title}`}
-                      data-oid="64s.i5-"
+                      data-oid="xkw9bbb"
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-white/90 mb-4" data-oid="va:c40n">
+              <p className="text-white/90 mb-4" data-oid="2qpop:q">
                 {timelineData[activeEventIndex].description}
               </p>
-              <div className="flex flex-wrap gap-2" data-oid="m0yais2">
+              <div className="flex flex-wrap gap-2" data-oid="c.xgew:">
                 {timelineData[activeEventIndex].skills.map((skill, index) => (
                   <Badge
                     key={index}
                     variant="outline"
                     className="bg-white/10 text-white border-white/20"
-                    data-oid="qby_vfw"
+                    data-oid="dpehleq"
                   >
                     {skill}
                   </Badge>
@@ -284,7 +284,7 @@ export default function InteractiveTimeline() {
         </AnimatePresence>
       </div>
 
-      <div className="space-y-4" data-oid="tx0le9-">
+      <div className="space-y-4" data-oid="amushmu">
         {timelineData.map((event, index) => (
           <motion.div
             key={event.id}
@@ -292,7 +292,7 @@ export default function InteractiveTimeline() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative"
-            data-oid="38yswt8"
+            data-oid="-eummbx"
           >
             <div
               className={cn(
@@ -300,7 +300,7 @@ export default function InteractiveTimeline() {
                 expandedEvent === event.id ? "pb-12" : "",
               )}
               onClick={() => toggleExpand(event.id)}
-              data-oid="08shcvz"
+              data-oid="n9_8i39"
             >
               <div
                 className={cn(
@@ -308,54 +308,54 @@ export default function InteractiveTimeline() {
                   expandedEvent === event.id ? "scale-125" : "",
                   event.color.replace("bg-gradient-to-r", "bg"),
                 )}
-                data-oid="by_71ej"
+                data-oid="3tdg4f_"
               />
 
               <div
                 className="flex flex-col md:flex-row md:items-center justify-between gap-2"
-                data-oid=":.:4xvi"
+                data-oid="mdh_f26"
               >
-                <div data-oid="sh82-cd">
+                <div data-oid="-r8fkrl">
                   <h3
                     className="text-lg font-semibold flex items-center gap-2"
-                    data-oid="kewodoi"
+                    data-oid="zq5-14d"
                   >
                     {event.title}
                     <motion.div
                       animate={{ rotate: expandedEvent === event.id ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      data-oid="vgp1:_l"
+                      data-oid="jb1djww"
                     >
                       {expandedEvent === event.id ? (
                         <ChevronDown
                           className="h-4 w-4 text-muted-foreground"
-                          data-oid="tipq580"
+                          data-oid="xw46pm:"
                         />
                       ) : (
                         <ChevronRight
                           className="h-4 w-4 text-muted-foreground"
-                          data-oid="fn3zyal"
+                          data-oid="-73iwg4"
                         />
                       )}
                     </motion.div>
                   </h3>
                   <div
                     className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground"
-                    data-oid="lku_6jb"
+                    data-oid="er-wcb8"
                   >
-                    <div className="flex items-center gap-1" data-oid="2nyw6i5">
-                      <Building className="h-3 w-3" data-oid="rmher06" />
-                      <span data-oid="43apubf">{event.company}</span>
+                    <div className="flex items-center gap-1" data-oid="_9dgc00">
+                      <Building className="h-3 w-3" data-oid="a5nl:tv" />
+                      <span data-oid="js3e_e.">{event.company}</span>
                     </div>
-                    <div className="flex items-center gap-1" data-oid="go4pi-x">
-                      <Clock className="h-3 w-3" data-oid="v3ekjj_" />
-                      <span data-oid="-6-zmd9">{event.period}</span>
+                    <div className="flex items-center gap-1" data-oid="1egqfsj">
+                      <Clock className="h-3 w-3" data-oid="m-4oopj" />
+                      <span data-oid="01l-g63">{event.period}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <AnimatePresence data-oid="xagpirq">
+              <AnimatePresence data-oid="qw-kpqh">
                 {expandedEvent === event.id && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -363,27 +363,27 @@ export default function InteractiveTimeline() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
-                    data-oid=".51uibm"
+                    data-oid="99z30bk"
                   >
-                    <div className="mt-4 pt-4 border-t" data-oid="_aq2-7g">
-                      <div className="space-y-4" data-oid="vdz1426">
-                        <div data-oid="p3wdduj">
+                    <div className="mt-4 pt-4 border-t" data-oid="xotq92s">
+                      <div className="space-y-4" data-oid="6oesrnm">
+                        <div data-oid=".c6yf02">
                           <h4
                             className="font-medium flex items-center gap-2 mb-2"
-                            data-oid="ueipt06"
+                            data-oid="dl-x_yx"
                           >
                             <Award
                               className="h-4 w-4 text-primary"
-                              data-oid="glkqio6"
+                              data-oid="6c-ybq0"
                             />
                             Key Achievements
                           </h4>
                           <ul
                             className="space-y-1 ml-6 list-disc text-muted-foreground"
-                            data-oid="k.38oko"
+                            data-oid="0t:bkse"
                           >
                             {event.achievements.map((achievement, i) => (
-                              <li key={i} data-oid="4-06..3">
+                              <li key={i} data-oid="urdo.qn">
                                 {achievement}
                               </li>
                             ))}
@@ -391,13 +391,13 @@ export default function InteractiveTimeline() {
                         </div>
                         <div
                           className="flex flex-wrap gap-2"
-                          data-oid="nmi8if-"
+                          data-oid="wm8_hit"
                         >
                           {event.skills.map((skill, i) => (
                             <Badge
                               key={i}
                               variant="secondary"
-                              data-oid="cdfyi2_"
+                              data-oid="s1luzm1"
                             >
                               {skill}
                             </Badge>

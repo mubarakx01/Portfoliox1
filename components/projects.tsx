@@ -222,20 +222,20 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-12" data-oid="58s9f-c">
+    <section id="projects" className="py-12" data-oid="doat:c6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        data-oid="e40mz_p"
+        data-oid="9-zda6x"
       >
-        <h2 className="text-3xl font-bold text-center mb-4" data-oid="b5p9cbj">
+        <h2 className="text-3xl font-bold text-center mb-4" data-oid="ph83jqk">
           Projects
         </h2>
         <p
           className="text-muted-foreground text-center max-w-2xl mx-auto mb-12"
-          data-oid="ry-ht:p"
+          data-oid="to8q:ue"
         >
           Explore my portfolio of AI, machine learning, and software development
           projects. Each project demonstrates different skills and technologies.
@@ -243,14 +243,14 @@ export default function Projects() {
       </motion.div>
 
       {featuredProject && (
-        <div className="mb-12" data-oid="os47i.j">
+        <div className="mb-12" data-oid="ws1twi2">
           <motion.h3
             className="text-xl font-semibold mb-6"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            data-oid="rqtuzhq"
+            data-oid="rbmhc5g"
           >
             Featured Project
           </motion.h3>
@@ -260,16 +260,16 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            data-oid="szwtf4s"
+            data-oid="1sxj5w:"
           >
             <Card
               className="overflow-hidden border-none bg-gradient-to-br from-blue-900/30 to-purple-900/30"
-              data-oid="fk-uiix"
+              data-oid="2103zhp"
             >
-              <div className="grid md:grid-cols-2 gap-6" data-oid="-kz5gh_">
+              <div className="grid md:grid-cols-2 gap-6" data-oid="p-fkdj1">
                 <div
                   className="relative aspect-video overflow-hidden rounded-tl-xl md:rounded-l-xl"
-                  data-oid="klqu..w"
+                  data-oid="5vc7vmq"
                 >
                   <Image
                     src={featuredProject.images[0] || "/placeholder.svg"}
@@ -277,93 +277,93 @@ export default function Projects() {
                     width={600}
                     height={400}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                    data-oid="ad.i4e4"
+                    data-oid="26:3352"
                   />
 
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
-                    data-oid="wrz83-i"
+                    data-oid="tdl61h2"
                   >
-                    <div className="p-4" data-oid="n7jyfwo">
-                      <Badge className="mb-2" data-oid="o3adviz">
+                    <div className="p-4" data-oid="50ea0w9">
+                      <Badge className="mb-2" data-oid="md1b0yc">
                         {featuredProject.category}
                       </Badge>
-                      <h3 className="text-xl font-bold" data-oid="afi2ama">
+                      <h3 className="text-xl font-bold" data-oid="rkcla1_">
                         {featuredProject.title}
                       </h3>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6" data-oid="m34wae0">
-                  <p className="text-muted-foreground mb-6" data-oid="b_yswz4">
+                <div className="p-6" data-oid="94tl1gm">
+                  <p className="text-muted-foreground mb-6" data-oid="f1d:70f">
                     {featuredProject.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6" data-oid="yv.i47o">
+                  <div className="flex flex-wrap gap-2 mb-6" data-oid="1k63b.t">
                     {featuredProject.technologies.map((tech, index) => (
                       <Badge
                         key={index}
                         variant="secondary"
                         className="animate-fade-in"
                         style={{ animationDelay: `${index * 0.1}s` }}
-                        data-oid="gfspp73"
+                        data-oid="9c1bz77"
                       >
                         {tech}
                       </Badge>
                     ))}
                   </div>
 
-                  <div className="flex flex-col gap-4 mb-6" data-oid="zle:tm1">
-                    <div className="flex items-center gap-2" data-oid="yf0k.pb">
+                  <div className="flex flex-col gap-4 mb-6" data-oid=".w46-4h">
+                    <div className="flex items-center gap-2" data-oid="hoqv9rc">
                       <Calendar
                         className="h-4 w-4 text-muted-foreground"
-                        data-oid="vvj4jhd"
+                        data-oid="pqhbq67"
                       />
 
-                      <span data-oid="ox7aamm">
+                      <span data-oid="0sap_qw">
                         Completed: {featuredProject.completed}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2" data-oid="6xjenqx">
+                    <div className="flex items-center gap-2" data-oid="95:yh04">
                       <Users
                         className="h-4 w-4 text-muted-foreground"
-                        data-oid="ylj185:"
+                        data-oid="4pist-x"
                       />
 
-                      <span data-oid="xcairyj">
+                      <span data-oid="p7ggh__">
                         Team Size: {featuredProject.teamSize}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2" data-oid="tfg7fbo">
+                    <div className="flex items-center gap-2" data-oid="re-1t24">
                       <Star
                         className="h-4 w-4 text-muted-foreground"
-                        data-oid="b_6umc2"
+                        data-oid="izvtqow"
                       />
 
-                      <div className="flex" data-oid="jv2jnd4">
+                      <div className="flex" data-oid="s8lodm1">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
                             key={i}
                             className={`h-4 w-4 ${i < featuredProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                            data-oid=":j40dnk"
+                            data-oid="u5pbj.w"
                           />
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex gap-3" data-oid="k0smazg">
+                  <div className="flex gap-3" data-oid=".3pcxea">
                     <Button
                       variant="default"
                       size="sm"
                       className="gap-2 group"
                       onClick={() => handleDemoClick(featuredProject.demoUrl)}
-                      data-oid="p7x44q8"
+                      data-oid="nt_psxt"
                     >
                       <ExternalLink
                         className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                        data-oid="wvtbnpv"
+                        data-oid="9j6fi9x"
                       />
                       Live Demo
                     </Button>
@@ -375,9 +375,9 @@ export default function Projects() {
                         setSelectedProject(featuredProject);
                         setIsDialogOpen(true);
                       }}
-                      data-oid="6-88_jx"
+                      data-oid="tfr2x7i"
                     >
-                      <Code className="h-4 w-4" data-oid="-2dhds1" />
+                      <Code className="h-4 w-4" data-oid="_xvn_o:" />
                       View Details
                     </Button>
                     <Button
@@ -385,15 +385,15 @@ export default function Projects() {
                       size="sm"
                       className="gap-2"
                       asChild
-                      data-oid="yk4nbkz"
+                      data-oid="a67-4ub"
                     >
                       <a
                         href={featuredProject.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-oid="dh9ge_k"
+                        data-oid="s2zkop-"
                       >
-                        <Github className="h-4 w-4" data-oid="nqbkyr5" />
+                        <Github className="h-4 w-4" data-oid="yucnvou" />
                         GitHub
                       </a>
                     </Button>
@@ -405,19 +405,19 @@ export default function Projects() {
         </div>
       )}
 
-      <div className="mb-8" data-oid="gfebqmq">
+      <div className="mb-8" data-oid="k:33ln2">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="flex flex-col md:flex-row gap-4 mb-6"
-          data-oid="_lg8u4u"
+          data-oid="p1y3l0h"
         >
-          <div className="relative flex-1" data-oid="6yn7okb">
+          <div className="relative flex-1" data-oid="j06uast">
             <Search
               className="absolute left-3 top-3 h-4 w-4 text-muted-foreground"
-              data-oid="3zz:dgy"
+              data-oid="eo564cs"
             />
 
             <Input
@@ -425,28 +425,28 @@ export default function Projects() {
               className="pl-10"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              data-oid=".3yvsgh"
+              data-oid="9p_r_n6"
             />
           </div>
 
-          <div className="flex flex-wrap gap-2" data-oid="26aqvas">
+          <div className="flex flex-wrap gap-2" data-oid="qhhbqw.">
             <Select
               value={categoryFilter || ""}
               onValueChange={(value) => setCategoryFilter(value || null)}
-              data-oid="4i4vu7u"
+              data-oid="acljoha"
             >
-              <SelectTrigger className="w-[180px]" data-oid="-s_sjlq">
-                <SelectValue placeholder="Category" data-oid="ec39.pq" />
+              <SelectTrigger className="w-[180px]" data-oid="9cdbo:-">
+                <SelectValue placeholder="Category" data-oid="htqkkye" />
               </SelectTrigger>
-              <SelectContent data-oid="fogv749">
-                <SelectItem value="all" data-oid="fiiucmj">
+              <SelectContent data-oid="ulj3zxz">
+                <SelectItem value="all" data-oid="zqj4u:o">
                   All Categories
                 </SelectItem>
                 {categories.map((category) => (
                   <SelectItem
                     key={category}
                     value={category}
-                    data-oid="1p1c2eu"
+                    data-oid="8-6kh.-"
                   >
                     {category}
                   </SelectItem>
@@ -459,20 +459,20 @@ export default function Projects() {
               onValueChange={(value) =>
                 setDifficultyFilter(value ? Number.parseInt(value) : null)
               }
-              data-oid="enuw5e9"
+              data-oid="sr607gm"
             >
-              <SelectTrigger className="w-[180px]" data-oid="pou_lru">
-                <SelectValue placeholder="Difficulty" data-oid="d8d4zps" />
+              <SelectTrigger className="w-[180px]" data-oid="al0bvu8">
+                <SelectValue placeholder="Difficulty" data-oid="tc2te:e" />
               </SelectTrigger>
-              <SelectContent data-oid="5vw4pf8">
-                <SelectItem value="all" data-oid=".evv9vk">
+              <SelectContent data-oid="g7_34rk">
+                <SelectItem value="all" data-oid="fa32dp3">
                   All Difficulties
                 </SelectItem>
                 {[1, 2, 3, 4, 5].map((level) => (
                   <SelectItem
                     key={level}
                     value={level.toString()}
-                    data-oid="eur04g4"
+                    data-oid="j85usil"
                   >
                     {level} {level === 1 ? "Star" : "Stars"}
                   </SelectItem>
@@ -486,9 +486,9 @@ export default function Projects() {
               onClick={resetFilters}
               className="shrink-0"
               aria-label="Reset filters"
-              data-oid="xj2g1ha"
+              data-oid="-r.veed"
             >
-              <X className="h-4 w-4" data-oid=".s:vd2k" />
+              <X className="h-4 w-4" data-oid="qwa6uy8" />
             </Button>
           </div>
         </motion.div>
@@ -498,9 +498,9 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-12"
-            data-oid="6pp:7zx"
+            data-oid="sc1z5d3"
           >
-            <p className="text-muted-foreground" data-oid="yfyjh1s">
+            <p className="text-muted-foreground" data-oid="dg-pbg9">
               No projects match your filters. Try adjusting your search
               criteria.
             </p>
@@ -508,7 +508,7 @@ export default function Projects() {
               variant="link"
               onClick={resetFilters}
               className="mt-2"
-              data-oid="f8:c5k7"
+              data-oid="r5kzpsp"
             >
               Reset Filters
             </Button>
@@ -516,9 +516,9 @@ export default function Projects() {
         ) : (
           <div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            data-oid="85_4xsq"
+            data-oid="ig.0..u"
           >
-            <AnimatePresence data-oid="v:-4upa">
+            <AnimatePresence data-oid="3k3avog">
               {filteredProjects
                 .filter((p) => !p.featured)
                 .map((project, index) => (
@@ -529,32 +529,32 @@ export default function Projects() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="project-card"
-                    data-oid="rm-:g8d"
+                    data-oid="v08bjj:"
                   >
-                    <div className="p-6" data-oid="mnou7ms">
-                      <Badge className="mb-3" data-oid="49nr:51">
+                    <div className="p-6" data-oid="mjtvhem">
+                      <Badge className="mb-3" data-oid=":ipegcb">
                         {project.category}
                       </Badge>
-                      <h3 className="text-lg font-bold mb-2" data-oid="osgl:y-">
+                      <h3 className="text-lg font-bold mb-2" data-oid="pjv4_b9">
                         {project.title}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground mb-4 line-clamp-2"
-                        data-oid="i5dejan"
+                        data-oid="r-bko29"
                       >
                         {project.description}
                       </p>
 
                       <div
                         className="flex flex-wrap gap-1 mb-4"
-                        data-oid="2v7hcis"
+                        data-oid="h.1n3z5"
                       >
                         {project.technologies.slice(0, 3).map((tech, i) => (
                           <Badge
                             key={i}
                             variant="outline"
                             className="text-xs"
-                            data-oid="lggrjjd"
+                            data-oid="3fi-x-8"
                           >
                             {tech}
                           </Badge>
@@ -563,7 +563,7 @@ export default function Projects() {
                           <Badge
                             variant="outline"
                             className="text-xs"
-                            data-oid="83zr_vh"
+                            data-oid="f.j0d05"
                           >
                             +{project.technologies.length - 3} more
                           </Badge>
@@ -572,20 +572,20 @@ export default function Projects() {
 
                       <div
                         className="flex justify-between items-center mb-4"
-                        data-oid="_2vsw90"
+                        data-oid="e099hlq"
                       >
-                        <div className="flex" data-oid="ylha:4s">
+                        <div className="flex" data-oid="ag2f0e8">
                           {Array.from({ length: 5 }).map((_, i) => (
                             <Star
                               key={i}
                               className={`h-3 w-3 ${i < project.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                              data-oid="zmez6yo"
+                              data-oid=".li08iv"
                             />
                           ))}
                         </div>
                         <div
                           className="text-xs text-muted-foreground"
-                          data-oid="smyxaf6"
+                          data-oid=":ru51hd"
                         >
                           Team: {project.teamSize}
                         </div>
@@ -599,7 +599,7 @@ export default function Projects() {
                           setSelectedProject(project);
                           setIsDialogOpen(true);
                         }}
-                        data-oid="e6ju_hf"
+                        data-oid="3afm6.7"
                       >
                         View Details
                       </Button>
@@ -614,36 +614,36 @@ export default function Projects() {
       <Dialog
         open={isDialogOpen}
         onOpenChange={setIsDialogOpen}
-        data-oid="_j024.r"
+        data-oid="e9_07ho"
       >
         <DialogContent
           className="max-w-4xl max-h-[90vh] overflow-hidden p-0"
-          data-oid="wo2ax1f"
+          data-oid="tc.odlk"
         >
           {selectedProject && (
-            <div className="flex flex-col h-full" data-oid="x-jo30z">
-              <DialogHeader className="px-6 pt-6 pb-2" data-oid="4ujfm9d">
+            <div className="flex flex-col h-full" data-oid="q:c5vka">
+              <DialogHeader className="px-6 pt-6 pb-2" data-oid="xyeee10">
                 <div
                   className="flex justify-between items-start"
-                  data-oid="jahs___"
+                  data-oid="g52:d09"
                 >
-                  <div data-oid=".hh0iep">
-                    <Badge className="mb-2" data-oid="4-q5k:s">
+                  <div data-oid="sgw1tbo">
+                    <Badge className="mb-2" data-oid="ptm6m-b">
                       {selectedProject.category}
                     </Badge>
-                    <DialogTitle className="text-2xl" data-oid="88a--oz">
+                    <DialogTitle className="text-2xl" data-oid="_s_ut6k">
                       {selectedProject.title}
                     </DialogTitle>
-                    <DialogDescription className="mt-2" data-oid="zmgf59p">
+                    <DialogDescription className="mt-2" data-oid="-8qf.ve">
                       {selectedProject.description}
                     </DialogDescription>
                   </div>
-                  <div className="flex" data-oid="zwgmt0v">
+                  <div className="flex" data-oid="jy59vg9">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
                         className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                        data-oid="xidgkj."
+                        data-oid="kwief46"
                       />
                     ))}
                   </div>
@@ -653,77 +653,77 @@ export default function Projects() {
               <Tabs
                 defaultValue="overview"
                 className="flex-1 overflow-hidden"
-                data-oid="sbrl1in"
+                data-oid="ockq9n:"
               >
                 <TabsList
                   className="px-6 justify-start border-b rounded-none"
-                  data-oid="jq:rjp-"
+                  data-oid="tk8_ql2"
                 >
-                  <TabsTrigger value="overview" data-oid="jo83r7t">
+                  <TabsTrigger value="overview" data-oid="euioo1y">
                     Overview
                   </TabsTrigger>
-                  <TabsTrigger value="gallery" data-oid="hkwr9x1">
+                  <TabsTrigger value="gallery" data-oid="9j9dbug">
                     Gallery
                   </TabsTrigger>
-                  <TabsTrigger value="demo" data-oid="wqc635o">
+                  <TabsTrigger value="demo" data-oid="_66:a7.">
                     Interactive Demo
                   </TabsTrigger>
                 </TabsList>
 
-                <ScrollArea className="flex-1 p-6" data-oid="lt4p46s">
+                <ScrollArea className="flex-1 p-6" data-oid=".7ixwt6">
                   <TabsContent
                     value="overview"
                     className="mt-0 h-full"
-                    data-oid="-84o6dn"
+                    data-oid="vw3-8iu"
                   >
                     <div
                       className="grid md:grid-cols-3 gap-6"
-                      data-oid="sh5r1bg"
+                      data-oid="hew68qg"
                     >
-                      <div className="md:col-span-2" data-oid="nqls74g">
+                      <div className="md:col-span-2" data-oid="ltjq:i0">
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="cok61a4"
+                          data-oid="qr22r6-"
                         >
                           Project Details
                         </h4>
-                        <p className="mb-6" data-oid="cwhug.l">
+                        <p className="mb-6" data-oid="gs53e4m">
                           {selectedProject.details}
                         </p>
 
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="aki:scs"
+                          data-oid="abv:mn."
                         >
                           Technologies
                         </h4>
                         <div
                           className="flex flex-wrap gap-2 mb-6"
-                          data-oid="t3iendl"
+                          data-oid="z-_dg6m"
                         >
                           {selectedProject.technologies.map((tech, index) => (
                             <Badge
                               key={index}
                               variant="secondary"
-                              data-oid="nbil7df"
+                              data-oid="vwwrbkd"
                             >
                               {tech}
                             </Badge>
                           ))}
                         </div>
 
-                        <div className="flex gap-3 mt-6" data-oid="bcab5tq">
+                        <div className="flex gap-3 mt-6" data-oid="uv:.75b">
                           <Button
                             variant="default"
                             className="gap-2"
                             onClick={() =>
                               handleDemoClick(selectedProject.demoUrl)
                             }
-                            data-oid="hfqc8fh"
+                            data-oid="-t4d6xk"
                           >
                             <ExternalLink
                               className="h-4 w-4"
-                              data-oid="p5jzijf"
+                              data-oid="vfaombf"
                             />
                             Live Demo
                           </Button>
@@ -731,64 +731,64 @@ export default function Projects() {
                             variant="outline"
                             className="gap-2"
                             asChild
-                            data-oid="z-r:nas"
+                            data-oid="t29fs3v"
                           >
                             <a
                               href={selectedProject.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              data-oid="j8k6s14"
+                              data-oid="kkd3f11"
                             >
-                              <Github className="h-4 w-4" data-oid="v5gvce0" />
+                              <Github className="h-4 w-4" data-oid=".1rsz1." />
                               GitHub
                             </a>
                           </Button>
                         </div>
                       </div>
 
-                      <div data-oid="cqe1.db">
+                      <div data-oid="--rj9:3">
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="0jlrcnn"
+                          data-oid="6ikvrr0"
                         >
                           Project Info
                         </h4>
-                        <div className="space-y-4" data-oid="uyvydv8">
-                          <div className="flex flex-col" data-oid="fzp0_8v">
+                        <div className="space-y-4" data-oid="2rsjy2:">
+                          <div className="flex flex-col" data-oid="e:e7260">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="sto1kk4"
+                              data-oid="lewr4ym"
                             >
                               Completed
                             </span>
-                            <span data-oid="e4kmknk">
+                            <span data-oid="eewbyz3">
                               {selectedProject.completed}
                             </span>
                           </div>
-                          <div className="flex flex-col" data-oid="1qpp2a5">
+                          <div className="flex flex-col" data-oid="rl-6lid">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="4g2u8b-"
+                              data-oid="hxax3gt"
                             >
                               Team Size
                             </span>
-                            <span data-oid=":8bauj9">
+                            <span data-oid="gzgr2ui">
                               {selectedProject.teamSize} people
                             </span>
                           </div>
-                          <div className="flex flex-col" data-oid="ffmbize">
+                          <div className="flex flex-col" data-oid="fy86-10">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="21nvzik"
+                              data-oid="p94jxa0"
                             >
                               Difficulty
                             </span>
-                            <div className="flex" data-oid="_w5yj.n">
+                            <div className="flex" data-oid="x7d1nta">
                               {Array.from({ length: 5 }).map((_, i) => (
                                 <Star
                                   key={i}
                                   className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                                  data-oid="q75l25k"
+                                  data-oid="lczadbu"
                                 />
                               ))}
                             </div>
@@ -801,17 +801,17 @@ export default function Projects() {
                   <TabsContent
                     value="gallery"
                     className="mt-0"
-                    data-oid="s0cl4mu"
+                    data-oid="ek3nc8y"
                   >
                     <div
                       className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                      data-oid="m5pm5bi"
+                      data-oid=":1phwwi"
                     >
                       {selectedProject.images.map((image, index) => (
                         <div
                           key={index}
                           className="overflow-hidden rounded-lg"
-                          data-oid="bhvyd_d"
+                          data-oid="dn01_ln"
                         >
                           <Image
                             src={image || "/placeholder.svg"}
@@ -819,28 +819,28 @@ export default function Projects() {
                             width={600}
                             height={400}
                             className="w-full h-auto object-cover transition-transform duration-500 hover:scale-110"
-                            data-oid="smmo-ty"
+                            data-oid="hy3wvv9"
                           />
                         </div>
                       ))}
                     </div>
                   </TabsContent>
 
-                  <TabsContent value="demo" className="mt-0" data-oid="bypgwvm">
+                  <TabsContent value="demo" className="mt-0" data-oid="um9z_zo">
                     <div
                       className="aspect-video bg-muted rounded-lg flex items-center justify-center"
-                      data-oid="ii90-th"
+                      data-oid="v3qo-zt"
                     >
-                      <div className="text-center p-6" data-oid="fu.zku-">
+                      <div className="text-center p-6" data-oid="uag0_0v">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="j.7i1oq"
+                          data-oid="8.886ox"
                         >
                           Interactive Demo
                         </h4>
                         <p
                           className="text-muted-foreground mb-4"
-                          data-oid="4y-82_i"
+                          data-oid="ns0p-dt"
                         >
                           Experience the project firsthand with our interactive
                           demo.
@@ -850,11 +850,11 @@ export default function Projects() {
                             handleDemoClick(selectedProject.demoUrl)
                           }
                           className="gap-2"
-                          data-oid="84_vb-0"
+                          data-oid="k_qzpz2"
                         >
                           <ExternalLink
                             className="h-4 w-4"
-                            data-oid="yil5p5y"
+                            data-oid="8nykcxy"
                           />
                           Launch Demo
                         </Button>

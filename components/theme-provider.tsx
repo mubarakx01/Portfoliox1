@@ -26,10 +26,12 @@ export function ThemeProvider({
   // useEffect only runs on the client, so we can safely show the UI
   React.useEffect(() => {
     // Check for Dark Reader extension
-    const isDarkReader = document.documentElement.getAttribute('data-darkreader-scheme');
+    const isDarkReader = document.documentElement.getAttribute(
+      "data-darkreader-scheme",
+    );
     if (isDarkReader) {
-      document.documentElement.removeAttribute('data-darkreader-scheme');
-      const style = document.getElementById('dark-reader-style');
+      document.documentElement.removeAttribute("data-darkreader-scheme");
+      const style = document.getElementById("dark-reader-style");
       style?.parentNode?.removeChild(style);
     }
     setMounted(true);
@@ -38,14 +40,14 @@ export function ThemeProvider({
   // Prevent hydration mismatch
   if (!mounted) {
     return (
-      <div style={{ visibility: "hidden" }} data-oid="oqwcrfm">
+      <div style={{ visibility: "hidden" }} data-oid="jadx:.v">
         {children}
       </div>
     );
   }
 
   return (
-    <NextThemesProvider {...props} data-oid=".7ynjrx">
+    <NextThemesProvider {...props} data-oid="-rez3k3">
       {children}
     </NextThemesProvider>
   );

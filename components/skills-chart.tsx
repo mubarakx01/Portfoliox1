@@ -110,14 +110,14 @@ export default function SkillsChart() {
       return (
         <div
           className="bg-background/90 backdrop-blur-sm p-2 rounded-md border shadow-md"
-          data-oid="2-.xqa-"
+          data-oid="4n768gx"
         >
-          <p className="font-medium" data-oid="rb.bpc5">
+          <p className="font-medium" data-oid="b2xashn">
             {payload[0].payload.area}
           </p>
           <p
             className="text-primary"
-            data-oid="fzz:jv7"
+            data-oid="b6_.m7."
           >{`Proficiency: ${payload[0].value}%`}</p>
         </div>
       );
@@ -126,10 +126,10 @@ export default function SkillsChart() {
   };
 
   return (
-    <div ref={chartRef} className="w-full" data-oid=":3.0.q5">
+    <div ref={chartRef} className="w-full" data-oid="j72s:s_">
       <div
         className="flex flex-wrap gap-2 justify-center mb-6"
-        data-oid="njl8nq2"
+        data-oid="0erx.6p"
       >
         {skillsData.map((group) => (
           <motion.button
@@ -143,14 +143,14 @@ export default function SkillsChart() {
             onClick={() => setSelectedSkillGroup(group)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            data-oid="5e1a7wm"
+            data-oid="jcthedj"
           >
             {group.name}
           </motion.button>
         ))}
       </div>
 
-      <AnimatePresence mode="wait" data-oid="d:y14jt">
+      <AnimatePresence mode="wait" data-oid="bhc5hb0">
         <motion.div
           key={selectedSkillGroup.name}
           initial={{ opacity: 0, scale: 0.9 }}
@@ -158,28 +158,28 @@ export default function SkillsChart() {
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.3 }}
           className="w-full aspect-square max-w-xl mx-auto"
-          data-oid="m:iq8wu"
+          data-oid="1na3i5d"
         >
           <Card
             className="w-full h-full bg-card/50 border-none overflow-hidden backdrop-blur-sm"
-            data-oid="yss::_0"
+            data-oid="q2ojh_x"
           >
-            <CardContent className="p-1 h-full" data-oid="4wqd6w6">
+            <CardContent className="p-1 h-full" data-oid="k902.hu">
               <ResponsiveContainer
                 width="100%"
                 height="100%"
-                data-oid="m46gjdr"
+                data-oid="3q45_e8"
               >
                 <RadarChart
                   cx="50%"
                   cy="50%"
                   outerRadius="80%"
                   data={selectedSkillGroup.skills}
-                  data-oid="ujjoa9k"
+                  data-oid="keq.8:0"
                 >
                   <PolarGrid
                     stroke="rgba(255, 255, 255, 0.15)"
-                    data-oid="iy4i0e0"
+                    data-oid="8n3.2:1"
                   />
 
                   <PolarAngleAxis
@@ -189,19 +189,19 @@ export default function SkillsChart() {
                       fontSize: 12,
                     }}
                     stroke="rgba(255, 255, 255, 0.15)"
-                    data-oid="vcr_tf3"
+                    data-oid="m8sm8on"
                   />
 
                   <PolarRadiusAxis
                     angle={30}
                     domain={[0, 100]}
                     stroke="rgba(255, 255, 255, 0.15)"
-                    data-oid="d8c79-p"
+                    data-oid="8d.pxly"
                   />
 
                   <Tooltip
-                    content={<CustomTooltip data-oid="_4gye:q" />}
-                    data-oid="tynfinm"
+                    content={<CustomTooltip data-oid="mgd2n99" />}
+                    data-oid="2c-h85p"
                   />
 
                   <Radar
@@ -213,7 +213,7 @@ export default function SkillsChart() {
                     animationDuration={isInView ? 1500 : 0}
                     animationEasing="ease-out"
                     isAnimationActive={isInView}
-                    data-oid="45wjlvz"
+                    data-oid="bpelu.7"
                   />
                 </RadarChart>
               </ResponsiveContainer>
@@ -224,7 +224,7 @@ export default function SkillsChart() {
 
       <div
         className="max-w-xl mx-auto mt-4 text-center text-sm text-muted-foreground"
-        data-oid="oo9-6pd"
+        data-oid="b:dfwqm"
       >
         Click on a category to view different skill groups. Hover over the chart
         for specific proficiency levels.

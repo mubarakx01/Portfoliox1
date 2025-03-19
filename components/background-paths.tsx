@@ -1,20 +1,24 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState, useEffect, memo } from "react"
+import { motion } from "framer-motion";
+import { useState, useEffect, memo } from "react";
 
 interface MousePosition {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 interface FloatingPathsProps {
-  position: number
-  mousePosition: MousePosition
-  windowSize: { width: number; height: number }
+  position: number;
+  mousePosition: MousePosition;
+  windowSize: { width: number; height: number };
 }
 
-const FloatingPaths = memo(function FloatingPaths({ position, mousePosition, windowSize }: FloatingPathsProps) {
+const FloatingPaths = memo(function FloatingPaths({
+  position,
+  mousePosition,
+  windowSize,
+}: FloatingPathsProps) {
   // Reduced number of paths from 36 to 12 for better performance
   const paths = Array.from({ length: 12 }, (_, i) => ({
     id: i,
@@ -26,32 +30,34 @@ const FloatingPaths = memo(function FloatingPaths({ position, mousePosition, win
       684 - i * 15 * position
     } ${875 - i * 18} ${684 - i * 15 * position} ${875 - i * 18}`,
     width: 0.8 + i * 0.08,
-  }))
+  }));
 
   // Throttled mouse position calculations
-  const centerX = windowSize.width / 2
-  const centerY = windowSize.height / 2
-  const maxOffsetPixels = 15 // Reduced from 20
-  const offsetX = ((mousePosition.x - centerX) / centerX) * maxOffsetPixels
-  const offsetY = ((mousePosition.y - centerY) / centerY) * maxOffsetPixels
+  const centerX = windowSize.width / 2;
+  const centerY = windowSize.height / 2;
+  const maxOffsetPixels = 15; // Reduced from 20
+  const offsetX = ((mousePosition.x - centerX) / centerX) * maxOffsetPixels;
+  const offsetY = ((mousePosition.y - centerY) / centerY) * maxOffsetPixels;
 
   // Simplified scaling calculation
-  const scalingFactor = Math.min(windowSize.width / 696, windowSize.height / 316) || 1
-  const svgOffsetX = offsetX / scalingFactor
-  const svgOffsetY = offsetY / scalingFactor
+  const scalingFactor =
+    Math.min(windowSize.width / 696, windowSize.height / 316) || 1;
+  const svgOffsetX = offsetX / scalingFactor;
+  const svgOffsetY = offsetY / scalingFactor;
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
-      <svg 
-        className="w-full h-full text-slate-950/25 dark:text-white/20" 
-        viewBox="0 0 696 316" 
+    <div className="absolute inset-0 pointer-events-none" data-oid="1km7hxs">
+      <svg
+        className="w-full h-full text-slate-950/25 dark:text-white/20"
+        viewBox="0 0 696 316"
         fill="none"
         style={{
-          filter: 'blur(0.5px)',
-          transform: 'scale(1.2)',
+          filter: "blur(0.5px)",
+          transform: "scale(1.2)",
         }}
+        data-oid="f3846yi"
       >
-        <title>Background Paths</title>
+        <title data-oid=".nzg6yn">Background Paths</title>
         {paths.map((path) => (
           <motion.path
             key={path.id}
@@ -64,8 +70,8 @@ const FloatingPaths = memo(function FloatingPaths({ position, mousePosition, win
               pathLength: 1,
               opacity: [0.3, 0.5, 0.3],
               pathOffset: [0, 1],
-              x: svgOffsetX * (path.id + 1) / 12 * position,
-              y: svgOffsetY * (path.id + 1) / 12 * position,
+              x: ((svgOffsetX * (path.id + 1)) / 12) * position,
+              y: ((svgOffsetY * (path.id + 1)) / 12) * position,
             }}
             transition={{
               duration: 30,
@@ -74,70 +80,87 @@ const FloatingPaths = memo(function FloatingPaths({ position, mousePosition, win
               opacity: {
                 duration: 8,
                 repeat: Infinity,
-              }
+              },
             }}
+            data-oid="r6o19gb"
           />
         ))}
       </svg>
     </div>
-  )
-})
+  );
+});
 
 export default function BackgroundPaths() {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 })
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
+  const [mousePosition, setMousePosition] = useState<MousePosition>({
+    x: 0,
+    y: 0,
+  });
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    let animationFrameId: number
-    let lastUpdate = 0
-    const THROTTLE_INTERVAL = 50 // Throttle to 20fps for mouse movement
+    let animationFrameId: number;
+    let lastUpdate = 0;
+    const THROTTLE_INTERVAL = 50; // Throttle to 20fps for mouse movement
 
     // Set initial window size
     setWindowSize({
       width: window.innerWidth,
-      height: window.innerHeight
-    })
+      height: window.innerHeight,
+    });
 
     const handleResize = () => {
       // Debounce resize events
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId)
+        cancelAnimationFrame(animationFrameId);
       }
       animationFrameId = requestAnimationFrame(() => {
         setWindowSize({
           width: window.innerWidth,
-          height: window.innerHeight
-        })
-      })
-    }
+          height: window.innerHeight,
+        });
+      });
+    };
 
     const handleMouseMove = (event: MouseEvent) => {
-      const now = Date.now()
+      const now = Date.now();
       if (now - lastUpdate >= THROTTLE_INTERVAL) {
-        setMousePosition({ x: event.clientX, y: event.clientY })
-        lastUpdate = now
+        setMousePosition({ x: event.clientX, y: event.clientY });
+        lastUpdate = now;
       }
-    }
+    };
 
-    window.addEventListener('resize', handleResize, { passive: true })
-    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+    window.addEventListener("resize", handleResize, { passive: true });
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     return () => {
       if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId)
+        cancelAnimationFrame(animationFrameId);
       }
-      window.removeEventListener('resize', handleResize)
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, [])
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      <div className="absolute inset-0">
-        <FloatingPaths position={1} mousePosition={mousePosition} windowSize={windowSize} />
-        <FloatingPaths position={-1} mousePosition={mousePosition} windowSize={windowSize} />
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      data-oid=".1x:axr"
+    >
+      <div className="absolute inset-0" data-oid="qbcnz_.">
+        <FloatingPaths
+          position={1}
+          mousePosition={mousePosition}
+          windowSize={windowSize}
+          data-oid="7hvn94m"
+        />
+
+        <FloatingPaths
+          position={-1}
+          mousePosition={mousePosition}
+          windowSize={windowSize}
+          data-oid="9fptkf7"
+        />
       </div>
     </div>
-  )
+  );
 }
-
