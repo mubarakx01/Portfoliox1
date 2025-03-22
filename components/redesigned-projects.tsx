@@ -176,8 +176,7 @@ const projects = [
       "Jupyter Notebooks",
       "Statistical Analysis",
     ],
-
-    imageUrl: "/movie-ratings-analysis.jpg",
+    imageUrl: "/movie-ratings.jpg",
     demoUrl: "https://github.com/mubarakx01/movie-ratings-analysis",
     githubUrl: "https://github.com/mubarakx01/movie-ratings-analysis",
     color: "from-blue-600 to-cyan-600",
@@ -1244,7 +1243,7 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
                 <div
                   className="absolute inset-0 opacity-70 transition-opacity duration-300"
                   style={{
-                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, ${project.color.split(" ")[1].replace("to-", "")}, transparent 70%)`,
+                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(59, 130, 246, 0.8), transparent 70%)`,
                   }}
                   data-oid="5dtuf30"
                 />
