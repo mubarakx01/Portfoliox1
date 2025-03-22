@@ -162,8 +162,41 @@ const projects = [
   },
   {
     id: 2,
+    title: "Movie Ratings Analysis Dashboard",
+    category: "data",
+    description:
+      "A comprehensive data visualization dashboard for analyzing movie ratings distribution and patterns using statistical methods and interactive charts.",
+    longDescription:
+      "This project provides deep insights into movie ratings patterns through statistical analysis and visualization. The dashboard features histograms and box plots to show the distribution of ratings, allowing users to understand rating trends and outliers. The analysis reveals that most movies receive ratings between 3.5 and 4.0, with a clear right-skewed distribution indicating users' tendency to rate movies positively.",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Jupyter Notebooks",
+      "Statistical Analysis",
+    ],
+
+    imageUrl: "/movie-ratings-analysis.jpg",
+    demoUrl: "https://github.com/mubarakx01/movie-ratings-analysis",
+    githubUrl: "https://github.com/mubarakx01/movie-ratings-analysis",
+    color: "from-blue-600 to-cyan-600",
+    featured: false,
+    completed: "2023",
+    teamSize: 1,
+    difficulty: 3,
+    achievements: [
+      "Analyzed over 100,000 movie ratings to identify distribution patterns",
+      "Created interactive visualizations showing rating frequencies and outliers",
+      "Implemented statistical methods to identify significant rating trends",
+      "Built a responsive dashboard for exploring the data",
+      "Discovered that 4-star ratings are the most common, followed by 3.5 stars",
+    ],
+  },
+  {
+    id: 3,
     title: "Movie Recommendation System",
-    category: "data-science",
+    category: "data",
     description:
       "A content-based movie recommendation system that suggests similar movies based on input titles using metadata and cosine similarity.",
     longDescription:
@@ -176,6 +209,7 @@ const projects = [
       "Streamlit",
       "TMDb API",
     ],
+
     imageUrl: "/lib/file/movie-recommendation-system.png",
     demoUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
     githubUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
@@ -193,7 +227,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Multi-Agent RL Environment",
     category: "ai",
     description:
@@ -217,7 +251,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Community Grant Management System",
     category: "web",
     description:
@@ -241,7 +275,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Wikipedia Connection Finder",
     category: "network",
     description:
@@ -265,7 +299,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "NYC Education Analytics",
     category: "data",
     description:
