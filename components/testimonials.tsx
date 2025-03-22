@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import AnimatedBox from "./animated-box";
 
 type Testimonial = {
   name: string;
@@ -28,7 +29,7 @@ const Testimonial: Testimonial[] = [
     role: "Web Developer",
     image: "https://randomuser.me/api/portraits/men/2.jpg",
     quote:
-      "He’s a talented developer with a passion for user-friendly interfaces. Our website’s engagement soared thanks to his work.",
+      "He's a talented developer with a passion for user-friendly interfaces. Our website's engagement soared thanks to his work.",
   },
   {
     name: "Sophie Patel",
@@ -91,7 +92,7 @@ const Testimonial: Testimonial[] = [
     role: "Technical Writer",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
     quote:
-      "His documentation is clear and comprehensive. It’s made onboarding so much easier.",
+      "His documentation is clear and comprehensive. It's made onboarding so much easier.",
   },
 ];
 
@@ -138,49 +139,61 @@ export default function TestimonialSection() {
                 data-oid="1m894v3"
               >
                 {chunk.map(({ name, role, quote, image }, index) => (
-                  <Card key={index} data-oid="ckou2kk">
-                    <CardContent
-                      className="grid grid-cols-[auto_1fr] gap-3 pt-6"
-                      data-oid="rd07:x-"
+                  <AnimatedBox
+                    key={index}
+                    className="w-full"
+                    rotateAmount={1.5}
+                    glowColor="rgba(224, 122, 95, 0.2)"
+                    glowIntensity={8}
+                    data-oid="3u5x95l"
+                  >
+                    <Card
+                      className="border-none shadow-none bg-transparent"
+                      data-oid="wgffkeu"
                     >
-                      <Avatar className="size-9" data-oid="uokoxc-">
-                        <AvatarImage
-                          alt={name}
-                          src={image}
-                          loading="lazy"
-                          width="120"
-                          height="120"
-                          data-oid="5kb6jmw"
-                        />
+                      <CardContent
+                        className="grid grid-cols-[auto_1fr] gap-3 pt-6"
+                        data-oid="rd07:x-"
+                      >
+                        <Avatar className="size-9" data-oid="uokoxc-">
+                          <AvatarImage
+                            alt={name}
+                            src={image}
+                            loading="lazy"
+                            width="120"
+                            height="120"
+                            data-oid="5kb6jmw"
+                          />
 
-                        <AvatarFallback data-oid="1us6oqj">
-                          {name
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div data-oid="0he38_8">
-                        <h3 className="font-medium" data-oid="t9i5mb7">
-                          {name}
-                        </h3>
-                        <span
-                          className="text-muted-foreground block text-sm tracking-wide"
-                          data-oid="7z3z33z"
-                        >
-                          {role}
-                        </span>
-                        <blockquote className="mt-3" data-oid="3mg9:he">
-                          <p
-                            className="text-gray-700 dark:text-gray-300"
-                            data-oid="s3.910z"
+                          <AvatarFallback data-oid="1us6oqj">
+                            {name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div data-oid="0he38_8">
+                          <h3 className="font-medium" data-oid="t9i5mb7">
+                            {name}
+                          </h3>
+                          <span
+                            className="text-muted-foreground block text-sm tracking-wide"
+                            data-oid="7z3z33z"
                           >
-                            {quote}
-                          </p>
-                        </blockquote>
-                      </div>
-                    </CardContent>
-                  </Card>
+                            {role}
+                          </span>
+                          <blockquote className="mt-3" data-oid="3mg9:he">
+                            <p
+                              className="text-gray-700 dark:text-gray-300"
+                              data-oid="s3.910z"
+                            >
+                              {quote}
+                            </p>
+                          </blockquote>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </AnimatedBox>
                 ))}
               </div>
             ))}

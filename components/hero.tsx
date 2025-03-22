@@ -1,111 +1,132 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail } from "lucide-react";
-import { ModeToggle } from "@/components/mode-toggle";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import AnimatedButton from "./animated-button";
 
 export default function Hero() {
   return (
     <section
-      className="min-h-screen flex flex-col justify-center px-4 bg-background text-foreground"
-      suppressHydrationWarning
-      data-oid="ffazap5"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a1625]"
+      data-oid="uegqdbc"
     >
-      <div className="absolute top-4 right-4" data-oid="jrecqc5">
-        <ModeToggle data-oid="z6epyg." />
+      {/* Background Elements */}
+      <div className="absolute inset-0 z-0" data-oid="j:aoj5_">
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-[#1a1625] to-[#2a2438]"
+          data-oid="_v-1kf:"
+        />
+        <div
+          className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+          data-oid="syii4j1"
+        />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        data-oid="k1s9pcc"
-      >
-        <Badge
-          variant="secondary"
-          className="w-fit mb-8 bg-secondary text-secondary-foreground"
-          data-oid="pqqkv6."
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10" data-oid="fzclixj">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          data-oid="vi0ihkr"
         >
-          Software Engineer
-        </Badge>
-
-        <h1
-          className="text-6xl font-bold mb-6 bg-gradient-to-r from-happy-hearts to-golden-nugget bg-clip-text text-transparent"
-          data-oid="2ayv03d"
-        >
-          MUBARAK A
-        </h1>
-
-        <p
-          className="text-xl text-muted-foreground mb-8 max-w-2xl"
-          data-oid="8vkhnyy"
-        >
-          Software Engineer, AI Specialist, and Community Organizer specializing
-          in machine learning, generative AI.
-        </p>
-
-        <div className="flex flex-wrap gap-4 mb-8" data-oid="-aa4lvp">
-          {["Machine Learning", "Generative AI", "Computer Vision", "NLP"].map(
-            (skill) => (
-              <Badge
-                key={skill}
-                variant="outline"
-                className="bg-accent/10 text-accent-foreground border-accent/20"
-                data-oid=".5.ul1a"
-              >
-                {skill}
-              </Badge>
-            ),
-          )}
-        </div>
-
-        <div className="flex flex-wrap gap-4 mb-12" data-oid="j:gse7y">
-          <Button
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
-            data-oid="hmyejk-"
+          {/* Left Column - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+            data-oid="ll8_vrg"
           >
-            View Projects
-          </Button>
-          <Button
-            variant="outline"
-            className="border-primary/20 hover:bg-primary/10"
-            data-oid="3-10ff5"
-          >
-            Contact Me
-          </Button>
-        </div>
-
-        <div className="flex gap-4" data-oid="mz5a79c">
-          {[
-            { icon: Github, href: "https://github.com/mubarakx01" },
-            {
-              icon: Linkedin,
-              href: "https://www.linkedin.com/in/mubarak-a-xyz/",
-            },
-            { icon: Mail, href: "mailto:mr1398463@gmail.com" },
-          ].map((social, index) => (
-            <Button
-              key={index}
-              variant="ghost"
-              size="icon"
-              className="hover:bg-accent/10"
-              asChild
-              data-oid="ts:7nhk"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-2"
+              data-oid="tvw56cx"
             >
-              <a
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-oid="6tt.-g0"
+              <div
+                className="mb-2 text-sm tracking-[0.2em] text-gray-400 uppercase"
+                data-oid="x4hw.rf"
               >
-                <social.icon className="h-5 w-5" data-oid="mbcqx29" />
-              </a>
-            </Button>
-          ))}
+                Welcome to
+              </div>
+              <div className="relative" data-oid="jtr:ihk">
+                <h1
+                  className="font-sans text-6xl font-black tracking-tight text-gray-400/80"
+                  data-oid="fi1bdag"
+                >
+                  PORTFOLIO
+                </h1>
+              </div>
+              <div className="relative" data-oid="7i9oyy-">
+                <h2
+                  className="font-sans text-5xl font-black tracking-tight text-gray-400/80"
+                  data-oid="7xkqwt5"
+                >
+                  OF MINE
+                </h2>
+              </div>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl text-gray-300 mt-8 mb-8"
+              data-oid="jhz5joi"
+            >
+              Full Stack Developer specializing in modern web technologies
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              data-oid="fzx0a-a"
+            >
+              <AnimatedButton variant="primary" data-oid="jcz4ulf">
+                View Projects
+              </AnimatedButton>
+              <AnimatedButton variant="secondary" data-oid="qbego-t">
+                Contact Me
+              </AnimatedButton>
+              <AnimatedButton variant="outline" data-oid="06e7nk8">
+                Download Resume
+              </AnimatedButton>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Column - Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative"
+            data-oid="nuoliz4"
+          >
+            <div
+              className="relative w-full aspect-square max-w-lg mx-auto"
+              data-oid="1ha1lli"
+            >
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-[#E07A5F] to-[#F4A261] rounded-full blur-3xl opacity-20"
+                data-oid="pdsub-5"
+              />
+              <div
+                className="relative rounded-full overflow-hidden border-4 border-white/10"
+                data-oid="0w2rh_7"
+              >
+                <Image
+                  src="/profile.jpg"
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                  priority
+                  data-oid="ravh:fq"
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

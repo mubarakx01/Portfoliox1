@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import {
@@ -43,6 +43,7 @@ import {
   Zap,
   Loader2,
 } from "lucide-react";
+import AnimatedBox from "@/components/animated-box";
 
 // Project categories
 const projectCategories = [
@@ -50,42 +51,42 @@ const projectCategories = [
   {
     id: "ai",
     name: "AI & ML",
-    icon: <Cpu className="h-4 w-4" data-oid="0ivexg4" />,
+    icon: <Cpu className="h-4 w-4" data-oid=".492cu." />,
   },
   {
     id: "audio",
     name: "Audio",
-    icon: <Zap className="h-4 w-4" data-oid="giqb_n6" />,
+    icon: <Zap className="h-4 w-4" data-oid="vx1x8vn" />,
   },
   {
     id: "web",
     name: "Web Dev",
-    icon: <Globe className="h-4 w-4" data-oid="-.k501s" />,
+    icon: <Globe className="h-4 w-4" data-oid="hwxez6x" />,
   },
   {
     id: "data",
     name: "Data Science",
-    icon: <Database className="h-4 w-4" data-oid="let00.k" />,
+    icon: <Database className="h-4 w-4" data-oid="y3y4jqr" />,
   },
   {
     id: "network",
     name: "Network",
-    icon: <Share2 className="h-4 w-4" data-oid="dbcn2yn" />,
+    icon: <Share2 className="h-4 w-4" data-oid="al3z4zw" />,
   },
   {
     id: "security",
     name: "Security",
-    icon: <Shield className="h-4 w-4" data-oid="10wymuu" />,
+    icon: <Shield className="h-4 w-4" data-oid="1p-tiqm" />,
   },
   {
     id: "communication",
     name: "Communication",
-    icon: <MessageSquare className="h-4 w-4" data-oid="on_788v" />,
+    icon: <MessageSquare className="h-4 w-4" data-oid="5kd5he4" />,
   },
   {
     id: "research",
     name: "Research",
-    icon: <BookOpen className="h-4 w-4" data-oid="igo6771" />,
+    icon: <BookOpen className="h-4 w-4" data-oid="b3_3aij" />,
   },
 ];
 
@@ -161,26 +162,34 @@ const projects = [
   },
   {
     id: 2,
-    title: "DALL-E 2 PyTorch Implementation",
-    category: "ai",
+    title: "Movie Recommendation System",
+    category: "data-science",
     description:
-      "Open-source implementation of OpenAI's DALL-E 2 image generation model using PyTorch.",
+      "A content-based movie recommendation system that suggests similar movies based on input titles using metadata and cosine similarity.",
     longDescription:
-      "A PyTorch implementation of the DALL-E 2 architecture for generating high-quality images from text descriptions. The project includes optimizations for CUDA acceleration and containerization with Docker for easy deployment and scaling.",
-    technologies: ["PyTorch", "CUDA", "Docker", "HuggingFace", "Python"],
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    demoUrl: "#",
-    githubUrl: "https://github.com/mubarakx01",
-    color: "from-purple-600 to-pink-600",
+      "Built a sophisticated movie recommendation system that leverages content-based filtering techniques. The system processes movie metadata including genres, directors, cast, and plot keywords to create comprehensive feature vectors. Using cosine similarity, it calculates movie similarities and provides personalized recommendations. The project includes data preprocessing, feature extraction, and an interactive Streamlit frontend for real-time testing.",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Cosine Similarity",
+      "Streamlit",
+      "TMDb API",
+    ],
+    imageUrl: "/lib/file/movie-recommendation-system.png",
+    demoUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
+    githubUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
+    color: "from-blue-600 to-cyan-600",
     featured: false,
     completed: "2023",
-    teamSize: 2,
-    difficulty: 5,
+    teamSize: 1,
+    difficulty: 4,
     achievements: [
-      "Implemented the full DALL-E 2 architecture with PyTorch",
-      "Optimized for CUDA acceleration with 40% performance improvement",
-      "Created Docker containers for easy deployment",
-      "Built a web interface for text-to-image generation",
+      "Implemented content-based filtering using cosine similarity",
+      "Processed and merged movie metadata for comprehensive feature vectors",
+      "Built an interactive Streamlit frontend for real-time testing",
+      "Integrated TMDb API for real movie data and posters",
+      "Achieved 85% accuracy in movie recommendations",
     ],
   },
   {
@@ -343,69 +352,69 @@ export default function RedesignedProjects() {
   // If not client-side yet, show a loading state
   if (!isClient || isLoading) {
     return (
-      <SectionContainer id="projects" className="relative" data-oid="lbe387t">
+      <SectionContainer id="projects" className="relative" data-oid="kmgzpck">
         <SectionHeader
           title="Project Portfolio"
           subtitle="Explore my portfolio of AI, machine learning, and software development projects."
-          data-oid="6jbyhu3"
+          data-oid="8-:g762"
         />
 
         <div
           className="flex justify-center items-center py-20"
-          data-oid="83hmz:9"
+          data-oid=":n01ek_"
         >
           <Loader2
             className="h-8 w-8 animate-spin text-primary mr-2"
-            data-oid="8neueh1"
+            data-oid="8bl0a7:"
           />
 
-          <span data-oid="umvzuj1">Loading projects...</span>
+          <span data-oid=":q8hnjp">Loading projects...</span>
         </div>
       </SectionContainer>
     );
   }
 
   return (
-    <SectionContainer id="projects" className="relative" data-oid="l4rr3hx">
+    <SectionContainer id="projects" className="relative" data-oid="em-2ueb">
       {/* Background decorative elements */}
       <div
         className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="ks00cp8"
+        data-oid="hugu_k_"
       />
 
       <div
         className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="y6qi15y"
+        data-oid="wriutws"
       />
 
       <SectionHeader
         title="Project Portfolio"
         subtitle="Explore my portfolio of AI, machine learning, and software development projects. Each project demonstrates different skills and technologies."
-        data-oid="xh2ekj0"
+        data-oid="ucow560"
       />
 
       {featuredProjects.length > 0 && (
-        <div className="mb-16" data-oid="e3r8u8l">
-          <ScrollReveal data-oid="o5eap1i">
+        <div className="mb-16" data-oid="4zfbvjs">
+          <ScrollReveal data-oid="p1uita9">
             <h3
               className="text-xl font-semibold mb-6 flex items-center gap-2 justify-center"
-              data-oid="50iys_0"
+              data-oid="z9tgngg"
             >
-              <Layers className="h-5 w-5 text-primary" data-oid="99kw_-1" />
-              <span data-oid=":1qg1s0">Featured Projects</span>
+              <Layers className="h-5 w-5 text-primary" data-oid="y.rbygr" />
+              <span data-oid="mk6la3k">Featured Projects</span>
             </h3>
           </ScrollReveal>
 
-          <ScrollReveal data-oid="oa6_:il">
+          <ScrollReveal data-oid="28w7:ef">
             <div
               className="relative rounded-xl overflow-hidden"
-              data-oid="o9:bbp_"
+              data-oid="bgnmh44"
             >
               <AnimatePresence
                 mode="wait"
                 initial={false}
                 custom={direction}
-                data-oid="g7qzxs9"
+                data-oid="m-m3ks4"
               >
                 <motion.div
                   key={featuredProjects[currentFeaturedIndex].id}
@@ -431,17 +440,20 @@ export default function RedesignedProjects() {
                     },
                   }}
                   className="relative w-full aspect-[16/9]"
-                  data-oid="28ckloq"
+                  data-oid="8397wy9"
                 >
                   <div
                     className="absolute inset-0 flex flex-col md:flex-row"
-                    data-oid="0d60tcr"
+                    data-oid="s335vqw"
                   >
                     <div
                       className="relative w-full h-48 md:h-auto md:w-1/2"
-                      data-oid="_s3apql"
+                      data-oid="sa9ch.e"
                     >
-                      <div className="relative w-full h-full">
+                      <div
+                        className="relative w-full h-full"
+                        data-oid="5.tey1g"
+                      >
                         <Image
                           src={
                             featuredProjects[currentFeaturedIndex].imageUrl ||
@@ -451,7 +463,7 @@ export default function RedesignedProjects() {
                           fill
                           priority
                           className="object-cover rounded-md"
-                          data-oid="bxj894j"
+                          data-oid="mrqopxv"
                         />
                       </div>
                     </div>
@@ -461,31 +473,31 @@ export default function RedesignedProjects() {
                         "w-full md:w-1/2 p-6 flex flex-col justify-center opacity-90 bg-gradient-to-r",
                         featuredProjects[currentFeaturedIndex].color,
                       )}
-                      data-oid="smbhb:n"
+                      data-oid="kbl1aii"
                     >
                       <Badge
                         variant="outline"
                         className="w-fit mb-4 bg-black/50 backdrop-blur-sm text-white border-white/20"
-                        data-oid="y5w7z:8"
+                        data-oid="d33y:4x"
                       >
                         Featured Project
                       </Badge>
                       <h3
                         className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4"
-                        data-oid="o-fl3_r"
+                        data-oid="jbrzr2:"
                       >
                         {featuredProjects[currentFeaturedIndex].title}
                       </h3>
                       <p
                         className="text-white/90 mb-4 md:mb-6 text-sm md:text-base line-clamp-3 md:line-clamp-none"
-                        data-oid="ppindfj"
+                        data-oid="lozpy:4"
                       >
                         {featuredProjects[currentFeaturedIndex].description}
                       </p>
 
                       <div
                         className="flex flex-wrap gap-2 mb-4 md:mb-6"
-                        data-oid="rl.x1wm"
+                        data-oid="q12p_8z"
                       >
                         {featuredProjects[currentFeaturedIndex].technologies
                           .slice(0, 3)
@@ -493,7 +505,7 @@ export default function RedesignedProjects() {
                             <Badge
                               key={index}
                               className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                              data-oid="crj-2qw"
+                              data-oid="rf7hec4"
                             >
                               {tech}
                             </Badge>
@@ -502,7 +514,7 @@ export default function RedesignedProjects() {
                           .length > 3 && (
                           <Badge
                             className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                            data-oid="2wkjk62"
+                            data-oid="v7uhc8e"
                           >
                             +
                             {featuredProjects[currentFeaturedIndex].technologies
@@ -512,7 +524,7 @@ export default function RedesignedProjects() {
                         )}
                       </div>
 
-                      <div className="flex flex-wrap gap-3" data-oid="kg6uset">
+                      <div className="flex flex-wrap gap-3" data-oid="h2248.3">
                         <Button
                           className="bg-white text-black hover:bg-white/90 group text-sm"
                           onClick={() =>
@@ -520,12 +532,12 @@ export default function RedesignedProjects() {
                               featuredProjects[currentFeaturedIndex].demoUrl,
                             )
                           }
-                          data-oid="_2org.u"
+                          data-oid="exqodzu"
                         >
                           Live Demo
                           <ExternalLink
                             className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                            data-oid="3i7ptqt"
+                            data-oid="f:8q3s2"
                           />
                         </Button>
 
@@ -533,7 +545,7 @@ export default function RedesignedProjects() {
                           variant="outline"
                           className="border-white text-white hover:bg-white/20 gap-2 text-sm"
                           asChild
-                          data-oid="z09-iz3"
+                          data-oid="jj96lq."
                         >
                           <a
                             href={
@@ -541,9 +553,9 @@ export default function RedesignedProjects() {
                             }
                             target="_blank"
                             rel="noopener noreferrer"
-                            data-oid="s03sokg"
+                            data-oid="8bmz.2j"
                           >
-                            <Github className="h-4 w-4" data-oid="20ei8ha" />
+                            <Github className="h-4 w-4" data-oid="2v.u60c" />
                             View Code
                           </a>
                         </Button>
@@ -557,9 +569,9 @@ export default function RedesignedProjects() {
                             );
                             setIsDialogOpen(true);
                           }}
-                          data-oid="jmf3spn"
+                          data-oid="oy1ug3-"
                         >
-                          <Code className="h-4 w-4" data-oid="8.n6ee." />
+                          <Code className="h-4 w-4" data-oid="evjneu." />
                           Details
                         </Button>
                       </div>
@@ -574,9 +586,9 @@ export default function RedesignedProjects() {
                 variant="ghost"
                 className="absolute left-2 top-1/2 -translate-y-1/2 z-30 h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
                 onClick={handlePrev}
-                data-oid="..oejzx"
+                data-oid="2ezl-uv"
               >
-                <ChevronLeft className="h-5 w-5" data-oid="r9t4yi3" />
+                <ChevronLeft className="h-5 w-5" data-oid="5lnmc9o" />
               </Button>
 
               <Button
@@ -584,15 +596,15 @@ export default function RedesignedProjects() {
                 variant="ghost"
                 className="absolute right-2 top-1/2 -translate-y-1/2 z-30 h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
                 onClick={handleNext}
-                data-oid="vpllr:c"
+                data-oid="b64wrzh"
               >
-                <ChevronRight className="h-5 w-5" data-oid="739_w-0" />
+                <ChevronRight className="h-5 w-5" data-oid="u5xs5mi" />
               </Button>
 
               {/* Progress dots */}
               <div
                 className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1"
-                data-oid="in16gzo"
+                data-oid="qia760s"
               >
                 {featuredProjects.map((_, index) => (
                   <button
@@ -608,7 +620,7 @@ export default function RedesignedProjects() {
                       setCurrentFeaturedIndex(index);
                     }}
                     aria-label={`Go to project ${index + 1}`}
-                    data-oid="g0oq691"
+                    data-oid="n.txedq"
                   />
                 ))}
               </div>
@@ -617,17 +629,17 @@ export default function RedesignedProjects() {
         </div>
       )}
 
-      <ScrollReveal data-oid="q4:p3q0">
+      <ScrollReveal data-oid="m9dn63k">
         <Tabs
           defaultValue="all"
           onValueChange={setSelectedCategory}
           className="w-full"
-          data-oid="j7sns24"
+          data-oid="sppiok4"
         >
-          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="etrc.8g">
+          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="txvl5k:">
             <TabsList
               className="flex justify-start gap-2 mb-8 bg-transparent w-max mx-auto"
-              data-oid="_h5k_:6"
+              data-oid="m3s2xa-"
             >
               {projectCategories.map((category) => (
                 <TabsTrigger
@@ -639,14 +651,14 @@ export default function RedesignedProjects() {
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted hover:bg-muted/80",
                   )}
-                  data-oid="_0inp2."
+                  data-oid="bk7ifr3"
                 >
                   <div
                     className="flex items-center gap-1 sm:gap-2"
-                    data-oid="g:hr7mt"
+                    data-oid=".7utc.s"
                   >
                     {category.icon && category.icon}
-                    <span data-oid="uoq4zt5">{category.name}</span>
+                    <span data-oid="xp:tyur">{category.name}</span>
                   </div>
                 </TabsTrigger>
               ))}
@@ -655,17 +667,17 @@ export default function RedesignedProjects() {
 
           <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            data-oid="cd_vt:m"
+            data-oid="z7x2t92"
           >
-            <AnimatePresence data-oid="aexhyyv">
+            <AnimatePresence data-oid="jns0azs">
               {filteredProjects.map((project, index) => (
-                <ErrorBoundary key={project.id} data-oid="06agsbj">
+                <ErrorBoundary key={project.id} data-oid="pze9t:y">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    data-oid="ozc7jnu"
+                    data-oid="-lp.n1b"
                   >
                     <ProjectCard
                       project={project}
@@ -673,7 +685,7 @@ export default function RedesignedProjects() {
                         setSelectedProject(project);
                         setIsDialogOpen(true);
                       }}
-                      data-oid="qj4gge9"
+                      data-oid="ixm0.i4"
                     />
                   </motion.div>
                 </ErrorBoundary>
@@ -687,24 +699,24 @@ export default function RedesignedProjects() {
       <Dialog
         open={isDialogOpen}
         onOpenChange={setIsDialogOpen}
-        data-oid="cesnwiy"
+        data-oid="h_bm6.5"
       >
         <DialogContent
           className="max-w-4xl max-h-[90vh] overflow-hidden p-0 w-[95vw]"
-          data-oid="wjiex.h"
+          data-oid="0ll00_0"
         >
           {selectedProject && (
-            <div className="flex flex-col h-full" data-oid="a3f4:ie">
+            <div className="flex flex-col h-full" data-oid="id1.ami">
               <DialogHeader
                 className="px-4 sm:px-6 pt-4 sm:pt-6 pb-2"
-                data-oid="uxl9t76"
+                data-oid=".-q9fh-"
               >
                 <div
                   className="flex justify-between items-start"
-                  data-oid="p8-mblj"
+                  data-oid="d098u_t"
                 >
-                  <div data-oid="fvat:u6">
-                    <Badge className="mb-2" data-oid="5p1rv6n">
+                  <div data-oid="p0yz0-_">
+                    <Badge className="mb-2" data-oid="vrj1ukn">
                       {selectedProject.category === "ai"
                         ? "AI & Machine Learning"
                         : selectedProject.category === "web"
@@ -717,23 +729,23 @@ export default function RedesignedProjects() {
                     </Badge>
                     <DialogTitle
                       className="text-xl sm:text-2xl"
-                      data-oid="fc0z-if"
+                      data-oid="wocx0qv"
                     >
                       {selectedProject.title}
                     </DialogTitle>
                     <DialogDescription
                       className="mt-2 text-sm"
-                      data-oid="xz3bmu0"
+                      data-oid="x__xwrl"
                     >
                       {selectedProject.description}
                     </DialogDescription>
                   </div>
-                  <div className="flex" data-oid="is_fpma">
+                  <div className="flex" data-oid="ool7cck">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
                         className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                        data-oid="ok6.tnu"
+                        data-oid="96ybz1v"
                       />
                     ))}
                   </div>
@@ -743,92 +755,124 @@ export default function RedesignedProjects() {
               <Tabs
                 defaultValue="overview"
                 className="flex-1 overflow-hidden"
-                data-oid="komfxh7"
+                data-oid="j0gdhqe"
               >
-                <div className="px-4 sm:px-6 border-b" data-oid="wq-3gq4">
+                <div className="px-4 sm:px-6 border-b" data-oid="dcyhwk1">
                   <TabsList
                     className="justify-start rounded-none bg-transparent h-10"
-                    data-oid="hge46k3"
+                    data-oid="o3hql82"
                   >
-                    <TabsTrigger
-                      value="overview"
-                      className="text-sm"
-                      data-oid="8igd5qc"
+                    <AnimatedBox
+                      glowColor={selectedProject.color
+                        .split(" ")[1]
+                        .replace("to-", "")}
+                      glowIntensity={0.5}
+                      rotateAmount={1}
+                      className="overflow-hidden rounded-md"
+                      data-oid=".pwgr3k"
                     >
-                      Overview
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="details"
-                      className="text-sm"
-                      data-oid="0a86zwb"
+                      <TabsTrigger
+                        value="overview"
+                        className="relative text-sm px-4 py-2 data-[state=active]:bg-primary/10"
+                        data-oid="4_t5pcz"
+                      >
+                        Overview
+                      </TabsTrigger>
+                    </AnimatedBox>
+
+                    <AnimatedBox
+                      glowColor={selectedProject.color
+                        .split(" ")[1]
+                        .replace("to-", "")}
+                      glowIntensity={0.5}
+                      rotateAmount={1}
+                      className="overflow-hidden rounded-md"
+                      data-oid="duaporf"
                     >
-                      Details
-                    </TabsTrigger>
-                    <TabsTrigger
-                      value="gallery"
-                      className="text-sm"
-                      data-oid="3e6s19b"
+                      <TabsTrigger
+                        value="details"
+                        className="relative text-sm px-4 py-2 data-[state=active]:bg-primary/10"
+                        data-oid=":hbpt1v"
+                      >
+                        Details
+                      </TabsTrigger>
+                    </AnimatedBox>
+
+                    <AnimatedBox
+                      glowColor={selectedProject.color
+                        .split(" ")[1]
+                        .replace("to-", "")}
+                      glowIntensity={0.5}
+                      rotateAmount={1}
+                      className="overflow-hidden rounded-md"
+                      data-oid="5xg6nwj"
                     >
-                      Gallery
-                    </TabsTrigger>
+                      <TabsTrigger
+                        value="gallery"
+                        className="relative text-sm px-4 py-2 data-[state=active]:bg-primary/10"
+                        data-oid="42jgu0o"
+                      >
+                        Gallery
+                      </TabsTrigger>
+                    </AnimatedBox>
                   </TabsList>
                 </div>
 
                 <div
                   className="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)]"
-                  data-oid="l2n:hj8"
+                  data-oid="9x-zt9v"
                 >
                   <TabsContent
                     value="overview"
                     className="mt-0 h-full"
-                    data-oid="0d1l9:x"
+                    data-oid="y.j4m1d"
                   >
                     <div
                       className="grid grid-cols-1 lg:grid-cols-3 gap-6"
-                      data-oid="5vyrr01"
+                      data-oid="hk1p0:-"
                     >
-                      <div className="lg:col-span-2" data-oid="ph0.:6n">
+                      <div className="lg:col-span-2" data-oid="whe-rl8">
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="9pgjff2"
+                          data-oid="2pdlcb1"
                         >
                           Project Details
                         </h4>
                         <p
                           className="mb-6 text-sm sm:text-base"
-                          data-oid="grc:-3l"
+                          data-oid="b70pl91"
                         >
                           {selectedProject.longDescription}
                         </p>
 
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="mdte7h1"
+                          data-oid="-e5l:u1"
                         >
                           Key Achievements
                         </h4>
-                        <ul className="space-y-2 mb-6" data-oid="3nq7so4">
+                        <ul className="space-y-2 mb-6" data-oid="q5k3jty">
                           {selectedProject.achievements.map(
                             (achievement, i) => (
                               <li
                                 key={i}
                                 className="flex items-start gap-2"
-                                data-oid="rlk2hou"
+                                data-oid=":fejb0g"
                               >
                                 <div
                                   className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0"
-                                  data-oid="_vpswba"
+                                  data-oid="oehrs8b"
                                 >
                                   <span
                                     className="text-xs text-primary"
-                                    data-oid="y11q-69"
+                                    data-oid="5yjbpi6"
                                   >
                                     ✓
                                   </span>
                                 </div>
                                 <span
                                   className="text-sm sm:text-base"
-                                  data-oid="qh96mh:"
+                                  data-oid="4r1k-p7"
                                 >
                                   {achievement}
                                 </span>
@@ -839,19 +883,19 @@ export default function RedesignedProjects() {
 
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="2.fozwp"
+                          data-oid="5xwgbt3"
                         >
                           Technologies
                         </h4>
                         <div
                           className="flex flex-wrap gap-2 mb-6"
-                          data-oid="cfhoszg"
+                          data-oid="g0-nb1y"
                         >
                           {selectedProject.technologies.map((tech, index) => (
                             <Badge
                               key={index}
                               variant="secondary"
-                              data-oid="4_sv17k"
+                              data-oid="ejg1icc"
                             >
                               {tech}
                             </Badge>
@@ -860,84 +904,114 @@ export default function RedesignedProjects() {
 
                         <div
                           className="flex flex-wrap gap-3 mt-6"
-                          data-oid="y6qre6g"
+                          data-oid="4z28au1"
                         >
-                          <Button
-                            variant="default"
-                            className="gap-2"
-                            onClick={() =>
-                              handleDemoClick(selectedProject.demoUrl)
-                            }
-                            data-oid="aqb-27j"
+                          <AnimatedBox
+                            glowColor={selectedProject.color
+                              .split(" ")[1]
+                              .replace("to-", "")}
+                            glowIntensity={0.8}
+                            rotateAmount={2}
+                            className="overflow-hidden rounded-md"
+                            data-oid="eoo4aeq"
                           >
-                            <ExternalLink
-                              className="h-4 w-4"
-                              data-oid="hv25dux"
-                            />
-                            Live Demo
-                          </Button>
-                          <Button
-                            variant="outline"
-                            className="gap-2"
-                            asChild
-                            data-oid="4w-f_p3"
-                          >
-                            <a
-                              href={selectedProject.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-oid="4wf_rga"
+                            <Button
+                              variant="default"
+                              className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 text-white hover:opacity-90"
+                              onClick={() =>
+                                handleDemoClick(selectedProject.demoUrl)
+                              }
+                              data-oid="q9c6fvd"
                             >
-                              <Github className="h-4 w-4" data-oid="flmmnjy" />
-                              GitHub
-                            </a>
-                          </Button>
+                              <span
+                                className="relative z-10 flex items-center gap-2"
+                                data-oid="iy71vio"
+                              >
+                                <ExternalLink
+                                  className="h-4 w-4"
+                                  data-oid=":dr8dtj"
+                                />
+                                Live Demo
+                              </span>
+                            </Button>
+                          </AnimatedBox>
+
+                          <AnimatedBox
+                            glowColor={selectedProject.color
+                              .split(" ")[1]
+                              .replace("to-", "")}
+                            glowIntensity={0.8}
+                            rotateAmount={2}
+                            className="overflow-hidden rounded-md"
+                            data-oid="mbusu3d"
+                          >
+                            <Button
+                              variant="outline"
+                              className="relative overflow-hidden hover:bg-primary/10"
+                              asChild
+                              data-oid="7iqsund"
+                            >
+                              <a
+                                href={selectedProject.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2"
+                                data-oid="n92el-h"
+                              >
+                                <Github
+                                  className="h-4 w-4"
+                                  data-oid="y_mv.dr"
+                                />
+                                GitHub
+                              </a>
+                            </Button>
+                          </AnimatedBox>
                         </div>
                       </div>
 
-                      <div data-oid=":ajopnb">
+                      <div data-oid="dn-xhvd">
                         <h4
                           className="text-lg font-semibold mb-3"
-                          data-oid="2yrkrrx"
+                          data-oid="7hbbl:t"
                         >
                           Project Info
                         </h4>
-                        <div className="space-y-4" data-oid="c:hgu9e">
-                          <div className="flex flex-col" data-oid="l37b29r">
+                        <div className="space-y-4" data-oid="ky0aw3w">
+                          <div className="flex flex-col" data-oid="1x.s9r3">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="9k74ix:"
+                              data-oid="sr1zx20"
                             >
                               Completed
                             </span>
-                            <span data-oid="r5jymoq">
+                            <span data-oid="m9uti7.">
                               {selectedProject.completed}
                             </span>
                           </div>
-                          <div className="flex flex-col" data-oid="j:ze3og">
+                          <div className="flex flex-col" data-oid="k32bpa-">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="o:zwlo:"
+                              data-oid="h.51c7d"
                             >
                               Team Size
                             </span>
-                            <span data-oid="xrdbp7u">
+                            <span data-oid="a:d7c6p">
                               {selectedProject.teamSize} people
                             </span>
                           </div>
-                          <div className="flex flex-col" data-oid="wu6cti0">
+                          <div className="flex flex-col" data-oid="l5hwx:i">
                             <span
                               className="text-sm text-muted-foreground"
-                              data-oid="gkb1550"
+                              data-oid="ebhpgb1"
                             >
                               Difficulty
                             </span>
-                            <div className="flex" data-oid=":vzb_:l">
+                            <div className="flex" data-oid="zdv3bv2">
                               {Array.from({ length: 5 }).map((_, i) => (
                                 <Star
                                   key={i}
                                   className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                                  data-oid="in2vpes"
+                                  data-oid="_1fx.dt"
                                 />
                               ))}
                             </div>
@@ -950,44 +1024,47 @@ export default function RedesignedProjects() {
                   <TabsContent
                     value="details"
                     className="mt-0"
-                    data-oid="c0mz.7h"
+                    data-oid="3ca9vf0"
                   >
                     <div
                       className="relative aspect-video mb-6 rounded-lg overflow-hidden"
-                      data-oid="_0fqnck"
+                      data-oid="e8:9:hm"
                     >
-                      <div className="relative w-full h-full">
+                      <div
+                        className="relative w-full h-full"
+                        data-oid="wt:cc1o"
+                      >
                         <Image
                           src={selectedProject.imageUrl || "/placeholder.svg"}
                           alt={selectedProject.title}
                           fill
                           className="object-cover rounded-md"
-                          data-oid="bzfnq.b"
+                          data-oid="47:dr76"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-6" data-oid="njzt5ux">
-                      <div data-oid="fb1uhi1">
+                    <div className="space-y-6" data-oid="i5xfnm4">
+                      <div data-oid="ylzzksp">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="7xhqqkj"
+                          data-oid="dcjgy2n"
                         >
                           Project Description
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="8bvccv-">
+                        <p className="text-sm sm:text-base" data-oid="d4zoyyt">
                           {selectedProject.longDescription}
                         </p>
                       </div>
 
-                      <div data-oid="1_moh7a">
+                      <div data-oid="upmu2kf">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="98npatj"
+                          data-oid="63ghlvj"
                         >
                           Implementation Details
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="fb:xegk">
+                        <p className="text-sm sm:text-base" data-oid="86fgk97">
                           This project was implemented using{" "}
                           {selectedProject.technologies.join(", ")}. The
                           development process involved careful planning,
@@ -996,14 +1073,14 @@ export default function RedesignedProjects() {
                         </p>
                       </div>
 
-                      <div data-oid="jh_y:fg">
+                      <div data-oid="6eb:y.d">
                         <h4
                           className="text-lg font-semibold mb-2"
-                          data-oid="bdhl.ne"
+                          data-oid="vqc29uv"
                         >
                           Challenges & Solutions
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="uc-qj9:">
+                        <p className="text-sm sm:text-base" data-oid=":.otx69">
                           During development, we encountered several challenges
                           including performance optimization, scalability
                           concerns, and integration complexities. These were
@@ -1017,25 +1094,28 @@ export default function RedesignedProjects() {
                   <TabsContent
                     value="gallery"
                     className="mt-0"
-                    data-oid=":bi3_7w"
+                    data-oid="inmc-vr"
                   >
                     <div
                       className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-                      data-oid="al92zua"
+                      data-oid="79x-afe"
                     >
                       {[1, 2, 3, 4].map((index) => (
                         <div
                           key={index}
                           className="overflow-hidden rounded-lg"
-                          data-oid=":n:z_u1"
+                          data-oid="u2ubqmp"
                         >
-                          <div className="relative aspect-video">
+                          <div
+                            className="relative aspect-video"
+                            data-oid="dj:vdvf"
+                          >
                             <Image
                               src={`/placeholder.svg?height=400&width=600&text=Screenshot ${index}`}
                               alt={`${selectedProject.title} screenshot ${index}`}
                               fill
                               className="object-cover transition-transform duration-500 hover:scale-110"
-                              data-oid="k.sn.pl"
+                              data-oid="28.9lrx"
                             />
                           </div>
                         </div>
@@ -1059,118 +1139,156 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, onSelect }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const isClient = useIsClient();
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!buttonRef.current) return;
+    const rect = buttonRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    setMousePosition({ x, y });
+  };
+
   return (
-    <Card
-      className="overflow-hidden h-full flex flex-col border-none shadow-md hover:shadow-lg transition-all duration-300 group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      data-oid="uqi57g5"
+    <AnimatedBox
+      glowColor={project.color.split(" ")[1].replace("to-", "")}
+      glowIntensity={isButtonHovered ? 0.8 : 0}
+      rotateAmount={isButtonHovered ? 2 : 0}
+      hoverScale={1}
+      className="w-full"
+      data-oid="ryqdv0x"
     >
-      <div className="relative aspect-video overflow-hidden" data-oid="qw0caks">
-        <div className="relative w-full h-full">
-          <Image
-            src={project.imageUrl || "/placeholder.svg"}
-            alt={project.title}
-            fill
-            className="object-cover"
-            data-oid="lj_8t3y"
+      <Card
+        className="overflow-hidden h-full flex flex-col border-none shadow-md hover:shadow-lg transition-all duration-300 group bg-background/80 backdrop-blur-sm"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        data-oid="sogpwn6"
+      >
+        <div
+          className="relative aspect-video overflow-hidden"
+          data-oid="3p5l6ug"
+        >
+          <div className="relative w-full h-full" data-oid="4o1shf_">
+            <Image
+              src={project.imageUrl || "/placeholder.svg"}
+              alt={project.title}
+              fill
+              className="object-cover"
+              data-oid="vsvq90j"
+            />
+          </div>
+
+          <div
+            className={cn(
+              "absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-300 bg-gradient-to-r",
+              project.color,
+            )}
+            data-oid="2xngt06"
           />
-        </div>
 
-        <div
-          className={cn(
-            "absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-300 bg-gradient-to-r",
-            project.color,
-          )}
-          data-oid="49aui4k"
-        />
-
-        <div
-          className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          data-oid="ia83jfa"
-        >
-          <Button
-            variant="outline"
-            className="border-white text-white hover:bg-white/20"
-            onClick={onSelect}
-            data-oid="l7-bafs"
+          <div
+            className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            data-oid="37argj4"
           >
-            View Details
-          </Button>
-        </div>
-      </div>
-
-      <CardContent className="p-4 flex-1 flex flex-col" data-oid="x5:h4sd">
-        <div
-          className="flex justify-between items-start mb-2"
-          data-oid="yhx8y83"
-        >
-          <Badge variant="outline" className="text-xs" data-oid="z82dpo-">
-            {project.category === "ai"
-              ? "AI & ML"
-              : project.category === "web"
-                ? "Web Dev"
-                : project.category === "data"
-                  ? "Data Science"
-                  : project.category === "audio"
-                    ? "Audio"
-                    : "Research"}
-          </Badge>
-          <div className="flex" data-oid="oqzfoo2">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star
-                key={i}
-                className={`h-3 w-3 ${i < project.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                data-oid="568b7k1"
-              />
-            ))}
-          </div>
-        </div>
-
-        <h3 className="font-bold mb-2 line-clamp-1" data-oid="clwglah">
-          {project.title}
-        </h3>
-        <p
-          className="text-muted-foreground text-sm line-clamp-3 mb-4"
-          data-oid="waxmpkq"
-        >
-          {project.description}
-        </p>
-
-        <div className="flex flex-wrap gap-1 mb-4 mt-auto" data-oid="-p0q2g.">
-          {project.technologies.slice(0, 3).map((tech, i) => (
-            <Badge
-              key={i}
-              variant="secondary"
-              className="text-xs"
-              data-oid="au4ue0x"
+            <Button
+              ref={buttonRef}
+              variant="outline"
+              className="relative border-white text-white hover:bg-white/20 transition-all duration-300 overflow-hidden"
+              onClick={onSelect}
+              onMouseEnter={() => setIsButtonHovered(true)}
+              onMouseLeave={() => setIsButtonHovered(false)}
+              onMouseMove={handleMouseMove}
+              data-oid="hou83e_"
             >
-              {tech}
-            </Badge>
-          ))}
-          {project.technologies.length > 3 && (
-            <Badge variant="secondary" className="text-xs" data-oid="5v2h3hy">
-              +{project.technologies.length - 3} more
-            </Badge>
-          )}
+              <span className="relative z-10" data-oid="1xmaoh5">
+                View Details
+              </span>
+              {isButtonHovered && (
+                <div
+                  className="absolute inset-0 opacity-70 transition-opacity duration-300"
+                  style={{
+                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, ${project.color.split(" ")[1].replace("to-", "")}, transparent 70%)`,
+                  }}
+                  data-oid="5dtuf30"
+                />
+              )}
+            </Button>
+          </div>
         </div>
 
-        <div
-          className="flex justify-between items-center text-xs text-muted-foreground"
-          data-oid="qaog1a7"
-        >
-          <div className="flex items-center gap-1" data-oid="m9yoxpq">
-            <Calendar className="h-3 w-3" data-oid="skd29rm" />
-            <span data-oid="221ki_j">{project.completed}</span>
+        <CardContent className="p-4 flex-1 flex flex-col" data-oid="-1h.5ia">
+          <div
+            className="flex justify-between items-start mb-2"
+            data-oid="w-7.yfa"
+          >
+            <Badge variant="outline" className="text-xs" data-oid="lwx_x8c">
+              {project.category === "ai"
+                ? "AI & ML"
+                : project.category === "web"
+                  ? "Web Dev"
+                  : project.category === "data"
+                    ? "Data Science"
+                    : project.category === "audio"
+                      ? "Audio"
+                      : "Research"}
+            </Badge>
+            <div className="flex" data-oid="k943cj9">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  className={`h-3 w-3 ${i < project.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
+                  data-oid="2fo65ib"
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex items-center gap-1" data-oid="6fnos8k">
-            <Users className="h-3 w-3" data-oid="y3_g2ia" />
-            <span data-oid="lnca.24">Team: {project.teamSize}</span>
+
+          <h3 className="font-bold mb-2 line-clamp-1" data-oid="xaype:e">
+            {project.title}
+          </h3>
+          <p
+            className="text-muted-foreground text-sm line-clamp-3 mb-4"
+            data-oid=".4i6o6d"
+          >
+            {project.description}
+          </p>
+
+          <div className="flex flex-wrap gap-1 mb-4 mt-auto" data-oid="e9mca.i">
+            {project.technologies.slice(0, 3).map((tech, i) => (
+              <Badge
+                key={i}
+                variant="secondary"
+                className="text-xs"
+                data-oid="v0tf0nl"
+              >
+                {tech}
+              </Badge>
+            ))}
+            {project.technologies.length > 3 && (
+              <Badge variant="secondary" className="text-xs" data-oid="zlxz-g.">
+                +{project.technologies.length - 3} more
+              </Badge>
+            )}
           </div>
-        </div>
-      </CardContent>
-    </Card>
+
+          <div
+            className="flex justify-between items-center text-xs text-muted-foreground"
+            data-oid="nes:_im"
+          >
+            <div className="flex items-center gap-1" data-oid="y0gj7h1">
+              <Calendar className="h-3 w-3" data-oid="tc_83-a" />
+              <span data-oid="1.3hsfd">{project.completed}</span>
+            </div>
+            <div className="flex items-center gap-1" data-oid="39nlkga">
+              <Users className="h-3 w-3" data-oid="6wwh37e" />
+              <span data-oid="2pqdqwc">Team: {project.teamSize}</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </AnimatedBox>
   );
 }

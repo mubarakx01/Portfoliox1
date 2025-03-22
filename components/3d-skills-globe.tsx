@@ -6,6 +6,19 @@ import { Card } from "@/components/ui/card";
 import { Loader2, AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsClient } from "@/hooks/use-is-client";
+import * as THREE from "three";
+import { Canvas, useFrame, useThree, ThreeElements } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+
+interface Skill {
+  name: string;
+  level: number;
+  category?: string;
+}
+
+interface SkillsGlobeProps {
+  skills: Skill[];
+}
 
 // Skills data for the globe
 const skills = [
@@ -36,495 +49,99 @@ const categoryColors: Record<string, string> = {
   "Soft Skills": "#8b5cf6", // purple
 };
 
-export default function SkillsGlobe() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [isGlobeInitialized, setIsGlobeInitialized] = useState(false);
+function Scene({ skills }: SkillsGlobeProps) {
+  const { camera } = useThree();
+
+  useEffect(() => {
+    camera.position.z = 5;
+  }, [camera]);
+
+  return (
+    <>
+      <ambientLight intensity={0.5} data-oid="ikhwaf7" />
+      <pointLight position={[10, 10, 10]} intensity={1} data-oid="9jtpiys" />
+      <mesh data-oid="9i80k5n">
+        <sphereGeometry args={[2, 32, 32]} data-oid="43m3a3p" />
+        <meshPhongMaterial
+          color="#000000"
+          transparent
+          opacity={0.1}
+          wireframe
+          data-oid="862f1z9"
+        />
+      </mesh>
+      {skills.map((skill, index) => {
+        const phi = Math.acos(-1 + (2 * index) / skills.length);
+        const theta = Math.sqrt(skills.length * Math.PI) * phi;
+        const position = new THREE.Vector3().setFromSphericalCoords(
+          2,
+          phi,
+          theta,
+        );
+        const color = skill.category
+          ? categoryColors[skill.category] || "#ffffff"
+          : "#ffffff";
+
+        return (
+          <mesh key={skill.name} position={position} data-oid="1ar217q">
+            <sphereGeometry args={[0.1, 16, 16]} data-oid="t.r0dno" />
+            <meshPhongMaterial
+              color={color}
+              emissive={new THREE.Color(color).multiplyScalar(0.2)}
+              data-oid="k2um:91"
+            />
+          </mesh>
+        );
+      })}
+      <OrbitControls
+        enableDamping
+        dampingFactor={0.05}
+        rotateSpeed={0.5}
+        enableZoom={false}
+        data-oid="v.n-kzx"
+      />
+    </>
+  );
+}
+
+export default function SkillsGlobe({ skills }: SkillsGlobeProps) {
   const [isError, setIsError] = useState(false);
   const isClient = useIsClient();
 
-  // Get unique categories
-  const categories = Array.from(new Set(skills.map((skill) => skill.category)));
-
-  // Filter skills by category
-  const filteredSkills = selectedCategory
-    ? skills.filter((skill) => skill.category === selectedCategory)
-    : skills;
-
-  useEffect(() => {
-    // Only run in browser environment
-    if (!isClient) return;
-
-    let animationFrameId: number;
-    let scene: any,
-      camera: any,
-      renderer: any,
-      globe: any,
-      raycaster: any,
-      mouse: any,
-      skillNodes: any[] = [];
-
-    const init = async () => {
-      try {
-        // Dynamically import Three.js
-        const THREE = await import("three").catch((err) => {
-          console.error("Failed to load Three.js:", err);
-          setIsError(true);
-          setIsLoading(false);
-          return null;
-        });
-
-        if (!THREE) return;
-
-        const { OrbitControls } = await import(
-          "three/examples/jsm/controls/OrbitControls"
-        ).catch((err) => {
-          console.error("Failed to load OrbitControls:", err);
-          setIsError(true);
-          setIsLoading(false);
-          return { OrbitControls: null };
-        });
-
-        if (!OrbitControls) return;
-
-        if (!canvasRef.current || !containerRef.current) return;
-
-        // Get container dimensions
-        const width = containerRef.current.clientWidth;
-        const height = containerRef.current.clientHeight;
-
-        // Initialize scene
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-        camera.position.z = 200;
-
-        renderer = new THREE.WebGLRenderer({
-          canvas: canvasRef.current,
-          alpha: true,
-          antialias: true,
-        });
-        renderer.setSize(width, height);
-        renderer.setPixelRatio(window.devicePixelRatio);
-
-        // Add orbit controls
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
-        controls.rotateSpeed = 0.5;
-        controls.enableZoom = false;
-
-        // Create globe geometry
-        const globeGeometry = new THREE.SphereGeometry(80, 64, 64);
-        const globeMaterial = new THREE.MeshBasicMaterial({
-          color: 0x111111,
-          transparent: true,
-          opacity: 0.1,
-          wireframe: true,
-        });
-        globe = new THREE.Mesh(globeGeometry, globeMaterial);
-        scene.add(globe);
-
-        // Add ambient light
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-        scene.add(ambientLight);
-
-        // Add point light
-        const pointLight = new THREE.PointLight(0xffffff, 1);
-        pointLight.position.set(100, 100, 100);
-        scene.add(pointLight);
-
-        // Setup for raycasting (detecting mouse hover)
-        raycaster = new THREE.Raycaster();
-        mouse = new THREE.Vector2();
-
-        // Create skill nodes
-        skillNodes = [];
-        filteredSkills.forEach((skill, index) => {
-          // Calculate position on sphere
-          const phi = Math.acos(-1 + (2 * index) / filteredSkills.length);
-          const theta = Math.sqrt(filteredSkills.length * Math.PI) * phi;
-
-          const x = Math.sin(phi) * Math.cos(theta) * 80;
-          const y = Math.sin(phi) * Math.sin(theta) * 80;
-          const z = Math.cos(phi) * 80;
-
-          // Create node geometry
-          const size = (skill.level / 100) * 5 + 2;
-          const nodeGeometry = new THREE.SphereGeometry(size, 16, 16);
-
-          // Get color from category
-          const color = categoryColors[skill.category] || "#ffffff";
-          const nodeMaterial = new THREE.MeshPhongMaterial({
-            color: new THREE.Color(color),
-            emissive: new THREE.Color(color),
-            emissiveIntensity: 0.3,
-            transparent: true,
-            opacity: 0.8,
-          });
-
-          const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
-          node.position.set(x, y, z);
-          node.userData = {
-            skill: skill.name,
-            category: skill.category,
-            level: skill.level,
-          };
-
-          scene.add(node);
-          skillNodes.push(node);
-        });
-
-        // Handle window resize
-        const handleResize = () => {
-          if (!containerRef.current) return;
-          const width = containerRef.current.clientWidth;
-          const height = containerRef.current.clientHeight;
-
-          camera.aspect = width / height;
-          camera.updateProjectionMatrix();
-          renderer.setSize(width, height);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        // Handle mouse move for raycasting
-        const handleMouseMove = (event: MouseEvent) => {
-          if (!containerRef.current || !canvasRef.current) return;
-
-          const rect = canvasRef.current.getBoundingClientRect();
-          mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-          mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-
-          raycaster.setFromCamera(mouse, camera);
-          const intersects = raycaster.intersectObjects(skillNodes);
-
-          if (intersects.length > 0) {
-            const intersectedObject = intersects[0].object;
-            setHoveredSkill(intersectedObject.userData.skill);
-            document.body.style.cursor = "pointer";
-          } else {
-            setHoveredSkill(null);
-            document.body.style.cursor = "default";
-          }
-        };
-
-        containerRef.current.addEventListener("mousemove", handleMouseMove);
-
-        // Animation loop
-        const animate = () => {
-          animationFrameId = requestAnimationFrame(animate);
-
-          try {
-            // Rotate globe slowly
-            globe.rotation.y += 0.001;
-
-            // Update skill nodes
-            skillNodes.forEach((node) => {
-              // Make hovered skill pulse
-              if (node.userData.skill === hoveredSkill) {
-                node.scale.x = 1.2 + Math.sin(Date.now() * 0.01) * 0.1;
-                node.scale.y = 1.2 + Math.sin(Date.now() * 0.01) * 0.1;
-                node.scale.z = 1.2 + Math.sin(Date.now() * 0.01) * 0.1;
-
-                // Increase emissive intensity
-                if (node.material) {
-                  const material = node.material as THREE.MeshPhongMaterial;
-                  material.emissiveIntensity = 0.8;
-                }
-              } else {
-                node.scale.set(1, 1, 1);
-                if (node.material) {
-                  const material = node.material as THREE.MeshPhongMaterial;
-                  material.emissiveIntensity = 0.3;
-                }
-              }
-            });
-
-            controls.update();
-            renderer.render(scene, camera);
-          } catch (error) {
-            console.error("Error in animation loop:", error);
-            cancelAnimationFrame(animationFrameId);
-            setIsLoading(false);
-            setIsError(true);
-          }
-        };
-
-        animate();
-        setIsLoading(false);
-        setIsGlobeInitialized(true);
-
-        // Cleanup function
-        return () => {
-          window.removeEventListener("resize", handleResize);
-          if (containerRef.current) {
-            containerRef.current.removeEventListener(
-              "mousemove",
-              handleMouseMove,
-            );
-          }
-          cancelAnimationFrame(animationFrameId);
-
-          // Dispose of resources
-          skillNodes.forEach((node) => {
-            node.geometry.dispose();
-            node.material.dispose();
-            scene.remove(node);
-          });
-
-          globe.geometry.dispose();
-          globe.material.dispose();
-          scene.remove(globe);
-
-          renderer.dispose();
-        };
-      } catch (error) {
-        console.error("Error initializing 3D globe:", error);
-        setIsLoading(false);
-        setIsError(true);
-      }
-    };
-
-    // Only initialize if component is mounted
-    if (isClient) {
-      init();
-    }
-
-    return () => {
-      if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-      }
-    };
-  }, [hoveredSkill, selectedCategory, isClient]);
-
-  // If not client-side yet, show a simple loading state
   if (!isClient) {
     return (
-      <div className="w-full" data-oid="dgh5h46">
-        <div
-          className="flex flex-wrap gap-2 justify-center mb-6"
-          data-oid="ami_37y"
-        >
-          <button
-            className="px-4 py-2 rounded-full text-sm font-medium bg-muted"
-            data-oid="-fpx1_f"
-          >
-            Loading...
-          </button>
-        </div>
-        <Card
-          className="relative w-full aspect-square max-w-xl mx-auto bg-card/50 border-none overflow-hidden backdrop-blur-sm"
-          data-oid="_l:dat9"
-        >
-          <div
-            className="w-full h-full flex items-center justify-center"
-            data-oid="-hl0348"
-          >
-            <Loader2
-              className="h-8 w-8 animate-spin text-primary"
-              data-oid="xxjbcw:"
-            />
-          </div>
-        </Card>
+      <div
+        className="w-full h-[500px] flex items-center justify-center"
+        data-oid="9lag7wl"
+      >
+        <Loader2
+          className="h-8 w-8 animate-spin text-primary"
+          data-oid="q_wz:wk"
+        />
+        <span className="ml-2" data-oid=":x7vk7.">
+          Loading 3D Globe...
+        </span>
       </div>
     );
   }
 
-  // Show a fallback grid view if 3D globe fails
   if (isError) {
     return (
-      <div className="w-full" data-oid="2jl3eu:">
-        <div
-          className="flex flex-wrap gap-2 justify-center mb-6"
-          data-oid="kvag062"
-        >
-          {["All Skills", ...categories].map((category, index) => (
-            <button
-              key={index}
-              className={cn(
-                "px-4 py-2 rounded-full text-sm font-medium transition-all",
-                selectedCategory === (index === 0 ? null : category)
-                  ? "bg-primary text-primary-foreground shadow-lg"
-                  : "bg-muted hover:bg-muted/80",
-              )}
-              onClick={() => setSelectedCategory(index === 0 ? null : category)}
-              data-oid="g7s94c-"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <Card
-          className="relative w-full max-w-xl mx-auto bg-card/50 border-none overflow-hidden backdrop-blur-sm p-6"
-          data-oid="qlxxsms"
-        >
-          <div
-            className="flex flex-col items-center justify-center mb-6"
-            data-oid="vzx_n2d"
-          >
-            <AlertTriangle
-              className="h-8 w-8 text-amber-500 mb-2"
-              data-oid=".0gpq7h"
-            />
-
-            <h3 className="text-lg font-semibold mb-1" data-oid="z:dl0la">
-              3D Visualization Unavailable
-            </h3>
-            <p
-              className="text-muted-foreground text-center mb-4"
-              data-oid="_.xf34q"
-            >
-              The 3D skills globe couldn't be loaded. Here's a simplified view
-              of my skills instead.
-            </p>
-          </div>
-
-          <div
-            className="grid grid-cols-2 md:grid-cols-3 gap-3"
-            data-oid="c6m:-:z"
-          >
-            {filteredSkills.map((skill, index) => (
-              <div
-                key={index}
-                className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-                data-oid="i2x4h92"
-              >
-                <div className="font-medium" data-oid="zum8qga">
-                  {skill.name}
-                </div>
-                <div
-                  className="text-xs text-muted-foreground flex justify-between"
-                  data-oid="ylk6acf"
-                >
-                  <span data-oid="otzmgwf">{skill.category}</span>
-                  <span data-oid="4thylb:">{skill.level}%</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Card>
+      <div
+        className="w-full h-[500px] flex flex-col items-center justify-center text-destructive"
+        data-oid="y13r06y"
+      >
+        <AlertTriangle className="h-8 w-8 mb-2" data-oid="j0j6z:5" />
+        <p data-oid="77nzg4z">Failed to load 3D visualization</p>
       </div>
     );
   }
 
   return (
-    <div className="w-full" data-oid="q0hv.o5">
-      <div
-        className="flex flex-wrap gap-2 justify-center mb-6"
-        data-oid="t9v2urt"
-      >
-        <motion.button
-          className={cn(
-            "px-4 py-2 rounded-full text-sm font-medium transition-all",
-            selectedCategory === null
-              ? "bg-primary text-primary-foreground shadow-lg"
-              : "bg-muted hover:bg-muted/80",
-          )}
-          onClick={() => setSelectedCategory(null)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
-          data-oid="mvj__3w"
-        >
-          All Skills
-        </motion.button>
-
-        {categories.map((category) => (
-          <motion.button
-            key={category}
-            className={cn(
-              "px-4 py-2 rounded-full text-sm font-medium transition-all",
-              selectedCategory === category
-                ? "bg-primary text-primary-foreground shadow-lg"
-                : "bg-muted hover:bg-muted/80",
-            )}
-            onClick={() => setSelectedCategory(category)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            style={{
-              backgroundColor:
-                selectedCategory === category
-                  ? categoryColors[category]
-                  : undefined,
-            }}
-            data-oid="-1hf3q."
-          >
-            {category}
-          </motion.button>
-        ))}
-      </div>
-
-      <Card
-        className="relative w-full aspect-square max-w-xl mx-auto bg-card/50 border-none overflow-hidden backdrop-blur-sm"
-        data-oid="ja5f-pc"
-      >
-        <div
-          ref={containerRef}
-          className="w-full h-full relative"
-          data-oid="8le:1:w"
-        >
-          {isLoading && (
-            <div
-              className="absolute inset-0 flex items-center justify-center"
-              data-oid="ff5z6f0"
-            >
-              <Loader2
-                className="h-8 w-8 animate-spin text-primary"
-                data-oid="pvw46hs"
-              />
-
-              <span className="ml-2" data-oid="c13w0hv">
-                Loading 3D Skills Globe...
-              </span>
-            </div>
-          )}
-
-          <canvas
-            ref={canvasRef}
-            className={cn(
-              "w-full h-full transition-opacity duration-500",
-              isGlobeInitialized ? "opacity-100" : "opacity-0",
-            )}
-            data-oid="d9lh0fi"
-          />
-
-          {hoveredSkill && (
-            <div
-              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg border shadow-lg"
-              data-oid="5abpyi."
-            >
-              <div className="font-medium" data-oid="_001go1">
-                {hoveredSkill}
-              </div>
-              <div className="text-xs text-muted-foreground" data-oid="pams79:">
-                {skills.find((s) => s.name === hoveredSkill)?.category} • Level:{" "}
-                {skills.find((s) => s.name === hoveredSkill)?.level}%
-              </div>
-            </div>
-          )}
-        </div>
-      </Card>
-
-      <div
-        className="max-w-xl mx-auto mt-4 text-center text-sm text-muted-foreground"
-        data-oid="vlm664m"
-      >
-        {isGlobeInitialized ? (
-          <>
-            Hover over nodes to see skill details. Click categories to filter
-            skills.
-            <br data-oid="dji0bcf" />
-            <span className="text-xs" data-oid="u7qiwu9">
-              Drag to rotate the globe and explore all skills.
-            </span>
-          </>
-        ) : (
-          <>View skills by category using the filters above.</>
-        )}
-      </div>
+    <div className="w-full h-[500px] relative" data-oid="5ettn.1">
+      <Canvas data-oid="if27bd1">
+        <Scene skills={skills} data-oid="3tvk-qf" />
+      </Canvas>
     </div>
   );
 }

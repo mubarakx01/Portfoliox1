@@ -17,6 +17,7 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
+import { useProgressiveLoading } from "@/components/progressive-loading-provider";
 import {
   Code,
   Cpu,
@@ -41,14 +42,14 @@ const SkillsGlobe = dynamic(() => import("@/components/3d-skills-globe"), {
   loading: () => (
     <div
       className="w-full h-[500px] flex items-center justify-center"
-      data-oid="gprh6--"
+      data-oid="o2888qm"
     >
       <Loader2
         className="h-8 w-8 animate-spin text-primary"
-        data-oid="cfw5aax"
+        data-oid=".x7-cji"
       />
 
-      <span className="ml-2" data-oid="g_ettr9">
+      <span className="ml-2" data-oid="t9gpdso">
         Loading 3D Globe...
       </span>
     </div>
@@ -60,235 +61,141 @@ const skillCategories = [
   {
     id: "ml-ai",
     name: "Machine Learning & AI",
-    icon: <Laptop className="h-5 w-5" data-oid="ohxf7lm" />,
+    icon: <Laptop className="h-5 w-5" data-oid="64o4t-n" />,
     color: "from-blue-500 to-indigo-500",
-  },
-  {
-    id: "audio",
-    name: "Audio & Voice Tech",
-    icon: <Zap className="h-5 w-5" data-oid="qnkutki" />,
-    color: "from-purple-500 to-violet-500",
   },
   {
     id: "programming",
     name: "Programming",
-    icon: <Code className="h-5 w-5" data-oid="tleuyku" />,
+    icon: <Code className="h-5 w-5" data-oid="xi.-a.:" />,
     color: "from-emerald-500 to-green-500",
   },
   {
     id: "frameworks",
     name: "AI Frameworks",
-    icon: <Cpu className="h-5 w-5" data-oid="h6_w7e0" />,
+    icon: <Cpu className="h-5 w-5" data-oid="z1exiru" />,
     color: "from-purple-500 to-violet-500",
   },
   {
     id: "data",
     name: "Data Science",
-    icon: <Database className="h-5 w-5" data-oid=":5jlyrk" />,
+    icon: <Database className="h-5 w-5" data-oid="nbygf3r" />,
     color: "from-amber-500 to-yellow-500",
-  },
-  {
-    id: "network",
-    name: "Network Analysis",
-    icon: <Globe className="h-5 w-5" data-oid="94gui:b" />,
-    color: "from-cyan-500 to-blue-500",
   },
   {
     id: "cloud",
     name: "Cloud & DevOps",
-    icon: <Cloud className="h-5 w-5" data-oid="i1rotle" />,
+    icon: <Cloud className="h-5 w-5" data-oid="j0luwml" />,
     color: "from-sky-500 to-blue-500",
   },
   {
     id: "chatbots",
     name: "Chatbots & AI",
-    icon: <MessageSquare className="h-5 w-5" data-oid="fxabcp9" />,
+    icon: <MessageSquare className="h-5 w-5" data-oid="isv7303" />,
     color: "from-green-500 to-emerald-500",
-  },
-  {
-    id: "security",
-    name: "Cybersecurity",
-    icon: <Shield className="h-5 w-5" data-oid="yqa6s6z" />,
-    color: "from-red-500 to-rose-500",
-  },
-  {
-    id: "research",
-    name: "Research",
-    icon: <BookOpen className="h-5 w-5" data-oid="jgu:29:" />,
-    color: "from-rose-500 to-pink-500",
   },
   {
     id: "tools",
     name: "Tools",
-    icon: <Tool className="h-5 w-5" data-oid="7j.3zh:" />,
+    icon: <Tool className="h-5 w-5" data-oid="y1me-p3" />,
     color: "from-orange-500 to-amber-500",
   },
   {
     id: "transferable",
     name: "Transferable Skills",
-    icon: <Briefcase className="h-5 w-5" data-oid="..8ug68" />,
+    icon: <Briefcase className="h-5 w-5" data-oid="7zwotz7" />,
     color: "from-indigo-500 to-blue-500",
-  },
-  {
-    id: "math",
-    name: "Mathematics",
-    icon: <Microscope className="h-5 w-5" data-oid="_z69wt0" />,
-    color: "from-cyan-500 to-teal-500",
   },
 ];
 
 // Skill data
 const skillsData = {
   "ml-ai": [
-    { name: "Deep Learning", level: 90 },
-    { name: "NLP", level: 85 },
-    { name: "Computer Vision", level: 85 },
-    { name: "Reinforcement Learning", level: 80 },
-    { name: "MLOps", level: 75 },
-    { name: "Generative AI", level: 90 },
-    { name: "Voice Cloning", level: 85 },
-    { name: "GANs", level: 90 },
-    { name: "Transformers", level: 85 },
-    { name: "Object Detection", level: 80 },
-  ],
-
-  audio: [
-    { name: "Real-time Voice Cloning", level: 90 },
-    { name: "One-Shot Voice Cloning", level: 85 },
-    { name: "TensorFlow TTS", level: 90 },
-    { name: "Speaker Diarization", level: 85 },
-    { name: "Whisper Transcription", level: 90 },
-    { name: "Audio Processing", level: 85 },
-    { name: "Audiobook Generation", level: 80 },
-    { name: "Real-time Audio Adjustments", level: 75 },
+    { name: "Prompt Engineering", level: 90 },
+    { name: "Generative AI", level: 80 },
+    { name: "Python Programming", level: 95 },
+    { name: "Machine Learning (ML)", level: 70 },
+    { name: "Deep Learning", level: 70 },
+    { name: "Data Preprocessing", level: 70 },
+    { name: "API Integration", level: 70 },
+    { name: "NLP", level: 60 },
   ],
 
   programming: [
-    { name: "Python", level: 95 },
-    { name: "JavaScript/TypeScript", level: 90 },
-    { name: "C++", level: 75 },
-    { name: "SQL", level: 80 },
-    { name: "R", level: 60 },
-    { name: "MATLAB", level: 50 },
-    { name: "Julia", level: 55 },
-    { name: "Go", level: 65 },
-    { name: "Java", level: 70 },
+    { name: "Python", level: 90 },
+    { name: "SQL", level: 85 },
+    { name: "HTML/CSS", level: 75 },
+    { name: "JavaScript", level: 70 },
+    { name: "Linux Shell Scripting", level: 60 },
   ],
 
   frameworks: [
+    { name: "Hugging Face", level: 90 },
     { name: "PyTorch", level: 90 },
     { name: "TensorFlow", level: 85 },
-    { name: "Scikit-learn", level: 95 },
-    { name: "Hugging Face", level: 90 },
-    { name: "CUDA", level: 75 },
-    { name: "TensorRT", level: 65 },
-    { name: "MLflow", level: 70 },
-    { name: "React", level: 80 },
-    { name: "Node.js", level: 75 },
-    { name: "Flask", level: 85 },
-    { name: "Django", level: 80 },
+    { name: "Scikit-learn", level: 85 },
+    { name: "Flask", level: 80 },
+    { name: "Pandas", level: 75 },
+    { name: "NumPy", level: 70 },
+    { name: "React", level: 70 },
   ],
 
   data: [
-    { name: "Data Mining", level: 85 },
+    { name: "Pandas", level: 85 },
+    { name: "Data Visualization", level: 80 },
+    { name: "Social Media Analysis", level: 80 },
+    { name: "Predictive Modeling", level: 75 },
     { name: "Business Intelligence", level: 70 },
-    { name: "Big Data Processing", level: 80 },
-    { name: "Pandas", level: 95 },
-    { name: "Tableau", level: 70 },
-    { name: "Data Visualization", level: 85 },
-    { name: "Predictive Modeling", level: 90 },
-    { name: "Text Analysis", level: 85 },
-    { name: "Sentiment Analysis", level: 80 },
-    { name: "Social Media Analysis", level: 75 },
-  ],
-
-  network: [
-    { name: "Social Network Analysis", level: 85 },
-    { name: "Graph Analytics", level: 80 },
-    { name: "Community Detection", level: 75 },
-    { name: "Network Visualization", level: 80 },
-    { name: "Friend Recommendation Systems", level: 85 },
-    { name: "Topic Connection Analysis", level: 80 },
-    { name: "NetworkX", level: 90 },
+    { name: "Data Mining", level: 70 },
+    { name: "Text Analysis", level: 65 },
   ],
 
   cloud: [
-    { name: "AWS", level: 85 },
-    { name: "GCP", level: 75 },
-    { name: "Docker", level: 90 },
     { name: "Kubernetes", level: 85 },
-    { name: "CI/CD", level: 80 },
-    { name: "Microservices", level: 75 },
+    { name: "AWS", level: 80 },
     { name: "DevOps", level: 80 },
-    { name: "Terraform", level: 70 },
-    { name: "Jenkins", level: 65 },
-    { name: "AWS Lambda", level: 85 },
+    { name: "AWS Lambda", level: 75 },
+    { name: "Docker", level: 70 },
+    { name: "Git", level: 95 },
+    { name: "CI/CD", level: 60 },
   ],
 
   chatbots: [
+    { name: "Prompt Engineering", level: 90 },
+    { name: "NLP Integration", level: 85 },
     { name: "Emotion-Aware Chatbots", level: 85 },
-    { name: "NLP Integration", level: 90 },
-    { name: "Conversational AI", level: 85 },
-    { name: "Rule-Based Systems", level: 80 },
-    { name: "Sentiment Tracking", level: 85 },
+    { name: "Conversational AI", level: 80 },
     { name: "Topic Tracking", level: 80 },
+    { name: "Sentiment Tracking", level: 75 },
     { name: "Customer Service Automation", level: 75 },
-  ],
-
-  security: [
-    { name: "Vulnerability Detection", level: 80 },
-    { name: "IoT Security", level: 75 },
-    { name: "ML for Cybersecurity", level: 85 },
-    { name: "Ethical Hacking", level: 70 },
-    { name: "Security Tools Development", level: 80 },
-    { name: "RF Security", level: 65 },
-    { name: "Web Security", level: 75 },
-  ],
-
-  research: [
-    { name: "Grant Writing", level: 75 },
-    { name: "Peer Review", level: 80 },
-    { name: "Research Methods", level: 90 },
-    { name: "Experimental Design", level: 85 },
-    { name: "Scientific Writing", level: 90 },
-    { name: "Literature Review", level: 85 },
-    { name: "Academic Publishing", level: 75 },
+    { name: "Rule-Based Systems", level: 65 },
   ],
 
   tools: [
-    { name: "Git/GitHub", level: 95 },
-    { name: "Linux/Unix", level: 85 },
-    { name: "SolidWorks", level: 60 },
-    { name: "AutoCAD", level: 55 },
-    { name: "Arduino", level: 70 },
-    { name: "Raspberry Pi", level: 75 },
-    { name: "Jupyter Notebooks", level: 95 },
-    { name: "VS Code", level: 90 },
-    { name: "Scrapy", level: 85 },
-    { name: "Selenium", level: 80 },
+    { name: "Git/GitHub", level: 90 },
+    { name: "Jupyter Notebooks", level: 85 },
+    { name: "VS Code", level: 80 },
+    { name: "Linux/Unix", level: 75 },
+    { name: "Figma", level: 70 },
+    { name: "Docker", level: 70 },
+    { name: "Arduino", level: 65 },
+    { name: "Postman", level: 65 },
+    { name: "AWS CLI", level: 65 },
+    { name: "Anaconda", level: 70 },
+    { name: "PyCharm", level: 60 },
+    { name: "Matplotlib", level: 60 },
+    { name: "Notion", level: 90 },
+    { name: "Canva", level: 95 },
   ],
 
   transferable: [
-    { name: "Project Management", level: 90 },
-    { name: "Technical Documentation", level: 85 },
-    { name: "Data-Driven Decision Making", level: 90 },
-    { name: "Innovation & Problem-Solving", level: 95 },
-    { name: "Collaboration", level: 90 },
-    { name: "Communication", level: 85 },
-    { name: "Leadership", level: 90 },
-    { name: "Time Management", level: 85 },
-  ],
-
-  math: [
-    { name: "Linear Algebra", level: 95 },
-    { name: "Differential Equations", level: 90 },
-    { name: "Complex Analysis", level: 80 },
-    { name: "Group Theory", level: 75 },
-    { name: "Quantum Mechanics", level: 85 },
-    { name: "Statistical Mechanics", level: 85 },
-    { name: "Mathematical Physics", level: 80 },
-    { name: "Statistics", level: 90 },
-    { name: "Probability Theory", level: 85 },
+    { name: "Innovation & Problem-Solving", level: 90 },
+    { name: "Collaboration", level: 85 },
+    { name: "Data-Driven Decision Making", level: 80 },
+    { name: "Communication", level: 75 },
+    { name: "Leadership", level: 70 },
+    { name: "Time Management", level: 70 },
+    { name: "Project Management", level: 65 },
   ],
 };
 
@@ -297,34 +204,39 @@ export default function RedesignedSkills() {
   const [visualizationType, setVisualizationType] = useState<"chart" | "globe">(
     "chart",
   );
-  const [isMounted, setIsMounted] = useState(false);
+  const { setLoaded } = useProgressiveLoading();
+  const [hasSetLoaded, setHasSetLoaded] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    // Only set loaded once when the component mounts
+    if (!hasSetLoaded) {
+      setLoaded("skills");
+      setHasSetLoaded(true);
+    }
+  }, [setLoaded, hasSetLoaded]);
 
   return (
     <SectionContainer
       id="skills"
       className="bg-gradient-to-b from-background to-background/95"
-      data-oid="5xksrbt"
+      data-oid="dn9qu6v"
     >
       <SectionHeader
         title="Technical Skills"
         subtitle="A comprehensive overview of my technical expertise across various domains, from machine learning and AI to software development and research."
-        data-oid="sw6p5-u"
+        data-oid="xr0rlbx"
       />
 
-      <ScrollReveal data-oid="wgbod0.">
+      <ScrollReveal data-oid="1ycaw7n">
         <Tabs
           defaultValue="ml-ai"
           onValueChange={setActiveCategory}
           className="w-full"
-          data-oid="tq:ly04"
+          data-oid="semoh-3"
         >
           <TabsList
             className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent"
-            data-oid="wiigbbj"
+            data-oid="yoelw0d"
           >
             {skillCategories.map((category) => (
               <TabsTrigger
@@ -336,18 +248,21 @@ export default function RedesignedSkills() {
                     ? `bg-gradient-to-r ${category.color} text-white`
                     : "bg-muted hover:bg-muted/80",
                 )}
-                data-oid=":0nxfst"
+                data-oid="_-alkke"
               >
-                <div className="flex items-center gap-2" data-oid="9ltcxi3">
+                <div className="flex items-center gap-2" data-oid="2i.44ox">
                   {category.icon}
-                  <span data-oid="8tdqh2r">{category.name}</span>
+                  <span data-oid="nlbj3mh">{category.name}</span>
                 </div>
               </TabsTrigger>
             ))}
           </TabsList>
 
-          <div className="flex justify-center mb-8" data-oid="4wzgcdm">
-            <div className="bg-muted rounded-full p-1 flex" data-oid="v:x:slw">
+          <div
+            className="flex justify-center mt-[65px] mb-[10px]"
+            data-oid="odyi0ty"
+          >
+            <div className="bg-muted rounded-full p-1 flex" data-oid="sn9.qxc">
               <button
                 onClick={() => setVisualizationType("chart")}
                 className={cn(
@@ -356,10 +271,10 @@ export default function RedesignedSkills() {
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted/80",
                 )}
-                data-oid="jc6235x"
+                data-oid="qn42d6."
               >
-                <BarChart3 className="h-4 w-4" data-oid="3ko5chr" />
-                <span data-oid="-r1mwou">Chart View</span>
+                <BarChart3 className="h-4 w-4" data-oid="bqx:bi7" />
+                <span data-oid="jy01p1q">Chart View</span>
               </button>
               <button
                 onClick={() => setVisualizationType("globe")}
@@ -369,120 +284,80 @@ export default function RedesignedSkills() {
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted/80",
                 )}
-                data-oid="33_6h3w"
+                data-oid="dlwy7i6"
               >
-                <Globe className="h-4 w-4" data-oid="rp8g0xv" />
-                <span data-oid="swn2wrr">3D Globe</span>
+                <Globe className="h-4 w-4" data-oid="mpn65-f" />
+                <span data-oid="7li6wg3">Globe View</span>
               </button>
             </div>
           </div>
 
-          {skillCategories.map((category) => (
-            <TabsContent
-              key={category.id}
-              value={category.id}
-              className="mt-0"
-              data-oid="c62n2nw"
-            >
-              <Card
-                className="border-none bg-gradient-to-br from-background/50 to-background/30 backdrop-blur-sm"
-                data-oid="ams557u"
-              >
-                <CardContent className="p-6" data-oid="84fhe2:">
-                  {visualizationType === "chart" ? (
-                    <StaggeredContainer
-                      className="grid md:grid-cols-2 gap-8"
-                      data-oid="uqjyx26"
-                    >
-                      {/* Left column - Skill bars */}
-                      <div data-oid="oi0daj.">
-                        <h3
-                          className="text-xl font-semibold mb-6 flex items-center gap-2"
-                          data-oid="lajhijz"
+          {Object.entries(skillsData).map(([category, skills]) => (
+            <TabsContent key={category} value={category} data-oid="3icf3:-">
+              <div className="flex flex-col items-center" data-oid="d2c-4n6">
+                {visualizationType === "chart" ? (
+                  <div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl"
+                    data-oid="r.vydb6"
+                  >
+                    {/* Progress bars */}
+                    <div className="space-y-4" data-oid="x:q_x_w">
+                      {skills.map((skill) => (
+                        <div
+                          key={skill.name}
+                          className="space-y-2"
+                          data-oid="a1-d9ow"
                         >
-                          {category.icon}
-                          <span data-oid="aggruzn">
-                            {category.name} Proficiency
-                          </span>
-                        </h3>
-
-                        <div className="space-y-6" data-oid="c2.88n3">
-                          {skillsData[
-                            category.id as keyof typeof skillsData
-                          ].map((skill, index) => (
-                            <StaggerItem
-                              key={skill.name}
-                              className="space-y-2"
-                              data-oid="lhojfq7"
+                          <div
+                            className="flex justify-between items-center"
+                            data-oid="izgo_qg"
+                          >
+                            <span
+                              className="text-sm font-medium"
+                              data-oid="36s_13_"
                             >
-                              <div
-                                className="flex justify-between items-center"
-                                data-oid="k:4a7li"
-                              >
-                                <span
-                                  className="font-medium"
-                                  data-oid="_rrurb9"
-                                >
-                                  {skill.name}
-                                </span>
-                                <Badge
-                                  className={cn(
-                                    "px-2 py-0.5 text-xs",
-                                    skill.level >= 90
-                                      ? "bg-green-500/20 text-green-500 border-green-500/30"
-                                      : skill.level >= 75
-                                        ? "bg-blue-500/20 text-blue-500 border-blue-500/30"
-                                        : "bg-amber-500/20 text-amber-500 border-amber-500/30",
-                                  )}
-                                  data-oid="s3z91ki"
-                                >
-                                  {skill.level}%
-                                </Badge>
-                              </div>
-                              <Progress
-                                value={skill.level}
-                                className="h-2"
-                                data-oid="i1s-x4m"
-                              />
-                            </StaggerItem>
-                          ))}
+                              {skill.name}
+                            </span>
+                            <span
+                              className="text-sm text-muted-foreground"
+                              data-oid="vumcsnm"
+                            >
+                              {skill.level}%
+                            </span>
+                          </div>
+                          <Progress value={skill.level} data-oid="8w8zkx5" />
                         </div>
-                      </div>
-
-                      {/* Right column - Skill visualization */}
-                      <div
-                        className="flex items-center justify-center"
-                        data-oid="v23bhtt"
-                      >
-                        {isMounted && (
-                          <SkillVisualization
-                            category={category}
-                            skills={
-                              skillsData[category.id as keyof typeof skillsData]
-                            }
-                            data-oid="dvl0223"
-                          />
-                        )}
-                      </div>
-                    </StaggeredContainer>
-                  ) : (
-                    <div className="flex justify-center" data-oid="iutguf7">
-                      {isMounted && <SkillsGlobe data-oid="5zwhkdy" />}
+                      ))}
                     </div>
-                  )}
-                </CardContent>
-              </Card>
+                    {/* Radar chart */}
+                    <div
+                      className="flex items-center justify-center"
+                      data-oid="wldrs.n"
+                    >
+                      <SkillVisualization
+                        category={
+                          skillCategories.find((c) => c.id === category)!
+                        }
+                        skills={skills}
+                        data-oid="wg4ui27"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <SkillsGlobe skills={skills} data-oid=".4huk13" />
+                )}
+              </div>
             </TabsContent>
           ))}
         </Tabs>
       </ScrollReveal>
 
-      <div className="mt-12 text-center" data-oid="ha32q9t">
-        <ScrollReveal data-oid="-9xynj7">
-          <p className="text-muted-foreground" data-oid="r1lowz2">
+      <div className="mt-12 text-center" data-oid="hktu-u-">
+        <ScrollReveal data-oid="8_nj_gr">
+          <p className="text-muted-foreground" data-oid="31o.x5l">
             These skills represent my technical expertise developed over years
             of professional experience and continuous learning.
-            <br data-oid="1jpeuxc" />
+            <br data-oid="l6lt.hl" />
             I'm constantly expanding my knowledge and staying up-to-date with
             the latest advancements in AI and technology.
           </p>
@@ -520,7 +395,6 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
       const colorName = colorPart.replace(position + "-", "");
 
       // Map color names to actual hex values
-      // This is a simplified mapping - you might want to expand this
       const colorMap: Record<string, string> = {
         "blue-500": "#3b82f6",
         "indigo-500": "#6366f1",
@@ -549,14 +423,17 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
   // Create a radar chart visualization
   const numSkills = skills.length;
   const angleStep = (Math.PI * 2) / numSkills;
+  const centerX = 150;
+  const centerY = 150;
+  const maxRadius = 120;
 
   // Calculate coordinates for each skill point
   const skillPoints = skills.map((skill, i) => {
     const angle = i * angleStep - Math.PI / 2; // Start from top
-    const radius = (skill.level / 100) * 120; // Scale to fit in container
+    const radius = (skill.level / 100) * maxRadius; // Scale to fit in container
     return {
-      x: 150 + radius * Math.cos(angle),
-      y: 150 + radius * Math.sin(angle),
+      x: centerX + radius * Math.cos(angle),
+      y: centerY + radius * Math.sin(angle),
       name: skill.name,
       level: skill.level,
     };
@@ -568,140 +445,141 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
     .join(" ");
 
   return (
-    <div className="relative w-[300px] h-[300px]" data-oid="2ryu4tn">
-      <svg width="300" height="300" viewBox="0 0 300 300" data-oid="e3zx9pt">
-        {/* Background circles */}
-        {[25, 50, 75, 100].map((level) => (
-          <circle
-            key={level}
-            cx="150"
-            cy="150"
-            r={(level / 100) * 120}
-            fill="none"
-            stroke="currentColor"
-            strokeOpacity="0.1"
-            strokeWidth="1"
-            data-oid="slgxxhh"
-          />
-        ))}
-
-        {/* Axis lines */}
-        {Array.from({ length: numSkills }).map((_, i) => {
-          const angle = i * angleStep - Math.PI / 2;
-          const x2 = 150 + 120 * Math.cos(angle);
-          const y2 = 150 + 120 * Math.sin(angle);
-          return (
-            <line
-              key={i}
-              x1="150"
-              y1="150"
-              x2={x2}
-              y2={y2}
+    <div className="relative w-[450px] h-[450px]" data-oid="a8n-9b9">
+      <svg width="450" height="450" viewBox="0 0 450 450" data-oid="abt-c89">
+        <g transform="translate(75, 75)" data-oid="saqzlwb">
+          {/* Background circles */}
+          {[25, 50, 75, 100].map((level) => (
+            <circle
+              key={level}
+              cx={centerX}
+              cy={centerY}
+              r={(level / 100) * maxRadius}
+              fill="none"
               stroke="currentColor"
               strokeOpacity="0.1"
               strokeWidth="1"
-              data-oid="3t5vjre"
+              data-oid="2.6vrhf"
             />
-          );
-        })}
+          ))}
 
-        {/* Skill polygon */}
-        <motion.polygon
-          points={polygonPoints}
-          fill={`url(#gradient-${category.id})`}
-          fillOpacity="0.3"
-          stroke={`url(#gradient-${category.id})`}
-          strokeWidth="2"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          data-oid="mwrlphh"
-        />
+          {/* Axis lines */}
+          {Array.from({ length: numSkills }).map((_, i) => {
+            const angle = i * angleStep - Math.PI / 2;
+            const x2 = centerX + maxRadius * Math.cos(angle);
+            const y2 = centerY + maxRadius * Math.sin(angle);
+            return (
+              <line
+                key={i}
+                x1={centerX}
+                y1={centerY}
+                x2={x2}
+                y2={y2}
+                stroke="currentColor"
+                strokeOpacity="0.1"
+                strokeWidth="1"
+                data-oid="c5cyyov"
+              />
+            );
+          })}
 
-        {/* Gradient definition */}
-        <defs data-oid="0nx5.ie">
-          <linearGradient
-            id={`gradient-${category.id}`}
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-            data-oid="lhrswn-"
-          >
-            {/* Extract colors safely from the gradient string */}
-            <stop
-              offset="0%"
-              stopColor={getColorFromGradient(category.color, "from")}
-              data-oid="m.88irt"
-            />
-
-            <stop
-              offset="100%"
-              stopColor={getColorFromGradient(category.color, "to")}
-              data-oid="-47aa_."
-            />
-          </linearGradient>
-        </defs>
-
-        {/* Skill points */}
-        {skillPoints.map((point, i) => (
-          <motion.circle
-            key={i}
-            cx={point.x}
-            cy={point.y}
-            r="4"
-            fill="white"
+          {/* Skill polygon */}
+          <motion.polygon
+            points={polygonPoints}
+            fill={`url(#gradient-${category.id})`}
+            fillOpacity="0.3"
             stroke={`url(#gradient-${category.id})`}
             strokeWidth="2"
-            initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: i * 0.05 }}
-            data-oid="i5g3k5a"
+            transition={{ duration: 0.5 }}
+            data-oid="h8u-cyh"
           />
-        ))}
 
-        {/* Skill labels */}
-        {skillPoints.map((point, i) => {
-          const angle = i * angleStep - Math.PI / 2;
-          const labelRadius = 135;
-          const labelX = 150 + labelRadius * Math.cos(angle);
-          const labelY = 150 + labelRadius * Math.sin(angle);
-
-          // Adjust text anchor based on position
-          const textAnchor =
-            angle > -Math.PI / 4 && angle < Math.PI / 4
-              ? "start"
-              : angle > (Math.PI * 3) / 4 || angle < (-Math.PI * 3) / 4
-                ? "end"
-                : "middle";
-
-          // Adjust vertical alignment
-          const dy =
-            angle > Math.PI / 4 && angle < (Math.PI * 3) / 4
-              ? "0.8em"
-              : angle > (-Math.PI * 3) / 4 && angle < -Math.PI / 4
-                ? "-0.5em"
-                : "0.3em";
-
-          return (
-            <motion.text
-              key={i}
-              x={labelX}
-              y={labelY}
-              textAnchor={textAnchor}
-              dy={dy}
-              fontSize="10"
-              fill="currentColor"
-              fillOpacity="0.7"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3, delay: i * 0.05 + 0.3 }}
-              data-oid="didyet0"
+          {/* Gradient definition */}
+          <defs data-oid="0qzdevf">
+            <linearGradient
+              id={`gradient-${category.id}`}
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+              data-oid="dx8368f"
             >
-              {point.name}
-            </motion.text>
-          );
-        })}
+              <stop
+                offset="0%"
+                stopColor={getColorFromGradient(category.color, "from")}
+                data-oid="0gumgny"
+              />
+
+              <stop
+                offset="100%"
+                stopColor={getColorFromGradient(category.color, "to")}
+                data-oid="tgms0q3"
+              />
+            </linearGradient>
+          </defs>
+
+          {/* Skill points */}
+          {skillPoints.map((point, i) => (
+            <motion.circle
+              key={i}
+              cx={point.x}
+              cy={point.y}
+              r="4"
+              fill="white"
+              stroke={`url(#gradient-${category.id})`}
+              strokeWidth="2"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              data-oid="ox8byka"
+            />
+          ))}
+
+          {/* Skill labels */}
+          {skillPoints.map((point, i) => {
+            const angle = i * angleStep - Math.PI / 2;
+            const labelRadius = maxRadius + 30;
+            const labelX = centerX + labelRadius * Math.cos(angle);
+            const labelY = centerY + labelRadius * Math.sin(angle);
+
+            // Adjust text anchor based on position
+            const textAnchor =
+              angle > -Math.PI / 4 && angle < Math.PI / 4
+                ? "start"
+                : angle > (Math.PI * 3) / 4 || angle < (-Math.PI * 3) / 4
+                  ? "end"
+                  : "middle";
+
+            // Adjust vertical alignment
+            const dy =
+              angle > Math.PI / 4 && angle < (Math.PI * 3) / 4
+                ? "0.8em"
+                : angle > (-Math.PI * 3) / 4 && angle < -Math.PI / 4
+                  ? "-0.5em"
+                  : "0.3em";
+
+            return (
+              <motion.text
+                key={i}
+                x={labelX}
+                y={labelY}
+                textAnchor={textAnchor}
+                dy={dy}
+                fontSize="12"
+                fill="currentColor"
+                fillOpacity="0.7"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: i * 0.05 + 0.3 }}
+                data-oid="5khs-ip"
+              >
+                {point.name}
+              </motion.text>
+            );
+          })}
+        </g>
       </svg>
     </div>
   );

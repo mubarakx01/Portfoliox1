@@ -214,27 +214,27 @@ export default function RedesignedExperience() {
     <SectionContainer
       id="experience"
       className="bg-gradient-to-b from-background/95 to-background"
-      data-oid="_oxiy29"
+      data-oid="1.20wk9"
     >
       <SectionHeader
         title="Professional Journey"
         subtitle="My professional experiences and career highlights in AI development, education, and community building."
-        data-oid="_fsxvx5"
+        data-oid=".v5co8b"
       />
 
-      <ScrollReveal data-oid="pcdr9zm">
+      <ScrollReveal data-oid="-stbpmm">
         <Tabs
           defaultValue="all"
           onValueChange={(value) =>
             setExperienceType(value as "all" | "work" | "education")
           }
           className="w-full"
-          data-oid=".m1wfia"
+          data-oid="dk6pzzc"
         >
-          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="efyeb1j">
+          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="atpijru">
             <TabsList
               className="flex justify-center gap-2 mb-8 bg-transparent w-fit mx-auto"
-              data-oid="f0kw-1x"
+              data-oid="2hjfset"
             >
               <TabsTrigger
                 value="all"
@@ -244,10 +244,10 @@ export default function RedesignedExperience() {
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted hover:bg-muted/80",
                 )}
-                data-oid="_h.xgoq"
+                data-oid="v6u314n"
               >
-                <div className="flex items-center gap-2" data-oid=".p26_aw">
-                  <span data-oid="xw6.3t5">All Experience</span>
+                <div className="flex items-center gap-2" data-oid="lw5wlvc">
+                  <span data-oid="tmbc1u8">All Experience</span>
                 </div>
               </TabsTrigger>
 
@@ -259,11 +259,11 @@ export default function RedesignedExperience() {
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted hover:bg-muted/80",
                 )}
-                data-oid="cztw83g"
+                data-oid=":_2vfe2"
               >
-                <div className="flex items-center gap-2" data-oid="e-:vbn4">
-                  <Briefcase className="h-4 w-4" data-oid="en4tu3q" />
-                  <span data-oid="s.x7ad.">Work Experience</span>
+                <div className="flex items-center gap-2" data-oid="gh8mfpb">
+                  <Briefcase className="h-4 w-4" data-oid="ucjv.40" />
+                  <span data-oid="nfv9wfz">Work Experience</span>
                 </div>
               </TabsTrigger>
 
@@ -275,46 +275,46 @@ export default function RedesignedExperience() {
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted hover:bg-muted/80",
                 )}
-                data-oid="5-:uee7"
+                data-oid="opet_8q"
               >
-                <div className="flex items-center gap-2" data-oid="ydyknnj">
-                  <GraduationCap className="h-4 w-4" data-oid="2dd5ku7" />
-                  <span data-oid="szrx4q-">Education</span>
+                <div className="flex items-center gap-2" data-oid="p23j-9y">
+                  <GraduationCap className="h-4 w-4" data-oid="4v3t4bg" />
+                  <span data-oid="8:7e9v8">Education</span>
                 </div>
               </TabsTrigger>
             </TabsList>
           </div>
 
-          <div className="space-y-6" data-oid="6r_a.bf">
+          <div className="space-y-6" data-oid="y_o1pw0">
             {filteredExperiences.map((experience, index) => (
-              <ErrorBoundary key={experience.id} data-oid="9.pb1zy">
+              <ErrorBoundary key={experience.id} data-oid="6tzf8l2">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  data-oid="8l3gfbp"
+                  data-oid="nja8wi3"
                 >
                   <Card
                     className={cn(
                       "overflow-hidden border-none shadow-lg",
                       `bg-gradient-to-br ${experience.color}/10`,
                     )}
-                    data-oid="yw2wj0x"
+                    data-oid="m9zvf36"
                   >
-                    <CardContent className="p-0" data-oid="8ttymo8">
+                    <CardContent className="p-0" data-oid="ppqmkhb">
                       <div
                         className={cn(
                           "p-4 sm:p-6 cursor-pointer transition-all duration-300",
                           expandedExperience === experience.id ? "pb-3" : "",
                         )}
                         onClick={() => toggleExpand(experience.id)}
-                        data-oid="vhqh63m"
+                        data-oid="stv5h5w"
                       >
                         <div
                           className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"
-                          data-oid="ksmzklr"
+                          data-oid="42z6.4c"
                         >
-                          <div data-oid="97gqp:7">
+                          <div data-oid="-kvf.j2">
                             <Badge
                               className={cn(
                                 "mb-2 px-3 py-1",
@@ -322,17 +322,17 @@ export default function RedesignedExperience() {
                                   ? "bg-blue-500/20 text-blue-500 border-blue-500/30"
                                   : "bg-amber-500/20 text-amber-500 border-amber-500/30",
                               )}
-                              data-oid="v1x6.h6"
+                              data-oid="nkubqzc"
                             >
                               {experience.type === "work" ? (
                                 <Briefcase
                                   className="h-3 w-3 mr-1"
-                                  data-oid="u-xd3ji"
+                                  data-oid="iqn83s1"
                                 />
                               ) : (
                                 <GraduationCap
                                   className="h-3 w-3 mr-1"
-                                  data-oid="8_qtmfq"
+                                  data-oid="yymwezf"
                                 />
                               )}
                               {experience.type === "work"
@@ -341,7 +341,7 @@ export default function RedesignedExperience() {
                             </Badge>
                             <h3
                               className="text-xl font-semibold flex items-center gap-2"
-                              data-oid="c1dbxg1"
+                              data-oid="2c5em11"
                             >
                               {experience.title}
                               <motion.div
@@ -352,61 +352,61 @@ export default function RedesignedExperience() {
                                       : 0,
                                 }}
                                 transition={{ duration: 0.3 }}
-                                data-oid="asgo05."
+                                data-oid="8z5f9.g"
                               >
                                 {expandedExperience === experience.id ? (
                                   <ChevronDown
                                     className="h-4 w-4 text-muted-foreground"
-                                    data-oid="ucqrh5d"
+                                    data-oid="n4hi906"
                                   />
                                 ) : (
                                   <ChevronRight
                                     className="h-4 w-4 text-muted-foreground"
-                                    data-oid="vsfambl"
+                                    data-oid="iaqvw_a"
                                   />
                                 )}
                               </motion.div>
                             </h3>
                             <div
                               className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1 text-muted-foreground"
-                              data-oid="1:duz0e"
+                              data-oid="f.nl:g3"
                             >
                               <div
                                 className="flex items-center gap-1"
-                                data-oid="u0keum4"
+                                data-oid="tgdooul"
                               >
                                 <Building
                                   className="h-4 w-4"
-                                  data-oid="-s7i214"
+                                  data-oid="ru.ynvp"
                                 />
 
-                                <span data-oid=".m6_4w.">
+                                <span data-oid="yf.7tzw">
                                   {experience.company}
                                 </span>
                               </div>
                               <div
                                 className="flex items-center gap-1"
-                                data-oid="jbgikg3"
+                                data-oid=".d_:d8o"
                               >
                                 <MapPin
                                   className="h-4 w-4"
-                                  data-oid="5__amj7"
+                                  data-oid="va5t.8x"
                                 />
 
-                                <span data-oid="y9frsyn">
+                                <span data-oid="hcl-trr">
                                   {experience.location}
                                 </span>
                               </div>
                               <div
                                 className="flex items-center gap-1"
-                                data-oid="87rl3cu"
+                                data-oid="rvu6s_p"
                               >
                                 <Calendar
                                   className="h-4 w-4"
-                                  data-oid="1cyj05u"
+                                  data-oid="sy4a2.:"
                                 />
 
-                                <span data-oid="pgp52c.">
+                                <span data-oid="nur3jf1">
                                   {experience.period}
                                 </span>
                               </div>
@@ -414,12 +414,12 @@ export default function RedesignedExperience() {
                           </div>
                         </div>
 
-                        <p className="text-muted-foreground" data-oid="qyobi_b">
+                        <p className="text-muted-foreground" data-oid="ba_7:75">
                           {experience.description}
                         </p>
                       </div>
 
-                      <AnimatePresence data-oid="5j:b60l">
+                      <AnimatePresence data-oid="0dd0hll">
                         {expandedExperience === experience.id && (
                           <motion.div
                             initial={{ opacity: 0, height: 0 }}
@@ -427,49 +427,49 @@ export default function RedesignedExperience() {
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
                             className="overflow-hidden"
-                            data-oid="nsormh-"
+                            data-oid="z65f_qm"
                           >
                             <div
                               className="px-4 sm:px-6 pb-6"
-                              data-oid="vhk3xd2"
+                              data-oid="ie:8xcv"
                             >
                               <div
                                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 border-t"
-                                data-oid="-197g._"
+                                data-oid="bd1i01e"
                               >
-                                <div data-oid="p_id8zw">
+                                <div data-oid="jnked48">
                                   <h4
                                     className="text-lg font-semibold mb-4 flex items-center gap-2"
-                                    data-oid="bs48owt"
+                                    data-oid="w3k-l6w"
                                   >
                                     <Award
                                       className="h-5 w-5 text-primary"
-                                      data-oid="derw5w-"
+                                      data-oid="njuvbiq"
                                     />
                                     Key Responsibilities
                                   </h4>
-                                  <ul className="space-y-2" data-oid="j.r4t58">
+                                  <ul className="space-y-2" data-oid="ma:_93c">
                                     {experience.responsibilities?.map(
                                       (responsibility, i) => (
                                         <li
                                           key={i}
                                           className="flex items-start gap-2"
-                                          data-oid="dm7c3ko"
+                                          data-oid="8q52yzd"
                                         >
                                           <div
                                             className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0"
-                                            data-oid="ae3-qe_"
+                                            data-oid="-qqv:fv"
                                           >
                                             <span
                                               className="text-xs text-primary"
-                                              data-oid="_q8fmuu"
+                                              data-oid="vv4n4iy"
                                             >
                                               ✓
                                             </span>
                                           </div>
                                           <span
                                             className="text-sm sm:text-base"
-                                            data-oid="g-1h755"
+                                            data-oid="kc_tp.t"
                                           >
                                             {responsibility}
                                           </span>
@@ -478,26 +478,26 @@ export default function RedesignedExperience() {
                                     )}
                                   </ul>
 
-                                  <div className="mt-6" data-oid="v-8ad3n">
+                                  <div className="mt-6" data-oid="c3vv5z4">
                                     <h4
                                       className="text-lg font-semibold mb-4 flex items-center gap-2"
-                                      data-oid="_40.o4p"
+                                      data-oid="99nxdv-"
                                     >
                                       <Users
                                         className="h-5 w-5 text-primary"
-                                        data-oid="cr91jho"
+                                        data-oid="cakb7y6"
                                       />
                                       Skills Applied
                                     </h4>
                                     <div
                                       className="flex flex-wrap gap-2"
-                                      data-oid="s2lfhvi"
+                                      data-oid="t259q3."
                                     >
                                       {experience.skills.map((skill, i) => (
                                         <Badge
                                           key={i}
                                           variant="secondary"
-                                          data-oid=".sj9yn-"
+                                          data-oid="a9get9z"
                                         >
                                           {skill}
                                         </Badge>
@@ -506,37 +506,37 @@ export default function RedesignedExperience() {
                                   </div>
                                 </div>
 
-                                <div data-oid="c7oj3ys">
+                                <div data-oid="y4ko9.3">
                                   <h4
                                     className="text-lg font-semibold mb-4 flex items-center gap-2"
-                                    data-oid="8tf96nx"
+                                    data-oid="6elbv7e"
                                   >
                                     <Target
                                       className="h-5 w-5 text-primary"
-                                      data-oid="yxwvtpc"
+                                      data-oid="7.5oojc"
                                     />
                                     Key Metrics & Achievements
                                   </h4>
 
                                   <div
                                     className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6"
-                                    data-oid="3-w::-5"
+                                    data-oid="sgl9urb"
                                   >
                                     {experience.metrics.map((metric, i) => (
                                       <div
                                         key={i}
                                         className="bg-primary/10 rounded-lg p-3 text-center"
-                                        data-oid="6lpkx2n"
+                                        data-oid="gc5d_tz"
                                       >
                                         <div
                                           className="text-xl sm:text-2xl font-bold"
-                                          data-oid="vdd6hfu"
+                                          data-oid="yho4to."
                                         >
                                           {metric.value}
                                         </div>
                                         <div
                                           className="text-xs sm:text-sm text-muted-foreground"
-                                          data-oid="mit:9ex"
+                                          data-oid="zwtjum:"
                                         >
                                           {metric.label}
                                         </div>
@@ -546,18 +546,18 @@ export default function RedesignedExperience() {
 
                                   {experience.type === "work" &&
                                     experience.reference_letter && (
-                                      <div className="mt-4" data-oid="rp041wr">
+                                      <div className="mt-4" data-oid="hk_plfe">
                                         <Button
                                           variant="outline"
                                           className="w-full"
                                           asChild
-                                          data-oid="30mrw_s"
+                                          data-oid="vw-hsdl"
                                         >
                                           <a
                                             href={experience.reference_letter}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            data-oid="jhcyh03"
+                                            data-oid="wtb487m"
                                           >
                                             View Reference Letter
                                           </a>
@@ -566,11 +566,11 @@ export default function RedesignedExperience() {
                                     )}
 
                                   {experience.type === "education" && (
-                                    <div className="mt-4" data-oid="ms.qt:a">
+                                    <div className="mt-4" data-oid="72w8rql">
                                       <Button
                                         variant="outline"
                                         className="w-full"
-                                        data-oid=".hxdq03"
+                                        data-oid="zx.wsrr"
                                       >
                                         View Transcript
                                       </Button>
