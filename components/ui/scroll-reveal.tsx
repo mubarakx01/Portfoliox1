@@ -88,11 +88,7 @@ export const ScrollReveal = memo(function ScrollReveal({
 
   // If not yet client-side, render without animation
   if (!isClient) {
-    return (
-      <div className={className} data-oid="rlcd7fl">
-        {children}
-      </div>
-    );
+    return <div className={className}>{children}</div>;
   }
 
   return (
@@ -102,7 +98,6 @@ export const ScrollReveal = memo(function ScrollReveal({
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={variants}
-      data-oid="vnm-m4j"
     >
       {children}
     </motion.div>
@@ -178,11 +173,7 @@ export const StaggeredContainer = memo(function StaggeredContainer({
 
   // If not yet mounted, render without animation
   if (!isClient) {
-    return (
-      <div className={cn("flex flex-col", className)} data-oid="a506mhx">
-        {children}
-      </div>
-    );
+    return <div className={cn("flex flex-col", className)}>{children}</div>;
   }
 
   return (
@@ -192,7 +183,6 @@ export const StaggeredContainer = memo(function StaggeredContainer({
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
-      data-oid="wd30eqa"
     >
       {children}
     </motion.div>
@@ -228,11 +218,7 @@ export const StaggerItem = memo(function StaggerItem({
   };
 
   return (
-    <motion.div
-      className={className}
-      variants={itemVariants}
-      data-oid="9:4bv0z"
-    >
+    <motion.div className={className} variants={itemVariants}>
       {children}
     </motion.div>
   );

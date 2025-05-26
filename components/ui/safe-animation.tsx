@@ -89,18 +89,14 @@ export function SafeAnimation({
   // If not client-side or animations should be disabled, render without animation
   if (!isClient || !shouldAnimate) {
     const Component = as;
-    return (
-      <Component className={className} data-oid="ngxy_ow">
-        {children}
-      </Component>
-    );
+    return <Component className={className}>{children}</Component>;
   }
 
   // Otherwise, render with animations
   const MotionComponent = motion[as as keyof typeof motion] || motion.div;
 
   return (
-    <MotionComponent className={className} {...motionProps} data-oid="gk9.5xv">
+    <MotionComponent className={className} {...motionProps}>
       {children}
     </MotionComponent>
   );

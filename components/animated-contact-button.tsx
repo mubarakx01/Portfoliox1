@@ -24,7 +24,6 @@ export default function AnimatedContactButton() {
         perspective: "1000px",
         transformStyle: "preserve-3d",
       }}
-      data-oid="rcsn0pb"
     >
       <motion.div
         className="relative px-8 py-4 bg-gradient-to-r from-[#E07A5F] to-[#F4A261] rounded-xl text-white font-sans text-xl font-bold cursor-pointer"
@@ -43,7 +42,6 @@ export default function AnimatedContactButton() {
         style={{
           transformStyle: "preserve-3d",
         }}
-        data-oid="ksj7no6"
       >
         <motion.div
           className="absolute inset-0 bg-white/30 rounded-xl"
@@ -53,7 +51,6 @@ export default function AnimatedContactButton() {
           transition={{
             duration: 0.2,
           }}
-          data-oid="imiba4m"
         />
 
         <motion.div
@@ -70,7 +67,6 @@ export default function AnimatedContactButton() {
           style={{
             transformStyle: "preserve-3d",
           }}
-          data-oid="yr6s.y8"
         >
           Contact Me
         </motion.div>
@@ -83,7 +79,6 @@ export default function AnimatedContactButton() {
           transition={{
             duration: 0.2,
           }}
-          data-oid="2wukv1c"
         />
       </motion.div>
     </motion.div>

@@ -36,29 +36,17 @@ export class ErrorBoundary extends React.Component<
       // You can render any custom fallback UI
       return (
         this.props.fallback || (
-          <div
-            className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4"
-            data-oid="7b0ymxm"
-          >
-            <AlertTriangle
-              className="h-10 w-10 text-destructive mb-4"
-              data-oid="zuk3h:w"
-            />
+          <div className="flex flex-col items-center justify-center p-6 border border-destructive/20 rounded-lg bg-destructive/10 my-4">
+            <AlertTriangle className="h-10 w-10 text-destructive mb-4" />
 
-            <h3 className="text-lg font-semibold mb-2" data-oid="h203i8z">
-              Something went wrong
-            </h3>
-            <p
-              className="text-muted-foreground mb-4 text-center max-w-md"
-              data-oid="5ckyrxi"
-            >
+            <h3 className="text-lg font-semibold mb-2">Something went wrong</h3>
+            <p className="text-muted-foreground mb-4 text-center max-w-md">
               {this.state.error?.message ||
                 "An unexpected error occurred while rendering this section"}
             </p>
             <Button
               variant="outline"
               onClick={() => this.setState({ hasError: false, error: null })}
-              data-oid="qrga7jx"
             >
               Try again
             </Button>
@@ -77,8 +65,8 @@ export function withErrorBoundary<P extends object>(
 ): React.FC<P> {
   return function WithErrorBoundary(props: P) {
     return (
-      <ErrorBoundary fallback={fallback} data-oid="53dcmmt">
-        <Component {...props} data-oid="bqh4xty" />
+      <ErrorBoundary fallback={fallback}>
+        <Component {...props} />
       </ErrorBoundary>
     );
   };

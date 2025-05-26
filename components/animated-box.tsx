@@ -90,25 +90,18 @@ export default function AnimatedBox({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ scale: hoverScale }}
-      data-oid="30l23ly"
     >
       {/* Gradient background */}
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-[#E07A5F]/5 to-[#F4A261]/5 rounded-xl"
-        data-oid="600o2q6"
-      />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#E07A5F]/5 to-[#F4A261]/5 rounded-xl" />
 
       {/* Interactive glow effect */}
       <div
         className="absolute inset-0 rounded-xl transition-opacity duration-300"
         style={glowStyle}
-        data-oid="8hjrwvy"
       />
 
       {/* Content */}
-      <div className="relative z-10" data-oid="3fkb7dq">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
     </motion.div>
   );
 }

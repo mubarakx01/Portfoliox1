@@ -58,19 +58,6 @@ const featuredProjects = [
     githubUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
     color: "from-pink-600 to-orange-600",
   },
-  {
-    id: 3,
-    title: "Community Grant Management System",
-    description:
-      "Web application for managing community grant applications, reviews, and distributions with advanced analytics.",
-    longDescription:
-      "A full-stack web application that streamlines the process of managing community grants from application to distribution. The system includes features for application submission, review workflows, financial tracking, and impact measurement dashboards.",
-    technologies: ["Next.js", "PostgreSQL", "AWS", "TypeScript", "Prisma"],
-    imageUrl: "/lib/file/Screenshot 2025-03-03 at 2.56.24 AM.png",
-    demoUrl: "#",
-    githubUrl: "#",
-    color: "from-green-600 to-emerald-600",
-  },
 ];
 
 export default function ProjectShowcase() {
@@ -138,19 +125,10 @@ export default function ProjectShowcase() {
       className="w-full max-w-5xl mx-auto relative rounded-2xl overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-oid="2p8_whr"
     >
-      <div
-        className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/70 to-background z-10"
-        data-oid="zhwudzo"
-      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/70 to-background z-10" />
 
-      <AnimatePresence
-        mode="wait"
-        initial={false}
-        custom={direction}
-        data-oid="rp_v3f7"
-      >
+      <AnimatePresence mode="wait" initial={false} custom={direction}>
         <motion.div
           key={project.id}
           custom={direction}
@@ -175,7 +153,6 @@ export default function ProjectShowcase() {
             },
           }}
           className="relative w-full aspect-[16/9]"
-          data-oid="lkep459"
         >
           <Image
             src={project.imageUrl || "/placeholder.svg"}
@@ -183,7 +160,6 @@ export default function ProjectShowcase() {
             fill
             className="object-cover"
             priority
-            data-oid=":2haxg4"
           />
 
           <div
@@ -191,71 +167,53 @@ export default function ProjectShowcase() {
               "absolute inset-0 opacity-60 bg-gradient-to-r",
               project.color,
             )}
-            data-oid="ph.qv8d"
           />
 
-          <div
-            className="absolute inset-0 z-20 flex flex-col justify-end p-8"
-            data-oid="fgokmsa"
-          >
+          <div className="absolute inset-0 z-20 flex flex-col justify-end p-8">
             <Badge
               variant="outline"
               className="w-fit mb-4 bg-black/50 backdrop-blur-sm text-white border-white/20"
-              data-oid="oxbarc-"
             >
               Featured Project
             </Badge>
-            <h3
-              className="text-2xl md:text-4xl font-bold text-white mb-4"
-              data-oid="5vy1wtz"
-            >
+            <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">
               {project.title}
             </h3>
-            <p
-              className="text-white/90 max-w-3xl mb-6 text-sm md:text-base"
-              data-oid="s:.-wr0"
-            >
+            <p className="text-white/90 max-w-3xl mb-6 text-sm md:text-base">
               {project.longDescription}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-6" data-oid="ri2r-fp">
+            <div className="flex flex-wrap gap-2 mb-6">
               {project.technologies.map((tech, index) => (
                 <Badge
                   key={index}
                   className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                  data-oid="ksuuxen"
                 >
                   {tech}
                 </Badge>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3" data-oid="cen-1kz">
+            <div className="flex flex-wrap gap-3">
               <Button
                 className="bg-white text-black hover:bg-white/90 group"
                 onClick={() => handleDemoClick(project.demoUrl)}
-                data-oid="bzb8sqg"
               >
                 Live Demo
-                <ExternalLink
-                  className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                  data-oid="3k3m5:y"
-                />
+                <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
 
               <Button
                 variant="outline"
                 className="border-white text-white hover:bg-white/20 gap-2"
                 asChild
-                data-oid="vdk2haf"
               >
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-oid="oe.38og"
                 >
-                  <Github className="h-4 w-4" data-oid="lkb7l7m" />
+                  <Github className="h-4 w-4" />
                   View Code
                 </a>
               </Button>
@@ -270,9 +228,8 @@ export default function ProjectShowcase() {
         variant="ghost"
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
         onClick={handlePrev}
-        data-oid="98..9gx"
       >
-        <ChevronLeft className="h-6 w-6" data-oid="28eyqy2" />
+        <ChevronLeft className="h-6 w-6" />
       </Button>
 
       <Button
@@ -280,16 +237,12 @@ export default function ProjectShowcase() {
         variant="ghost"
         className="absolute right-4 top-1/2 -translate-y-1/2 z-30 h-10 w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
         onClick={handleNext}
-        data-oid="mwhsvor"
       >
-        <ChevronRight className="h-6 w-6" data-oid="5d_mnfp" />
+        <ChevronRight className="h-6 w-6" />
       </Button>
 
       {/* Progress dots */}
-      <div
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1"
-        data-oid="2i_wovj"
-      >
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1">
         {featuredProjects.map((_, index) => (
           <button
             key={index}
@@ -301,7 +254,6 @@ export default function ProjectShowcase() {
             )}
             onClick={() => handleDotClick(index)}
             aria-label={`Go to project ${index + 1}`}
-            data-oid="k4c7y7x"
           />
         ))}
       </div>

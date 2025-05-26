@@ -51,42 +51,42 @@ const projectCategories = [
   {
     id: "ai",
     name: "AI & ML",
-    icon: <Cpu className="h-4 w-4" data-oid=".492cu." />,
+    icon: <Cpu className="h-4 w-4" />,
   },
   {
     id: "audio",
     name: "Audio",
-    icon: <Zap className="h-4 w-4" data-oid="vx1x8vn" />,
+    icon: <Zap className="h-4 w-4" />,
   },
   {
     id: "web",
     name: "Web Dev",
-    icon: <Globe className="h-4 w-4" data-oid="hwxez6x" />,
+    icon: <Globe className="h-4 w-4" />,
   },
   {
     id: "data",
     name: "Data Science",
-    icon: <Database className="h-4 w-4" data-oid="y3y4jqr" />,
+    icon: <Database className="h-4 w-4" />,
   },
   {
     id: "network",
     name: "Network",
-    icon: <Share2 className="h-4 w-4" data-oid="al3z4zw" />,
+    icon: <Share2 className="h-4 w-4" />,
   },
   {
     id: "security",
     name: "Security",
-    icon: <Shield className="h-4 w-4" data-oid="1p-tiqm" />,
+    icon: <Shield className="h-4 w-4" />,
   },
   {
     id: "communication",
     name: "Communication",
-    icon: <MessageSquare className="h-4 w-4" data-oid="5kd5he4" />,
+    icon: <MessageSquare className="h-4 w-4" />,
   },
   {
     id: "research",
     name: "Research",
-    icon: <BookOpen className="h-4 w-4" data-oid="b3_3aij" />,
+    icon: <BookOpen className="h-4 w-4" />,
   },
 ];
 
@@ -94,35 +94,40 @@ const projectCategories = [
 const projects = [
   {
     id: 0,
-    title: "Machine Connect Monitor: Real-time Machine Status Dashboard",
-    category: "network",
+    title: "AI-Powered GYM Workout",
+    category: "ai",
     description:
-      "A real-time monitoring system for tracking machine status, connectivity, and performance metrics across a network of devices with a clean, modern interface.",
+      "A comprehensive AI-driven fitness application that provides personalized workout plans, real-time pose estimation, wearable integration, and social features for an engaging workout experience.",
     longDescription:
-      "The Machine Connect Monitor provides a comprehensive solution for tracking the status and performance of networked machines in real-time. The system features a responsive dashboard that displays machine connectivity status, IP addresses, and allows for direct connection to machines for maintenance and monitoring purposes.",
+      "An advanced fitness platform that leverages artificial intelligence to deliver personalized workout experiences. The system features goal-based customization, real-time pose estimation for form correction, wearable device integration, and social features to keep users motivated. The app includes a vast exercise library, AR-powered training, and adaptive workout plans based on user progress and feedback.",
     technologies: [
-      "React.js/Next.js",
-      "WebSockets",
-      "Tailwind CSS",
+      "TensorFlow",
+      "MediaPipe",
+      "React Native",
       "Node.js",
-      "Network Protocols",
-      "Real-time Monitoring",
+      "Python",
+      "AWS",
+      "Firebase",
+      "AR Kit",
+      "Wearable APIs",
     ],
-
-    imageUrl: "/machine-monitor.jpg",
-    demoUrl: "/machine-monitor",
-    githubUrl: "https://github.com/mubarakx01",
-    color: "from-green-600 to-blue-600",
+    imageUrl: "/lib/file/ai-gym-dashboard.png",
+    gallery: [
+      "/lib/file/ai-gym-dashboard.png",
+    ],
+    demoUrl: "#",
+    githubUrl: "https://github.com/yourusername/ai-gym-workout",
+    color: "from-purple-600 to-pink-600",
     featured: true,
     completed: "2024",
     teamSize: 1,
-    difficulty: 4,
+    difficulty: 5,
     achievements: [
-      "Implemented real-time machine status monitoring with WebSockets",
-      "Created a clean, intuitive dashboard interface with Tailwind CSS",
-      "Developed secure machine connection protocols",
-      "Built responsive design that works across all device sizes",
-      "Integrated automatic status updates and notifications",
+      "Implemented real-time pose estimation with 90% accuracy using TensorFlow",
+      "Developed personalized AI workout planning system",
+      "Integrated multiple wearable device APIs for comprehensive health tracking",
+      "Created AR-powered virtual trainer experience",
+      "Built social features including challenges and leaderboards",
     ],
   },
   {
@@ -143,8 +148,10 @@ const projects = [
       "TensorFlow",
       "Docker",
     ],
-
-    imageUrl: "/Screenshot 2025-03-03 at 2.56.24 AM.png",
+    imageUrl: "/lib/file/Machine-data-x3.png",
+    gallery: [
+      "/lib/file/Machine-data-x3.png",
+    ],
     demoUrl: "#",
     githubUrl: "https://github.com/mubarakx01",
     color: "from-blue-600 to-violet-600",
@@ -162,40 +169,8 @@ const projects = [
   },
   {
     id: 2,
-    title: "Movie Ratings Analysis Dashboard",
-    category: "data",
-    description:
-      "A comprehensive data visualization dashboard for analyzing movie ratings distribution and patterns using statistical methods and interactive charts.",
-    longDescription:
-      "This project provides deep insights into movie ratings patterns through statistical analysis and visualization. The dashboard features histograms and box plots to show the distribution of ratings, allowing users to understand rating trends and outliers. The analysis reveals that most movies receive ratings between 3.5 and 4.0, with a clear right-skewed distribution indicating users' tendency to rate movies positively.",
-    technologies: [
-      "Python",
-      "Pandas",
-      "Matplotlib",
-      "Seaborn",
-      "Jupyter Notebooks",
-      "Statistical Analysis",
-    ],
-    imageUrl: "/movie-ratings.jpg",
-    demoUrl: "https://github.com/mubarakx01/movie-ratings-analysis",
-    githubUrl: "https://github.com/mubarakx01/movie-ratings-analysis",
-    color: "from-blue-600 to-cyan-600",
-    featured: false,
-    completed: "2023",
-    teamSize: 1,
-    difficulty: 3,
-    achievements: [
-      "Analyzed over 100,000 movie ratings to identify distribution patterns",
-      "Created interactive visualizations showing rating frequencies and outliers",
-      "Implemented statistical methods to identify significant rating trends",
-      "Built a responsive dashboard for exploring the data",
-      "Discovered that 4-star ratings are the most common, followed by 3.5 stars",
-    ],
-  },
-  {
-    id: 3,
     title: "Movie Recommendation System",
-    category: "data",
+    category: "data-science",
     description:
       "A content-based movie recommendation system that suggests similar movies based on input titles using metadata and cosine similarity.",
     longDescription:
@@ -208,8 +183,10 @@ const projects = [
       "Streamlit",
       "TMDb API",
     ],
-
-    imageUrl: "/lib/file/movie-recommendation-system.png",
+    imageUrl: "/lib/file/MOvie-x1.jpg",
+    gallery: [
+      "/lib/file/MOvie-x1.jpg",
+    ],
     demoUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
     githubUrl: "https://github.com/mubarakx01/Movie-Recommendation-System",
     color: "from-blue-600 to-cyan-600",
@@ -226,55 +203,45 @@ const projects = [
     ],
   },
   {
-    id: 4,
-    title: "Multi-Agent RL Environment",
-    category: "ai",
+    id: 3,
+    title: "Airbnb Price Prediction System",
+    category: "data-science",
     description:
-      "A flexible environment for training and evaluating multi-agent reinforcement learning algorithms.",
+      "A machine learning model to predict nightly prices of Airbnb listings in Chennai, Tamil Nadu, using listing metadata, location-based features, and text processing techniques.",
     longDescription:
-      "A customizable environment for developing and testing multi-agent reinforcement learning algorithms. The system supports various reward structures, observation spaces, and agent interactions.",
-    technologies: ["Python", "TensorFlow", "OpenAI Gym", "Ray", "Docker"],
-    imageUrl: "/placeholder.svg?height=600&width=800",
+      "Built a comprehensive price prediction system for Airbnb listings that helps hosts optimize pricing and guests find value-for-money accommodations. The system leverages advanced machine learning techniques, location-based features, and natural language processing to provide accurate price predictions based on multiple factors including property attributes, amenities, and proximity to landmarks.",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "XGBoost",
+      "LightGBM",
+      "Streamlit",
+      "GeoPy",
+      "NLP",
+      "BeautifulSoup",
+    ],
+  imageUrl: "/lib/file/Airbnb.png",
+  gallery: [
+    "/lib/file/Airbnb.png",
+  ],
     demoUrl: "#",
-    githubUrl: "https://github.com/mubarakx01",
-    color: "from-green-600 to-teal-600",
+    githubUrl: "https://github.com/yourusername/airbnb-price-prediction",
+    color: "from-rose-600 to-pink-600",
     featured: false,
     completed: "2023",
-    teamSize: 2,
+    teamSize: 1,
     difficulty: 4,
     achievements: [
-      "Designed a flexible multi-agent environment supporting various RL algorithms",
-      "Implemented custom reward structures and observation spaces",
-      "Created visualization tools for agent behavior analysis",
-      "Benchmarked performance against standard environments",
+      "Developed ML models achieving 85% prediction accuracy using XGBoost and LightGBM",
+      "Engineered location-based features using GeoPy for landmark proximity analysis",
+      "Implemented NLP for sentiment analysis on listing descriptions",
+      "Created an interactive Streamlit interface for real-time price predictions",
+      "Deployed the system on Heroku with API integration",
     ],
   },
   {
     id: 5,
-    title: "Community Grant Management System",
-    category: "web",
-    description:
-      "Web application for managing community grant applications, reviews, and distributions.",
-    longDescription:
-      "A full-stack web application that streamlines the process of managing community grants from application to distribution. The system includes features for application submission, review workflows, and financial tracking.",
-    technologies: ["Next.js", "PostgreSQL", "AWS", "TypeScript", "Prisma"],
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    demoUrl: "#",
-    githubUrl: "https://github.com/mubarakx01",
-    color: "from-amber-600 to-orange-600",
-    featured: false,
-    completed: "2022",
-    teamSize: 2,
-    difficulty: 3,
-    achievements: [
-      "Built a full-stack application with Next.js and PostgreSQL",
-      "Implemented secure authentication and authorization",
-      "Created a workflow system for grant application review",
-      "Deployed on AWS with CI/CD pipeline",
-    ],
-  },
-  {
-    id: 6,
     title: "Wikipedia Connection Finder",
     category: "network",
     description:
@@ -296,9 +263,13 @@ const projects = [
       "Optimized performance for large-scale graph traversal",
       "Built a caching system with MongoDB for faster results",
     ],
+    imageUrl: "/lib/file/Wikipedia.png",
+    gallery: [
+      "/lib/file/Wikipedia.png",
+    ],
   },
   {
-    id: 7,
+    id: 6,
     title: "NYC Education Analytics",
     category: "data",
     description:
@@ -319,6 +290,10 @@ const projects = [
       "Built predictive models for student success with Scikit-learn",
       "Created interactive visualizations with Tableau",
       "Presented findings to education stakeholders",
+    ],
+    imageUrl: "/lib/file/NYC.jpeg",
+    gallery: [
+      "/lib/file/NYC.jpeg",
     ],
   },
 ];
@@ -385,70 +360,45 @@ export default function RedesignedProjects() {
   // If not client-side yet, show a loading state
   if (!isClient || isLoading) {
     return (
-      <SectionContainer id="projects" className="relative" data-oid="kmgzpck">
+      <SectionContainer id="projects" className="relative">
         <SectionHeader
           title="Project Portfolio"
           subtitle="Explore my portfolio of AI, machine learning, and software development projects."
-          data-oid="8-:g762"
         />
 
-        <div
-          className="flex justify-center items-center py-20"
-          data-oid=":n01ek_"
-        >
-          <Loader2
-            className="h-8 w-8 animate-spin text-primary mr-2"
-            data-oid="8bl0a7:"
-          />
+        <div className="flex justify-center items-center py-20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary mr-2" />
 
-          <span data-oid=":q8hnjp">Loading projects...</span>
+          <span>Loading projects...</span>
         </div>
       </SectionContainer>
     );
   }
 
   return (
-    <SectionContainer id="projects" className="relative" data-oid="em-2ueb">
+    <SectionContainer id="projects" className="relative">
       {/* Background decorative elements */}
-      <div
-        className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="hugu_k_"
-      />
+      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10" />
 
-      <div
-        className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10"
-        data-oid="wriutws"
-      />
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl -z-10" />
 
       <SectionHeader
         title="Project Portfolio"
         subtitle="Explore my portfolio of AI, machine learning, and software development projects. Each project demonstrates different skills and technologies."
-        data-oid="ucow560"
       />
 
       {featuredProjects.length > 0 && (
-        <div className="mb-16" data-oid="4zfbvjs">
-          <ScrollReveal data-oid="p1uita9">
-            <h3
-              className="text-xl font-semibold mb-6 flex items-center gap-2 justify-center"
-              data-oid="z9tgngg"
-            >
-              <Layers className="h-5 w-5 text-primary" data-oid="y.rbygr" />
-              <span data-oid="mk6la3k">Featured Projects</span>
+        <div className="mb-16">
+          <ScrollReveal>
+            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 justify-center">
+              <Layers className="h-5 w-5 text-primary" />
+              <span>Featured Projects</span>
             </h3>
           </ScrollReveal>
 
-          <ScrollReveal data-oid="28w7:ef">
-            <div
-              className="relative rounded-xl overflow-hidden"
-              data-oid="bgnmh44"
-            >
-              <AnimatePresence
-                mode="wait"
-                initial={false}
-                custom={direction}
-                data-oid="m-m3ks4"
-              >
+          <ScrollReveal>
+            <div className="relative rounded-xl overflow-hidden">
+              <AnimatePresence mode="wait" initial={false} custom={direction}>
                 <motion.div
                   key={featuredProjects[currentFeaturedIndex].id}
                   custom={direction}
@@ -473,20 +423,10 @@ export default function RedesignedProjects() {
                     },
                   }}
                   className="relative w-full aspect-[16/9]"
-                  data-oid="8397wy9"
                 >
-                  <div
-                    className="absolute inset-0 flex flex-col md:flex-row"
-                    data-oid="s335vqw"
-                  >
-                    <div
-                      className="relative w-full h-48 md:h-auto md:w-1/2"
-                      data-oid="sa9ch.e"
-                    >
-                      <div
-                        className="relative w-full h-full"
-                        data-oid="5.tey1g"
-                      >
+                  <div className="absolute inset-0 flex flex-col md:flex-row">
+                    <div className="relative w-full h-48 md:h-auto md:w-1/2">
+                      <div className="relative w-full h-full">
                         <Image
                           src={
                             featuredProjects[currentFeaturedIndex].imageUrl ||
@@ -496,7 +436,6 @@ export default function RedesignedProjects() {
                           fill
                           priority
                           className="object-cover rounded-md"
-                          data-oid="mrqopxv"
                         />
                       </div>
                     </div>
@@ -506,49 +445,34 @@ export default function RedesignedProjects() {
                         "w-full md:w-1/2 p-6 flex flex-col justify-center opacity-90 bg-gradient-to-r",
                         featuredProjects[currentFeaturedIndex].color,
                       )}
-                      data-oid="kbl1aii"
                     >
                       <Badge
                         variant="outline"
                         className="w-fit mb-4 bg-black/50 backdrop-blur-sm text-white border-white/20"
-                        data-oid="d33y:4x"
                       >
                         Featured Project
                       </Badge>
-                      <h3
-                        className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4"
-                        data-oid="jbrzr2:"
-                      >
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4">
                         {featuredProjects[currentFeaturedIndex].title}
                       </h3>
-                      <p
-                        className="text-white/90 mb-4 md:mb-6 text-sm md:text-base line-clamp-3 md:line-clamp-none"
-                        data-oid="lozpy:4"
-                      >
+                      <p className="text-white/90 mb-4 md:mb-6 text-sm md:text-base line-clamp-3 md:line-clamp-none">
                         {featuredProjects[currentFeaturedIndex].description}
                       </p>
 
-                      <div
-                        className="flex flex-wrap gap-2 mb-4 md:mb-6"
-                        data-oid="q12p_8z"
-                      >
+                      <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
                         {featuredProjects[currentFeaturedIndex].technologies
                           .slice(0, 3)
                           .map((tech, index) => (
                             <Badge
                               key={index}
                               className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                              data-oid="rf7hec4"
                             >
                               {tech}
                             </Badge>
                           ))}
                         {featuredProjects[currentFeaturedIndex].technologies
                           .length > 3 && (
-                          <Badge
-                            className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm"
-                            data-oid="v7uhc8e"
-                          >
+                          <Badge className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-sm">
                             +
                             {featuredProjects[currentFeaturedIndex].technologies
                               .length - 3}{" "}
@@ -557,7 +481,7 @@ export default function RedesignedProjects() {
                         )}
                       </div>
 
-                      <div className="flex flex-wrap gap-3" data-oid="h2248.3">
+                      <div className="flex flex-wrap gap-3">
                         <Button
                           className="bg-white text-black hover:bg-white/90 group text-sm"
                           onClick={() =>
@@ -565,20 +489,15 @@ export default function RedesignedProjects() {
                               featuredProjects[currentFeaturedIndex].demoUrl,
                             )
                           }
-                          data-oid="exqodzu"
                         >
                           Live Demo
-                          <ExternalLink
-                            className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                            data-oid="f:8q3s2"
-                          />
+                          <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
 
                         <Button
                           variant="outline"
                           className="border-white text-white hover:bg-white/20 gap-2 text-sm"
                           asChild
-                          data-oid="jj96lq."
                         >
                           <a
                             href={
@@ -586,9 +505,8 @@ export default function RedesignedProjects() {
                             }
                             target="_blank"
                             rel="noopener noreferrer"
-                            data-oid="8bmz.2j"
                           >
-                            <Github className="h-4 w-4" data-oid="2v.u60c" />
+                            <Github className="h-4 w-4" />
                             View Code
                           </a>
                         </Button>
@@ -602,9 +520,8 @@ export default function RedesignedProjects() {
                             );
                             setIsDialogOpen(true);
                           }}
-                          data-oid="oy1ug3-"
                         >
-                          <Code className="h-4 w-4" data-oid="evjneu." />
+                          <Code className="h-4 w-4" />
                           Details
                         </Button>
                       </div>
@@ -619,9 +536,8 @@ export default function RedesignedProjects() {
                 variant="ghost"
                 className="absolute left-2 top-1/2 -translate-y-1/2 z-30 h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
                 onClick={handlePrev}
-                data-oid="2ezl-uv"
               >
-                <ChevronLeft className="h-5 w-5" data-oid="5lnmc9o" />
+                <ChevronLeft className="h-5 w-5" />
               </Button>
 
               <Button
@@ -629,16 +545,12 @@ export default function RedesignedProjects() {
                 variant="ghost"
                 className="absolute right-2 top-1/2 -translate-y-1/2 z-30 h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-black/50 text-white hover:bg-black/70"
                 onClick={handleNext}
-                data-oid="b64wrzh"
               >
-                <ChevronRight className="h-5 w-5" data-oid="u5xs5mi" />
+                <ChevronRight className="h-5 w-5" />
               </Button>
 
               {/* Progress dots */}
-              <div
-                className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1"
-                data-oid="qia760s"
-              >
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1">
                 {featuredProjects.map((_, index) => (
                   <button
                     key={index}
@@ -653,7 +565,6 @@ export default function RedesignedProjects() {
                       setCurrentFeaturedIndex(index);
                     }}
                     aria-label={`Go to project ${index + 1}`}
-                    data-oid="n.txedq"
                   />
                 ))}
               </div>
@@ -662,18 +573,14 @@ export default function RedesignedProjects() {
         </div>
       )}
 
-      <ScrollReveal data-oid="m9dn63k">
+      <ScrollReveal>
         <Tabs
           defaultValue="all"
           onValueChange={setSelectedCategory}
           className="w-full"
-          data-oid="sppiok4"
         >
-          <div className="overflow-x-auto pb-2 no-scrollbar" data-oid="txvl5k:">
-            <TabsList
-              className="flex justify-start gap-2 mb-8 bg-transparent w-max mx-auto"
-              data-oid="m3s2xa-"
-            >
+          <div className="overflow-x-auto pb-2 no-scrollbar">
+            <TabsList className="flex justify-start gap-2 mb-8 bg-transparent w-max mx-auto">
               {projectCategories.map((category) => (
                 <TabsTrigger
                   key={category.id}
@@ -684,33 +591,25 @@ export default function RedesignedProjects() {
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted hover:bg-muted/80",
                   )}
-                  data-oid="bk7ifr3"
                 >
-                  <div
-                    className="flex items-center gap-1 sm:gap-2"
-                    data-oid=".7utc.s"
-                  >
+                  <div className="flex items-center gap-1 sm:gap-2">
                     {category.icon && category.icon}
-                    <span data-oid="xp:tyur">{category.name}</span>
+                    <span>{category.name}</span>
                   </div>
                 </TabsTrigger>
               ))}
             </TabsList>
           </div>
 
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            data-oid="z7x2t92"
-          >
-            <AnimatePresence data-oid="jns0azs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatePresence>
               {filteredProjects.map((project, index) => (
-                <ErrorBoundary key={project.id} data-oid="pze9t:y">
+                <ErrorBoundary key={project.id}>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    data-oid="-lp.n1b"
                   >
                     <ProjectCard
                       project={project}
@@ -718,7 +617,6 @@ export default function RedesignedProjects() {
                         setSelectedProject(project);
                         setIsDialogOpen(true);
                       }}
-                      data-oid="ixm0.i4"
                     />
                   </motion.div>
                 </ErrorBoundary>
@@ -729,27 +627,14 @@ export default function RedesignedProjects() {
       </ScrollReveal>
 
       {/* Project details dialog */}
-      <Dialog
-        open={isDialogOpen}
-        onOpenChange={setIsDialogOpen}
-        data-oid="h_bm6.5"
-      >
-        <DialogContent
-          className="max-w-4xl max-h-[90vh] overflow-hidden p-0 w-[95vw]"
-          data-oid="0ll00_0"
-        >
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden p-0 w-[95vw]">
           {selectedProject && (
-            <div className="flex flex-col h-full" data-oid="id1.ami">
-              <DialogHeader
-                className="px-4 sm:px-6 pt-4 sm:pt-6 pb-2"
-                data-oid=".-q9fh-"
-              >
-                <div
-                  className="flex justify-between items-start"
-                  data-oid="d098u_t"
-                >
-                  <div data-oid="p0yz0-_">
-                    <Badge className="mb-2" data-oid="vrj1ukn">
+            <div className="flex flex-col h-full">
+              <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6 pb-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <Badge className="mb-2">
                       {selectedProject.category === "ai"
                         ? "AI & Machine Learning"
                         : selectedProject.category === "web"
@@ -760,41 +645,27 @@ export default function RedesignedProjects() {
                               ? "Audio & Voice Tech"
                               : "Research"}
                     </Badge>
-                    <DialogTitle
-                      className="text-xl sm:text-2xl"
-                      data-oid="wocx0qv"
-                    >
+                    <DialogTitle className="text-xl sm:text-2xl">
                       {selectedProject.title}
                     </DialogTitle>
-                    <DialogDescription
-                      className="mt-2 text-sm"
-                      data-oid="x__xwrl"
-                    >
+                    <DialogDescription className="mt-2 text-sm">
                       {selectedProject.description}
                     </DialogDescription>
                   </div>
-                  <div className="flex" data-oid="ool7cck">
+                  <div className="flex">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
                         className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                        data-oid="96ybz1v"
                       />
                     ))}
                   </div>
                 </div>
               </DialogHeader>
 
-              <Tabs
-                defaultValue="overview"
-                className="flex-1 overflow-hidden"
-                data-oid="j0gdhqe"
-              >
-                <div className="px-4 sm:px-6 border-b" data-oid="dcyhwk1">
-                  <TabsList
-                    className="justify-start rounded-none bg-transparent h-10"
-                    data-oid="o3hql82"
-                  >
+              <Tabs defaultValue="overview" className="flex-1 overflow-hidden">
+                <div className="px-4 sm:px-6 border-b">
+                  <TabsList className="justify-start rounded-none bg-transparent h-10">
                     <AnimatedBox
                       glowColor={selectedProject.color
                         .split(" ")[1]
@@ -802,12 +673,10 @@ export default function RedesignedProjects() {
                       glowIntensity={0.5}
                       rotateAmount={1}
                       className="overflow-hidden rounded-md"
-                      data-oid=".pwgr3k"
                     >
                       <TabsTrigger
                         value="overview"
                         className="relative text-sm px-4 py-2 data-[state=active]:bg-primary/10"
-                        data-oid="4_t5pcz"
                       >
                         Overview
                       </TabsTrigger>
@@ -820,12 +689,10 @@ export default function RedesignedProjects() {
                       glowIntensity={0.5}
                       rotateAmount={1}
                       className="overflow-hidden rounded-md"
-                      data-oid="duaporf"
                     >
                       <TabsTrigger
                         value="details"
                         className="relative text-sm px-4 py-2 data-[state=active]:bg-primary/10"
-                        data-oid=":hbpt1v"
                       >
                         Details
                       </TabsTrigger>
@@ -838,12 +705,10 @@ export default function RedesignedProjects() {
                       glowIntensity={0.5}
                       rotateAmount={1}
                       className="overflow-hidden rounded-md"
-                      data-oid="5xg6nwj"
                     >
                       <TabsTrigger
                         value="gallery"
                         className="relative text-sm px-4 py-2 data-[state=active]:bg-primary/10"
-                        data-oid="42jgu0o"
                       >
                         Gallery
                       </TabsTrigger>
@@ -851,62 +716,30 @@ export default function RedesignedProjects() {
                   </TabsList>
                 </div>
 
-                <div
-                  className="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)]"
-                  data-oid="9x-zt9v"
-                >
-                  <TabsContent
-                    value="overview"
-                    className="mt-0 h-full"
-                    data-oid="y.j4m1d"
-                  >
-                    <div
-                      className="grid grid-cols-1 lg:grid-cols-3 gap-6"
-                      data-oid="hk1p0:-"
-                    >
-                      <div className="lg:col-span-2" data-oid="whe-rl8">
-                        <h4
-                          className="text-lg font-semibold mb-3"
-                          data-oid="2pdlcb1"
-                        >
+                <div className="p-4 sm:p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+                  <TabsContent value="overview" className="mt-0 h-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                      <div className="lg:col-span-2">
+                        <h4 className="text-lg font-semibold mb-3">
                           Project Details
                         </h4>
-                        <p
-                          className="mb-6 text-sm sm:text-base"
-                          data-oid="b70pl91"
-                        >
+                        <p className="mb-6 text-sm sm:text-base">
                           {selectedProject.longDescription}
                         </p>
 
-                        <h4
-                          className="text-lg font-semibold mb-3"
-                          data-oid="-e5l:u1"
-                        >
+                        <h4 className="text-lg font-semibold mb-3">
                           Key Achievements
                         </h4>
-                        <ul className="space-y-2 mb-6" data-oid="q5k3jty">
+                        <ul className="space-y-2 mb-6">
                           {selectedProject.achievements.map(
                             (achievement, i) => (
-                              <li
-                                key={i}
-                                className="flex items-start gap-2"
-                                data-oid=":fejb0g"
-                              >
-                                <div
-                                  className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0"
-                                  data-oid="oehrs8b"
-                                >
-                                  <span
-                                    className="text-xs text-primary"
-                                    data-oid="5yjbpi6"
-                                  >
+                              <li key={i} className="flex items-start gap-2">
+                                <div className="h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                                  <span className="text-xs text-primary">
                                     ✓
                                   </span>
                                 </div>
-                                <span
-                                  className="text-sm sm:text-base"
-                                  data-oid="4r1k-p7"
-                                >
+                                <span className="text-sm sm:text-base">
                                   {achievement}
                                 </span>
                               </li>
@@ -914,31 +747,18 @@ export default function RedesignedProjects() {
                           )}
                         </ul>
 
-                        <h4
-                          className="text-lg font-semibold mb-3"
-                          data-oid="5xwgbt3"
-                        >
+                        <h4 className="text-lg font-semibold mb-3">
                           Technologies
                         </h4>
-                        <div
-                          className="flex flex-wrap gap-2 mb-6"
-                          data-oid="g0-nb1y"
-                        >
+                        <div className="flex flex-wrap gap-2 mb-6">
                           {selectedProject.technologies.map((tech, index) => (
-                            <Badge
-                              key={index}
-                              variant="secondary"
-                              data-oid="ejg1icc"
-                            >
+                            <Badge key={index} variant="secondary">
                               {tech}
                             </Badge>
                           ))}
                         </div>
 
-                        <div
-                          className="flex flex-wrap gap-3 mt-6"
-                          data-oid="4z28au1"
-                        >
+                        <div className="flex flex-wrap gap-3 mt-6">
                           <AnimatedBox
                             glowColor={selectedProject.color
                               .split(" ")[1]
@@ -946,7 +766,6 @@ export default function RedesignedProjects() {
                             glowIntensity={0.8}
                             rotateAmount={2}
                             className="overflow-hidden rounded-md"
-                            data-oid="eoo4aeq"
                           >
                             <Button
                               variant="default"
@@ -954,16 +773,9 @@ export default function RedesignedProjects() {
                               onClick={() =>
                                 handleDemoClick(selectedProject.demoUrl)
                               }
-                              data-oid="q9c6fvd"
                             >
-                              <span
-                                className="relative z-10 flex items-center gap-2"
-                                data-oid="iy71vio"
-                              >
-                                <ExternalLink
-                                  className="h-4 w-4"
-                                  data-oid=":dr8dtj"
-                                />
+                              <span className="relative z-10 flex items-center gap-2">
+                                <ExternalLink className="h-4 w-4" />
                                 Live Demo
                               </span>
                             </Button>
@@ -976,25 +788,19 @@ export default function RedesignedProjects() {
                             glowIntensity={0.8}
                             rotateAmount={2}
                             className="overflow-hidden rounded-md"
-                            data-oid="mbusu3d"
                           >
                             <Button
                               variant="outline"
                               className="relative overflow-hidden hover:bg-primary/10"
                               asChild
-                              data-oid="7iqsund"
                             >
                               <a
                                 href={selectedProject.githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2"
-                                data-oid="n92el-h"
                               >
-                                <Github
-                                  className="h-4 w-4"
-                                  data-oid="y_mv.dr"
-                                />
+                                <Github className="h-4 w-4" />
                                 GitHub
                               </a>
                             </Button>
@@ -1002,49 +808,32 @@ export default function RedesignedProjects() {
                         </div>
                       </div>
 
-                      <div data-oid="dn-xhvd">
-                        <h4
-                          className="text-lg font-semibold mb-3"
-                          data-oid="7hbbl:t"
-                        >
+                      <div>
+                        <h4 className="text-lg font-semibold mb-3">
                           Project Info
                         </h4>
-                        <div className="space-y-4" data-oid="ky0aw3w">
-                          <div className="flex flex-col" data-oid="1x.s9r3">
-                            <span
-                              className="text-sm text-muted-foreground"
-                              data-oid="sr1zx20"
-                            >
+                        <div className="space-y-4">
+                          <div className="flex flex-col">
+                            <span className="text-sm text-muted-foreground">
                               Completed
                             </span>
-                            <span data-oid="m9uti7.">
-                              {selectedProject.completed}
-                            </span>
+                            <span>{selectedProject.completed}</span>
                           </div>
-                          <div className="flex flex-col" data-oid="k32bpa-">
-                            <span
-                              className="text-sm text-muted-foreground"
-                              data-oid="h.51c7d"
-                            >
+                          <div className="flex flex-col">
+                            <span className="text-sm text-muted-foreground">
                               Team Size
                             </span>
-                            <span data-oid="a:d7c6p">
-                              {selectedProject.teamSize} people
-                            </span>
+                            <span>{selectedProject.teamSize} people</span>
                           </div>
-                          <div className="flex flex-col" data-oid="l5hwx:i">
-                            <span
-                              className="text-sm text-muted-foreground"
-                              data-oid="ebhpgb1"
-                            >
+                          <div className="flex flex-col">
+                            <span className="text-sm text-muted-foreground">
                               Difficulty
                             </span>
-                            <div className="flex" data-oid="zdv3bv2">
+                            <div className="flex">
                               {Array.from({ length: 5 }).map((_, i) => (
                                 <Star
                                   key={i}
                                   className={`h-4 w-4 ${i < selectedProject.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                                  data-oid="_1fx.dt"
                                 />
                               ))}
                             </div>
@@ -1054,50 +843,33 @@ export default function RedesignedProjects() {
                     </div>
                   </TabsContent>
 
-                  <TabsContent
-                    value="details"
-                    className="mt-0"
-                    data-oid="3ca9vf0"
-                  >
-                    <div
-                      className="relative aspect-video mb-6 rounded-lg overflow-hidden"
-                      data-oid="e8:9:hm"
-                    >
-                      <div
-                        className="relative w-full h-full"
-                        data-oid="wt:cc1o"
-                      >
+                  <TabsContent value="details" className="mt-0">
+                    <div className="relative aspect-video mb-6 rounded-lg overflow-hidden">
+                      <div className="relative w-full h-full">
                         <Image
                           src={selectedProject.imageUrl || "/placeholder.svg"}
                           alt={selectedProject.title}
                           fill
                           className="object-cover rounded-md"
-                          data-oid="47:dr76"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-6" data-oid="i5xfnm4">
-                      <div data-oid="ylzzksp">
-                        <h4
-                          className="text-lg font-semibold mb-2"
-                          data-oid="dcjgy2n"
-                        >
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2">
                           Project Description
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="d4zoyyt">
+                        <p className="text-sm sm:text-base">
                           {selectedProject.longDescription}
                         </p>
                       </div>
 
-                      <div data-oid="upmu2kf">
-                        <h4
-                          className="text-lg font-semibold mb-2"
-                          data-oid="63ghlvj"
-                        >
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2">
                           Implementation Details
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid="86fgk97">
+                        <p className="text-sm sm:text-base">
                           This project was implemented using{" "}
                           {selectedProject.technologies.join(", ")}. The
                           development process involved careful planning,
@@ -1106,14 +878,11 @@ export default function RedesignedProjects() {
                         </p>
                       </div>
 
-                      <div data-oid="6eb:y.d">
-                        <h4
-                          className="text-lg font-semibold mb-2"
-                          data-oid="vqc29uv"
-                        >
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2">
                           Challenges & Solutions
                         </h4>
-                        <p className="text-sm sm:text-base" data-oid=":.otx69">
+                        <p className="text-sm sm:text-base">
                           During development, we encountered several challenges
                           including performance optimization, scalability
                           concerns, and integration complexities. These were
@@ -1124,31 +893,16 @@ export default function RedesignedProjects() {
                     </div>
                   </TabsContent>
 
-                  <TabsContent
-                    value="gallery"
-                    className="mt-0"
-                    data-oid="inmc-vr"
-                  >
-                    <div
-                      className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-                      data-oid="79x-afe"
-                    >
-                      {[1, 2, 3, 4].map((index) => (
-                        <div
-                          key={index}
-                          className="overflow-hidden rounded-lg"
-                          data-oid="u2ubqmp"
-                        >
-                          <div
-                            className="relative aspect-video"
-                            data-oid="dj:vdvf"
-                          >
+                  <TabsContent value="gallery" className="mt-0">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {(selectedProject.gallery || []).map((imageUrl, index) => (
+                        <div key={index} className="overflow-hidden rounded-lg">
+                          <div className="relative aspect-video">
                             <Image
-                              src={`/placeholder.svg?height=400&width=600&text=Screenshot ${index}`}
-                              alt={`${selectedProject.title} screenshot ${index}`}
+                              src={imageUrl}
+                              alt={`${selectedProject.title} screenshot ${index + 1}`}
                               fill
                               className="object-cover transition-transform duration-500 hover:scale-110"
-                              data-oid="28.9lrx"
                             />
                           </div>
                         </div>
@@ -1192,25 +946,19 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
       rotateAmount={isButtonHovered ? 2 : 0}
       hoverScale={1}
       className="w-full"
-      data-oid="ryqdv0x"
     >
       <Card
         className="overflow-hidden h-full flex flex-col border-none shadow-md hover:shadow-lg transition-all duration-300 group bg-background/80 backdrop-blur-sm"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        data-oid="sogpwn6"
       >
-        <div
-          className="relative aspect-video overflow-hidden"
-          data-oid="3p5l6ug"
-        >
-          <div className="relative w-full h-full" data-oid="4o1shf_">
+        <div className="relative aspect-video overflow-hidden">
+          <div className="relative w-full h-full">
             <Image
               src={project.imageUrl || "/placeholder.svg"}
               alt={project.title}
               fill
               className="object-cover"
-              data-oid="vsvq90j"
             />
           </div>
 
@@ -1219,13 +967,9 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
               "absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-300 bg-gradient-to-r",
               project.color,
             )}
-            data-oid="2xngt06"
           />
 
-          <div
-            className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            data-oid="37argj4"
-          >
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <Button
               ref={buttonRef}
               variant="outline"
@@ -1234,30 +978,23 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
               onMouseEnter={() => setIsButtonHovered(true)}
               onMouseLeave={() => setIsButtonHovered(false)}
               onMouseMove={handleMouseMove}
-              data-oid="hou83e_"
             >
-              <span className="relative z-10" data-oid="1xmaoh5">
-                View Details
-              </span>
+              <span className="relative z-10">View Details</span>
               {isButtonHovered && (
                 <div
                   className="absolute inset-0 opacity-70 transition-opacity duration-300"
                   style={{
-                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(59, 130, 246, 0.8), transparent 70%)`,
+                    background: `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, ${project.color.split(" ")[1].replace("to-", "")}, transparent 70%)`,
                   }}
-                  data-oid="5dtuf30"
                 />
               )}
             </Button>
           </div>
         </div>
 
-        <CardContent className="p-4 flex-1 flex flex-col" data-oid="-1h.5ia">
-          <div
-            className="flex justify-between items-start mb-2"
-            data-oid="w-7.yfa"
-          >
-            <Badge variant="outline" className="text-xs" data-oid="lwx_x8c">
+        <CardContent className="p-4 flex-1 flex flex-col">
+          <div className="flex justify-between items-start mb-2">
+            <Badge variant="outline" className="text-xs">
               {project.category === "ai"
                 ? "AI & ML"
                 : project.category === "web"
@@ -1268,56 +1005,42 @@ function ProjectCard({ project, onSelect }: ProjectCardProps) {
                       ? "Audio"
                       : "Research"}
             </Badge>
-            <div className="flex" data-oid="k943cj9">
+            <div className="flex">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
                   key={i}
                   className={`h-3 w-3 ${i < project.difficulty ? "fill-yellow-500 text-yellow-500" : "text-muted"}`}
-                  data-oid="2fo65ib"
                 />
               ))}
             </div>
           </div>
 
-          <h3 className="font-bold mb-2 line-clamp-1" data-oid="xaype:e">
-            {project.title}
-          </h3>
-          <p
-            className="text-muted-foreground text-sm line-clamp-3 mb-4"
-            data-oid=".4i6o6d"
-          >
+          <h3 className="font-bold mb-2 line-clamp-1">{project.title}</h3>
+          <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
             {project.description}
           </p>
 
-          <div className="flex flex-wrap gap-1 mb-4 mt-auto" data-oid="e9mca.i">
+          <div className="flex flex-wrap gap-1 mb-4 mt-auto">
             {project.technologies.slice(0, 3).map((tech, i) => (
-              <Badge
-                key={i}
-                variant="secondary"
-                className="text-xs"
-                data-oid="v0tf0nl"
-              >
+              <Badge key={i} variant="secondary" className="text-xs">
                 {tech}
               </Badge>
             ))}
             {project.technologies.length > 3 && (
-              <Badge variant="secondary" className="text-xs" data-oid="zlxz-g.">
+              <Badge variant="secondary" className="text-xs">
                 +{project.technologies.length - 3} more
               </Badge>
             )}
           </div>
 
-          <div
-            className="flex justify-between items-center text-xs text-muted-foreground"
-            data-oid="nes:_im"
-          >
-            <div className="flex items-center gap-1" data-oid="y0gj7h1">
-              <Calendar className="h-3 w-3" data-oid="tc_83-a" />
-              <span data-oid="1.3hsfd">{project.completed}</span>
+          <div className="flex justify-between items-center text-xs text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Calendar className="h-3 w-3" />
+              <span>{project.completed}</span>
             </div>
-            <div className="flex items-center gap-1" data-oid="39nlkga">
-              <Users className="h-3 w-3" data-oid="6wwh37e" />
-              <span data-oid="2pqdqwc">Team: {project.teamSize}</span>
+            <div className="flex items-center gap-1">
+              <Users className="h-3 w-3" />
+              <span>Team: {project.teamSize}</span>
             </div>
           </div>
         </CardContent>

@@ -24,7 +24,7 @@ export function SectionWrapper({
 }: SectionWrapperProps) {
   const { loadedSections, setLoaded } = useProgressiveLoading();
   const [ref, setRef] = useState<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const isInView = useInView({ current: ref }, { once: true, amount: 0.1 });
   const [shouldRender, setShouldRender] = useState(false);
 
   // Determine if this section should be loaded
@@ -59,7 +59,7 @@ export function SectionWrapper({
   }, [shouldRender, sectionName, setLoaded, loadedSections]);
 
   return (
-    <div ref={setRef} className={cn(className)} data-oid="3dz_kc3">
+    <div ref={setRef} className={cn(className)}>
       {shouldRender ? children : skeletonComponent}
     </div>
   );

@@ -63,34 +63,23 @@ export default function ResponsiveHeader() {
   // If not mounted yet, render a simpler version to avoid hydration issues
   if (!isMounted) {
     return (
-      <header
-        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
-        data-oid="da-n02p"
-      >
-        <div
-          className="container flex h-16 items-center justify-between"
-          data-oid=".ws9sa3"
-        >
-          <div className="flex items-center gap-2" data-oid="6-8fk.d">
-            <div className="font-bold text-xl" data-oid="gxuq8b8">
-              SW
-            </div>
-            <div className="hidden md:block" data-oid="c3qdbi.">
-              <div className="font-bold" data-oid="vglv4uk">
-                MUBARAK A
-              </div>
-              <div className="text-xs text-muted-foreground" data-oid="zilb:qg">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="container flex h-16 items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="font-bold text-xl">SW</div>
+            <div className="hidden md:block">
+              <div className="font-bold">MUBARAK A</div>
+              <div className="text-xs text-muted-foreground">
                 AI Engineer & Community Builder
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4" data-oid="ywmyuo-">
-            <div className="h-9 w-9" data-oid="_t6aeh7"></div>{" "}
-            {/* Placeholder for theme toggle */}
-            <div className="md:hidden" data-oid="malz_oz">
-              <Button variant="ghost" size="icon" data-oid="dq5ib6x">
-                <Menu className="h-5 w-5" data-oid="i7hajct" />
+          <div className="flex items-center gap-4">
+            <div className="h-9 w-9"></div> {/* Placeholder for theme toggle */}
+            <div className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -108,48 +97,34 @@ export default function ResponsiveHeader() {
           : "bg-transparent",
       )}
       style={{ "--primary-rgb": "14, 165, 233" } as React.CSSProperties}
-      data-oid="spvqu_g"
     >
-      <div
-        className="container flex h-16 items-center justify-between px-4"
-        data-oid="yfwzihi"
-      >
+      <div className="container flex h-16 items-center justify-between px-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2"
-          data-oid="vo5jsc4"
         >
-          <div className="flex items-center gap-2" data-oid="xeb_a_0">
-            <div
-              className="font-bold text-xl bg-gradient-to-r from-happy-hearts to-golden-nugget text-transparent bg-clip-text"
-              data-oid="x8_itkr"
-            >
+          <div className="flex items-center gap-2">
+            <div className="font-bold text-xl bg-gradient-to-r from-happy-hearts to-golden-nugget text-transparent bg-clip-text">
               MA
             </div>
-            <div className="hidden md:block" data-oid="3gdk223">
-              <div className="font-bold" data-oid="a_ftast">
-                MUBARAK A
-              </div>
-              <div className="text-xs text-muted-foreground" data-oid="04h7.-q">
+            <div className="hidden md:block">
+              <div className="font-bold">MUBARAK A</div>
+              <div className="text-xs text-muted-foreground">
                 AI Engineer & Community Builder
               </div>
             </div>
           </div>
         </motion.div>
 
-        <nav
-          className="hidden md:flex items-center gap-4 lg:gap-6 text-sm"
-          data-oid="e-6:3si"
-        >
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm">
           {navItems.map((item, index) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              data-oid="v3n:y2z"
             >
               <Link
                 href={item.href}
@@ -160,7 +135,6 @@ export default function ResponsiveHeader() {
                     ? "text-primary font-medium after:w-full shadow-[0_0_10px_rgba(var(--primary-rgb),0.3)]"
                     : "after:w-0 hover:after:w-full",
                 )}
-                data-oid="t5.be:y"
               >
                 {item.name}
               </Link>
@@ -168,35 +142,33 @@ export default function ResponsiveHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-4" data-oid="3bgu4xm">
+        <div className="flex items-center gap-2 sm:gap-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.7 }}
-            data-oid="m57sa6c"
           >
-            <ThemeSwitcher data-oid="diz8n7s" />
+            <ThemeSwitcher />
           </motion.div>
 
-          <div className="md:hidden" data-oid="1_fg7cp">
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              data-oid="4hoee7."
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" data-oid="jpuc9kv" />
+                <X className="h-5 w-5" />
               ) : (
-                <Menu className="h-5 w-5" data-oid="vmbzky6" />
+                <Menu className="h-5 w-5" />
               )}
             </Button>
           </div>
         </div>
       </div>
 
-      <AnimatePresence data-oid="vdf:o2x">
+      <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -204,16 +176,14 @@ export default function ResponsiveHeader() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden border-t overflow-hidden bg-background/95 backdrop-blur-md"
-            data-oid=".6s_bm6"
           >
-            <div className="flex flex-col space-y-3 p-4" data-oid="4vjg0k6">
+            <div className="flex flex-col space-y-3 p-4">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  data-oid="k9p0cq3"
                 >
                   <Link
                     href={item.href}
@@ -224,21 +194,14 @@ export default function ResponsiveHeader() {
                         : "hover:text-primary",
                     )}
                     onClick={() => setMobileMenuOpen(false)}
-                    data-oid="5-yb66t"
                   >
                     {item.name}
                   </Link>
                 </motion.div>
               ))}
-              <div className="pt-2 border-t border-border" data-oid="ljtdiaq">
-                <div
-                  className="flex items-center justify-between"
-                  data-oid="ib_pmjw"
-                >
-                  <span
-                    className="text-sm text-muted-foreground"
-                    data-oid="-.-w6jf"
-                  >
+              <div className="pt-2 border-t border-border">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground">
                     Theme settings
                   </span>
                 </div>

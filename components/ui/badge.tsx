@@ -29,11 +29,7 @@ export interface BadgeProps
 
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (
-    <div
-      className={cn(badgeVariants({ variant }), className)}
-      {...props}
-      data-oid="0d_96ny"
-    />
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />
   );
 }
 

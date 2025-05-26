@@ -5,164 +5,89 @@ import { Progress } from "@/components/ui/progress";
 
 export default function Education() {
   return (
-    <section id="education" className="py-12" data-oid="a0j-7-o">
-      <h2 className="text-3xl font-bold text-center mb-12" data-oid="3qfvefd">
-        Education
-      </h2>
+    <section id="education" className="py-12">
+      <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
 
-      <Card
-        className="bg-gradient-to-r from-indigo-950 to-purple-950 border-none"
-        data-oid="zh:d9:z"
-      >
-        <CardHeader className="pb-2" data-oid="eyr6o2o">
-          <div className="flex items-center gap-2" data-oid="l7xc86_">
-            <GraduationCap className="h-5 w-5" data-oid="vf30ye1" />
-            <CardTitle data-oid=":w4fj75">Bachelor of Engineering</CardTitle>
+      <Card className="bg-gradient-to-r from-indigo-950 to-purple-950 border-none">
+        <CardHeader className="pb-2">
+          <div className="flex items-center gap-2">
+            <GraduationCap className="h-5 w-5" />
+            <CardTitle>Bachelor of Engineering</CardTitle>
           </div>
-          <div
-            className="flex justify-between items-center mt-2"
-            data-oid="v:_uji9"
-          >
-            <div className="text-muted-foreground" data-oid="3gmif53">
+          <div className="flex justify-between items-center mt-2">
+            <div className="text-muted-foreground">
               City College of Thirvannamalai
             </div>
-            <div data-oid="6v6znip">2020 - 2023</div>
+            <div>2020 - 2023</div>
           </div>
-          <div className="text-muted-foreground" data-oid="_:etlw4">
-            Indian ,Tamil nadu
-          </div>
-          <div className="text-muted-foreground" data-oid="vespqh1"></div>
-          <div className="text-muted-foreground mt-1" data-oid="m_7.x9v">
+          <div className="text-muted-foreground">Indian ,Tamil nadu</div>
+          <div className="text-muted-foreground"></div>
+          <div className="text-muted-foreground mt-1">
             Relevant Coursework: Machine Learning, Data Structures,
             Computational Physics, Network Science, Data Visualization
           </div>
         </CardHeader>
-        <CardContent data-oid="rbct0h:">
-          <div className="grid md:grid-cols-2 gap-8 mt-4" data-oid="j_r0fpk">
-            <div data-oid="b031w3m">
-              <h3 className="text-lg font-semibold mb-4" data-oid="s37_mgm">
-                Key Coursework
-              </h3>
-              <div className="grid grid-cols-2 gap-4" data-oid="n_wl3h:">
-                <CourseItem
-                  name="Machine Learning"
-                  grade="A"
-                  data-oid="hu0qi6j"
-                />
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-8 mt-4">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Key Coursework</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <CourseItem name="Machine Learning" grade="A" />
 
-                <CourseItem
-                  name="Data Structures"
-                  grade="A"
-                  data-oid="d8ddzpj"
-                />
+                <CourseItem name="Data Structures" grade="A" />
 
-                <CourseItem
-                  name="Computational Physics"
-                  grade="A"
-                  data-oid="hpsogib"
-                />
+                <CourseItem name="Computational Physics" grade="A" />
 
-                <CourseItem
-                  name="Network Science"
-                  grade="A"
-                  data-oid="y0gzmwx"
-                />
+                <CourseItem name="Network Science" grade="A" />
 
-                <CourseItem
-                  name="Data Visualization"
-                  grade="A"
-                  data-oid="__39l6g"
-                />
+                <CourseItem name="Data Visualization" grade="A" />
 
-                <CourseItem
-                  name="Quantum Mechanics"
-                  grade="A"
-                  data-oid="qi8efm2"
-                />
+                <CourseItem name="Quantum Mechanics" grade="A" />
 
-                <CourseItem
-                  name="Statistical Mechanics"
-                  grade="A"
-                  data-oid="a64zecy"
-                />
+                <CourseItem name="Statistical Mechanics" grade="A" />
 
-                <CourseItem
-                  name="Mathematical Physics"
-                  grade="A"
-                  data-oid="1wfs3e8"
-                />
+                <CourseItem name="Mathematical Physics" grade="A" />
 
-                <CourseItem
-                  name="Differential Equations"
-                  grade="A"
-                  data-oid="n8kto__"
-                />
+                <CourseItem name="Differential Equations" grade="A" />
 
-                <CourseItem
-                  name="Linear Algebra"
-                  grade="A"
-                  data-oid="ck3kyis"
-                />
+                <CourseItem name="Linear Algebra" grade="A" />
               </div>
             </div>
 
-            <div data-oid="4fq:dsc">
-              <h3 className="text-lg font-semibold mb-4" data-oid="4ytcm13">
-                Key Achievements
-              </h3>
-              <div className="space-y-6" data-oid="vroj4yo">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Key Achievements</h3>
+              <div className="space-y-6">
                 <AchievementItem
-                  icon={<Trophy className="h-5 w-5" data-oid="jm21a4y" />}
+                  icon={<Trophy className="h-5 w-5" />}
                   title="Research Excellence"
                   description="Applied advanced data analysis techniques to physics research projects"
-                  data-oid="92lzq22"
                 />
 
                 <AchievementItem
-                  icon={<CheckCircle className="h-5 w-5" data-oid="blk15s-" />}
+                  icon={<CheckCircle className="h-5 w-5" />}
                   title="Technical Innovation"
                   description="Developed computational models for complex physical systems"
-                  data-oid="z_473lb"
                 />
 
                 <AchievementItem
-                  icon={<BookOpen className="h-5 w-5" data-oid="_om5d5z" />}
+                  icon={<BookOpen className="h-5 w-5" />}
                   title="Academic Leadership"
                   description="Led physics study groups and mentored junior students"
-                  data-oid="jx4qy0k"
                 />
               </div>
             </div>
           </div>
 
-          <div className="mt-8" data-oid="6mf0rbh">
-            <h3 className="text-lg font-semibold mb-4" data-oid="4uqfk_5">
-              Skills Developed
-            </h3>
-            <div className="space-y-4" data-oid="66v1ku4">
-              <SkillProgressItem
-                name="Scientific Computing"
-                value={90}
-                data-oid="rtl6r:b"
-              />
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold mb-4">Skills Developed</h3>
+            <div className="space-y-4">
+              <SkillProgressItem name="Scientific Computing" value={90} />
 
-              <SkillProgressItem
-                name="Data Analysis"
-                value={85}
-                data-oid="5jentmh"
-              />
+              <SkillProgressItem name="Data Analysis" value={85} />
 
-              <SkillProgressItem
-                name="Mathematical Modeling"
-                value={80}
-                data-oid=":72bazc"
-              />
+              <SkillProgressItem name="Mathematical Modeling" value={80} />
 
-              <SkillProgressItem
-                name="Research Methods"
-                value={95}
-                data-oid="mxt-mib"
-              />
+              <SkillProgressItem name="Research Methods" value={95} />
             </div>
           </div>
         </CardContent>
@@ -178,12 +103,9 @@ interface CourseItemProps {
 
 function CourseItem({ name, grade }: CourseItemProps) {
   return (
-    <div className="flex justify-between items-center" data-oid="a4-1e._">
-      <div data-oid="vf1k4fj">{name}</div>
-      <div
-        className="bg-white text-black w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
-        data-oid="v6iexb_"
-      >
+    <div className="flex justify-between items-center">
+      <div>{name}</div>
+      <div className="bg-white text-black w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
         {grade}
       </div>
     </div>
@@ -198,16 +120,12 @@ interface AchievementItemProps {
 
 function AchievementItem({ icon, title, description }: AchievementItemProps) {
   return (
-    <div className="bg-black/20 rounded-lg p-4" data-oid=".scf:f_">
-      <div className="flex items-center gap-2 mb-2" data-oid="sobgbr:">
+    <div className="bg-black/20 rounded-lg p-4">
+      <div className="flex items-center gap-2 mb-2">
         {icon}
-        <h4 className="font-medium" data-oid="b5y:rz6">
-          {title}
-        </h4>
+        <h4 className="font-medium">{title}</h4>
       </div>
-      <p className="text-sm text-muted-foreground" data-oid="n3s2y0o">
-        {description}
-      </p>
+      <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
 }
@@ -219,15 +137,12 @@ interface SkillProgressItemProps {
 
 function SkillProgressItem({ name, value }: SkillProgressItemProps) {
   return (
-    <div data-oid="9:d:gln">
-      <div
-        className="flex justify-between items-center mb-1"
-        data-oid="qu2x81x"
-      >
-        <div data-oid="nyqkres">{name}</div>
-        <div data-oid="steeqjm">{value}%</div>
+    <div>
+      <div className="flex justify-between items-center mb-1">
+        <div>{name}</div>
+        <div>{value}%</div>
       </div>
-      <Progress value={value} className="h-2" data-oid="zq-yngl" />
+      <Progress value={value} className="h-2" />
     </div>
   );
 }

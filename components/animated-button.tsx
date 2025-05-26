@@ -32,7 +32,7 @@ export default function AnimatedButton({
   };
 
   return (
-    <div className="relative group" data-oid="j-7bvg3">
+    <div className="relative group">
       <motion.div
         className={`relative px-8 py-4 rounded-xl font-sans text-xl font-bold cursor-pointer ${getVariantStyles()} ${className}`}
         animate={{
@@ -56,7 +56,6 @@ export default function AnimatedButton({
           perspective: "1000px",
         }}
         onClick={onClick}
-        data-oid=".fbvyvn"
       >
         {/* Background glow effect */}
         <motion.div
@@ -66,7 +65,6 @@ export default function AnimatedButton({
             scale: isHovered ? 1.2 : 1,
           }}
           transition={{ duration: 0.3 }}
-          data-oid="28hgaw3"
         />
 
         {/* Main button content */}
@@ -84,7 +82,6 @@ export default function AnimatedButton({
             stiffness: 400,
             damping: 25,
           }}
-          data-oid="qc3hdae"
         >
           {children}
         </motion.div>
@@ -97,7 +94,6 @@ export default function AnimatedButton({
             scale: isHovered ? 1.05 : 1,
           }}
           transition={{ duration: 0.2 }}
-          data-oid="3wpz5eg"
         />
 
         {/* Shine effect */}
@@ -111,7 +107,6 @@ export default function AnimatedButton({
             repeat: isHovered ? Infinity : 0,
             ease: "linear",
           }}
-          data-oid="hpdlj8p"
         />
       </motion.div>
     </div>

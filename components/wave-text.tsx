@@ -9,7 +9,7 @@ interface WaveTextProps {
 
 export function WaveText({ text, className = "" }: WaveTextProps) {
   return (
-    <div className={className} suppressHydrationWarning data-oid="m-iua7d">
+    <div className={className} suppressHydrationWarning>
       {text.split("").map((char, index) => (
         <motion.span
           key={index}
@@ -29,7 +29,6 @@ export function WaveText({ text, className = "" }: WaveTextProps) {
               "0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(168, 85, 247, 0.4)",
           }}
           suppressHydrationWarning
-          data-oid="ulz7jdz"
         >
           {char}
         </motion.span>

@@ -40,18 +40,10 @@ import {
 const SkillsGlobe = dynamic(() => import("@/components/3d-skills-globe"), {
   ssr: false,
   loading: () => (
-    <div
-      className="w-full h-[500px] flex items-center justify-center"
-      data-oid="o2888qm"
-    >
-      <Loader2
-        className="h-8 w-8 animate-spin text-primary"
-        data-oid=".x7-cji"
-      />
+    <div className="w-full h-[500px] flex items-center justify-center">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
 
-      <span className="ml-2" data-oid="t9gpdso">
-        Loading 3D Globe...
-      </span>
+      <span className="ml-2">Loading 3D Globe...</span>
     </div>
   ),
 });
@@ -61,49 +53,49 @@ const skillCategories = [
   {
     id: "ml-ai",
     name: "Machine Learning & AI",
-    icon: <Laptop className="h-5 w-5" data-oid="64o4t-n" />,
+    icon: <Laptop className="h-5 w-5" />,
     color: "from-blue-500 to-indigo-500",
   },
   {
     id: "programming",
     name: "Programming",
-    icon: <Code className="h-5 w-5" data-oid="xi.-a.:" />,
+    icon: <Code className="h-5 w-5" />,
     color: "from-emerald-500 to-green-500",
   },
   {
     id: "frameworks",
     name: "AI Frameworks",
-    icon: <Cpu className="h-5 w-5" data-oid="z1exiru" />,
+    icon: <Cpu className="h-5 w-5" />,
     color: "from-purple-500 to-violet-500",
   },
   {
     id: "data",
     name: "Data Science",
-    icon: <Database className="h-5 w-5" data-oid="nbygf3r" />,
+    icon: <Database className="h-5 w-5" />,
     color: "from-amber-500 to-yellow-500",
   },
   {
     id: "cloud",
     name: "Cloud & DevOps",
-    icon: <Cloud className="h-5 w-5" data-oid="j0luwml" />,
+    icon: <Cloud className="h-5 w-5" />,
     color: "from-sky-500 to-blue-500",
   },
   {
     id: "chatbots",
     name: "Chatbots & AI",
-    icon: <MessageSquare className="h-5 w-5" data-oid="isv7303" />,
+    icon: <MessageSquare className="h-5 w-5" />,
     color: "from-green-500 to-emerald-500",
   },
   {
     id: "tools",
     name: "Tools",
-    icon: <Tool className="h-5 w-5" data-oid="y1me-p3" />,
+    icon: <Tool className="h-5 w-5" />,
     color: "from-orange-500 to-amber-500",
   },
   {
     id: "transferable",
     name: "Transferable Skills",
-    icon: <Briefcase className="h-5 w-5" data-oid="7zwotz7" />,
+    icon: <Briefcase className="h-5 w-5" />,
     color: "from-indigo-500 to-blue-500",
   },
 ];
@@ -219,25 +211,19 @@ export default function RedesignedSkills() {
     <SectionContainer
       id="skills"
       className="bg-gradient-to-b from-background to-background/95"
-      data-oid="dn9qu6v"
     >
       <SectionHeader
         title="Technical Skills"
         subtitle="A comprehensive overview of my technical expertise across various domains, from machine learning and AI to software development and research."
-        data-oid="xr0rlbx"
       />
 
-      <ScrollReveal data-oid="1ycaw7n">
+      <ScrollReveal>
         <Tabs
           defaultValue="ml-ai"
           onValueChange={setActiveCategory}
           className="w-full"
-          data-oid="semoh-3"
         >
-          <TabsList
-            className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent"
-            data-oid="yoelw0d"
-          >
+          <TabsList className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent">
             {skillCategories.map((category) => (
               <TabsTrigger
                 key={category.id}
@@ -248,21 +234,17 @@ export default function RedesignedSkills() {
                     ? `bg-gradient-to-r ${category.color} text-white`
                     : "bg-muted hover:bg-muted/80",
                 )}
-                data-oid="_-alkke"
               >
-                <div className="flex items-center gap-2" data-oid="2i.44ox">
+                <div className="flex items-center gap-2">
                   {category.icon}
-                  <span data-oid="nlbj3mh">{category.name}</span>
+                  <span>{category.name}</span>
                 </div>
               </TabsTrigger>
             ))}
           </TabsList>
 
-          <div
-            className="flex justify-center mt-[65px] mb-[10px]"
-            data-oid="odyi0ty"
-          >
-            <div className="bg-muted rounded-full p-1 flex" data-oid="sn9.qxc">
+          <div className="flex justify-center mt-[65px] mb-[10px]">
+            <div className="bg-muted rounded-full p-1 flex">
               <button
                 onClick={() => setVisualizationType("chart")}
                 className={cn(
@@ -271,10 +253,9 @@ export default function RedesignedSkills() {
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted/80",
                 )}
-                data-oid="qn42d6."
               >
-                <BarChart3 className="h-4 w-4" data-oid="bqx:bi7" />
-                <span data-oid="jy01p1q">Chart View</span>
+                <BarChart3 className="h-4 w-4" />
+                <span>Chart View</span>
               </button>
               <button
                 onClick={() => setVisualizationType("globe")}
@@ -284,67 +265,46 @@ export default function RedesignedSkills() {
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted/80",
                 )}
-                data-oid="dlwy7i6"
               >
-                <Globe className="h-4 w-4" data-oid="mpn65-f" />
-                <span data-oid="7li6wg3">Globe View</span>
+                <Globe className="h-4 w-4" />
+                <span>Globe View</span>
               </button>
             </div>
           </div>
 
           {Object.entries(skillsData).map(([category, skills]) => (
-            <TabsContent key={category} value={category} data-oid="3icf3:-">
-              <div className="flex flex-col items-center" data-oid="d2c-4n6">
+            <TabsContent key={category} value={category}>
+              <div className="flex flex-col items-center">
                 {visualizationType === "chart" ? (
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl"
-                    data-oid="r.vydb6"
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
                     {/* Progress bars */}
-                    <div className="space-y-4" data-oid="x:q_x_w">
+                    <div className="space-y-4">
                       {skills.map((skill) => (
-                        <div
-                          key={skill.name}
-                          className="space-y-2"
-                          data-oid="a1-d9ow"
-                        >
-                          <div
-                            className="flex justify-between items-center"
-                            data-oid="izgo_qg"
-                          >
-                            <span
-                              className="text-sm font-medium"
-                              data-oid="36s_13_"
-                            >
+                        <div key={skill.name} className="space-y-2">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm font-medium">
                               {skill.name}
                             </span>
-                            <span
-                              className="text-sm text-muted-foreground"
-                              data-oid="vumcsnm"
-                            >
+                            <span className="text-sm text-muted-foreground">
                               {skill.level}%
                             </span>
                           </div>
-                          <Progress value={skill.level} data-oid="8w8zkx5" />
+                          <Progress value={skill.level} />
                         </div>
                       ))}
                     </div>
                     {/* Radar chart */}
-                    <div
-                      className="flex items-center justify-center"
-                      data-oid="wldrs.n"
-                    >
+                    <div className="flex items-center justify-center">
                       <SkillVisualization
                         category={
                           skillCategories.find((c) => c.id === category)!
                         }
                         skills={skills}
-                        data-oid="wg4ui27"
                       />
                     </div>
                   </div>
                 ) : (
-                  <SkillsGlobe skills={skills} data-oid=".4huk13" />
+                  <SkillsGlobe skills={skills} />
                 )}
               </div>
             </TabsContent>
@@ -352,12 +312,12 @@ export default function RedesignedSkills() {
         </Tabs>
       </ScrollReveal>
 
-      <div className="mt-12 text-center" data-oid="hktu-u-">
-        <ScrollReveal data-oid="8_nj_gr">
-          <p className="text-muted-foreground" data-oid="31o.x5l">
+      <div className="mt-12 text-center">
+        <ScrollReveal>
+          <p className="text-muted-foreground">
             These skills represent my technical expertise developed over years
             of professional experience and continuous learning.
-            <br data-oid="l6lt.hl" />
+            <br />
             I'm constantly expanding my knowledge and staying up-to-date with
             the latest advancements in AI and technology.
           </p>
@@ -445,9 +405,9 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
     .join(" ");
 
   return (
-    <div className="relative w-[450px] h-[450px]" data-oid="a8n-9b9">
-      <svg width="450" height="450" viewBox="0 0 450 450" data-oid="abt-c89">
-        <g transform="translate(75, 75)" data-oid="saqzlwb">
+    <div className="relative w-[450px] h-[450px]">
+      <svg width="450" height="450" viewBox="0 0 450 450">
+        <g transform="translate(75, 75)">
           {/* Background circles */}
           {[25, 50, 75, 100].map((level) => (
             <circle
@@ -459,7 +419,6 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
               stroke="currentColor"
               strokeOpacity="0.1"
               strokeWidth="1"
-              data-oid="2.6vrhf"
             />
           ))}
 
@@ -478,7 +437,6 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
                 stroke="currentColor"
                 strokeOpacity="0.1"
                 strokeWidth="1"
-                data-oid="c5cyyov"
               />
             );
           })}
@@ -493,29 +451,25 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            data-oid="h8u-cyh"
           />
 
           {/* Gradient definition */}
-          <defs data-oid="0qzdevf">
+          <defs>
             <linearGradient
               id={`gradient-${category.id}`}
               x1="0%"
               y1="0%"
               x2="100%"
               y2="100%"
-              data-oid="dx8368f"
             >
               <stop
                 offset="0%"
                 stopColor={getColorFromGradient(category.color, "from")}
-                data-oid="0gumgny"
               />
 
               <stop
                 offset="100%"
                 stopColor={getColorFromGradient(category.color, "to")}
-                data-oid="tgms0q3"
               />
             </linearGradient>
           </defs>
@@ -533,7 +487,6 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              data-oid="ox8byka"
             />
           ))}
 
@@ -573,7 +526,6 @@ function SkillVisualization({ category, skills }: SkillVisualizationProps) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: i * 0.05 + 0.3 }}
-                data-oid="5khs-ip"
               >
                 {point.name}
               </motion.text>

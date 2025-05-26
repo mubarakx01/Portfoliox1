@@ -29,7 +29,6 @@ export function SectionContainer({
       )}
       style={style}
       {...props}
-      data-oid="oibvlgz"
     >
       {children}
     </Component>
@@ -54,20 +53,16 @@ export function SectionHeader({
   decorative = true,
 }: SectionHeaderProps) {
   return (
-    <div className={cn("mb-12", `text-${align}`)} data-oid="bp493k.">
+    <div className={cn("mb-12", `text-${align}`)}>
       <h2
         className={cn(
           "text-3xl md:text-4xl font-bold relative inline-block",
           titleClassName,
         )}
-        data-oid="wbrth-0"
       >
         {title}
         {decorative && (
-          <span
-            className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary/80 to-primary/20 rounded-full"
-            data-oid="7kuzphi"
-          />
+          <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary/80 to-primary/20 rounded-full" />
         )}
       </h2>
       {subtitle && (
@@ -76,7 +71,6 @@ export function SectionHeader({
             "mt-4 text-muted-foreground max-w-2xl mx-auto",
             subtitleClassName,
           )}
-          data-oid="c3c-398"
         >
           {subtitle}
         </p>

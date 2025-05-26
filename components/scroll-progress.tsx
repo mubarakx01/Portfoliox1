@@ -30,7 +30,6 @@ export default function ScrollProgress() {
     <motion.div
       className="progress-bar fixed top-0 left-0 right-0 h-[3px] bg-primary z-50"
       style={{ scaleX }}
-      data-oid="h-hkfwm"
     />
   );
 }

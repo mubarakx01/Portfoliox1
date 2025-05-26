@@ -39,18 +39,10 @@ export function ThemeProvider({
 
   // Prevent hydration mismatch
   if (!mounted) {
-    return (
-      <div style={{ visibility: "hidden" }} data-oid="122:mld">
-        {children}
-      </div>
-    );
+    return <div style={{ visibility: "hidden" }}>{children}</div>;
   }
 
-  return (
-    <NextThemesProvider {...props} data-oid="lynqypq">
-      {children}
-    </NextThemesProvider>
-  );
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
 
 // Custom hook to manage both theme mode and color theme

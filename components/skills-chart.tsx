@@ -28,51 +28,51 @@ interface SkillGroup {
 
 const skillsData: SkillGroup[] = [
   {
-    name: "Web Design",
+    name: "Machine Learning",
     color: "#8b5cf6",
     skills: [
-      { area: "Responsive Design", value: 90, fullMark: 100 },
-      { area: "Figma", value: 90, fullMark: 100 },
-      { area: "Webflow", value: 85, fullMark: 100 },
-      { area: "HTML/CSS", value: 80, fullMark: 100 },
-      { area: "JavaScript", value: 75, fullMark: 100 },
-      { area: "SEO", value: 80, fullMark: 100 },
+      { area: "Deep Learning", value: 90, fullMark: 100 },
+      { area: "NLP", value: 85, fullMark: 100 },
+      { area: "Computer Vision", value: 75, fullMark: 100 },
+      { area: "Reinforcement Learning", value: 70, fullMark: 100 },
+      { area: "MLOps", value: 60, fullMark: 100 },
+      { area: "Generative AI", value: 80, fullMark: 100 },
     ],
   },
   {
     name: "Programming",
     color: "#3b82f6",
     skills: [
-      { area: "Python", value: 85, fullMark: 100 },
-      { area: "C++", value: 80, fullMark: 100 },
+      { area: "Python", value: 95, fullMark: 100 },
+      { area: "JavaScript/TypeScript", value: 90, fullMark: 100 },
+      { area: "C++", value: 75, fullMark: 100 },
       { area: "SQL", value: 80, fullMark: 100 },
-      { area: "HTML/CSS", value: 80, fullMark: 100 },
-      { area: "JavaScript", value: 75, fullMark: 100 },
-      { area: "Linux", value: 70, fullMark: 100 },
+      { area: "R", value: 60, fullMark: 100 },
+      { area: "MATLAB", value: 50, fullMark: 100 },
     ],
   },
   {
-    name: "Data Science & ML",
+    name: "Frameworks",
     color: "#10b981",
     skills: [
-      { area: "Machine Learning", value: 80, fullMark: 100 },
-      { area: "Data Analysis", value: 85, fullMark: 100 },
-      { area: "Python", value: 85, fullMark: 100 },
-      { area: "SQL", value: 80, fullMark: 100 },
-      { area: "IoT Analytics", value: 80, fullMark: 100 },
-      { area: "Generative AI", value: 75, fullMark: 100 },
+      { area: "PyTorch", value: 90, fullMark: 100 },
+      { area: "TensorFlow", value: 85, fullMark: 100 },
+      { area: "React", value: 80, fullMark: 100 },
+      { area: "Node.js", value: 75, fullMark: 100 },
+      { area: "Scikit-learn", value: 95, fullMark: 100 },
+      { area: "Hugging Face", value: 80, fullMark: 100 },
     ],
   },
   {
-    name: "Graphic Design & Tools",
+    name: "Infrastructure",
     color: "#f59e0b",
     skills: [
-      { area: "Photoshop", value: 85, fullMark: 100 },
-      { area: "Illustrator", value: 85, fullMark: 100 },
-      { area: "Figma", value: 90, fullMark: 100 },
-      { area: "Canva", value: 80, fullMark: 100 },
-      { area: "AWS", value: 75, fullMark: 100 },
-      { area: "Framer", value: 70, fullMark: 100 },
+      { area: "Docker", value: 85, fullMark: 100 },
+      { area: "Kubernetes", value: 75, fullMark: 100 },
+      { area: "AWS", value: 80, fullMark: 100 },
+      { area: "GCP", value: 70, fullMark: 100 },
+      { area: "CI/CD", value: 60, fullMark: 100 },
+      { area: "Microservices", value: 70, fullMark: 100 },
     ],
   },
 ];
@@ -108,16 +108,9 @@ export default function SkillsChart() {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div
-          className="bg-background/90 backdrop-blur-sm p-2 rounded-md border shadow-md"
-          data-oid="ra6i5sa"
-        >
-          <p className="font-medium" data-oid="1f1bzdr">
-            {payload[0].payload.area}
-          </p>
-          <p className="text-primary" data-oid="o_0xtjk">
-            {`Proficiency: ${payload[0].value}%`}
-          </p>
+        <div className="bg-background/90 backdrop-blur-sm p-2 rounded-md border shadow-md">
+          <p className="font-medium">{payload[0].payload.area}</p>
+          <p className="text-primary">{`Proficiency: ${payload[0].value}%`}</p>
         </div>
       );
     }
@@ -125,11 +118,8 @@ export default function SkillsChart() {
   };
 
   return (
-    <div ref={chartRef} className="w-full" data-oid="2mjya9h">
-      <div
-        className="flex flex-wrap gap-2 justify-center mb-6"
-        data-oid="s9h2fhf"
-      >
+    <div ref={chartRef} className="w-full">
+      <div className="flex flex-wrap gap-2 justify-center mb-6">
         {skillsData.map((group) => (
           <motion.button
             key={group.name}
@@ -142,14 +132,13 @@ export default function SkillsChart() {
             onClick={() => setSelectedSkillGroup(group)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            data-oid="b6:ajop"
           >
             {group.name}
           </motion.button>
         ))}
       </div>
 
-      <AnimatePresence mode="wait" data-oid="x-nxr3m">
+      <AnimatePresence mode="wait">
         <motion.div
           key={selectedSkillGroup.name}
           initial={{ opacity: 0, scale: 0.9 }}
@@ -157,29 +146,17 @@ export default function SkillsChart() {
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.3 }}
           className="w-full aspect-square max-w-xl mx-auto"
-          data-oid="drm_.hq"
         >
-          <Card
-            className="w-full h-full bg-card/50 border-none overflow-hidden backdrop-blur-sm"
-            data-oid="p:qnr6u"
-          >
-            <CardContent className="p-1 h-full" data-oid="p4.zjte">
-              <ResponsiveContainer
-                width="100%"
-                height="100%"
-                data-oid="36js8l7"
-              >
+          <Card className="w-full h-full bg-card/50 border-none overflow-hidden backdrop-blur-sm">
+            <CardContent className="p-1 h-full">
+              <ResponsiveContainer width="100%" height="100%">
                 <RadarChart
                   cx="50%"
                   cy="50%"
                   outerRadius="80%"
                   data={selectedSkillGroup.skills}
-                  data-oid="mxsq-8p"
                 >
-                  <PolarGrid
-                    stroke="rgba(255, 255, 255, 0.15)"
-                    data-oid="x39y3ul"
-                  />
+                  <PolarGrid stroke="rgba(255, 255, 255, 0.15)" />
 
                   <PolarAngleAxis
                     dataKey="area"
@@ -188,20 +165,15 @@ export default function SkillsChart() {
                       fontSize: 12,
                     }}
                     stroke="rgba(255, 255, 255, 0.15)"
-                    data-oid="1m78veg"
                   />
 
                   <PolarRadiusAxis
                     angle={30}
                     domain={[0, 100]}
                     stroke="rgba(255, 255, 255, 0.15)"
-                    data-oid="6ffd:3g"
                   />
 
-                  <Tooltip
-                    content={<CustomTooltip data-oid="szk5szh" />}
-                    data-oid="b7pksvl"
-                  />
+                  <Tooltip content={<CustomTooltip />} />
 
                   <Radar
                     name="Skill Level"
@@ -212,7 +184,6 @@ export default function SkillsChart() {
                     animationDuration={isInView ? 1500 : 0}
                     animationEasing="ease-out"
                     isAnimationActive={isInView}
-                    data-oid=":zthwh9"
                   />
                 </RadarChart>
               </ResponsiveContainer>
@@ -221,10 +192,7 @@ export default function SkillsChart() {
         </motion.div>
       </AnimatePresence>
 
-      <div
-        className="max-w-xl mx-auto mt-4 text-center text-sm text-muted-foreground"
-        data-oid="8p4dl2v"
-      >
+      <div className="max-w-xl mx-auto mt-4 text-center text-sm text-muted-foreground">
         Click on a category to view different skill groups. Hover over the chart
         for specific proficiency levels.
       </div>

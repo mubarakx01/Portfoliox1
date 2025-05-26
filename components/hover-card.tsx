@@ -91,19 +91,15 @@ export default function HoverCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      data-oid="ux1mure"
     >
       {/* Glow effect layer */}
       <div
         className="absolute inset-0 rounded-xl transition-opacity duration-300"
         style={glowStyle}
-        data-oid="onlm010"
       />
 
       {/* Content */}
-      <div className="relative z-10" data-oid="m7361hj">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }

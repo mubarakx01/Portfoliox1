@@ -73,88 +73,70 @@ export function FloatingThemeSwitcher() {
   const isDark = currentTheme === "dark";
 
   return (
-    <div className="fixed bottom-20 right-4 z-40" data-oid="t7_zm7n">
-      <AnimatePresence data-oid="bw-z_dw">
+    <div className="fixed bottom-20 right-4 z-40">
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 10 }}
             className="mb-2 p-3 bg-background/95 backdrop-blur-md rounded-lg border shadow-lg"
-            data-oid="u9yg27b"
           >
-            <div
-              className="flex justify-between items-center mb-2"
-              data-oid="_.zz80c"
-            >
-              <h3 className="text-sm font-medium" data-oid="w4a:lze">
-                Theme
-              </h3>
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-sm font-medium">Theme</h3>
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-7 w-7 p-0"
                 onClick={() => setIsOpen(false)}
-                data-oid="ik3lji9"
               >
-                <X className="h-4 w-4" data-oid="sj-gvl9" />
+                <X className="h-4 w-4" />
               </Button>
             </div>
 
-            <div className="flex gap-2 mb-3" data-oid="eolkxri">
+            <div className="flex gap-2 mb-3">
               <Button
                 variant={isDark ? "default" : "outline"}
                 size="sm"
                 className="gap-1"
                 onClick={() => setTheme("dark")}
-                data-oid="sv6sk4."
               >
-                <Moon className="h-3.5 w-3.5" data-oid="2f44cex" />
-                <span className="text-xs" data-oid="r:2vg_f">
-                  Dark
-                </span>
+                <Moon className="h-3.5 w-3.5" />
+                <span className="text-xs">Dark</span>
               </Button>
               <Button
                 variant={!isDark ? "default" : "outline"}
                 size="sm"
                 className="gap-1"
                 onClick={() => setTheme("light")}
-                data-oid="83k_f45"
               >
-                <Sun className="h-3.5 w-3.5" data-oid="anrg7f:" />
-                <span className="text-xs" data-oid="yn-v:dn">
-                  Light
-                </span>
+                <Sun className="h-3.5 w-3.5" />
+                <span className="text-xs">Light</span>
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-2" data-oid="gvjlj4m">
+            <div className="grid grid-cols-3 gap-2">
               {colorOptions.map((option) => (
                 <button
                   key={option.value}
                   onClick={() => setColorTheme(option.value)}
                   className="relative flex flex-col items-center justify-center p-1 rounded-md hover:bg-muted transition-colors"
-                  data-oid="m444hnq"
                 >
                   <div
                     className={cn(
                       "w-8 h-8 rounded-full bg-gradient-to-br",
                       isDark ? option.darkColor : option.color,
                     )}
-                    data-oid="p6mh3p6"
                   />
 
-                  <span className="text-xs mt-1" data-oid="h96e1tf">
-                    {option.label}
-                  </span>
+                  <span className="text-xs mt-1">{option.label}</span>
                   {colorTheme === option.value && (
                     <motion.div
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       className="absolute top-0 right-0 bg-primary text-primary-foreground rounded-full p-0.5"
-                      data-oid="h.:h7:n"
                     >
-                      <Check className="h-3 w-3" data-oid="_4h8x.1" />
+                      <Check className="h-3 w-3" />
                     </motion.div>
                   )}
                 </button>
@@ -171,9 +153,8 @@ export function FloatingThemeSwitcher() {
           isOpen ? "bg-primary text-primary-foreground" : "bg-background",
         )}
         onClick={() => setIsOpen(!isOpen)}
-        data-oid="_v8_ltl"
       >
-        <Palette className="h-5 w-5" data-oid=":n:g.na" />
+        <Palette className="h-5 w-5" />
       </Button>
     </div>
   );

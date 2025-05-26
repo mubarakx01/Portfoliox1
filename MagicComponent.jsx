@@ -40,12 +40,11 @@ const MagicComponent = () => {
           cursor: "pointer",
           marginBottom: "20px",
         }}
-        data-oid="h8a8tf7"
       >
         {isVisible ? "Hide" : "Show"}
       </button>
 
-      <AnimatePresence mode="wait" data-oid="78h8tu2">
+      <AnimatePresence mode="wait">
         {isVisible && (
           <motion.div
             key="magic-box"
@@ -62,11 +61,9 @@ const MagicComponent = () => {
               borderRadius: "8px",
               boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
             }}
-            data-oid="ax_v-8:"
           >
             <h3
               style={{ color: "white", padding: "20px", textAlign: "center" }}
-              data-oid="bxicb1h"
             >
               Magic Box
             </h3>

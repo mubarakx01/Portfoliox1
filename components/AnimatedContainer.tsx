@@ -160,7 +160,7 @@ export default function AnimatedContainer({
   };
 
   return (
-    <div className={`${wrapperClassName}`} data-oid="6930ma0">
+    <div className={`${wrapperClassName}`}>
       <motion.div
         ref={boxRef}
         className={`relative ${className}`}
@@ -177,21 +177,17 @@ export default function AnimatedContainer({
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        data-oid="7bu69dn"
       >
         {/* Glow effect layer */}
         {glowEffect && (
           <div
             className="absolute inset-0 rounded-xl transition-opacity duration-300"
             style={glowStyle}
-            data-oid="tim2:9:"
           />
         )}
 
         {/* Content */}
-        <div className="relative z-10" data-oid="hitwh6r">
-          {children}
-        </div>
+        <div className="relative z-10">{children}</div>
       </motion.div>
     </div>
   );
